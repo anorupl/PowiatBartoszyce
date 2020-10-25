@@ -1,0 +1,76 @@
+/* Widget
+========================================================================== */
+.widget {
+
+    position: relative;
+
+
+
+  ul {
+        margin:0;
+        padding:0;
+
+        ul {
+            margin: 0.4583em 0 0 1em;
+            padding-top: 0.4583em;
+        }
+    }
+
+    li {
+        list-style: none;
+        padding: 0.4583em 0;
+    }
+    li:first-child {
+        padding-top: 0;
+    }
+
+    .post-date, .rss-date {
+        display: block;
+        padding: 0.4583em 0;
+        opacity: 0.8;
+        @include font-size($font-size-s);
+        text-transform: uppercase;
+
+    }
+
+}
+
+.widget-title {
+    margin-top: 0;
+}
+
+.widget_archive,
+.widget_categories,
+.widget_links,
+.widget_meta,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_rss,
+.widget_text {
+
+    li {
+        border-top: 1px solid $border-color;
+    }
+    li:first-child {
+        border-top: 0;
+    }
+}
+.widget_calendar {
+
+    td, th, table caption  {
+        text-align: center;
+    }
+    table caption {
+        font-weight: bold;
+    }
+}
+
+.widget-area {
+  h2,.class-h2,.f-size-h2         { @include font-size(($size-base + 0.5));}
+  h3,.class-h3,.f-size-h3         { @include font-size(($size-base + 0.3));}
+  h4,.class-h4,.f-size-h4         { @include font-size(($size-base + 0.1));}
+}
+.widget-pad {
+  
+}

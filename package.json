@@ -1,0 +1,53 @@
+{
+  "name": "powiat-bartoszycki",
+  "version": "0.1.0",
+  "description": "Theme for Powiat Bartoszycki",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "author": "Kamil Żerebny",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "compass-importer": "^0.4.1",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
+    "gulp-ignore": "^3.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sassbeautify": "^0.1.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-wp-pot": "^2.5.0",
+    "susy": "2.2.14",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "html5shiv": "^3.7.3",
+    "imagesloaded": "4.1.4",
+    "jquery": "^3.4.1",
+    "jquery.cookie": "1.4.1",
+    "magnific-popup": "^1.1.0",
+    "masonry-layout": "3.3.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "Firefox ESR"
+  ]
+}

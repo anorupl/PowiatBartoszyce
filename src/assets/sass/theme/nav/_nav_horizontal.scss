@@ -1,0 +1,103 @@
+/*
+* All
+* */
+.h-nav	{
+  font-family: $font-second;
+  /*
+  *  li all
+  * -----------*/
+  li                          {position: relative; outline: none;}
+  li a                        {display: block; position:relative; padding: 20px 14px; outline: none;}
+
+  /*
+  *  ul
+  * -----------*/
+  .menu                       {display: flex; flex-direction: column;}
+  .menu > li                  {float: left;}
+
+  /*
+  *  ul ul
+  * -----------*/
+  .sub-menu                       {display: block; position: absolute; min-width: 100%; left: -999em; font-family: $font-base; z-index: $z-dropdown ;}
+  .sub-menu li                    {clear: both; padding: 0 10px; min-width: 100%; max-width: 230px; text-align: left;}
+  .sub-menu li a                  {padding: 10px;}
+
+  /* li - submenu active*/
+  .menu > li:hover > .sub-menu,
+  .menu > li.focus > .sub-menu    {left:50%; transform: translate(-50%, 0);}
+
+
+  /*
+  *  ul ul ul
+  * -----------*/
+  .sub-menu li > .sub-menu {border:0}
+  /* li li - submenu active*/
+  .menu ul.sub-menu li:hover > ul.sub-menu,
+  .menu ul.sub-menu li.focus > ul.sub-menu    {left: -100%; top: -10px;}
+
+
+  .menu > li.menu-item-has-children{
+    text-align: center;
+  }
+  .menu-item-has-children {
+    //width: 200px;
+  }
+
+  /*
+  *  current li a
+  * -----------*/
+  .current_page_item > a,
+  .current-menu-item > a        {font-weight: bold;}
+
+
+  /*
+  *  highlight
+  * -----------*/
+  .menu .highlight > a                                  {color: $four-bw; background: $two-color; border-radius: 5px;}
+  .menu .highlight > a:hover                            {background-color: $one-color; color: $four-bw;}
+  .menu .highlight.menu-item-has-children > a::after    {color: $four-bw; }
+}
+.h-nav--color {
+
+  .menu li > a                {color: $hv-a;}
+  .menu li > a:hover          {color: $hv-ahover;}
+
+  .sub-menu li                {background: $hv-lili;}
+  .sub-menu li a              {color: $hv-aa;}
+  .sub-menu li > a:hover      {color: $hv-aahover;}
+  .sub-menu li li  > a:hover  {color: $hv-aahover;}
+}
+
+.bar-color {
+
+  /*
+   *  strzalki
+   * -----------*/
+   .menu-item-has-children > a:after {
+      display: inline;
+      color: $hv-plus;
+      font-weight: bold;
+  }
+  /* pierwszy poziom strzalka w dół */
+  .menu > .menu-item-has-children > a:after 	{
+     @extend [class^="icon-"];
+     content: "\f107";
+  }
+  /* drugi poziom strzalkaw prawo */
+	.sub-menu .menu-item-has-children > a:after 	{
+	    @extend [class^="icon-"];
+	    content: "\f105";
+	}
+
+
+  .menu li > a                {color: $bar-a;}
+  .menu li > a:hover,
+  .menu li.focus > a          {background-color: $bar-bg-ahover;}
+
+  .sub-menu li                {background: $bar-lili;}
+  .sub-menu li a              {color: $bar-aa; border-bottom: solid 1px $bar-lili;}
+  .sub-menu li > a:hover      {color: $bar-aahover; background-color: transparent; border-bottom: solid 1px $bar-aahover;}
+  .sub-menu li li > a:hover  {color: $bar-aahover; background-color: transparent;}
+
+
+}

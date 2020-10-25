@@ -1,0 +1,28 @@
+/* Headings
+========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.class-h1,
+.class-h2,
+.class-h3,
+.class-h4,
+.class-h5 {
+	display: block;
+	padding: 0;
+	margin: 0.5em 0;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-family: $font-bold;
+	line-height: 1.3em;
+}
+
+h1,.class-h1,.f-size-h1         { @include font-size(($size-base + 1.3));}
+h2,.class-h2,.f-size-h2         { @include font-size(($size-base + 1.0));}
+h3,.class-h3,.f-size-h3         { @include font-size(($size-base + 0.7));}
+h4,.class-h4,.f-size-h4         { @include font-size(($size-base + 0.4));}
+h5, h6, .class-h5,.f-size-h5    { @include font-size(($size-base + 0.2)); letter-spacing: 0.1em; text-transform: uppercase;}

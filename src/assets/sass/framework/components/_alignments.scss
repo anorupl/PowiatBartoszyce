@@ -1,0 +1,36 @@
+/* Alignments
+========================================================================== */
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.alignleft,
+.alignright {
+    display: block;
+    float: none;
+    margin-right: auto;
+  	margin-left: auto;    
+}
+.wp-caption.alignleft,
+.wp-caption.alignright,
+blockquote.alignleft,
+blockquote.alignright,
+img.alignleft,
+img.alignright, {
+    display: block;
+    margin: 1.2em auto;
+}
+
+.text-center,
+.text-center-right,
+.text-center-left {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}

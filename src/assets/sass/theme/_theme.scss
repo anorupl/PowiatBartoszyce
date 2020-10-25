@@ -1,0 +1,602 @@
+/* Theme style
+========================================================================== */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+
+3.1 Header
+3.1.1 Header Slider with post
+3.1.2 Header custom text
+3.1.3 Header quick links
+
+3.2  Regular Content
+3.3  Posts - multi loop
+3.4  Posts & Page
+3.5  Taxonomy
+3.6  Attachment
+3.7 Widgets
+
+4 Sections
+4.1 Section alert
+4.2 Section loop homepage
+4.3 Section featured category
+4.4 Section menu with custom links to pages (education links)
+4.5 Section advice and services (widget sidebar-bottom_baners)
+4.6 Section Partners (widget sidebar-footer_banners )
+
+5.0 Footer
+5.1 Footer Contact
+5.2 Footer quick links (widget sidebar-footer_contact )
+
+6.0 Cookie and Copyright
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: auto
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+body {
+  overflow: hidden;
+  font-family: $font-base;
+  @include font-size($size-base);
+  line-height: 1.74;
+  background: $four-bw;
+  color: $one-bw;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+main {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.hide {
+  display: none;
+}
+
+.h-font {
+  font-family: $font-second;
+}
+
+.btn {
+  color: $four-bw;
+  background-color: $two-color;
+  border: 1px solid $two-color;
+  padding: 0.7em;
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.7em;
+  &:hover {
+    color: $four-bw;
+    background-color: $one-color;
+  }
+}
+
+.btn--50 {
+  width: 50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* color schemes */
+.text-light {color: $white;}
+.text-dark {color: $one-color;}
+
+.a-light a {color: $white; }
+.a-dark a  {color: $one-color;}
+
+.a-hover-one a:hover{ color: $one-color;}
+.a-hover-two a:hover {color: $two-color;}
+.a-hover-three a:hover{color: $three-color;}
+.a-hover-light a:hover{color: $four-bw;}
+
+.bg-white {
+  background-color: $white;
+}
+.radius {
+  border-radius: 10px;
+}
+
+.content-style {
+  border-radius: 10px;
+  border: 1px solid $light-border;
+  background-color: $white;
+
+  padding: gutter();
+}
+
+
+
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+.inline-right {
+  display: inline-block;
+  float: right;
+}
+
+.inline-left {
+  display: inline-block;
+  float: left;
+}
+.page-section {
+  margin-top: gutter();
+  margin-bottom: gutter();
+}
+
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+/* Top bar - Header */
+#top-bar {
+  @include font-size($font-size-m);
+  padding: 5px gutter();
+  border-bottom: 1px solid $light-border;
+
+  .contact-item {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0 5px;
+
+  }
+}
+.form-wcga form {
+  margin: 0;
+  display: inline;
+}
+
+.form-wcga input {
+  width: auto;
+  margin: 0 2px;
+}
+
+
+
+/* Site branding - Header */
+#site-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title-area {
+  padding-left: gutter();
+  padding-right:gutter();
+  padding-top: 10px;
+  padding-bottom:10px;
+  text-align: center;
+}
+.site-title {
+  margin: 0;
+  max-height: 80px;
+  overflow: hidden;
+  text-align: center;
+  img {
+    max-height: 80px;
+    width: auto;
+  }
+}
+
+
+#site-nav-bar {
+
+  background: $two-color;
+}
+
+/*--------------------------------------------------------------
+3.1.1 Header Slider with post
+--------------------------------------------------------------*/
+#header-content {
+  background: url('http://beta.kz.atthost24.pl/wp-content/uploads/2020/10/iStockm.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden;
+
+
+  &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 25px;
+      @include linear-gradient(90deg, #EB3349, #F45C43);
+      clear: both;
+  }
+}
+
+
+
+#header-slider {
+  overflow: hidden;
+
+  .btn {
+    margin-top: 30px;
+    margin-bottom:30px;
+  }
+}
+
+#slider {
+  width: 80%;
+  margin: 10px auto;
+  @include bg-op($four-bw, 0.8);
+}
+
+.meta-line {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 2px $three-color;
+    position: absolute;
+    left: 300px;
+    top: 48%;
+    z-index: $z-footer;
+  }
+  > span {
+    position: relative;
+    display: inline-block;
+    z-index: $z-header;
+  }
+}
+/*--------------------------------------------------------------
+3.1.2 Header custom text
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.1.3 Header quick links
+--------------------------------------------------------------*/
+#menu_shortcuts {
+  background-color: $four-bw;
+}
+.shortcuts-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  img {
+    display: inline-block;
+    width: 52%;
+    margin: 10px 23%;
+  }
+
+
+  > li {
+    flex-basis: 160px;
+    height: 160px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    @include bg-op($four-bw, 0.8);
+
+  }
+
+  a {
+    color: $one-bw;
+  }
+  a:hover {
+    color: $two-color;
+  }
+}
+
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+
+#breadcrumbs {
+    padding: 1%;
+    margin-bottom: gutter();
+    border-bottom: 1px solid $border-color;
+}
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi {
+
+  .meta__item {
+    padding-bottom: 3px;
+
+    [class^="icon-"] {
+      padding: 0 10px 0 0;
+      min-width: 0;
+    }
+  }
+}
+
+.posts {
+  .entry-meta {
+    &::after {
+        content: '';
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-color: $light-border;
+    }
+  }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.hentry{
+  overflow: hidden;
+}
+.post-thumbnail {
+  position: relative;
+  border-radius: 5px;
+}
+.meta__item {
+    display: inline-block;
+}
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.7  Widgets
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4 Sections
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.1 Section alert
+--------------------------------------------------------------*/
+#section-alert {
+  background-color: $four-color;
+  color: $two-bw;
+  font-weight: bold;
+
+    a { color: $two-bw;}
+    a:hover {color: $three-color;}
+    .btn--alert {
+      border:none;
+    }
+    a.btn--alert {
+      color: $four-color;
+      background:  $two-bw;
+    }
+    a.btn--alert:hover {
+      color: $three-bw;
+    }
+}
+.alert-summary {
+  margin-bottom: gutter();
+  padding-bottom: 10px;
+  border-bottom: 4px solid $two-bw;
+}
+
+/*--------------------------------------------------------------
+4.2 Section loop homepage
+--------------------------------------------------------------*/
+.col-one article:nth-child(1) {
+  @include linear-gradient(90deg, #EB3349, #F45C43);
+  color: $three-bw;
+  border-radius: 5px;
+
+  a {color: $three-bw;}
+  a:hover {color:$one-bw;}
+
+}
+/*--------------------------------------------------------------
+4.3 Section featured category
+--------------------------------------------------------------*/
+#featured-cat{
+  h3 {
+    @include font-size(($size-base));
+  }
+  .meta__item {
+    margin: 10px 0;
+    @include font-size(($font-size-m));
+  }
+  img {
+    width: 100%;
+  }
+}
+/*--------------------------------------------------------------
+4.4 Section menu with custom links to pages (education links)
+--------------------------------------------------------------*/
+#page_links {
+  float: right;
+  @extend .h-font;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    color: $three-bw;
+  }
+  a {
+
+      display: inline-block;
+      min-height: 81px;
+      width: 100%;
+      color: $three-bw;
+      @include linear-gradient(90deg, #EB3349, #F45C43);
+      padding: gutter() gutter() gutter() 80px;
+      margin-bottom: gutter();
+
+      &:hover {
+        color:$one-bw;
+        @include linear-gradient(90deg, $three-bw, $three-bw);
+      }
+  }
+
+  li > a:before {
+
+      @extend .i-style;
+      @extend .icon-college-graduation:before;
+
+      position: absolute;
+      width: 80px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 1;
+
+  }
+}
+
+
+/*--------------------------------------------------------------
+4.5 Section advice and services (widget sidebar-bottom_baners)
+--------------------------------------------------------------*/
+
+#primary-baners {
+
+  .widget {
+    padding: 0;
+    margin-bottom: gutter();
+  }
+  .widget_media_image {
+    max-height: 285px;
+    overflow: hidden;
+    .widget-title {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+4.6 Section Partners (widget sidebar-footer_banners )
+--------------------------------------------------------------*/
+#secondary-baners {
+  background: $four-bw;
+  padding-bottom: gutter();
+  .banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+
+    @extend .container
+  }
+
+
+  .widget {
+    max-width: 320px;
+    flex-basis: 18.33333%;
+    margin-left: 3.33333%;
+    margin-right: 3.33333%;
+    margin-bottom: gutter();
+  }
+}
+/*--------------------------------------------------------------
+5.0 Footer
+--------------------------------------------------------------*/
+.footer-background {
+  //background-image: url(#{$img-path}footer-bg.png);
+  //background-repeat: no-repeat;
+  //background-position: bottom;
+  //background-size: contain;
+  //min-height: 327px;
+  img {
+    width: 100%;
+
+  }
+}
+
+/*--------------------------------------------------------------
+5.1 Footer Contact
+--------------------------------------------------------------*/
+#contact-footer {
+  min-height: 200px;
+  overflow: hidden;
+  @include linear-gradient(90deg, #EB3349, #F45C43);
+  color: $four-bw;
+  border-color: $four-bw;
+
+  a {
+    color: $four-bw;
+    &:hover {color: $one-color}
+  }
+
+  h3 {
+    border-bottom: solid 4px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+
+  }
+
+  .contact-item {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-item__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  i {
+    width: 35px;
+  }
+  span {
+    display: inline-block;
+    @include font-size($font-size-xl);
+  }
+}
+.contact-item__text {
+  padding-left: 38px;
+}
+
+
+/*--------------------------------------------------------------
+5.2 Footer quick links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+6.0 Cookie and Copyright
+--------------------------------------------------------------*/
+#copyright {
+  min-height: 80px;
+  background-color: $four-bw;
+  overflow: hidden;
+}

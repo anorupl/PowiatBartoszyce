@@ -1,0 +1,575 @@
+# Copyright (C) 2020 Powiat Bartoszycki
+# This file is distributed under the same license as the Powiat Bartoszycki package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Powiat Bartoszycki\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: http:/powiatbartoszyce.pl\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/404.php:12
+msgid "Page not found"
+msgstr ""
+
+#: src/404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: src/404.php:23, src/components/content_multi/content-none.php:15, src/components/site/loop-homepage.php:156
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#: src/attachment.php:31
+msgid "Click to download"
+msgstr ""
+
+#: src/attachment.php:35
+msgid "File size: "
+msgstr ""
+
+#: src/comments.php:27
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/comments.php:46
+msgid "Comments are closed."
+msgstr ""
+
+#: src/components/content_multi/content-none.php:12, src/components/site/loop-homepage.php:153
+msgid "Nothing Found"
+msgstr ""
+
+#: src/components/content_multi/content-page.php:45, src/components/content_multi/content-page.php:27, src/components/content_multi/content.php:45, src/components/content_multi/content.php:27, src/components/site/loop-homepage.php:101, src/components/site/loop-homepage.php:77
+msgid "Author"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: src/components/content_multi/content.php:54, src/components/features/slider/loop-category.php:41
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: src/components/content_single/content-page.php:34, src/components/content_single/content.php:32, src/page-templates/page-no_sidebar.php:31
+msgid "Pages:"
+msgstr ""
+
+#: src/components/content_single/content-page.php:38, src/components/content_single/content.php:36, src/components/site/loop-homepage.php:141, src/index.php:85, src/page-templates/page-no_sidebar.php:35, src/search.php:44
+msgid "Page"
+msgstr ""
+
+#: src/components/content_single/content.php:45
+msgid "Next"
+msgstr ""
+
+#: src/components/content_single/content.php:46
+msgid "Next post:"
+msgstr ""
+
+#: src/components/content_single/content.php:48
+msgid "Previous"
+msgstr ""
+
+#: src/components/content_single/content.php:49
+msgid "Previous post:"
+msgstr ""
+
+#: src/components/features/section-alert.php:11, src/components/features/slider/custom-text.php:12, src/components/features/slider/custom-text.php:20, src/components/site/section-alert.php:18, src/inc/customizer/setting_control/inc_setting_alert.php:66
+msgid "Information"
+msgstr ""
+
+#: src/components/features/section-alert.php:21, src/components/features/slider/custom-text.php:31
+msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: src/components/features/section-featured.php:42, src/components/features/section-featured_sidebar.php:40, src/inc/customizer/setting_control/inc_setting_featuredcat.php:32, src/inc/customizer/setting_control/inc_setting_main_loop.php:15, src/inc/template-tags.php:333, src/index.php:56
+msgid "Last post"
+msgstr ""
+
+#: src/components/features/section-featured.php:77
+msgid "Show all"
+msgstr ""
+
+#: src/components/features/section-links.php:13
+msgid "Links"
+msgstr ""
+
+#: src/components/site/loop-homepage.php:139, src/index.php:83, src/search.php:42
+msgid "Previous page"
+msgstr ""
+
+#: src/components/site/loop-homepage.php:140, src/index.php:84, src/search.php:43
+msgid "Next page"
+msgstr ""
+
+#: src/components/site/section-alert.php:21, src/inc/customizer/setting_control/inc_setting_alert.php:34, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:32
+msgid "Show more"
+msgstr ""
+
+#: src/footer.php:29
+msgid "Place name"
+msgstr ""
+
+#: src/footer.php:33, src/inc/customizer/setting_control/inc_setting_contact.php:52
+msgid "Address"
+msgstr ""
+
+#: src/footer.php:42, src/inc/customizer/custom_control_field/inc_field_open_hours.php:46, src/inc/customizer/setting_control/inc_setting_contact.php:112
+msgid "Opening Hours"
+msgstr ""
+
+#: src/footer.php:51, src/inc/customizer/setting_control/inc_setting_contact.php:67
+msgid "Telephone number"
+msgstr ""
+
+#: src/footer.php:63, src/inc/customizer/setting_control/inc_setting_contact.php:82
+msgid "E-mail"
+msgstr ""
+
+#: src/footer.php:90
+msgid "All Rights Reserved"
+msgstr ""
+
+#: src/functions.php:83
+msgid "Header Menu"
+msgstr ""
+
+#: src/functions.php:84
+msgid "Section - Shortcuts"
+msgstr ""
+
+#: src/functions.php:85
+msgid "Section - Links to other pages"
+msgstr ""
+
+#: src/functions.php:134, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87, src/inc/wcga_form.php:96
+msgid "Wyłącz kontrast"
+msgstr ""
+
+#: src/functions.php:135, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
+msgid "Włącz kontrast"
+msgstr ""
+
+#: src/functions.php:137
+msgid "Previous Image (left arrow key)"
+msgstr ""
+
+#: src/functions.php:138
+msgid "Next Image (right arrow key)"
+msgstr ""
+
+#: src/functions.php:139
+msgid "of"
+msgstr ""
+
+#: src/functions.php:140
+msgid "Close (Escape key)"
+msgstr ""
+
+#: src/functions.php:141
+msgid "Loading ..."
+msgstr ""
+
+#: src/functions.php:142, src/inc/widget/widget-baner.php:113
+msgid "Image"
+msgstr ""
+
+#: src/functions.php:143
+msgid "it cannot be loaded."
+msgstr ""
+
+#: src/functions.php:157, src/inc/customizer/setting_control/inc_setting_baners.php:25
+msgid "Baners - Primary section"
+msgstr ""
+
+#: src/functions.php:166
+msgid "Right Sidebar"
+msgstr ""
+
+#: src/functions.php:175, src/inc/customizer/setting_control/inc_setting_baners.php:70
+msgid "Baners - Secondary section"
+msgstr ""
+
+#: src/functions.php:185
+msgid "Footer - middle column"
+msgstr ""
+
+#: src/header.php:75, src/header.php:61
+msgid "Menu"
+msgstr ""
+
+#: src/header.php:78
+msgid "Add menu"
+msgstr ""
+
+#: src/image.php:12, src/index.php:47, src/page-templates/page-no_sidebar.php:14, src/page.php:20, src/single.php:15
+msgid "You are here: &nbsp;"
+msgstr ""
+
+#: src/image.php:28
+msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:76
+msgid "Theme Settings"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:89
+msgid "Typography"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:102
+msgid "News section"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:114
+msgid "Header slider"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:125
+msgid "Header without a slider"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:137
+msgid "Header - image background"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:149
+msgid "Featured category"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:161
+msgid "Section links"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:173
+msgid "Section Alert"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:186
+msgid "Section Baners"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:199
+msgid "Contact"
+msgstr ""
+
+#: src/inc/customizer/customizer.php:210
+msgid "Social networks"
+msgstr ""
+
+#: src/inc/customizer/helpers/inc_helpers.php:100
+msgid "Category"
+msgstr ""
+
+#: src/inc/customizer/helpers/inc_helpers.php:124, src/inc/customizer/helpers/inc_helpers.php:171
+msgid "All Categories"
+msgstr ""
+
+#: src/inc/customizer/helpers/inc_helpers.php:153
+msgid "Profile on the site "
+msgstr ""
+
+#: src/inc/customizer/helpers/inc_helpers.php:157
+msgid "Find us on"
+msgstr ""
+
+#: src/inc/customizer/helpers/inc_helpers.php:170, src/inc/customizer/setting_control/inc_setting_featuredcat.php:60, src/inc/customizer/setting_control/inc_setting_header_slider.php:64, src/inc/customizer/setting_control/inc_setting_main_loop.php:43
+msgid "Select Category"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_alert.php:23, src/inc/customizer/setting_control/inc_setting_featuredcat.php:22, src/inc/customizer/setting_control/inc_setting_header_slider.php:22, src/inc/customizer/setting_control/inc_setting_links.php:23
+msgid "Show section"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_alert.php:42
+msgid "Button title"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_alert.php:57
+msgid "Button url"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_alert.php:72
+msgid "Description"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_baners.php:36, src/inc/customizer/setting_control/inc_setting_baners.php:81, src/sidebar-primary_baners.php:13, src/sidebar-secondary_baners.php:14
+msgid "Title"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_baners.php:44
+msgid "Section title (only for screen reader)"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_baners.php:89
+msgid "Section title"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:19
+msgid "Show map in contact"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:29, src/inc/customizer/setting_control/inc_setting_contact.php:37
+msgid "Place title"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:97
+msgid "E-mail administrator"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:128
+msgid "Select a location on map"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:40, src/inc/customizer/setting_control/inc_setting_links.php:41, src/inc/customizer/setting_control/inc_setting_main_loop.php:23
+msgid "Title section"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:61, src/inc/customizer/setting_control/inc_setting_main_loop.php:44
+msgid "Select category to show in Section."
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:36
+msgid "Body Font Family"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:37, src/inc/customizer/setting_control/inc_setting_fonts.php:98
+msgid "Select font or option Google Font to see advanced options google fonts."
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:54
+msgid "Google Font Family"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:72, src/inc/customizer/setting_control/inc_setting_fonts.php:133
+msgid "Font Variant"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:73, src/inc/customizer/setting_control/inc_setting_fonts.php:134
+msgid "Different variants of the font, provides control over font-weight and italics"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:97
+msgid "Heading Font Family"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:115
+msgid "Heading - Google Font Family"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:151
+msgid "Latin"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:152
+msgid "Latin Extended"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:153
+msgid "Greek"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:154
+msgid "Greek Extended"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:155
+msgid "Cyrillic"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:156
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:157
+msgid "Vietnamese"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:158
+msgid "Arabic"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:159
+msgid "Khmer"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:160
+msgid "Devanagari"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:174
+msgid "Choose Google Font Subsets"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_image.php:18
+msgid "Image background "
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:14, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:22
+msgid "Title information"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:40
+msgid "Information - Button title"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:55
+msgid "Information - Button url "
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:70
+msgid "Description information"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:40
+msgid "No of items"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:41
+msgid "Enter number between %1s and %2s .Save and refresh the page if No of Blocks is changed."
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:65
+msgid "Select category to show slider."
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_links.php:33
+msgid "Links to pages"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_privacy.php:21
+msgid "Show in footer"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_privacy.php:22
+msgid "Go to the page with privacy policy settings: <a href=\"%1$s\">Policy settings</a>"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_social.php:28
+msgid "Link to  %1$s"
+msgstr ""
+
+#: src/inc/template-functions.php:90
+msgid "Untitled"
+msgstr ""
+
+#: src/inc/template-tags.php:28
+msgid "Data"
+msgstr ""
+
+#: src/inc/template-tags.php:43
+msgid "Share on Twitter!"
+msgstr ""
+
+#: src/inc/template-tags.php:44
+msgid "Share on Google+"
+msgstr ""
+
+#: src/inc/template-tags.php:45
+msgid "Share on Facebook"
+msgstr ""
+
+#: src/inc/template-tags.php:96, src/inc/template-tags.php:69
+msgid "Post published in category "
+msgstr ""
+
+#: src/inc/template-tags.php:102
+msgid ", on data"
+msgstr ""
+
+#: src/inc/template-tags.php:109, src/inc/template-tags.php:136
+msgid "by user"
+msgstr ""
+
+#: src/inc/template-tags.php:130
+msgid "Page published on data"
+msgstr ""
+
+#: src/inc/template-tags.php:229
+msgid "Comment navigation"
+msgstr ""
+
+#: src/inc/template-tags.php:332
+msgid "Home"
+msgstr ""
+
+#: src/inc/template-tags.php:334
+msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
+msgstr ""
+
+#: src/inc/template-tags.php:335
+msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
+msgstr ""
+
+#: src/inc/template-tags.php:336
+msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
+msgstr ""
+
+#: src/inc/template-tags.php:337
+msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
+msgstr ""
+
+#: src/inc/template-tags.php:338
+msgid "<span class=\"screen-reader-text\">Error 404</span>"
+msgstr ""
+
+#: src/inc/template-tags.php:339
+msgid "<span class=\"screen-reader-text\">Page</span> %s"
+msgstr ""
+
+#: src/inc/template-tags.php:340
+msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
+msgstr ""
+
+#: src/inc/template-tags.php:374
+msgid "page: "
+msgstr ""
+
+#: src/inc/wcga_form.php:110
+msgid "Standard font size"
+msgstr ""
+
+#: src/inc/wcga_form.php:111
+msgid "Increase font size 150%"
+msgstr ""
+
+#: src/inc/wcga_form.php:112
+msgid "Increase font size 200%"
+msgstr ""
+
+#: src/inc/widget/widget-baner.php:11
+msgid "Baner with description"
+msgstr ""
+
+#: src/inc/widget/widget-baner.php:14
+msgid "Image widget with description"
+msgstr ""
+
+#: src/inc/widget/widget-baner.php:102
+msgid "Open in new window?"
+msgstr ""
+
+#: src/index.php:59
+msgid " - page: "
+msgstr ""
+
+#: src/page-templates/page-no_sidebar.php:3
+msgid "Page - no sidebars"
+msgstr ""
+
+#: src/search.php:17
+msgid "Search Results for: <span> %s </span>"
+msgstr ""
+
+#: src/searchform.php:13, src/searchform.php:14, src/searchform.php:15
+msgid "Search"
+msgstr ""

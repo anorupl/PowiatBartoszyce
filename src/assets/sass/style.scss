@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+
+@import "../../../node_modules/susy/sass/susy";
+@import "../../../node_modules/compass-mixins/lib/compass";
+
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/susy";
+@import "setting/variables";
+
+/*--------------------------------------------------------------
+-- framework/base/
+--------------------------------------------------------------*/
+@import "framework/base/icon_font";
+
+/*--------------------------------------------------------------
+-- framework/components/
+--------------------------------------------------------------*/
+@import "framework/components/alignments";
+@import "framework/components/base_html_tags";
+@import "framework/components/gallery";
+@import "framework/components/headings";
+@import "framework/components/links";
+@import "framework/components/list";
+@import "framework/components/media";
+@import "framework/components/tables";
+
+/*--------------------------------------------------------------
+-- framework/components/forms/
+--------------------------------------------------------------*/
+@import "framework/components/forms/forms__normalize";
+@import "framework/components/forms/forms";
+
+/*--------------------------------------------------------------
+-- framework/layout/
+--------------------------------------------------------------*/
+@import "framework/layout/gird";
+
+/*--------------------------------------------------------------
+-- framework/vendors/pluginy_js/
+--------------------------------------------------------------*/
+@import "framework/vendors/pluginy_js/_magnificPopup";
+
+/*--------------------------------------------------------------
+//-- theme/
+--------------------------------------------------------------*/
+@import "theme/theme";
+@import "theme/widgets";
+@import "theme/coments";
+@import "theme/accessibility";
+
+/*--------------------------------------------------------------
+-- theme/nav/
+--------------------------------------------------------------*/
+@import "theme/nav/nav_horizontal";
+@import "theme/nav/nav_pagination";
+@import "theme/nav/nav_small";
+@import "theme/nav/nav_verticall";
+
+
+////////////////////////////////////////////////////////////////
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+  .col-4_5 {
+    @include span(12);
+  }
+  .no-flexbox {
+    .bn-col-4 {
+       @include span(3 no-gutters);
+    }
+  }
+
+  .ph-col-6,
+  .ph-col-4,
+  .ph-col-3 { @include span(12 split);}
+
+@media (min-width: $phone) {
+  .no-flexbox {
+    .bn-col-4 {
+       @include span(6 of 12 3 split);
+    }
+  }
+  .ph-col-6,
+  .ph-col-3 { @include span(6 split);}
+  .ph-col-4 { @include span(4 split);}
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (max-width: $tablet) {
+
+.hide-on-small {display: none !important;}
+
+//  @import "theme/theme--rwd_max-desktop";
+//  @import "theme/nav/nav_horizontal_rwd-tablet";
+
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) {
+
+  .hide-desktop {display:none !important;}
+  .no-flexbox {
+    .bn-col-4 {@include span(3 of 12 3 split);}
+  }
+  .col-4_5 {
+    @include span(4.5);
+  }
+
+  .ph-col-6 { @include span(6 split);}
+  .ph-col-4 { @include span(4 split);}
+  .ph-col-3 { @include span(3 split);}
+
+
+  @import "framework/layout/gird__rwd-desktop";
+  @import "theme/theme--rwd_min-desktop";
+
+  @import "framework/components/alignments__rwd-desktop";
+  @import "theme/nav/nav_horizontal__rwd-desktop";
+  @import "theme/nav/nav_pagination__rwd-desktop";
+
+
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-mdpi) {
+
+  //@import "theme/theme--rwd_min-desktop_max-mdpi";
+  //@import "theme/widgets--rwd_min_desktop_max-mdpi";
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-ldpi) {
+  @import "theme/theme--rwd_min-ldpi";
+}
+
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-hdpi) {
+  .no-flexbox {
+    .bn-col-4 { @include span(3 of 12 4 split);}
+  }
+  @import "theme/theme--rwd_min-hdpi";
+
+}
+
+/*----------------------------------
+*  Special Breakpoint old desktop 1024
+* ---------------------------------*/
+@media (min-width: $desktop) and (max-width: #{pem(1279)}) {
+}

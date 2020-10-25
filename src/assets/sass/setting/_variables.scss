@@ -1,0 +1,173 @@
+/*--------------------------------------------------------------
+>>> variables
+----------------------------------------------------------------
+|
+|-- Path
+|-- Font
+|-- Breakpoint (continer max-width 1300px)
+|
+|-- Color
+|----- Menu horizontal
+|----- Menu vertical
+|----- Menu small
+|----- Pagination
+|
+*/
+
+/*--------------------------------------------------------------
+>>> Path
+---------------------------------------------------------------*/
+$img-path:  "img/";
+$svg-path:  "img/svg/";
+$mime-path: "img/mime/";
+$font-path: "fonts/";
+/*--------------------------------------------------------------
+>>> Font
+---------------------------------------------------------------*/
+$font-base	: Lato, Arial, Helvetica, sans-serif;
+$font-second: Roboto, 'Open Sans', sans-serif;
+$font-bold	: Tahoma, Geneva, sans-serif;
+$font-code	: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$font-size-s   : 1.2;
+$font-size-m   : 1.4;
+$size-base     : 1.7;
+$font-size-xl  : 1.9;
+$font-size-xxl : 2.2;
+$font-size-xxxl: 2.6;
+
+/*--------------------------------------------------------------
+>>> Breakpoint
+---------------------------------------------------------------*/
+$phone          : #{pem(576)};
+$tablet         : #{pem(991)};
+$desktop        : #{pem(992)};
+$desktop-ldpi   : #{pem(1280)};
+$desktop-mdpi   : #{pem(1440)};
+$desktop-hdpi   : #{pem(1600)};
+
+/*--------------------------------------------------------------
+>>> Color
+---------------------------------------------------------------*/
+
+$one-color      : #32292f;
+$two-color      : #c10000;
+$three-color    : #ea3949;
+$four-color     : #ffc914;
+$six-color      : #1d201f;
+
+$one-bw         : #2d3942;  // text
+$two-bw         : #1d201f;  // icon
+$three-bw       : #ededed;
+$four-bw        : #fbfafc;
+$five-bw        : #7e7e7e;
+$white          : #ffffff;
+
+$border-color   : #d5d4d9;
+$light-border   : #e9e9e9;
+
+$wcag-herf      : #FFFE00;
+$wcag-text      : #ffffff;
+$wcag-bg        : #000000;
+
+$fields-fff     : $four-bw;
+$fields-text    : $one-bw;
+$fields-color   : $two-color;
+$fields-bg      : lighten($three-bw, 50%);
+$fields-border  : $border-color;
+$fields-active  : $one-color;
+$button-border  : $two-color;
+
+$outline        : 1px solid $one-color;
+
+/*--------------------------------------------------------------
+>>> Menu horizontal
+---------------------------------------------------------------*/
+/* all */
+$hv-li:             transparent;
+$hv-lili:           $four-bw;
+
+$hv-lihover:        transparent;
+$hv-lilihover:      $four-bw;
+
+$hv-a:              $one-color;
+$hv-ahover:         $two-color;
+
+$hv-aa:             $one-color;
+$hv-aahover:        $two-color;
+
+$hv-border:         $light-border;
+$hv-plus:           $two-color;
+
+/* bar */
+$bar-li:             transparent;
+$bar-lili:           $four-bw;
+
+$bar-lihover:        transparent;
+$bar-lilihover:      $four-bw;
+
+$bar-a:              $four-bw;
+$bar-bg-a:           $two-color;
+$bar-ahover:         $four-bw ;
+$bar-bg-ahover:      darken( $two-color, 15% );
+
+$bar-aa:             $one-color;
+$bar-aahover:        $two-color;
+
+
+
+
+
+
+
+/* over */
+$hv-ov-a:           $four-bw;
+$hv-ov-ahover:      $four-bw;
+$hv-ov-li:          transparent;
+$hv-ov-lihover:     transparent;
+
+
+/*--------------------------------------------------------------
+>>> Color Menu small
+---------------------------------------------------------------*/
+
+$small-button-color:            $four-bw;
+$small-border:                  $light-border;
+$small-background:              $two-color;
+// lv
+$small-color-a:                 $two-color;
+$small-background-li:           $four-bw;
+// lv:hover
+$small-color-ahover:            $two-color;
+$small-background-lihover:      $four-bw;
+// lv2:hover
+$small-color-aa:                $two-bw;
+$small-background-lili:         $four-bw;
+// lv2:hover
+$small-color-aahover:           $two-color;
+$small-background-lilihover:    $four-bw;
+
+
+
+/*--------------------------------------------------------------
+>>> Color Menu Pagination
+---------------------------------------------------------------*/
+$nav-border             : $two-color;
+
+$nav-color              : $two-color;
+$nav-text               : $four-bw;
+
+$nav-background         : $four-bw;
+$nav-background-active  : $four-bw;
+
+
+/*--------------------------------------------------------------
+>>> Z-index
+---------------------------------------------------------------*/
+
+
+$z-modal     : 9000;
+$z-overlay   : 8000;
+$z-dropdown  : 7000;
+$z-header    : 6000;
+$z-footer    : 5000;
