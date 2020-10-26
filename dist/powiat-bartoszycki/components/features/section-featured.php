@@ -65,7 +65,7 @@
                 <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
               </header>
               <div class="entry-summary">
-              <?php echo wpg_get_excerpt(30); ?>
+              <?php echo wpg_get_excerpt(15); ?>
               </div>
             </article>
           <?php endwhile; ?>

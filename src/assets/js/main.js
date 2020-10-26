@@ -91,7 +91,7 @@
        dots: false,
        arrows: false,
        slidesToShow: 1,
-       autoplay: false,
+       autoplay: true,
        pauseOnHover: false,
      })
 
@@ -99,7 +99,7 @@
        dots: false,
        arrows: false,
        slidesToShow: 1,
-       autoplay: false,
+       autoplay: true,
        pauseOnHover: false,
      })
 
@@ -130,13 +130,13 @@
      });
 
      //Gallery image
-     $('.gallery').each(function () {
+     $('.wp-block-gallery, .gallery').each(function () {
        $(this).magnificPopup({
          delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
          type: 'image',
          gallery: {
            enabled: true,
-         } 
+         }
        });
      });
 

@@ -56,7 +56,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.i-style, blockquote:before, #menu_page_links li > a:before, .small-menu .menu li li.menu-item a:before,
+.i-style, blockquote:before, #page_links li > a:before, .small-menu .menu li li.menu-item a:before,
 [class^="icon-"],
 .comment-reply-title small a:before,
 .bar-color .menu > .menu-item-has-children > a:after,
@@ -97,7 +97,7 @@ i.xl-icon {
   font-size: 265%;
   line-height: 265%; }
 
-.icon-college-graduation:before, #menu_page_links li > a:before {
+.icon-college-graduation:before, #page_links li > a:before {
   content: "\e909"; }
 
 .icon-info:before {
@@ -1773,7 +1773,7 @@ main {
 .hide {
   display: none; }
 
-.h-font, #menu_page_links {
+.h-font, #page_links {
   font-family: Roboto, "Open Sans", sans-serif; }
 
 .btn {
@@ -2082,16 +2082,16 @@ main {
 /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)
 --------------------------------------------------------------*/
-#menu_page_links {
+#page_links {
   float: right; }
-  #menu_page_links ul {
+  #page_links ul {
     padding: 0;
     margin: 0;
     list-style: none; }
-  #menu_page_links li {
+  #page_links li {
     position: relative;
     color: #ededed; }
-  #menu_page_links a {
+  #page_links a {
     display: inline-block;
     min-height: 81px;
     width: 100%;
@@ -2101,12 +2101,12 @@ main {
     background: linear-gradient(90deg, #EB3349, #F45C43);
     padding: 2.08333% 2.08333% 2.08333% 80px;
     margin-bottom: 2.08333%; }
-    #menu_page_links a:hover {
+    #page_links a:hover {
       color: #2d3942;
       background: #ededed;
       background: -webkit-linear-gradient(0deg, #ededed, #ededed);
       background: linear-gradient(90deg, #ededed, #ededed); }
-  #menu_page_links li > a:before {
+  #page_links li > a:before {
     position: absolute;
     width: 80px;
     left: 0;
@@ -3131,7 +3131,7 @@ a.skip-main:active {
 4.3 Section featured category
 --------------------------------------------------------------*/
   .home #featured-cat,
-  .home #menu_page_links {
+  .home #page_links {
     min-height: 665px; }
   /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)

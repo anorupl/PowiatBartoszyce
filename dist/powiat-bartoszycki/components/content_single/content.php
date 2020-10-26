@@ -9,13 +9,16 @@
 ?>
 <article <?php post_class('content-style'); ?>>
   <?php if (has_post_thumbnail()) : ?>
-    <figure class="post-thumbnail">
-        <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
-        <?php wpg_meta_page('over-thumbnail text-center'); ?>
-    </figure>
+    <div class="top-thumbnail">
+      <figure class="post-thumbnail">
+          <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
+      </figure>
+      <?php wpg_meta_page('over-thumbnail text-center'); ?>
+    </div>
     <header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
     </header>
+
   <?php else: ?>
     <header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>

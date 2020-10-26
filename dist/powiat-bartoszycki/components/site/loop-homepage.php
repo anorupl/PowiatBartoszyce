@@ -84,7 +84,7 @@
                     <?php if ($i > 4) {
                        echo wpg_get_excerpt(22);
                     } else {
-                      the_excerpt();
+                      echo wpg_get_excerpt(28);
                     }
                     ?>
                    </div><!-- .entry-summary -->
@@ -105,12 +105,7 @@
                    <?php endif; ?>
                  </div><!-- .entry-meta -->
                  <div class="entry-content">
-                   <?php if ($i > 4) {
-                      echo wpg_get_excerpt(25);
-                   } else {
-                     the_excerpt();
-                   }
-                   ?>
+                   <?php  echo wpg_get_excerpt(25); ?>
                  </div><!-- .entry-content -->
 
                <?php endif; ?>

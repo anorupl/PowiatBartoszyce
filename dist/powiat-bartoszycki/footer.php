@@ -82,12 +82,25 @@
   </div>
   <div id="copyright">
     <div class="container">
-      <div class="col-7 pad-all">
+      <div class="col-8 pad-all">
         <!-- menu footer (deklaracje rodo) -->
+        <?php if (has_nav_menu('menu_footer')) {
+
+    			wp_nav_menu(array(
+    				'container'      => false,
+    				'theme_location' => 'menu_footer',
+    				'menu_id'        => 'menu_footer',
+    				'items_wrap'     => '<nav id="%1$s" class="h-nav wp-nav" data-class="h-nav wp-nav"><ul class="%2$s">%3$s</ul></nav>',
+    			));
+        }
+        ?>
+
+
+
       </div>
-      <div class="col-3 pad-all">
+      <div class="col-4 text-center-right pad-all">
         <!-- logo -->
-        &copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>.<?php  _e('All Rights Reserved', 'wpg_theme'); ?>
+        &copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>.<br> <?php _e('All Rights Reserved', 'wpg_theme'); ?>
       </div>
     </div>
   </div>

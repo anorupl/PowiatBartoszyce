@@ -120,14 +120,17 @@ if (!empty($image_id)) {
 			}
 			?>
 		</div>
-			<?php if (has_nav_menu('menu_shortcuts')):
-					wp_nav_menu(array(
-						'container'      => false,
-						'theme_location' => 'menu_shortcuts',
-						'menu_id'        => 'menu_shortcuts',
-						'items_wrap'     => '<section id="%1$s" class="col-5"><ul class="shortcuts-links">%3$s</ul></section>',
-					));
-				endif; ?>
+		<?php
+		if ( is_active_sidebar( 'wpg-headerbar-shortcuts' ) ) {
+			?>
+			<section id="bar_shortcuts" class="col-5">
+				<ul class="shortcuts-links">
+					<?php dynamic_sidebar( 'wpg-headerbar-shortcuts' ); ?>
+				</ul>
+			</section>
+			<?php
+		}
+		?>
 			</div>
 	</div>
 </div>

@@ -64,25 +64,18 @@
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-  .col-4_5 {
-    @include span(12);
-  }
-  .no-flexbox {
-    .bn-col-4 {
-       @include span(3 no-gutters);
-    }
-  }
+  .col-4_5  {@include span(12);}
+  
+  .bn-col-4 {@include span(12 no-gutters); }
+
 
   .ph-col-6,
   .ph-col-4,
   .ph-col-3 { @include span(12 split);}
 
 @media (min-width: $phone) {
-  .no-flexbox {
-    .bn-col-4 {
-       @include span(6 of 12 3 split);
-    }
-  }
+  .bn-col-4 {@include span(6 of 12 3 split);}
+
   .ph-col-6,
   .ph-col-3 { @include span(6 split);}
   .ph-col-4 { @include span(4 split);}
@@ -105,12 +98,10 @@
 @media (min-width: $desktop) {
 
   .hide-desktop {display:none !important;}
-  .no-flexbox {
-    .bn-col-4 {@include span(3 of 12 3 split);}
-  }
-  .col-4_5 {
-    @include span(4.5);
-  }
+
+  .bn-col-4 {@include span(3 of 12 3 split);}
+
+  .col-4_5 {@include span(4.5);}
 
   .ph-col-6 { @include span(6 split);}
   .ph-col-4 { @include span(4 split);}
@@ -148,9 +139,7 @@
 -- Responsive breakpoint
 --------------------------------------------------------------*/
 @media (min-width: $desktop-hdpi) {
-  .no-flexbox {
-    .bn-col-4 { @include span(3 of 12 4 split);}
-  }
+  .bn-col-4 { @include span(3 of 12 4 split);}
   @import "theme/theme--rwd_min-hdpi";
 
 }

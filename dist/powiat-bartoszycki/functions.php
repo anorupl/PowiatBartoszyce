@@ -73,7 +73,7 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 			'comment-form',
 			'comment-list',
 			'gallery',
-			'caption',
+			'caption'
 		) );
 
 		/**
@@ -81,8 +81,8 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 		*/
 		register_nav_menus( array(
 			'menu_header'				=> esc_html__( 'Header Menu', 'wpg_theme' ),
-			'menu_shortcuts'		=> esc_html__( 'Section - Shortcuts', 'wpg_theme' ),
 			'menu_page_links'		=> esc_html__( 'Section - Links to other pages', 'wpg_theme' ),
+			'menu_footer'		=> esc_html__( 'Footer Menu', 'wpg_theme' )
 		));
 
 		/**
@@ -153,6 +153,15 @@ add_action( 'wp_enqueue_scripts', 'wpg_enqueue' );
 */
 function wpg_widgets_init() {
 
+	register_sidebar( array(
+		'name'          => esc_html__( 'Header Shortcuts', 'wpg_theme' ),
+		'id'            => 'wpg-headerbar-shortcuts',
+		'description'   => '',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Baners - Primary section', 'wpg_theme' ),
 		'id'            => 'wpg-footerbar-primary_baners',

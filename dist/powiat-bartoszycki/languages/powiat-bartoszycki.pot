@@ -98,8 +98,8 @@ msgstr ""
 msgid "Show all"
 msgstr ""
 
-#: src/components/features/section-links.php:13
-msgid "Links"
+#: src/components/features/section-links.php:13, src/inc/customizer/setting_control/inc_setting_links.php:33
+msgid "Links to pages"
 msgstr ""
 
 #: src/components/site/loop-homepage.php:139, src/index.php:83, src/search.php:42
@@ -143,62 +143,62 @@ msgid "Header Menu"
 msgstr ""
 
 #: src/functions.php:84
-msgid "Section - Shortcuts"
-msgstr ""
-
-#: src/functions.php:85
 msgid "Section - Links to other pages"
 msgstr ""
 
-#: src/functions.php:134, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87, src/inc/wcga_form.php:96
+#: src/functions.php:133, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87, src/inc/wcga_form.php:96
 msgid "Wyłącz kontrast"
 msgstr ""
 
-#: src/functions.php:135, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
+#: src/functions.php:134, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
 msgid "Włącz kontrast"
 msgstr ""
 
-#: src/functions.php:137
+#: src/functions.php:136
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:138
+#: src/functions.php:137
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:139
+#: src/functions.php:138
 msgid "of"
 msgstr ""
 
-#: src/functions.php:140
+#: src/functions.php:139
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:141
+#: src/functions.php:140
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:142, src/inc/widget/widget-baner.php:113
+#: src/functions.php:141, src/inc/widget/widget-baner.php:113
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:143
+#: src/functions.php:142
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:157, src/inc/customizer/setting_control/inc_setting_baners.php:25
+#: src/functions.php:156
+msgid "Header Shortcuts"
+msgstr ""
+
+#: src/functions.php:165, src/inc/customizer/setting_control/inc_setting_baners.php:25
 msgid "Baners - Primary section"
 msgstr ""
 
-#: src/functions.php:166
+#: src/functions.php:174
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/functions.php:175, src/inc/customizer/setting_control/inc_setting_baners.php:70
+#: src/functions.php:183, src/inc/customizer/setting_control/inc_setting_baners.php:70
 msgid "Baners - Secondary section"
 msgstr ""
 
-#: src/functions.php:185
+#: src/functions.php:193
 msgid "Footer - middle column"
 msgstr ""
 
@@ -440,10 +440,6 @@ msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_header_slider.php:65
 msgid "Select category to show slider."
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_links.php:33
-msgid "Links to pages"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_privacy.php:21
