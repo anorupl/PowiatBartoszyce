@@ -31,9 +31,12 @@
      if (true === supportsInlineSVG()) {
        document.documentElement.className = document.documentElement.className.replace(/(\s*)no-svg(\s*)/, '$1svg$2');
      }
+
+
      /**
      *  function menu
      */
+
      //if resize window
      $('#header-menu').nav();
 
@@ -56,7 +59,7 @@
      });
 
 
-     var screenReaderText = {"expand":"<span class=\"screen-reader-text\">rozwi\u0144 menu potomne<\/span>","collapse":"<span class=\"screen-reader-text\">zwi\u0144 menu potomne<\/span>"};
+    var screenReaderText = {"expand":"<span class=\"screen-reader-text\">rozwi\u0144 menu potomne<\/span>","collapse":"<span class=\"screen-reader-text\">zwi\u0144 menu potomne<\/span>"};
 
  		$( '.v-nav.dropdown .menu .page_item_has_children > a, .v-nav.dropdown .menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
@@ -101,7 +104,41 @@
      })
 
 
+     /**
+     * Image Popup
+     */
+     //Translating magnificPopup
+     $.extend(true, $.magnificPopup.defaults, {
+       tClose: datalanuge.close, // Alt text on close button
+       tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
+       gallery: {
+         tPrev: datalanuge.prev, // Alt text on left arrow
+         tNext: datalanuge.next, // Alt text on right arrow
+         tCounter: '%curr% '+ datalanuge.of + ' %total%' // Markup for "1 of 7" counter
+       },
+       image: {
+         tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when image could not be loaded
+       },
+       ajax: {
+         tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when ajax request failed
+       }
+     });
 
+     // Single image
+     $('.wp-block-image a[href*=".jpg"]').magnificPopup({
+       type:'image',
+     });
+
+     //Gallery image
+     $('.gallery').each(function () {
+       $(this).magnificPopup({
+         delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
+         type: 'image',
+         gallery: {
+           enabled: true,
+         } 
+       });
+     });
 
        /**
        * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)

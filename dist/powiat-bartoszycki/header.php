@@ -120,7 +120,7 @@ if (!empty($image_id)) {
 			}
 			?>
 		</div>
-			<?php if (has_nav_menu('shortcuts')):
+			<?php if (has_nav_menu('menu_shortcuts')):
 					wp_nav_menu(array(
 						'container'      => false,
 						'theme_location' => 'menu_shortcuts',
