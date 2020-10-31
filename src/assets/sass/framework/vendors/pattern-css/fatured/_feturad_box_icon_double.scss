@@ -17,7 +17,7 @@
         vertical-align: middle;
         border: 1px solid transparent;
         border-color: inherit;
-        z-index: 0;
+        z-index: $z-level-1;
     }
     .icon-wrapper:before {
         left: -15px;

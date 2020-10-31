@@ -37,7 +37,7 @@
 
   if ( $query_featuredcat->have_posts()) :
     ?>
-    <section id="featured-cat" class="page-section posts content-style col-7">
+    <section id="featured-cat" class="page-section content-style col-7">
         <header class="header-section meta-line">
               <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h2>
         </header>

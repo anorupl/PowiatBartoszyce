@@ -152,17 +152,19 @@ function wpg_the_widgets_count( $sidebar_id ) {
 
 		 switch (count($sidebars_widgets[ $sidebar_id ])) {
 			case (2):
-		  	return 'ph-col-6';
+		  	return 'col-6';
 		  	break;
+			case (3):
+			  	return 'col-12--3';
 			case (4):
-		  	return 'ph-col-3';
+		  	return 'col-12--2-4';
 		  		break;
 		 	default:
-		 		return 'ph-col-4';
+		 		return 'col-12--2-4';
 		 		break;
 		 }
 	 } else {
-		 return 'ph-col-4';
+		 return 'col-12--2-4';
 	 }
 	}
 }

@@ -32,7 +32,7 @@
     border-right: 1px solid #eee;
     padding: 10px;
     text-align:center;
-    z-index: 9999;
+    z-index: $z-level-1;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
     border-bottom: 1px solid $four-bw;

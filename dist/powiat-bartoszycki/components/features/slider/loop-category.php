@@ -8,8 +8,11 @@
 */
 
 ?>
-
-    <section id="slider" class="radius">
+<section class="radius">
+        <header class="screen-reader-text">
+          <h2><?php echo get_theme_mod('wpg_slider_section',__('Section title', 'wpg_theme'));?></h2>
+        </header>
+        <div id="slider" class="slides radius">
         <?php
         $slider_number = absint( get_theme_mod('wpg_slider_number', 1 ) );
         $slider_category = absint( get_theme_mod('wpg_slider_category', 0 ) );
@@ -29,8 +32,8 @@
             if (isset($query_slajd) && $query_slajd->have_posts()) :
                 while ($query_slajd->have_posts()) : $query_slajd->the_post();
             ?>
-                <div class="slides" class="pad-all">
-                  <article id="header-post-<?php the_ID(); ?>" class="pad-all">
+
+                  <article id="header-post-<?php the_ID(); ?>">
                       <div class="header-post-meta meta-line">
                         <span class="pad-all">
                           <?php wpg_time() ?>
@@ -41,11 +44,20 @@
                         <a href="<?php the_permalink();?>" class="btn alignleft"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
                       </div>
                   </article>
-                </div>
+
                 <?php
             endwhile;
             wp_reset_postdata();// Restore original Post Data
         else: ?>
-        <div class="slides"></div>
+        <article id="header-post-<?php the_ID(); ?>" class="pad-all">
+            <div class="header-post-meta meta-line">
+              <span class="pad-all"><?php _e('Nothing Found', 'wpg_theme'); ?></span>
+            </div>
+            <div class="text-center-left">
+              <header class=""><?php _e('Nothing Found', 'wpg_theme'); ?></header>
+              <span class="btn alignleft"><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></span>
+            </div>
+        </article>
         <?php endif; ?>
+      </div><!-- #slider -->
 </section>

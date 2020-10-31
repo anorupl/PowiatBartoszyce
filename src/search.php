@@ -10,13 +10,16 @@
 */
 
 get_header(); ?>
-<div id="content" class="site-content clear-both">
+<div id="content" class="clear-both">
+  <div id="breadcrumbs" class="text-center bg-white">
+      <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
+  </div>
   <div class="container">
-    <div id="primary" class="content-area col-primary hentry-multi gutters">
+    <div id="primary" class="primary-col hentry-multi gutters">
+      <main id="main" class="site-main">
       <header class="content-style col-12">
         <h2><?php printf( __( 'Search Results for: <span> %s </span>', 'wpg_theme' ), esc_html( get_search_query())); ?></h2>
       </header>
-      <main id="main" class="site-main ">
         <?php
         if ( have_posts() ) :
           /* Start the Loop */
@@ -27,12 +30,9 @@ get_header(); ?>
             switch ($post_type) {
               case 'page':
                 get_template_part( 'components/content_multi/content', 'page' );
-
                 break;
-
               default:
                 get_template_part( 'components/content_multi/content', get_post_format() );
-
                 break;
             }
           endwhile;
@@ -50,26 +50,9 @@ get_header(); ?>
         ?>
       </main><!-- .site-main -->
     </div><!-- #primary -->
-    <div id="secondary" class="widget-area col-secondary content-style">
-
-      <?php
-      /* ==========================================
-      * Section - loop with custom category       *
-      * =====================================+====*/
-      if (get_theme_mod('wpg_featuredcat_active', false) === true) {
-        get_template_part('components/features/section', 'featured_sidebar' );
-      }
-      /* ==========================================
-      * Section - widget banner                   *
-      * =====================================+====*/
-      if (get_theme_mod('wpg_b_bottom_active', false) === true) {
-        get_sidebar('bottom_baners');
-      }
-
-      get_sidebar('right');
-
-      ?>
-    </div><!-- #secondary -->
+    <aside id="secondary" class="secondary-col narrow-col widget-area content-style" role="complementary">
+      <?php  get_template_part( 'components/site/secondary', 'column'); ?>
+    </aside><!-- #secondary -->
   </div><!-- .container -->
 </div><!-- #content -->
 <?php get_footer(); ?>

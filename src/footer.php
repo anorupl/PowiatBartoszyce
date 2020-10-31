@@ -90,6 +90,7 @@
     				'container'      => false,
     				'theme_location' => 'menu_footer',
     				'menu_id'        => 'menu_footer',
+            'depth'          => 1,
     				'items_wrap'     => '<nav id="%1$s" class="h-nav wp-nav" data-class="h-nav wp-nav"><ul class="%2$s">%3$s</ul></nav>',
     			));
         }

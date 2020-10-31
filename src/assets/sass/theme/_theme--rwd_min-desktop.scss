@@ -41,6 +41,9 @@
 /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
+.radius-desktop {
+  border-radius: 10px;
+}
 /*--------------------------------------------------------------
 3.0 Layout
 --------------------------------------------------------------*/
@@ -55,12 +58,21 @@
   @include push(3);
 }
 .active-sidebar {
-  .col-primary{
-    @include span(8 no-gutters);
+  .primary-col {
+     @include span(8 no-gutters);
   }
-  .col-secondary{
+  .secondary-col {
+
     @include span(4 no-gutters);
+
+    margin-left: 0;
+    margin-right: 0;
   }
+}
+.content-col,
+.primary-col,
+.secondary-col {
+  @include span(12 no-gutters);
 }
 
 
@@ -82,18 +94,32 @@
 }
 
 .fixed-header{
-  padding-top: 95px;
+
+
   .header-wrapper {
-    position: fixed;
     top: 0;
   }
+  .site-title img {
+      max-height: 50px;
+      margin-left: auto;
+      margin-right:auto;
+
+
+  }
+  #site-search {
+    display: none;
+  }
+
 }
+.fixed-header-2 {
+  .header-wrapper {
+    position: fixed;
+  }
+}
+
 /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
-#header-slider {
-  padding: 10rem 0;
-}
 #slider {
   width: 100%;
 }
@@ -105,6 +131,7 @@
 --------------------------------------------------------------*/
 #bar_shortcuts {
   background-color: transparent;
+  padding-bottom: 10rem;
 }
 .shortcuts-links {
     flex-direction: row;
@@ -117,14 +144,12 @@
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
 .hentry-multi {
-  .hentry {
-    padding: gutter();
-  }
   .meta__item {
     display: inline-block;
   }
   .post-thumbnail{
     margin: 1em 0;
+    border-radius: 5px;
   }
 
   .entry-summary,
@@ -134,8 +159,14 @@
     margin-right: gutter();
   }
 }
-.continue_reading {
+.hentry-multi {
+  #home-posts .hentry {
+    margin-bottom: 0;
+  }
+}
+.more-link {
   float: right;
+  display: inline-block;
 }
 /*--------------------------------------------------------------
 3.4  Posts & Page
@@ -164,6 +195,9 @@
 /*--------------------------------------------------------------
 4.2 Section loop homepage
 --------------------------------------------------------------*/
+.col-one article:nth-child(1) {
+  @extend .radius-desktop;
+}
 .col-one {
   padding-right: gutter();
   border-right: 1px solid $light-border;

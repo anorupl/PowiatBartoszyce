@@ -15,7 +15,7 @@
     right: 0;
     top: 0;
     margin: 0.333333em gutter();
-    z-index: 300;
+    z-index: $z-level-1;
   }
   &:before {
     content: "\f039";
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    z-index:9990;
+    z-index:$z-level-3;
     background: $four-bw;
   }
   .menu ul                    {background: $three-bw; margin: 0; padding-left: 30px;}

@@ -8,7 +8,7 @@
 * @since 0.1.0
 */
 ?>
-<section id="primary-baners" class="page-section col-12">
+
 	<header class="screen-reader">
 		<h2><?php echo esc_html(get_theme_mod('wpg_primary_baners_title',__('Title', 'wpg_theme'))); ?></h2>
 	</header>
@@ -17,4 +17,3 @@
 		dynamic_sidebar( 'wpg-footerbar-primary_baners' );
 	}
 	?>
-</section>

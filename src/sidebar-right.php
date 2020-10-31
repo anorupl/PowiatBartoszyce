@@ -10,7 +10,5 @@
 if ( ! is_active_sidebar( 'wpg-sidebar-right' ) ) {
 	return;
 }
+dynamic_sidebar( 'wpg-sidebar-right' );
 ?>
-<aside id="secondary" class="widget-area col-secondary gutters" role="complementary">
-	<?php dynamic_sidebar( 'wpg-sidebar-right' ); ?>
-</aside>

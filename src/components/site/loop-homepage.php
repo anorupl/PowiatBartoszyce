@@ -9,8 +9,7 @@
 */
 ?>
   <main id="main" class="site-main hentry-multi">
-    <div id="home-posts" class="page-section posts content-style col-12">
-      <section>
+    <section id="home-posts" class="page-section posts content-style col-12">
       <header class="meta-line">
       <?php
       $category = get_option('default_category');
@@ -60,18 +59,18 @@
                <article id="post-<?php the_ID(); ?>" <?php post_class('clear-both'); ?>>
                  <?php
                  if (has_post_thumbnail()) : ?>
-                 <div class="col-5">
+                 <div class="col-4_5">
                    <figure class="post-thumbnail">
                      <a href="<?php the_permalink(); ?>" aria-hidden="true">
                        <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
                      </a>
                    </figure>
                  </div>
-                 <div class="col-7">
+                 <div class="col-7_5 gutters">
                    <header class="entry-header">
                      <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
                    </header>
-                   <div class="entry-meta">
+                   <div class="entry-meta pad-all">
                      <div class="meta__item"><?php wpg_time() ?></div>
                      <div class="meta__item screen-reader-text">
                        <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
@@ -95,7 +94,7 @@
                  <header class="entry-header">
                    <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
                  </header>
-                 <div class="entry-meta">
+                 <div class="entry-meta pad-all">
                    <div class="meta__item"><?php wpg_time() ?></div>
                    <div class="meta__item screen-reader-text">
                      <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
@@ -156,6 +155,5 @@
                   <?php
                 endif;
                 ?>
-      </section>
-    </div>
+    </section>
 </main>

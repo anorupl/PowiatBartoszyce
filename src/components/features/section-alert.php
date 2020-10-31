@@ -10,7 +10,7 @@
 
 $alert_title = esc_html(get_theme_mod('wpg_alert_title',__('Information', 'wpg_theme')));
 ?>
-<section id="site-alert" class="pad-all col-5">
+<aside id="site-alert" class="pad-all col-5">
   <header class="header-section meta-line">
         <h2><?php echo $alert_title; ?></h2>
   </header>
@@ -22,4 +22,4 @@ $alert_title = esc_html(get_theme_mod('wpg_alert_title',__('Information', 'wpg_t
   <?php echo get_theme_mod('wpg_alert_btn_title', $alert_btn);?>
   <i class="icon-angle-right"></i>
 </a>
-</section>
+</aside>

@@ -27,12 +27,12 @@ a.skip-main:active 	{
 	font-size: 1.2em;
 	background-color: $wcag-bg;
 	display: block;
-	z-index:999;
+	z-index:$z-level-5 + 100;
 	left: auto;
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text, 
+.screen-reader-text,
 .screen-reader {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */

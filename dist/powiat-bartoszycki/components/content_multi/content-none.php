@@ -7,7 +7,7 @@
 *
 */
 ?>
-<article class="hentry clear-both, bg-white, col-12">
+<article class="hentry content-style col-12 text-center">
   <header class="entry-header">
     <h3 class="entry-title"><?php _e('Nothing Found', 'wpg_theme'); ?><h3>
   </header>

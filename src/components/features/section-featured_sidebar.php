@@ -35,9 +35,9 @@ $query_featuredcat = new WP_Query($query_feat);
 
   if ( $query_featuredcat->have_posts()) :
     ?>
-    <section id="featured-cat" class="page-section posts">
-        <header class="header-section meta-line">
-              <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h2>
+    <aside id="featured-cat" class="widget widget-area">
+        <header class="header-section">
+              <h3 class="widget-title"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h3>
         </header>
         <div id="featured-slide" class="featured-item">
           <?php while ($query_featuredcat->have_posts()) :
@@ -51,7 +51,7 @@ $query_featuredcat = new WP_Query($query_feat);
             }
             ?>
             <article <?php post_class('col-4'); ?>>
-              <figure class="post-thumbnail">
+              <figure class="post-thumbnail radius">
                 <a href="<?php the_permalink(); ?>" aria-hidden="true">
                   <img src="<?php echo esc_url($url_thumb); ?>" alt="  <?php the_title() ;?>" />
                 </a>
@@ -68,7 +68,7 @@ $query_featuredcat = new WP_Query($query_feat);
             </article>
           <?php endwhile; ?>
 </div>
-</section>
+</aside>
     <?php
   endif;
   wp_reset_query();

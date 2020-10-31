@@ -23,6 +23,12 @@
 	<?php wp_head();?>
 </head>
 <body <?php body_class(); ?> >
+	<div id="skip-links">
+		<span class="clear"></span>
+		<a role="button" id="first-skip-link" class="skip-main" href="#main"> <?php _e('Skip to content','wpg_theme'); ?></a>
+		<a role="button" class="skip-main" href="#menu_header"><?php _e('Go to the main page navigation','wpg_themee'); ?></a>
+		<span class="clear"></span>
+	</div>
 <div id="top-bar" class="header-top clear-both">
 	<div class="wrapper">
 		<div id="top-bar__address" class="inline-left hide-on-small">
@@ -38,8 +44,8 @@
 		</div>
 	</div>
 </div>
-<header class="header-wrapper" >
-	<div id="site-header" class="wrapper clear-both">
+<header class="header-wrapper clear-both" >
+	<div id="site-header" class="wrapper">
 		<div class="title-area col-7">
 			<h1 class="site-title">
 				<span class="screen-reader-text"><?php bloginfo('name');?></span>
@@ -105,10 +111,10 @@ if (!empty($image_id)) {
 }
 
 ?>
-<div id="header-content" class="col-12" style="background-image:url('<?php echo esc_url($image_header); ?>');">
+<div id="header-background" class="col-12" style="background-image:url('<?php echo esc_url($image_header); ?>');">
 	<div class="container">
-			<div id="header-slider">
-				<div  class="col-7">
+			<div id="header-content">
+				<div id="slider-container" class="col-7 gutters">
 			<?php
 			/* ====================
 			 * Section - Slider   *
@@ -124,6 +130,9 @@ if (!empty($image_id)) {
 		if ( is_active_sidebar( 'wpg-headerbar-shortcuts' ) ) {
 			?>
 			<section id="bar_shortcuts" class="col-5">
+				<header class="screen-reader-text">
+					<h2><?php echo get_theme_mod('wpg_shortcuts_section',__('Section title', 'wpg_theme'));?></h2>
+				</header>
 				<ul class="shortcuts-links">
 					<?php dynamic_sidebar( 'wpg-headerbar-shortcuts' ); ?>
 				</ul>
@@ -134,4 +143,3 @@ if (!empty($image_id)) {
 			</div>
 	</div>
 </div>
-<div class="header-bootom-bar clear-both"></div>

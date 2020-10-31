@@ -332,7 +332,7 @@ function wpg_breadcrumbs() {
   $text['home']      = __('Home','wpg_theme'); // text for the 'Home' link
   $text['home_blog'] = get_theme_mod('wpg_blog_title', __('Last post', 'wpg_theme')); // text for the 'Home' link
   $text['category']  = __('<span class="screen-reader-text">Archive by Category</span> %s','wpg_theme'); // text for a category page
-  $text['search']    = __('<span class="screen-reader-text">Search Results for</span> %s','wpg_theme'); // text for a search results page
+  $text['search']    = __('<span>Search Results for</span> %s','wpg_theme'); // text for a search results page
   $text['tag']       = __('<span class="screen-reader-text">Posts Tagged</span> %s','wpg_theme'); // text for a tag page
   $text['author']    = __('<span class="screen-reader-text">Articles Posted by</span> %s','wpg_theme'); // text for an author page
   $text['404']       = __('<span class="screen-reader-text">Error 404</span>','wpg_theme'); // text for the 404 page

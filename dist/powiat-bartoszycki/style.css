@@ -1528,7 +1528,7 @@ form input[type=file] {
 --------------------------------------------------------------*/
 /* Gird 12 column
 ========================================================================== */
-.container, #secondary-baners .banner-container {
+.container {
   position: relative;
   max-width: 1366px;
   margin: auto;
@@ -1543,21 +1543,42 @@ form input[type=file] {
       flex-wrap: wrap;
 }
 
-.gutters {
-  padding-left: 2.08333%;
-  padding-right: 2.08333%;
-}
-
-.pad-all {
-  padding: 2.08333%;
-}
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-1_5,
+.col-2_5,
+.col-3_5,
+.col-4_5,
+.col-5_5,
+.col-6_5,
+.col-7_5,
+.col-8_5 {
   position: relative;
   width: 100%;
   float: left;
   margin-left: auto;
   margin-right: auto;
+}
+
+.col-12--2-4,
+.col-12--3 {
+  width: 100%;
+  float: left;
+  padding-left: 2.08333%;
+  padding-right: 2.08333%;
+}
+
+.gutters {
+  padding-left: 2.08333%;
+  padding-right: 2.08333%;
+}
+
+.margin {
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+.pad-all {
+  padding: 2.08333%;
 }
 
 /* clear */
@@ -1592,7 +1613,7 @@ form input[type=file] {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1042;
+  z-index: 9002;
   overflow: hidden;
   position: fixed;
   background: #0b0b0b;
@@ -1605,7 +1626,7 @@ form input[type=file] {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1043;
+  z-index: 9003;
   position: fixed;
   outline: none !important;
   -webkit-backface-visibility: hidden;
@@ -1641,7 +1662,7 @@ form input[type=file] {
   vertical-align: middle;
   margin: 0 auto;
   text-align: left;
-  z-index: 1045;
+  z-index: 9005;
 }
 
 .mfp-inline-holder .mfp-content,
@@ -1696,7 +1717,7 @@ form input[type=file] {
   margin-top: -0.8em;
   left: 8px;
   right: 8px;
-  z-index: 1044;
+  z-index: 9004;
 }
 
 .mfp-preloader a {
@@ -1724,7 +1745,7 @@ button.mfp-close, button.mfp-arrow {
   display: block;
   outline: none;
   padding: 0;
-  z-index: 1046;
+  z-index: 9006;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2163,7 +2184,7 @@ main {
   font-family: Roboto, "Open Sans", sans-serif;
 }
 
-.btn {
+.btn, .more-link {
   color: #fbfafc;
   background-color: #c10000;
   border: 1px solid #c10000;
@@ -2174,9 +2195,10 @@ main {
   border-radius: 0.7em;
 }
 
-.btn:hover {
+.btn:hover, .more-link:hover {
   color: #fbfafc;
   background-color: #32292f;
+  border-color: #32292f;
 }
 
 .btn--50 {
@@ -2252,6 +2274,11 @@ main {
   margin-bottom: 2.08333%;
 }
 
+.secondary-col {
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
 /*--------------------------------------------------------------
 3.1 Header
 --------------------------------------------------------------*/
@@ -2309,24 +2336,42 @@ main {
 .site-title img {
   max-height: 80px;
   width: auto;
+  -webkit-transition: all 0.2s linear 0.4s;
+  -o-transition: all 0.2s linear 0.4s;
+  transition: all 0.2s linear 0.4s;
 }
 
+/* Site navigation */
 #site-nav-bar {
   float: left;
   background: #c10000;
 }
 
+/* Site header content */
+.header-wrapper {
+  z-index: 7000;
+  background: #fbfafc;
+  top: -200px;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.fixed-header-2 {
+  padding-top: 169px;
+}
+
 /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
-#header-content {
+#header-background {
   background: url("http://beta.kz.atthost24.pl/wp-content/uploads/2020/10/iStockm.jpg");
   background-size: cover;
   background-position: bottom center;
   overflow: hidden;
 }
 
-#header-content::after {
+#header-background::after {
   content: '';
   display: block;
   width: 100%;
@@ -2338,13 +2383,18 @@ main {
   clear: both;
 }
 
-#header-slider {
+#header-content {
+  padding-top: 10rem;
   overflow: hidden;
 }
 
-#header-slider .btn {
+#header-content .btn, #header-content .more-link {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+#slider-container {
+  padding-bottom: 10rem;
 }
 
 #slider {
@@ -2353,6 +2403,11 @@ main {
   background: #fbfafc;
   /* The Fallback */
   background: rgba(251, 250, 252, 0.8);
+}
+
+#slider article {
+  overflow: hidden;
+  padding: 15px;
 }
 
 .meta-line {
@@ -2373,7 +2428,6 @@ main {
 .meta-line > span {
   position: relative;
   display: inline-block;
-  z-index: 6000;
 }
 
 /*--------------------------------------------------------------
@@ -2386,10 +2440,42 @@ main {
   background-color: #fbfafc;
 }
 
+#bar_shortcuts li {
+  -ms-flex-preferred-size: 160px;
+      flex-basis: 160px;
+  margin: 5px;
+  text-align: center;
+  background: #fbfafc;
+  /* The Fallback */
+  background: rgba(251, 250, 252, 0.8);
+}
+
+#bar_shortcuts li:hover {
+  background-color: #fbfafc;
+}
+
+#bar_shortcuts img {
+  display: inline-block;
+  width: 52%;
+  margin: 10px 23%;
+}
+
 #bar_shortcuts h3 {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-size: 1.7rem;
+}
+
+#bar_shortcuts a {
+  display: inline-block;
+  width: 100%;
+  height: 160px;
+  padding: 5px;
+  color: #2d3942;
+}
+
+#bar_shortcuts a:hover {
+  color: #c10000;
 }
 
 .shortcuts-links {
@@ -2410,33 +2496,6 @@ main {
   padding: 0;
 }
 
-.shortcuts-links img {
-  display: inline-block;
-  width: 52%;
-  margin: 10px 23%;
-}
-
-.shortcuts-links > li {
-  -ms-flex-preferred-size: 160px;
-      flex-basis: 160px;
-  height: 160px;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 20px;
-  text-align: center;
-  background: #fbfafc;
-  /* The Fallback */
-  background: rgba(251, 250, 252, 0.8);
-}
-
-.shortcuts-links a {
-  color: #2d3942;
-}
-
-.shortcuts-links a:hover {
-  color: #c10000;
-}
-
 /*--------------------------------------------------------------
 3.2  Regular Content
 --------------------------------------------------------------*/
@@ -2449,6 +2508,11 @@ main {
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
+.hentry-multi .hentry {
+  padding: 2.08333%;
+  margin-bottom: 40px;
+}
+
 .hentry-multi .meta__item {
   padding-bottom: 3px;
 }
@@ -2458,12 +2522,9 @@ main {
   min-width: 0;
 }
 
-.posts .entry-meta::after {
-  content: '';
-  width: 100%;
-  display: block;
-  height: 1px;
-  background-color: #e9e9e9;
+.more-link {
+  margin: auto;
+  max-width: 250px;
 }
 
 /*--------------------------------------------------------------
@@ -2491,7 +2552,6 @@ main {
 
 .post-thumbnail {
   position: relative;
-  border-radius: 5px;
 }
 
 .post-thumbnail img {
@@ -2554,12 +2614,11 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(#EB3349), to(#F45C43));
   background: -o-linear-gradient(left, #EB3349, #F45C43);
   background: linear-gradient(90deg, #EB3349, #F45C43);
-  color: #ededed;
-  border-radius: 5px;
+  color: #fbfafc;
 }
 
 .col-one article:nth-child(1) a {
-  color: #ededed;
+  color: #fbfafc;
 }
 
 .col-one article:nth-child(1) a:hover {
@@ -2569,9 +2628,17 @@ main {
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-#featured-cat h3 {
+#featured-cat h3.entry-title {
   font-size: 17px;
   font-size: 1.7rem;
+}
+
+#featured-cat .entry-meta::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #e9e9e9;
 }
 
 #featured-cat .meta__item {
@@ -2599,14 +2666,14 @@ main {
 
 #page_links li {
   position: relative;
-  color: #ededed;
+  color: white;
 }
 
 #page_links a {
   display: inline-block;
   min-height: 81px;
   width: 100%;
-  color: #ededed;
+  color: white;
   background: #EB3349;
   background: -webkit-gradient(linear, left top, right top, from(#EB3349), to(#F45C43));
   background: -o-linear-gradient(left, #EB3349, #F45C43);
@@ -2617,10 +2684,10 @@ main {
 
 #page_links a:hover {
   color: #2d3942;
-  background: #ededed;
-  background: -webkit-gradient(linear, left top, right top, from(#ededed), to(#ededed));
-  background: -o-linear-gradient(left, #ededed, #ededed);
-  background: linear-gradient(90deg, #ededed, #ededed);
+  background: #d4d4d4;
+  background: -webkit-gradient(linear, left top, right top, from(#d4d4d4), to(#ededed));
+  background: -o-linear-gradient(left, #d4d4d4, #ededed);
+  background: linear-gradient(90deg, #d4d4d4, #ededed);
 }
 
 #page_links li > a:before {
@@ -2639,8 +2706,7 @@ main {
 /*--------------------------------------------------------------
 4.5 Section advice and services (widget sidebar-bottom_baners)
 --------------------------------------------------------------*/
-#primary-baners .widget {
-  padding: 0;
+#primary-baners .widget-item {
   margin-bottom: 2.08333%;
 }
 
@@ -2661,7 +2727,7 @@ main {
 4.6 Section Partners (widget sidebar-footer_banners )
 --------------------------------------------------------------*/
 #secondary-baners {
-  background: #fbfafc;
+  background: #ffffff;
   padding-bottom: 2.08333%;
 }
 
@@ -2686,12 +2752,12 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(#EB3349), to(#F45C43));
   background: -o-linear-gradient(left, #EB3349, #F45C43);
   background: linear-gradient(90deg, #EB3349, #F45C43);
-  color: #fbfafc;
-  border-color: #fbfafc;
+  color: white;
+  border-color: white;
 }
 
 #contact-footer a {
-  color: #fbfafc;
+  color: white;
 }
 
 #contact-footer a:hover {
@@ -2751,6 +2817,7 @@ main {
 ========================================================================== */
 .widget {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .widget ul {
@@ -2783,6 +2850,43 @@ main {
 
 .widget-title {
   margin-top: 0;
+}
+
+.widget-title img {
+  display: inline-block;
+}
+
+.secondary-col .widget {
+  padding: 0 15px 15px;
+  border-bottom: 2px solid #d5d4d9;
+}
+
+.secondary-col .widget::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 25%;
+  max-height: 80px;
+  background-color: #d5d4d9;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+}
+
+.secondary-col .widget-title {
+  text-transform: uppercase;
+}
+
+.secondary-col .widget-title::after {
+  content: '';
+  display: block;
+  margin-top: 5px;
+  width: 60%;
+  height: 5px;
+  background: #EB3349;
+  background: -webkit-gradient(linear, left top, right top, from(#EB3349), to(#F45C43));
+  background: -o-linear-gradient(left, #EB3349, #F45C43);
+  background: linear-gradient(90deg, #EB3349, #F45C43);
 }
 
 .widget_archive li,
@@ -3051,7 +3155,7 @@ a.skip-main:active {
   font-size: 1.2em;
   background-color: #000000;
   display: block;
-  z-index: 999;
+  z-index: 9100;
   left: auto;
 }
 
@@ -3098,6 +3202,9 @@ a.skip-main:active {
   /*
   *  highlight
   * -----------*/
+  /*
+  * WCAG TAB Focus
+  *----------------*/
 }
 
 .h-nav li {
@@ -3165,10 +3272,6 @@ a.skip-main:active {
   top: -10px;
 }
 
-.h-nav .menu > li.menu-item-has-children {
-  text-align: center;
-}
-
 .h-nav .current_page_item > a,
 .h-nav .current-menu-item > a {
   font-weight: bold;
@@ -3189,28 +3292,9 @@ a.skip-main:active {
   color: #fbfafc;
 }
 
-.h-nav--color .menu li > a {
-  color: #32292f;
-}
-
-.h-nav--color .menu li > a:hover {
-  color: #c10000;
-}
-
-.h-nav--color .sub-menu li {
-  background: #fbfafc;
-}
-
-.h-nav--color .sub-menu li a {
-  color: #32292f;
-}
-
-.h-nav--color .sub-menu li > a:hover {
-  color: #c10000;
-}
-
-.h-nav--color .sub-menu li li > a:hover {
-  color: #c10000;
+.h-nav .menu li.focus > a {
+  background-color: #750000;
+  color: #fbfafc;
 }
 
 .bar-color {
@@ -3219,6 +3303,10 @@ a.skip-main:active {
    * -----------*/
   /* pierwszy poziom strzalka w dół */
   /* drugi poziom strzalkaw prawo */
+}
+
+.bar-color .menu > li.menu-item-has-children {
+  text-align: center;
 }
 
 .bar-color .menu-item-has-children > a:after {
@@ -3242,6 +3330,7 @@ a.skip-main:active {
 .bar-color .menu li > a:hover,
 .bar-color .menu li.focus > a {
   background-color: #750000;
+  color: #fbfafc;
 }
 
 .bar-color .sub-menu li {
@@ -3458,7 +3547,7 @@ a.skip-main:active {
   right: 0;
   top: 0;
   margin: 0.33333em 2.08333%;
-  z-index: 300;
+  z-index: 5000;
 }
 
 .icon-button-small-menu:before {
@@ -3489,7 +3578,7 @@ a.skip-main:active {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0;
-  z-index: 9990;
+  z-index: 7000;
   background: #fbfafc;
 }
 
@@ -3626,46 +3715,15 @@ a.skip-main:active {
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-.col-4_5 {
-  width: 100%;
-  float: left;
-  padding-left: 2.08333%;
-  padding-right: 2.08333%;
-}
-
-.bn-col-4 {
-  width: 100%;
-  float: left;
-}
-
-.ph-col-6,
-.ph-col-4,
-.ph-col-3 {
-  width: 95.83333%;
-  float: left;
-  margin-left: 2.08333%;
-  margin-right: 2.08333%;
-}
-
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
 @media (min-width: 36em) {
-  .bn-col-4 {
-    width: 43.75%;
+  .wide-col .col-12--3 {
+    width: 33.33333%;
     float: left;
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-  }
-  .ph-col-6,
-  .ph-col-3 {
-    width: 45.83333%;
-    float: left;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
-  }
-  .ph-col-4 {
-    width: 29.16667%;
-    float: left;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
+    padding-left: 2.08333%;
+    padding-right: 2.08333%;
   }
 }
 
@@ -3681,39 +3739,76 @@ a.skip-main:active {
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-@media (min-width: 62em) {
-  .hide-desktop {
-    display: none !important;
-  }
-  .bn-col-4 {
-    width: 18.75%;
-    float: left;
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-  }
-  .col-4_5 {
-    width: 37.5%;
+@media (min-width: 36em) and (max-width: 62em) {
+  .narrow-col .col-12--3 {
+    width: 33.33333%;
     float: left;
     padding-left: 2.08333%;
     padding-right: 2.08333%;
   }
-  .ph-col-6 {
-    width: 45.83333%;
+  .wide-col .col-12--2-4 {
+    width: 50%;
     float: left;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
+    padding-left: 2.08333%;
+    padding-right: 2.08333%;
   }
-  .ph-col-4 {
-    width: 29.16667%;
-    float: left;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (max-width: 62em) {
+  /* Theme style
+========================================================================== */
+  /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+3.1 Header
+3.2  Regular Content
+3.3  Posts - multi loop
+3.4  Posts & Page
+3.5  Taxonomy
+3.6  Attachment
+4 Sections
+4.1 Header Slider with post
+4.2 Header quick links
+4.4 Section alert
+4.4 Section last post
+4.5 Section invitations and Ad
+4.6 Section education links (widget sidebar)
+4.7 Section advice and services
+4.8 Section Partners (slick slider css)
+5.0 Footer
+5.1 Footer Contact
+5.2 Footer quick links
+5.3 Footer maps
+6.0 Cookie and Copyright
+7.0 Widgets
+
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+  .more-link {
+    display: block;
   }
-  .ph-col-3 {
-    width: 20.83333%;
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 62em) {
+  .hide-desktop {
+    display: none !important;
+  }
+  .wide-col .col-12--2-4 {
+    width: 25%;
     float: left;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
+    padding-left: 2.08333%;
+    padding-right: 2.08333%;
   }
   /* Gird 12 column
 ========================================================================== */
@@ -3761,8 +3856,36 @@ a.skip-main:active {
     width: 91.66667%;
     float: left;
   }
-  .col-12 {
-    width: 100%;
+  .col-1_5 {
+    width: 12.5%;
+    float: left;
+  }
+  .col-2_5 {
+    width: 20.83333%;
+    float: left;
+  }
+  .col-3_5 {
+    width: 29.16667%;
+    float: left;
+  }
+  .col-4_5 {
+    width: 37.5%;
+    float: left;
+  }
+  .col-5_5 {
+    width: 45.83333%;
+    float: left;
+  }
+  .col-6_5 {
+    width: 54.16667%;
+    float: left;
+  }
+  .col-7_5 {
+    width: 62.5%;
+    float: left;
+  }
+  .col-8_5 {
+    width: 70.83333%;
     float: left;
   }
   /* Theme style
@@ -3806,6 +3929,9 @@ a.skip-main:active {
   /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
+  .radius-desktop, .col-one article:nth-child(1) {
+    border-radius: 10px;
+  }
   /*--------------------------------------------------------------
 3.0 Layout
 --------------------------------------------------------------*/
@@ -3820,12 +3946,20 @@ a.skip-main:active {
     float: left;
     margin-left: 25%;
   }
-  .active-sidebar .col-primary {
+  .active-sidebar .primary-col {
     width: 66.66667%;
     float: left;
   }
-  .active-sidebar .col-secondary {
+  .active-sidebar .secondary-col {
     width: 33.33333%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .content-col,
+  .primary-col,
+  .secondary-col {
+    width: 100%;
     float: left;
   }
   /*--------------------------------------------------------------
@@ -3850,19 +3984,23 @@ a.skip-main:active {
   .site-title {
     text-align: left;
   }
-  .fixed-header {
-    padding-top: 95px;
-  }
   .fixed-header .header-wrapper {
-    position: fixed;
     top: 0;
+  }
+  .fixed-header .site-title img {
+    max-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fixed-header #site-search {
+    display: none;
+  }
+  .fixed-header-2 .header-wrapper {
+    position: fixed;
   }
   /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
-  #header-slider {
-    padding: 10rem 0;
-  }
   #slider {
     width: 100%;
   }
@@ -3874,6 +4012,7 @@ a.skip-main:active {
 --------------------------------------------------------------*/
   #bar_shortcuts {
     background-color: transparent;
+    padding-bottom: 10rem;
   }
   .shortcuts-links {
     -webkit-box-orient: horizontal;
@@ -3887,14 +4026,12 @@ a.skip-main:active {
   /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
-  .hentry-multi .hentry {
-    padding: 2.08333%;
-  }
   .hentry-multi .meta__item {
     display: inline-block;
   }
   .hentry-multi .post-thumbnail {
     margin: 1em 0;
+    border-radius: 5px;
   }
   .hentry-multi .entry-summary,
   .hentry-multi .has-post-thumbnail .entry-header,
@@ -3902,8 +4039,12 @@ a.skip-main:active {
     margin-left: 2.08333%;
     margin-right: 2.08333%;
   }
-  .continue_reading {
+  .hentry-multi #home-posts .hentry {
+    margin-bottom: 0;
+  }
+  .more-link {
     float: right;
+    display: inline-block;
   }
   /*--------------------------------------------------------------
 3.4  Posts & Page
@@ -4040,137 +4181,35 @@ a.skip-main:active {
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
--- Responsive breakpoint
---------------------------------------------------------------*/
-@media (min-width: 80em) {
-  /* Theme style
-========================================================================== */
-  /*--------------------------------------------------------------
->>> TABLE OF CONTENTS
-----------------------------------------------------------------
-1.0 Normalize
-2.0 Universal styles
-3.0 Layout
-3.1 Header
-3.2  Regular Content
-3.3  Posts - multi loop
-3.4  Posts & Page
-3.5  Taxonomy
-3.6  Attachment
-4 Sections
-4.1 Header Slider with post
-4.2 Header quick links
-4.4 Section alert
-4.4 Section last post
-4.5 Section invitations and Ad
-4.6 Section education links (widget sidebar)
-4.7 Section advice and services
-4.8 Section Partners (slick slider css)
-5.0 Footer
-5.1 Footer Contact
-5.2 Footer quick links
-5.3 Footer maps
-6.0 Cookie and Copyright
-7.0 Widgets
-
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.3 Section featured category
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.4 Section menu with custom links to pages (education links)
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.5 Section advice and services (widget sidebar-bottom_baners)
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.6 Section Partners (widget sidebar-footer_banners )
---------------------------------------------------------------*/
-  #footer-baners .widget {
-    max-width: 250px;
-  }
-  /*--------------------------------------------------------------
-5.0 Footer
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-5.1 Footer Contact
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-5.2 Footer quick links
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-6.0 Cookie and Copyright
---------------------------------------------------------------*/
-}
-
-/*--------------------------------------------------------------
--- Responsive breakpoint
---------------------------------------------------------------*/
-@media (min-width: 100em) {
-  .bn-col-4 {
-    width: 18.33333%;
+@media (min-width: 61.9375em) and (max-width: 75em) {
+  #header-background .col-7,
+  #header-background .col-5 {
+    width: 100%;
     float: left;
-    margin-left: 3.33333%;
-    margin-right: 3.33333%;
+    padding-left: 2.08333%;
+    padding-right: 2.08333%;
   }
-  /* Theme style
-========================================================================== */
-  /*--------------------------------------------------------------
->>> TABLE OF CONTENTS
-----------------------------------------------------------------
-1.0 Normalize
-2.0 Universal styles
-3.0 Layout
-3.1 Header
-3.2  Regular Content
-3.3  Posts - multi loop
-3.4  Posts & Page
-3.5  Taxonomy
-3.6  Attachment
-4 Sections
-4.1 Header Slider with post
-4.2 Header quick links
-4.4 Section alert
-4.4 Section last post
-4.5 Section invitations and Ad
-4.6 Section education links (widget sidebar)
-4.7 Section advice and services
-4.8 Section Partners (slick slider css)
-5.0 Footer
-5.1 Footer Contact
-5.2 Footer quick links
-5.3 Footer maps
-6.0 Cookie and Copyright
-7.0 Widgets
-
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.3 Section featured category
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.4 Section menu with custom links to pages (education links)
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.5 Section advice and services (widget sidebar-bottom_baners)
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-4.6 Section Partners (widget sidebar-footer_banners )
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-5.0 Footer
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-5.1 Footer Contact
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-5.2 Footer quick links
---------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-6.0 Cookie and Copyright
---------------------------------------------------------------*/
 }
 
-/*----------------------------------
-*  Special Breakpoint old desktop 1024
-* ---------------------------------*/
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 62em) and (max-width: 100em) {
+  #bar_shortcuts li {
+    -ms-flex-preferred-size: 145px;
+        flex-basis: 145px;
+  }
+  #bar_shortcuts a {
+    height: 145px;
+  }
+  #bar_shortcuts h3 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .container {
+    max-width: 1466px;
+  }
+}

@@ -8,8 +8,8 @@
 
 get_header();
 ?>
-<div id="content" class="site-content">
-    <div id="primary" class="content-area hentry-single">
+<div id="content">
+    <div id="primary" class="content-area">
         <main id="main" class="site-main ">
             <?php while (have_posts()) : the_post(); ?>
 

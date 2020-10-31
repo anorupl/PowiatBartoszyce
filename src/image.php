@@ -12,7 +12,7 @@ get_header();
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
   </div>
   <div class="container">
-    <div id="primary" class="content-area gutters">
+    <div id="primary" class="content-area margin">
       <main id="main" class="site-main">
             <?php while (have_posts()) : the_post(); ?>
                 <div <?php post_class(); ?>>

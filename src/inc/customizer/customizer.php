@@ -93,28 +93,17 @@ function wpg_customizer_general($wp_customize) {
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_fonts.php';
 
 
-	// 1. Main loop setting in homepage
-	$loop_section_id = 'wpg_loop_stc';
+	// 2. Section with alert.
+	 $alert_section_id = 'wpg_alert_stc';
 
-	$wp_customize->add_section( $loop_section_id, array(
-		'priority'   		=> '1',
-		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'News section', 'wpg_theme' ),
-		'panel' 				=> $theme_panel_id,
-	));
-
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_main_loop.php';
-
-	// 2. Slider setting in header
-	$header_slider_section_id = 'wpg_h_slider_stc';
-
-	$wp_customize->add_section( $header_slider_section_id, array(
+	$wp_customize->add_section($alert_section_id, array(
 		'priority'   		=> '2',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Header slider', 'wpg_theme' ),
+		'title'      		=> __( 'Section Alert', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_slider.php';
+
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_alert.php';
 
 	// 3. Setting in header without a slider
 	$header_section_id = 'wpg_header_stc';
@@ -128,11 +117,23 @@ function wpg_customizer_general($wp_customize) {
 
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_no_slider.php';
 
-	// 4. Image background setting in header
+	// 4. Slider setting in header
+	$header_slider_section_id = 'wpg_h_slider_stc';
+
+	$wp_customize->add_section( $header_slider_section_id, array(
+		'priority'   		=> '4',
+		'capability' 		=> 'edit_theme_options',
+		'title'      		=> __( 'Header slider', 'wpg_theme' ),
+		'panel' 				=> $theme_panel_id,
+	));
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_slider.php';
+
+
+	// 5. Image background setting in header
 	$header_img_id = 'wpg_h_img_stc';
 
 	$wp_customize->add_section($header_img_id, array(
-		'priority'   		=> '4',
+		'priority'   		=> '5',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Header - image background', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
@@ -140,11 +141,36 @@ function wpg_customizer_general($wp_customize) {
 
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_image.php';
 
-	// 5. Featured category in custom section on homepage.
+
+	// 6. Shortcuts section in header
+	$shortcuts_section_id = 'wpg_shortcuts_stc';
+
+	$wp_customize->add_section( $shortcuts_section_id, array(
+		'priority'   		=> '6',
+		'capability' 		=> 'edit_theme_options',
+		'title'      		=> __( 'Shortcuts section', 'wpg_theme' ),
+		'panel' 				=> $theme_panel_id,
+	));
+
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_shortcuts.php';
+
+	// 7. Main loop setting in homepage
+	$loop_section_id = 'wpg_loop_stc';
+
+	$wp_customize->add_section( $loop_section_id, array(
+		'priority'   		=> '7',
+		'capability' 		=> 'edit_theme_options',
+		'title'      		=> __( 'News section', 'wpg_theme' ),
+		'panel' 				=> $theme_panel_id,
+	));
+
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_main_loop.php';
+
+	// 8. Featured category in custom section on homepage.
 	$featuredcat_id = 'wpg_featuredcat_stc';
 
 	$wp_customize->add_section($featuredcat_id, array(
-		'priority'   		=> '5',
+		'priority'   		=> '8',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Featured category', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
@@ -152,11 +178,11 @@ function wpg_customizer_general($wp_customize) {
 
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_featuredcat.php';
 
-	// 6. Section with menu links to other pages.
+	// 9. Section with menu links to other pages.
 	 $links_section_id = 'wpg_links_stc';
 
 	$wp_customize->add_section($links_section_id, array(
-		'priority'   		=> '6',
+		'priority'   		=> '9',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Section links', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
@@ -164,24 +190,11 @@ function wpg_customizer_general($wp_customize) {
 
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_links.php';
 
-	// 7. Section with menu links to other pages.
-	 $alert_section_id = 'wpg_alert_stc';
-
-	$wp_customize->add_section($alert_section_id, array(
-		'priority'   		=> '7',
-		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Section Alert', 'wpg_theme' ),
-		'panel' 				=> $theme_panel_id,
-	));
-
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_alert.php';
-
-
-	// 8. Section with widget banners.
+	// 10. Section with widget banners.
 	 $baners_section_id = 'wpg_baners_stc';
 
 	$wp_customize->add_section($baners_section_id, array(
-		'priority'   		=> '8',
+		'priority'   		=> '10',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Section Baners', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
@@ -190,22 +203,22 @@ function wpg_customizer_general($wp_customize) {
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_baners.php';
 
 
-	// 8. Section contact.
+	// 11. Section contact.
 	$contact_section_id = 'wpg_contact_stc';
 
 	$wp_customize->add_section( $contact_section_id, array(
-		'priority'   		=> '9',
+		'priority'   		=> '11',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Contact', 'wpg_theme' ),
 		'panel' 			=> $theme_panel_id,
 	));
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_contact.php';
 
-	// 9. Social
+	// 12. Social
 	$social_section_id = 'wpg_social_stc';
 
 	$wp_customize->add_section(  $social_section_id, array(
-		'priority'   		=> '10',
+		'priority'   		=> '12',
 		'capability' 		=> 'edit_theme_options',
 		'title'      		=> __( 'Social networks', 'wpg_theme' ),
 		'panel' 			=> $theme_panel_id

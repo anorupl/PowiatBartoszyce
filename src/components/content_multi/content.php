@@ -32,6 +32,8 @@
   </div><!-- .entry-meta -->
   <div class="entry-summary">
     <?php the_excerpt(); ?>
+    <a class="more-link" href="<?php the_permalink() ?>"><?php _e('Continue reading', 'wpg_theme'); ?> <span class="screen-reader-text"><?php the_title(); ?></span></a>
+
   </div><!-- .entry-summary -->
   </div>
 <?php else: ?>
@@ -48,7 +50,7 @@
       <div class="meta__item screen-reader-text"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
     <?php endif; ?>
   </div><!-- .entry-meta -->
-  <div class="entry-content">
+  <div class="entry-summary">
     <?php
     /* translators: %s: Name of current post */
     the_content( sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title() ) );
