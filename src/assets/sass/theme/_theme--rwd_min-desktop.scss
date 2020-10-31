@@ -41,6 +41,9 @@
 /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
+.radius-desktop {
+  border-radius: 10px;
+}
 /*--------------------------------------------------------------
 3.0 Layout
 --------------------------------------------------------------*/
@@ -55,12 +58,21 @@
   @include push(3);
 }
 .active-sidebar {
-  .col-primary{
-    @include span(8 no-gutters);
+  .primary-col {
+     @include span(8 no-gutters);
   }
-  .col-secondary{
+  .secondary-col {
+
     @include span(4 no-gutters);
+
+    margin-left: 0;
+    margin-right: 0;
   }
+}
+.content-col,
+.primary-col,
+.secondary-col {
+  @include span(12 no-gutters);
 }
 
 
@@ -76,24 +88,47 @@
 }
 .title-area {
   padding-left: 0;
-}
-.site-title {
   text-align: left;
 }
-
-.fixed-header{
-  padding-top: 95px;
-  .header-wrapper {
-    position: fixed;
-    top: 0;
+.site-title {
+  img {
+    margin-left: 0;
   }
 }
+
+// fixed menu
+.fixed-header {
+  .header-wrapper {
+    top: 0;
+  }
+  .site-title img {
+      max-height: 50px;
+      margin-left: auto;
+      margin-right:auto;
+  }
+  #site-search {
+    display: none;
+  }
+  .title-area {
+    text-align: center;
+  }
+}
+.fixed-header-2 {
+  .header-wrapper {
+    position: fixed;
+  }
+}
+
 /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
-#header-slider {
-  padding: 10rem 0;
+#header-content {
+  padding-top: 10rem;
 }
+#slider-container {
+  padding-bottom: 10rem;
+}
+
 #slider {
   width: 100%;
 }
@@ -105,6 +140,7 @@
 --------------------------------------------------------------*/
 #bar_shortcuts {
   background-color: transparent;
+  padding-bottom: 10rem;
 }
 .shortcuts-links {
     flex-direction: row;
@@ -117,26 +153,38 @@
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
 .hentry-multi {
-  .hentry {
-    padding: gutter();
-  }
   .meta__item {
     display: inline-block;
   }
   .post-thumbnail{
-    margin: 1em 0;
+    margin: 0 0 1em 0;
+    border-radius: 5px;
   }
 
-  .entry-summary,
-  .has-post-thumbnail .entry-header,
-  .has-post-thumbnail .entry-meta {
+
+  .has-post-thumbnail .entry-meta,
+  .entry-summary, {
     margin-left: gutter();
     margin-right: gutter();
   }
 }
-.continue_reading {
-  float: right;
+.hentry-multi {
+  #home-posts .hentry {
+    margin-bottom: 10px;
+  }
 }
+.more-link {
+  float: right;
+  display: inline-block;
+}
+
+.col-one article:nth-child(1n+2) {
+  margin-top:10px;
+}
+.col-two article:nth-child(1n+2) {
+  margin-top:10px;
+}
+
 /*--------------------------------------------------------------
 3.4  Posts & Page
 --------------------------------------------------------------*/
@@ -164,14 +212,18 @@
 /*--------------------------------------------------------------
 4.2 Section loop homepage
 --------------------------------------------------------------*/
+.col-one article:nth-child(1) {
+  @extend .radius-desktop;
+}
 .col-one {
-  padding-right: gutter();
+  padding-right: 20px;
   border-right: 1px solid $light-border;
   .hentry {
     min-height: 274px;
   }
 }
 .col-two {
+  padding-left: 20px;
   .hentry {
     min-height: 274px;
   }
@@ -179,12 +231,21 @@
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-.home {
-  #featured-cat,
-  #page_links{
-    min-height: 665px;
+#featured-cat-frontpage,
+#page_links {
+    min-height: 695px;
+}
+.featured-item {
+  .entry-meta {
+    font-size: 85%;
   }
 }
+#featured-cat-frontpage {
+  .hentry {padding: gutter();}
+}
+
+
+
 
 /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)
@@ -211,7 +272,9 @@
 /*--------------------------------------------------------------
 5.2 Footer quick links
 --------------------------------------------------------------*/
-
+/*--------------------------------------------------------------
+5.3 footer map
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/

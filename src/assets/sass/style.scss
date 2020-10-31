@@ -16,7 +16,7 @@
 @import "framework/base/icon_font";
 
 /*--------------------------------------------------------------
--- framework/components/
+-- framework/components/...
 --------------------------------------------------------------*/
 @import "framework/components/alignments";
 @import "framework/components/base_html_tags";
@@ -27,9 +27,6 @@
 @import "framework/components/media";
 @import "framework/components/tables";
 
-/*--------------------------------------------------------------
--- framework/components/forms/
---------------------------------------------------------------*/
 @import "framework/components/forms/forms__normalize";
 @import "framework/components/forms/forms";
 
@@ -39,8 +36,9 @@
 @import "framework/layout/gird";
 
 /*--------------------------------------------------------------
--- framework/vendors/pluginy_js/
+-- framework/vendors/...
 --------------------------------------------------------------*/
+@import "framework/vendors/pattern-css/attachment";
 @import "framework/vendors/pluginy_js/_magnificPopup";
 
 /*--------------------------------------------------------------
@@ -64,22 +62,33 @@
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-  .col-4_5  {@include span(12);}
-  
-  .bn-col-4 {@include span(12 no-gutters); }
 
 
-  .ph-col-6,
-  .ph-col-4,
-  .ph-col-3 { @include span(12 split);}
-
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
 @media (min-width: $phone) {
-  .bn-col-4 {@include span(6 of 12 3 split);}
 
-  .ph-col-6,
-  .ph-col-3 { @include span(6 split);}
-  .ph-col-4 { @include span(4 split);}
+  .wide-col .col-12--3 {@include span(4); }
 }
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (max-width: $phone) {
+
+.hentry table {
+      caption { background-image: none; }
+      thead, table th { display: none; }
+
+      td {display: block; @include font-size(1.1);}
+
+      tbody td::before {content: attr(data-th); float: left; width: 30%; font-weight: bold; }
+      tbody td::after { content: ''; display:block; clear: both; }
+  }
+}
+
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint
@@ -90,23 +99,44 @@
 
 //  @import "theme/theme--rwd_max-desktop";
 //  @import "theme/nav/nav_horizontal_rwd-tablet";
+/*----------------------------------
+ *  Tables
+ * ---------------------------------*/
 
 }
+
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $phone) and (max-width: $desktop) {
+
+  .narrow-col .col-12--3 {@include span(4);}
+  .wide-col .col-12--2-4 {@include span(6); }
+
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (max-width: $desktop) {
+
+  @import "theme/theme--rwd_max-desktop";
+
+}
+
+
+
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
 @media (min-width: $desktop) {
 
   .hide-desktop {display:none !important;}
+  #breadcrumbs {display: block;}
 
-  .bn-col-4 {@include span(3 of 12 3 split);}
-
-  .col-4_5 {@include span(4.5);}
-
-  .ph-col-6 { @include span(6 split);}
-  .ph-col-4 { @include span(4 split);}
-  .ph-col-3 { @include span(3 split);}
-
+  .wide-col .col-12--2-4 {@include span(3);}
 
   @import "framework/layout/gird__rwd-desktop";
   @import "theme/theme--rwd_min-desktop";
@@ -114,23 +144,6 @@
   @import "framework/components/alignments__rwd-desktop";
   @import "theme/nav/nav_horizontal__rwd-desktop";
   @import "theme/nav/nav_pagination__rwd-desktop";
-
-
-}
-/*--------------------------------------------------------------
--- Responsive breakpoint
---------------------------------------------------------------*/
-@media (min-width: $desktop) and (max-width: $desktop-mdpi) {
-
-  //@import "theme/theme--rwd_min-desktop_max-mdpi";
-  //@import "theme/widgets--rwd_min_desktop_max-mdpi";
-}
-
-/*--------------------------------------------------------------
--- Responsive breakpoint
---------------------------------------------------------------*/
-@media (min-width: $desktop-ldpi) {
-  @import "theme/theme--rwd_min-ldpi";
 }
 
 
@@ -138,14 +151,54 @@
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-@media (min-width: $desktop-hdpi) {
-  .bn-col-4 { @include span(3 of 12 4 split);}
-  @import "theme/theme--rwd_min-hdpi";
-
+@media (min-width: $tablet) and (max-width: $desktop-1200) {
+  #header-background {
+    .col-7,
+    .col-5 {@include span(12);}
+  }
 }
 
-/*----------------------------------
-*  Special Breakpoint old desktop 1024
-* ---------------------------------*/
-@media (min-width: $desktop) and (max-width: #{pem(1279)}) {
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-ldpi) {
+  .h-nav li a {
+      padding: 20px 5px;
+  }
+  .h-nav {
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-hdpi) {
+  #bar_shortcuts {
+    li  { flex-basis: 145px; }
+    a   { height: 145px; }
+    h3  { @include font-size($font-size-m);}
+    .no-flexbox & h3 {
+      min-height: 36px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: $desktop-mdpi) {
+  .container  {
+    max-width: 1466px;
+  }
 }

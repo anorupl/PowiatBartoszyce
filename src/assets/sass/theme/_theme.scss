@@ -31,6 +31,8 @@
 5.0 Footer
 5.1 Footer Contact
 5.2 Footer quick links (widget sidebar-footer_contact )
+5.3 footer map
+5.4 Popup
 
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
@@ -85,6 +87,7 @@ main {
   background-color: $two-color;
   border: 1px solid $two-color;
   padding: 0.7em;
+  max-width: 320px;
   min-width: 200px;
   display: inline-block;
   text-align: center;
@@ -92,31 +95,31 @@ main {
   &:hover {
     color: $four-bw;
     background-color: $one-color;
+    border-color: $one-color;
   }
 }
 
-.btn--50 {
-  width: 50%;
+.btn--center {
+  width: 75%;
+  max-width: 320px;
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* color schemes */
-.text-light {color: $white;}
-.text-dark {color: $one-color;}
-
-.a-light a {color: $white; }
-.a-dark a  {color: $one-color;}
-
-.a-hover-one a:hover{ color: $one-color;}
-.a-hover-two a:hover {color: $two-color;}
-.a-hover-three a:hover{color: $three-color;}
-.a-hover-light a:hover{color: $four-bw;}
-
-.bg-white {
-  background-color: $white;
+.btn-slide {
+  position: absolute;
+  z-index: $z-level-4;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
 }
+.btn-slide:focus {
+  opacity: 1;
+  left: 0;
+}
+
+/* color schemes */
 .radius {
   border-radius: 10px;
 }
@@ -125,12 +128,59 @@ main {
   border-radius: 10px;
   border: 1px solid $light-border;
   background-color: $white;
-
-  padding: gutter();
+}
+.style__wide{
+  padding: 21px 4.08333%;
+}
+.style__narrow{
+  padding: 21px 2.08333%;
 }
 
 
+.meta-line {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
 
+
+  &:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 2px $three-color;
+    position: absolute;
+    top: 48%;
+    z-index: $z-level-1;
+  }
+  > span {
+    position: relative;
+    display: inline-block;
+  }
+
+  h1,h2,h3 {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+    z-index: $z-level-2;
+    background-color: $four-bw;
+  }
+
+ #secondary-baners &,
+ .content-style & {
+   h1,h2,h3 {
+     background-color: $white;
+   }
+ }
+}
+
+
+.bw-image {
+  filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+a:hover .bw-image {
+  filter: grayscale(0%);
+}
 
 /*--------------------------------------------------------------
 3.0 Layout
@@ -144,17 +194,49 @@ main {
   display: inline-block;
   float: left;
 }
+
 .page-section {
   margin-top: gutter();
   margin-bottom: gutter();
 }
+.primary-col,
+.secondary-col {
+  overflow: hidden;
+}
+
+.secondary-col {
+  margin-left: gutter();
+  margin-right: gutter();
+}
+
+.pad-v {
+  padding-top: gutter();
+  padding-bottom: gutter();
+}
+
+
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.flex-col-2 {
+  .wpg-block-column {
+    width: 50%;
+  }
+}
+.wpg-block-column {
+  flex-basis: auto;
+  min-width: 320px;
+}
+
 
 /*--------------------------------------------------------------
 3.1 Header
 --------------------------------------------------------------*/
 /* Top bar - Header */
 #top-bar {
-  @include font-size($font-size-m);
+  font-size: 85%;
   padding: 5px gutter();
   border-bottom: 1px solid $light-border;
 
@@ -175,7 +257,13 @@ main {
   margin: 0 2px;
 }
 
-
+/* Site header content */
+.header-wrapper {
+  z-index: $z-level-3;
+  background: $four-bw;
+  top: -200px;
+  transition: all 0.5s linear;
+}
 
 /* Site branding - Header */
 #site-header {
@@ -192,31 +280,39 @@ main {
   text-align: center;
 }
 .site-title {
+  display: inline-block;
   margin: 0;
   max-height: 80px;
   overflow: hidden;
-  text-align: center;
+
   img {
-    max-height: 80px;
+
     width: auto;
+    max-height: 80px;
+    margin-left: auto;
+    margin-right:auto;
+    transition: all 0.2s linear 0.4s;
   }
 }
 
-
+/* Site navigation */
 #site-nav-bar {
   float: left;
   background: $two-color;
 }
 
+.fixed-header-2 {
+    padding-top: 169px;
+}
+
 /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
-#header-content {
+#header-background {
   background: url('http://beta.kz.atthost24.pl/wp-content/uploads/2020/10/iStockm.jpg');
   background-size: cover;
   background-position: bottom center;
   overflow: hidden;
-
 
   &::after {
       content: '';
@@ -228,55 +324,85 @@ main {
   }
 }
 
-
-
-#header-slider {
+#header-content {
+  padding-top: 5rem;
   overflow: hidden;
-
   .btn {
     margin-top: 30px;
     margin-bottom:30px;
   }
+  .slick-slide {
+    overflow: hidden;
+    padding: 15px;
+    margin: 5px;
+  }
 }
 
-#slider {
-  width: 80%;
+
+#slider-container {
+  padding-bottom: 5rem;
+}
+.slide-content {
+  display: inline-block;
+}
+.slides {
   margin: 10px auto;
-  @include bg-op($four-bw, 0.8);
+  @include bg-op($white, 0.8);
+}
+.meta-line--content {
+  padding: gutter() gutter()  gutter() 0;
 }
 
-.meta-line {
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    content: '';
-    width: 100%;
-    border-bottom: solid 2px $three-color;
-    position: absolute;
-    left: 300px;
-    top: 48%;
-    z-index: $z-footer;
-  }
-  > span {
-    position: relative;
-    display: inline-block;
-    z-index: $z-header;
-  }
-}
 /*--------------------------------------------------------------
 3.1.2 Header custom text
 --------------------------------------------------------------*/
-
+#header-post-noslide {
+  padding: 15px;
+  overflow: hidden;
+}
 /*--------------------------------------------------------------
 3.1.3 Header quick links
 --------------------------------------------------------------*/
 #bar_shortcuts {
   background-color: $four-bw;
 
-  h3 {
-    font-family: $font-base;
+  li {
+    flex-basis: 160px;
+    margin: 5px;
+    text-align: center;
+    @include bg-op($four-bw, 0.8);
+
+    &:hover {
+      background-color: $four-bw;
+    }
+  }
+
+  img {
+    display: inline-block;
+    width: 52%;
+    margin: 10px 23%;
+  }
+
+  .widget-title.class-h3 {
     @include font-size($size-base);
+    overflow: hidden;
+  }
+
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 160px;
+    padding: 5px;
+    color: $one-bw;
+    &:hover {color: $two-color;}
+  }
+  .no-flexbox & li {
+    display: inline-block;
+    width: 160px;
+  }
+  .no-flexbox & .widget-title  {
+    min-height: 44px;
   }
 }
 .shortcuts-links {
@@ -287,31 +413,6 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  img {
-    display: inline-block;
-    width: 52%;
-    margin: 10px 23%;
-  }
-
-
-  > li {
-    flex-basis: 160px;
-    height: 160px;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    text-align: center;
-    @include bg-op($four-bw, 0.8);
-
-  }
-
-  a {
-    color: $one-bw;
-  }
-  a:hover {
-    color: $two-color;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -319,16 +420,38 @@ main {
 --------------------------------------------------------------*/
 
 #breadcrumbs {
+    display: none;
     padding: 1%;
     margin-bottom: gutter();
     border-bottom: 1px solid $border-color;
+    background-color: $four-bw;
+
+}
+.site-main {
+  margin: 2px auto;
 }
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
 .hentry-multi {
-
+  .hentry {
+    margin-bottom: 40px;
+  }
+  .entry-header{
+    padding: 2px;
+  }
+  .entry-meta{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lighten( $border-color, 10% );
+    i {
+      color: #C4C4C4;
+    }
+  }
   .meta__item {
+    display: inline-block;
+    padding: 0 2%;
     padding-bottom: 3px;
 
     [class^="icon-"] {
@@ -338,27 +461,28 @@ main {
   }
 }
 
-.posts {
-  .entry-meta {
-    &::after {
-        content: '';
-        width: 100%;
-        display: block;
-        height: 1px;
-        background-color: $light-border;
-    }
-  }
+.more-link {
+  @extend .btn;
+  margin: auto;
+  max-width: 250px;
 }
-
-
-
-
 
 /*--------------------------------------------------------------
 3.4  Posts & Page
 --------------------------------------------------------------*/
-.hentry{
+.hentry {
   overflow: hidden;
+
+  .single &,
+  .page & {
+    .entry-header {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-bottom: 2px solid $border-color;
+    }
+    .entry-meta {margin: 20px 0;}
+  }
 }
 .meta__item {
     display: inline-block;
@@ -372,18 +496,27 @@ main {
     left: 0;
     bottom: 30px;
     width: 100%;
-    background: $four-bw;
+    padding-top: gutter();
+    padding-bottom: gutter();
+    background: $white;
 }
 
 .post-thumbnail {
   position: relative;
-  border-radius: 5px;
+
   img {
     width: 100%;
   }
 }
 
+#search-header {
+  margin-bottom: 40px;
+}
 
+.entry-image {
+  padding-top: gutter();
+  border-top: 1px solid $light-border;
+}
 
 
 /*--------------------------------------------------------------
@@ -393,10 +526,19 @@ main {
 /*--------------------------------------------------------------
 3.6  Attachment
 --------------------------------------------------------------*/
+.attachment-file {
+  max-width: 600px;
+  margin: 70px auto 100px auto;
 
+  img {
+    display: inline-block;
+    margin: 30px auto;
+  }
+}
 /*--------------------------------------------------------------
 3.7  Widgets
 --------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 4 Sections
@@ -433,29 +575,24 @@ main {
 4.2 Section loop homepage
 --------------------------------------------------------------*/
 .col-one article:nth-child(1) {
+  padding: gutters();
   @include linear-gradient(90deg, #EB3349, #F45C43);
-  color: $three-bw;
-  border-radius: 5px;
+  color: $four-bw;
 
-  a {color: $three-bw;}
+
+  a,
+  i {color: $four-bw;}
   a:hover {color:$one-bw;}
 
 }
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-#featured-cat{
-  h3 {
-    @include font-size(($size-base));
-  }
-  .meta__item {
-    margin: 10px 0;
-    @include font-size(($font-size-m));
-  }
-  img {
-    width: 100%;
-  }
+.featured-cat {
+  h3.entry-title {font-size: 100%;}
+  img            {width: 100%;}
 }
+
 /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)
 --------------------------------------------------------------*/
@@ -471,21 +608,21 @@ main {
 
   li {
     position: relative;
-    color: $three-bw;
+    color: lighten( $three-bw, 20% );
   }
   a {
 
       display: inline-block;
       min-height: 81px;
       width: 100%;
-      color: $three-bw;
+      color: lighten( $three-bw, 20% );
       @include linear-gradient(90deg, #EB3349, #F45C43);
       padding: gutter() gutter() gutter() 80px;
       margin-bottom: gutter();
 
       &:hover {
         color:$one-bw;
-        @include linear-gradient(90deg, $three-bw, $three-bw);
+        @include linear-gradient(90deg, darken($three-bw, 10%), $three-bw);
       }
   }
 
@@ -513,16 +650,19 @@ main {
 
 #primary-baners {
 
-  .widget {
-    padding: 0;
+  .widget-item {
+    a {display: block;}
     margin-bottom: gutter();
   }
+
   .widget_media_image {
     max-height: 285px;
     overflow: hidden;
+
     .widget-title {
       display: none;
     }
+
     img {
       width: 100%;
     }
@@ -533,15 +673,10 @@ main {
 4.6 Section Partners (widget sidebar-footer_banners )
 --------------------------------------------------------------*/
 #secondary-baners {
-  background: $four-bw;
+  background: $white;
   padding-bottom: gutter();
-  .banner-container {
-    @extend .container
-  }
-
-
+  .widget-item a {display: block;}
   .widget {
-
     margin-bottom: gutter();
   }
 }
@@ -549,17 +684,14 @@ main {
 5.0 Footer
 --------------------------------------------------------------*/
 .footer-background {
-  //background-image: url(#{$img-path}footer-bg.png);
-  //background-repeat: no-repeat;
-  //background-position: bottom;
-  //background-size: contain;
-  //min-height: 327px;
   img {
     width: 100%;
-
   }
 }
-
+.footer-item--h {
+  font-size: 112%;
+  @extend .h-font;
+}
 /*--------------------------------------------------------------
 5.1 Footer Contact
 --------------------------------------------------------------*/
@@ -567,23 +699,29 @@ main {
   min-height: 200px;
   overflow: hidden;
   @include linear-gradient(90deg, #EB3349, #F45C43);
-  color: $four-bw;
-  border-color: $four-bw;
+  color: lighten( $three-bw, 20% );
+  border-color: lighten( $three-bw, 20% );
 
   a {
-    color: $four-bw;
+    color: lighten( $three-bw, 20% );
     &:hover {color: $one-color}
   }
 
-  h3 {
+  h2 {
     border-bottom: solid 4px;
     padding-bottom: 10px;
     margin-bottom: 25px;
-
+    @include font-size(($size-base + 0.7));
   }
-
   .contact-item {
     margin-bottom: 20px;
+  }
+  ul {
+     padding: 0;
+    list-style: none;
+  }
+  .wpg-block-column {
+    min-width: 155px;
   }
 }
 
@@ -591,13 +729,8 @@ main {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  i {
-    width: 35px;
-  }
-  span {
-    display: inline-block;
-    @include font-size($font-size-xl);
-  }
+  i    {width: 35px;}
+  span {display: inline-block;}
 }
 .contact-item__text {
   padding-left: 38px;
@@ -609,10 +742,125 @@ main {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+5.3 footer map
+--------------------------------------------------------------*/
+#map_svg {
+  padding-top: 4%;
+
+  a {outline: none;}
+}
+
+#title_path {
+    position: absolute;
+    bottom: 55px;
+    left: 5px;
+    z-index: $z-level-1;
+    max-width: 49%;
+}
+
+/*--------------------------------------------------------------
+5.4 Popup
+--------------------------------------------------------------*/
+#site-popup {
+    position: relative;
+    background: $white;
+    padding: 20px;
+    width: auto;
+    max-width: 900px;
+    max-width: 100vh;
+    margin: 20px auto;
+    text-align: center;
+    img {
+      display: inline-block;
+      max-height: 80vh;
+    }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
 #copyright {
   min-height: 80px;
   background-color: $four-bw;
   overflow: hidden;
+}
+body.prevent-scroll {
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+}
+
+body.prevent-scroll #page:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: $z-level-4;
+    transition: opacity 500ms ease-in-out;
+}
+
+body.prevent-scroll.prevent-scroll--enabled,
+body.prevent-scroll.prevent-scroll--enabled #page:after {
+    opacity: 1;
+}
+
+
+#cookie-notice {
+    display: none;
+    position: fixed;
+    min-width: 100%;
+    height: auto;
+    z-index: $z-level-5;
+    left: 0;
+    text-align: center;
+    background: $white;
+    bottom: 0;
+    border-top: 2px solid $border-color;
+}
+#cn-notice-text {
+  .btn {
+    margin: 10px;
+    line-height: 1;
+  }
+}
+
+#cookie-notice.cookie-notice-visible {
+  display: block;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+7.0 Gutenberg blocks
+--------------------------------------------------------------*/
+
+.wp-block-button__link img {
+    display: inline;
+    margin: -2rem 0 -2rem 24px;
+    max-width: 50px;
+}
+
+.wp-block-file .wp-block-file__button {
+font-size: 100%;
+padding: 10px 15px;
+border-radius: 15px;
+min-width: 140px;
+display: inline-block;
+text-align: center;
+background: $two-color;
 }

@@ -10,7 +10,7 @@
         display: inline-block;
         vertical-align:top;
         min-width:100%;
-        z-index: 100;
+        z-index: $z-level-1;
     }
 }
 //style 1
@@ -58,7 +58,7 @@
     visibility: hidden;
     transform: scale(1.5);
     transition: all ease 0.4s;
-    z-index: 100;
+    z-index: $z-level-1;
     color: $four-bw;
     @include bg-op($two-color);
 

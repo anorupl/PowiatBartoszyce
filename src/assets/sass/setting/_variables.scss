@@ -45,6 +45,8 @@ $desktop        : #{pem(992)};
 $desktop-ldpi   : #{pem(1280)};
 $desktop-mdpi   : #{pem(1440)};
 $desktop-hdpi   : #{pem(1600)};
+$desktop-1024   : #{pem(1024)};
+$desktop-1200   : #{pem(1200)};
 
 /*--------------------------------------------------------------
 >>> Color
@@ -166,8 +168,8 @@ $nav-background-active  : $four-bw;
 ---------------------------------------------------------------*/
 
 
-$z-modal     : 9000;
-$z-overlay   : 8000;
-$z-dropdown  : 7000;
-$z-header    : 6000;
-$z-footer    : 5000;
+$z-level-5: 9000; 
+$z-level-4: 8000;
+$z-level-3: 7000;
+$z-level-2: 6000;
+$z-level-1: 5000;

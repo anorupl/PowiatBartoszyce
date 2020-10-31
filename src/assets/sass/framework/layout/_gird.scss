@@ -10,14 +10,16 @@
   display: flex;
   flex-wrap: wrap;
 }
-.gutters {
-  @include gutters();
-}
-.pad-all {
-  padding: gutters();
-}
 
-%col-styles {
+%col-styles,
+.col-1_5,
+.col-2_5,
+.col-3_5,
+.col-4_5,
+.col-5_5,
+.col-6_5,
+.col-7_5,
+.col-8_5 {
   position: relative;
   @include span(12 no-gutters);
   margin-left: auto;
@@ -28,6 +30,22 @@
   .col-#{$i} { @extend %col-styles; }
 }
 
+.col-12--2-4,
+.col-12--3 {
+  @include span(12);
+}
+
+
+.gutters {
+  @include gutters();
+}
+.margin {
+  margin-left: gutter();
+  margin-right: gutter();
+}
+.pad-all {
+  padding: gutters();
+}
 
 /* clear */
 .clear {

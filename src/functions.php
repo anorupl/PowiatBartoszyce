@@ -22,82 +22,89 @@ define( 'THEME_DEBUG',   true );
 
 
 if ( ! function_exists( 'wpg_setup' ) ) :
-	/**
-	* Sets up theme defaults and registers support for various WordPress features.
-	*
-	* Note that this function is hooked into the after_setup_theme hook, which
-	* runs before the init hook. The init hook is too late for some features, such
-	* as indicating support for post thumbnails.
-	*
-	*/
-	function wpg_setup() {
+/**
+* Sets up theme defaults and registers support for various WordPress features.
+*
+* Note that this function is hooked into the after_setup_theme hook, which
+* runs before the init hook. The init hook is too late for some features, such
+* as indicating support for post thumbnails.
+*
+*/
+function wpg_setup() {
 
-		if ( ! isset( $content_width ) ) {
-			$content_width = 1366;
-		}
-
-		load_theme_textdomain( 'wpg_theme', THEME_PATH . 'languages' );
-
-		/**
-		* Add default posts and comments RSS feed links to head.
-		*/
-		add_theme_support( 'automatic-feed-links' );
-
-		/**
-		* Let WordPress manage the document title.
-		*/
-		add_theme_support( 'title-tag' );
-
-		/**
-		*  Add theme support for Custom Logo.
-		*/
-		add_theme_support( 'custom-logo', array(
-			'height'  => 287,
-			'width'   => 768,
-			'flex-height' => true,
-			'flex-width'  => true
-		));
-
-		/**
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-		add_theme_support( 'post-thumbnails' );
-
-		/**
-		* Switch core markup to output valid HTML5.
-		*/
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption'
-		) );
-
-		/**
-		* This theme uses wp_nav_menu().
-		*/
-		register_nav_menus( array(
-			'menu_header'				=> esc_html__( 'Header Menu', 'wpg_theme' ),
-			'menu_page_links'		=> esc_html__( 'Section - Links to other pages', 'wpg_theme' ),
-			'menu_footer'		=> esc_html__( 'Footer Menu', 'wpg_theme' )
-		));
-
-		/**
-		* Update image size;
-		*/
-		update_option( 'thumbnail_size_w', 320 );
-		update_option( 'thumbnail_size_h', 480 );
-		update_option( 'thumbnail_crop', false );
-		update_option( 'medium_size_w', 768);
-		update_option( 'medium_size_h', 512 );
-		update_option( 'large_size_w', 1366);
-		update_option( 'large_size_h', 911 );
-
+	if ( ! isset( $content_width ) ) {
+		$content_width = 1366;
 	}
-	add_action( 'after_setup_theme', 'wpg_setup' );
+
+	load_theme_textdomain( 'wpg_theme', THEME_PATH . 'languages' );
+
+	/**
+	* Add default posts and comments RSS feed links to head.
+	*/
+	add_theme_support( 'automatic-feed-links' );
+
+	/**
+	* Let WordPress manage the document title.
+	*/
+	add_theme_support( 'title-tag' );
+
+	/**
+	*  Add theme support for Custom Logo.
+	*/
+	add_theme_support( 'custom-logo', array(
+		'height'  => 287,
+		'width'   => 768,
+		'flex-height' => true,
+		'flex-width'  => true
+	));
+
+	/**
+	* Enable support for Post Thumbnails on posts and pages.
+	*
+	* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	*/
+	add_theme_support( 'post-thumbnails' );
+
+	/**
+	* Switch core markup to output valid HTML5.
+	*/
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
+	) );
+
+	/**
+	* This theme uses wp_nav_menu().
+	*/
+	register_nav_menus( array(
+		'menu_header'				=> esc_html__( 'Header Menu', 'wpg_theme' ),
+		'menu_page_links'		=> esc_html__( 'Section - Links to other pages', 'wpg_theme' ),
+		'menu_footer'		=> esc_html__( 'Footer Menu', 'wpg_theme' )
+	));
+
+	/**
+	* Update image size;
+	*/
+	update_option( 'thumbnail_size_w', 768 );
+	update_option( 'thumbnail_size_h', 512 );
+	update_option( 'thumbnail_crop', false );
+
+	update_option( 'medium_size_w', 1068);
+	update_option( 'medium_size_h', 812 );
+
+	update_option( 'large_size_w', 1600);
+	update_option( 'large_size_h', 1067 );
+
+	/**
+	* Custom style css for gutenberg editor
+	*/
+	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
+	add_editor_style( 'css/style-editor.css' );
+}
+add_action( 'after_setup_theme', 'wpg_setup' );
 endif;
 
 /**
@@ -109,16 +116,18 @@ function wpg_enqueue() {
 	wp_deregister_script( 'jquery' );
 
 	//css
-	wp_enqueue_style( 'wpg-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wpg-style', get_stylesheet_uri(),array(),THEME_VERSION, 'screen' );
+	wp_enqueue_style(	'wpg-print-style', THEME_URL . 'css/print.css', array(), THEME_VERSION, 'print');
+
 	wp_enqueue_style( 'slick', THEME_URL . "css/slick.css");
 
 	// fallback css
-	wp_enqueue_style( 'wpg-ie', THEME_URL . 'css/ie.css');
-	wp_style_add_data( 'wpg-ie', 'conditional', 'lt IE 9' );
+	//wp_enqueue_style( 'wpg-ie', THEME_URL . 'css/ie.css');
+	//wp_style_add_data( 'wpg-ie', 'conditional', 'lt IE 9' );
 
 	//Enqueue scripts
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js');
-	wp_enqueue_script( 'cookie', THEME_URL . 'js/assets/jquery.cookie.js','', THEME_VERSION);
+	wp_enqueue_script( 'cookie', THEME_URL . 'js/assets/js.cookie.js','', THEME_VERSION);
 	wp_enqueue_script( 'wpg-image', THEME_URL . 'js/assets/wpg-image.min.js',array('jquery'), THEME_VERSION, true );
 	wp_enqueue_script( 'slick-js', THEME_URL . 'js/assets/slick.min.js',array('jquery'), THEME_VERSION, true );
 
@@ -140,7 +149,8 @@ function wpg_enqueue() {
 		'close' => __('Close (Escape key)', 'wpg_theme'),
 		'load'=> __('Loading ...', 'wpg_theme'),
 		'image' => __('Image', 'wpg_theme'),
-		'error_image' => __('it cannot be loaded.', 'wpg_theme')
+		'error_image' => __('it cannot be loaded.', 'wpg_theme'),
+		'blank' 			=> __('Link open in a new window', 'wpg_theme'),
 	));
 }
 add_action( 'wp_enqueue_scripts', 'wpg_enqueue' );
@@ -157,16 +167,16 @@ function wpg_widgets_init() {
 		'name'          => esc_html__( 'Header Shortcuts', 'wpg_theme' ),
 		'id'            => 'wpg-headerbar-shortcuts',
 		'description'   => '',
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'before_widget' => '<li id="%1$s" class="widget radius %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<span class="widget-title class-h3">',
+		'after_title'   => '</span>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Baners - Primary section', 'wpg_theme' ),
 		'id'            => 'wpg-footerbar-primary_baners',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget ' . wpg_the_widgets_count('wpg-footerbar-primary_baners') . ' %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget-item ' . wpg_the_widgets_count('wpg-footerbar-primary_baners') . ' %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="screen-reader">',
 		'after_title'   => '</h3>',
@@ -177,31 +187,39 @@ function wpg_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Baners - Secondary section', 'wpg_theme' ),
 		'id'            => 'wpg-footerbar-secondary_baners',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget bn-col-4 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget widget-item ' . wpg_the_widgets_count('wpg-footerbar-secondary_baners') . ' %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="screen-reader">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer - middle column', 'wpg_theme' ),
-		'id'            => 'wpg-footer_column',
-		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'wpg_widgets_init' );
 
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ *
+ * @link https://git.io/vWdr2
+ */
+function wpg_skip_link_focus_fix() {
+	// The following is minified from js/assets/skip-link-focus-fix.js`.
+	?>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'wpg_skip_link_focus_fix' );
 
 
 /**
@@ -217,5 +235,12 @@ require THEME_PATH . 'inc/template-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 require THEME_PATH . 'inc/wcga_form.php';
 
+if (is_admin()) {
+	require THEME_PATH . 'inc/admin/tinymce_wcga.php';
+}
 
+
+/**
+* Include file with custom widget.
+*/
 require THEME_PATH . 'inc/widget/widget-baner.php';

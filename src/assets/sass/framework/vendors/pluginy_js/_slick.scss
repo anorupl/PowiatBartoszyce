@@ -84,6 +84,11 @@
     .slick-initialized & {
         display: block;
     }
+    .no-js & {
+      display: block;
+      float: none;
+      margin-bottom: 10px;
+    }
 
     .slick-loading & {
         visibility: hidden;

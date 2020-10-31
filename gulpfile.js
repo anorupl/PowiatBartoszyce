@@ -27,7 +27,7 @@ const project_dir = dist + project + '/';
 
 // Config assets_js
 const jquery         = node + 'jquery/dist/jquery.min.js';
-const cookies        = node + 'jquery.cookie/jquery.cookie.js';
+const cookies        = node + 'js-cookie/src/js.cookie.js';
 const html5shiv      = node + 'html5shiv/dist/*.min.js';
 const slider         = node + 'slick-carousel/slick/slick.min.js';
 const carousel       = node + 'owl.carousel/dist/owl.carousel.min.js';
@@ -105,7 +105,7 @@ function copyFonts() {
 //4.0 Copy Js assets: silder, html5shiv
 function copyJs() {
   return gulp
-  .src([slider, html5shiv, cookies])
+  .src([html5shiv, cookies])
   .pipe(changed(project_dir + dist_assets_js))
   .pipe(gulp.dest(project_dir + dist_assets_js))
 }
@@ -142,16 +142,16 @@ function style() {
   .src([theme.css.src + 'style.scss'])
   .pipe(changed(theme.css.dist))
   //Default:nestedValues:nested,expanded,compact,compressed
-  .pipe(sass({outputStyle: 'expanded' }).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(prefixer())
   .pipe(gulp.dest(theme.css.dist));
 }
 //4.0 sass other
 function otherStyle() {
   return gulp
-  .src(['!' + theme.css.src + 'style.scss', theme.css.src + '*.scss'])
+  .src([theme.css.src + 'big.scss', theme.css.src + 'medium.scss', theme.css.src + 'contrast.scss',theme.css.src + 'print.scss',theme.css.src + 'slick.scss', theme.css.src + 'style-editor.scss'])
   .pipe(changed(theme.css.dist_css))
-  .pipe(sass().on('error', function(error) {console.log(error);this.emit('end');}))
+  .pipe(sass({outputStyle: 'compressed' }).on('error', function(error) {console.log(error);this.emit('end');}))
   .pipe(gulp.dest(theme.css.dist_css));
 
 }
@@ -169,22 +169,22 @@ function headerTag() {
   return gulp
   .src(project_dir + 'style.css')
   .pipe(header(
-    '/*\n\
-    Theme Name: Powiat Bartoszycki\n\
-    Theme URI: https://powiat.bartoszyce.pl/\n\
-    Author: Kamil Żerebny\n\
-    Author URI:https://zerebny.ovh\n\
-    Description: :Theme for Powiat Bartoszycki\n\
-    Version: 0.1.0\n\
-    Licence: GPL-2.0\n\
-    Licence URI: http://www.gnu.org/licenses/gpl-2.0.html\n\
-    Tags: one-column,responsive-layout,custom-menu,featured-images,microformats,threaded-comments,translation-ready\n\
-    Text Domain: wpg_theme\n\
-    */\n'
+'/*\n\
+Theme Name: Powiat Bartoszycki\n\
+Theme URI: https://powiatbartoszyce.pl/\n\
+Author: Kamil Zerebny\n\
+Author URI: https://zerebny.ovh\n\
+Description: Oficjalny szablon strony Starostwa Powiatowego w Bartoszycach.\n\
+Version: 0.1.0\n\
+Licence: GPL-2.0\n\
+Licence URI: http://www.gnu.org/licenses/gpl-2.0.html\n\
+Tags: one-column,responsive-layout,custom-menu,featured-images,microformats,threaded-comments,translation-ready\n\
+Text Domain: wpg_theme\n\
+*/\n'
   ))
   .pipe(gulp.dest(project_dir))
-
 }
+
 //4.0 imagesFile
 function imagesFile() {
   return gulp

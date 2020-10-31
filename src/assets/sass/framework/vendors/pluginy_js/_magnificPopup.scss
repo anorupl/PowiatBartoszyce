@@ -14,7 +14,7 @@ $mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Sh
 $mfp-popup-padding-left:              8px!default ;                        // Padding from left and from right side
 $mfp-popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
 
-$mfp-z-index-base:                    1040 !default;                       // Base z-index of popup
+$mfp-z-index-base:                    $z-level-5;                       // Base z-index of popup
 
 // controls
 $mfp-include-arrows:                  true !default;                       // Include styles for nav arrows
@@ -84,7 +84,7 @@ $mfp-use-visuallyhidden:              false !default;                      // Hi
   z-index: $mfp-z-index-base + 2;
   overflow: hidden;
   position: fixed;
-  
+
   background: $mfp-overlay-color;
   opacity: $mfp-overlay-opacity;
   @if $mfp-IE7support {
@@ -278,7 +278,7 @@ button {
   width: 44px;
   height: 44px;
   line-height: 44px;
-  
+
   position: absolute;
   right: 0;
   top: 0;
@@ -290,11 +290,11 @@ button {
   }
   padding: 0 0 18px 10px;
   color: $mfp-controls-color;
-  
+
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
-  
+
   &:hover,
   &:focus {
     opacity: 1;
@@ -302,7 +302,7 @@ button {
       filter: unquote("alpha(opacity=#{1*100})");
     }
   }
-  
+
   &:active {
     top: 1px;
   }
@@ -382,27 +382,27 @@ button {
       margin-left: 35px;
       border: medium inset transparent;
     }
-    
+
     &:after,
     .mfp-a {
-      
+
       border-top-width: 13px;
       border-bottom-width: 13px;
       top:8px;
     }
-    
+
     &:before,
     .mfp-b {
       border-top-width: 21px;
       border-bottom-width: 21px;
       opacity: 0.7;
     }
-    
+
   }
-  
+
   .mfp-arrow-left {
     left: 0;
-    
+
     &:after,
     .mfp-a {
       border-right: 17px solid $mfp-controls-color;
@@ -414,7 +414,7 @@ button {
       border-right: 27px solid $mfp-controls-border-color;
     }
   }
-  
+
   .mfp-arrow-right {
     right: 0;
     &:after,
@@ -467,7 +467,7 @@ button {
 
 // Image content type
 @if $mfp-include-image-type {
-  
+
   /* Main image in popup */
   img {
     &.mfp-img {
@@ -483,7 +483,7 @@ button {
       margin: 0 auto;
     }
   }
-  
+
   /* The shadow behind the image */
   .mfp-figure {
     line-height: 0;
@@ -526,13 +526,13 @@ button {
     word-wrap: break-word;
     padding-right: 36px; // leave some space for counter at right side
   }
-  
+
   .mfp-image-holder {
     .mfp-content {
       max-width: 100%;
     }
   }
-  
+
   .mfp-gallery {
     .mfp-image-holder {
       .mfp-figure {
@@ -540,8 +540,8 @@ button {
       }
     }
   }
-  
-  
+
+
   @if $mfp-include-mobile-layout-for-image {
     @media screen and (max-width: 800px) and (orientation:landscape), screen and (max-height: 300px) {
       /**

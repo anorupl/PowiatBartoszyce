@@ -1,34 +1,34 @@
 <?php
 /**
- * Sanitize functions
- *
- * @package Powiat Bartoszycki
- * @since 0.1.0
- */
+* Sanitize functions
+*
+* @package Powiat Bartoszycki
+* @since 0.1.0
+*/
 
 
 /**
- * Sanitize function for intval
- *
- * @since 0.1.0
- *
- * @param intval $value
- * @return intval
- */
+* Sanitize function for intval
+*
+* @since 0.1.0
+*
+* @param intval $value
+* @return intval
+*/
 function wpg_intval($value) {
 	return intval($value);
 }
 
 /**
- * Sanitize function for Font Family
- *
- * @since 0.1.0
- *
- * @param string $value
- * @param object $setting
- *
- * @return string
- */
+* Sanitize function for Font Family
+*
+* @since 0.1.0
+*
+* @param string $value
+* @param object $setting
+*
+* @return string
+*/
 function wpg_sanitize_font_family( $value, $setting ) {
 
 	// Setting id
@@ -52,13 +52,13 @@ function wpg_sanitize_font_family( $value, $setting ) {
 }
 
 /**
- * Sanitize function to Font Family Variant
- *
- * @since 0.1.0
- *
- * @param string $value
- * @return string
- */
+* Sanitize function to Font Family Variant
+*
+* @since 0.1.0
+*
+* @param string $value
+* @return string
+*/
 function wpg_sanitize_font_variant( $value ) {
 
 	$options = array(
@@ -107,32 +107,32 @@ function wpg_sanitize_font_variant( $value ) {
 
 
 /**
- * Sanitize function to Multi Checbox
- *
- * @since 1.0.0
- *
- * @param array $values, List select checbox
- * @return array
- */
+* Sanitize function to Multi Checbox
+*
+* @since 1.0.0
+*
+* @param array $values, List select checbox
+* @return array
+*/
 function wpg_sanitize_MultiChecbox( $values ) {
 
-    $multi_values = !is_array( $values ) ? explode( ',', $values ) : $values;
+	$multi_values = !is_array( $values ) ? explode( ',', $values ) : $values;
 
-    return !empty( $multi_values ) ? array_map( 'sanitize_text_field', $multi_values ) : '';
+	return !empty( $multi_values ) ? array_map( 'sanitize_text_field', $multi_values ) : '';
 }
 
 
 /**
- * Sanitize number range.
- *
- * @since 0.1.0
- *
- * @see absint() https://developer.wordpress.org/reference/functions/absint/
- *
- * @param int                  $input Number to check within the numeric range defined by the setting.
- * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
- * @return int|string The number, if it is zero or greater and falls within the defined range; otherwise, the setting default.
- */
+* Sanitize number range.
+*
+* @since 0.1.0
+*
+* @see absint() https://developer.wordpress.org/reference/functions/absint/
+*
+* @param int                  $input Number to check within the numeric range defined by the setting.
+* @param WP_Customize_Setting $setting WP_Customize_Setting instance.
+* @return int|string The number, if it is zero or greater and falls within the defined range; otherwise, the setting default.
+*/
 function wpg_sanitize_number_range( $input, $setting ) {
 
 	// Ensure input is an absolute integer.

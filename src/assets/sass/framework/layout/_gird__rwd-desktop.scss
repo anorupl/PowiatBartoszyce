@@ -1,7 +1,16 @@
 /* Gird 12 column
 ========================================================================== */
-@for $i from 1 through 12 {
+@for $i from 1 through 11 {
     .col-#{$i} {
         @include span($i no-gutters);
     }
 }
+
+.col-1_5 {@include span(1.5 no-gutters);}
+.col-2_5 {@include span(2.5 no-gutters);}
+.col-3_5 {@include span(3.5 no-gutters);}
+.col-4_5 {@include span(4.5 no-gutters);}
+.col-5_5 {@include span(5.5 no-gutters);}
+.col-6_5 {@include span(6.5 no-gutters);}
+.col-7_5 {@include span(7.5 no-gutters);}
+.col-8_5 {@include span(8.5 no-gutters);}

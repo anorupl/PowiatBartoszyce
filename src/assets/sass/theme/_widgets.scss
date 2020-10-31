@@ -3,6 +3,7 @@
 .widget {
 
     position: relative;
+    margin-bottom: 50px;
 
 
 
@@ -37,7 +38,45 @@
 
 .widget-title {
     margin-top: 0;
+    img {
+      display: inline-block;
+    }
 }
+.secondary-col {
+  .widget {
+    padding: 0 gutter() 15px;
+    border-bottom: 2px solid $border-color;
+    overflow: hidden;
+    &::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 25%;
+        max-height: 80px;
+        background-color: $border-color;
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+  }
+
+  .widget-title {
+      text-transform: uppercase;
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 5px;
+        width: 60%;
+        height: 5px;
+        @include linear-gradient(90deg, #EB3349, #F45C43);
+      }
+  }
+
+
+}
+
+
+
 
 .widget_archive,
 .widget_categories,
@@ -72,5 +111,5 @@
   h4,.class-h4,.f-size-h4         { @include font-size(($size-base + 0.1));}
 }
 .widget-pad {
-  
+
 }

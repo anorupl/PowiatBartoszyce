@@ -4,13 +4,11 @@
 *
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 *
-* @package MBP Bartoszyce
+* @package Powiat Bartoszycki
 * @since 0.1.0
 */
 if ( ! is_active_sidebar( 'wpg-sidebar-right' ) ) {
 	return;
 }
+dynamic_sidebar( 'wpg-sidebar-right' );
 ?>
-<aside id="secondary" class="widget-area col-secondary gutters" role="complementary">
-	<?php dynamic_sidebar( 'wpg-sidebar-right' ); ?>
-</aside>

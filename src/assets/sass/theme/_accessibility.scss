@@ -27,12 +27,12 @@ a.skip-main:active 	{
 	font-size: 1.2em;
 	background-color: $wcag-bg;
 	display: block;
-	z-index:999;
+	z-index:$z-level-5 + 100;
 	left: auto;
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text, 
+.screen-reader-text,
 .screen-reader {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -43,4 +43,42 @@ a.skip-main:active 	{
 	width: 1px !important;
 	overflow: hidden;
 	margin: 0 !important;
+}
+.screen-reader-focus {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	margin: 0;
+	&:focus {
+		position: relative;
+		clip: auto;
+		height: auto;
+		width: auto;
+	}
+}
+
+.blank-ico 	{
+position: absolute;
+margin: 1px 5px 0 5px;
+border: 0 !important;
+//display: inline-block;
+//width: 19px;
+//height: 17px;
+text-indent: -9999px;
+//background: url(#{$img-path}new_window.png);
+background-repeat: no-repeat;
+opacity: 0;
+}
+article:focus,
+section:focus,
+main:focus,
+header:focus,
+div:focus,
+a:focus  {
+	outline: 2px solid $two-color;
 }

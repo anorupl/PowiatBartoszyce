@@ -72,14 +72,14 @@ $wp_customize->add_control( "wpg_contact_phone_1", array(
 // ==============================================
 //  = E-mail (text) =
 //  =============================================
-$wp_customize->add_setting("wpg_contact_email_1", array(
+$wp_customize->add_setting("wpg_contact_email_office", array(
 	'default'=> '',
 	'sanitize_callback' => 'sanitize_email'
 ));
 
-$wp_customize->add_control( "wpg_contact_email_1", array(
-	'settings' => "wpg_contact_email_1",
-	'label'    => __('E-mail', 'wpg_theme'),
+$wp_customize->add_control( "wpg_contact_email_office", array(
+	'settings' => "wpg_contact_email_office",
+	'label'    => __('E-mail to Office', 'wpg_theme'),
 	'section'  => $contact_section_id,
 	'type'     => 'email'
 ));
@@ -87,14 +87,14 @@ $wp_customize->add_control( "wpg_contact_email_1", array(
 // ==============================================
 //  = E-mail (text) =
 //  =============================================
-$wp_customize->add_setting("wpg_contact_email_web", array(
+$wp_customize->add_setting("wpg_contact_email_editorial", array(
 	'default'=> '',
 	'sanitize_callback' => 'sanitize_email'
 ));
 
-$wp_customize->add_control( "wpg_contact_email_web", array(
-	'settings' => "wpg_contact_email_web",
-	'label'    => __('E-mail administrator', 'wpg_theme'),
+$wp_customize->add_control( "wpg_contact_email_editorial", array(
+	'settings' => "wpg_contact_email_editorial",
+	'label'    => __('E-mail to editorial office', 'wpg_theme'),
 	'section'  => $contact_section_id,
 	'type'     => 'email'
 ));
@@ -104,7 +104,7 @@ $wp_customize->add_control( "wpg_contact_email_web", array(
 //  =============================================
 $wp_customize->add_setting('wpg_hours', array(
 	'default'        => '',
-		'sanitize_callback' => 'sanitize_text_field'
+	'sanitize_callback' => 'sanitize_text_field'
 ));
 
 $wp_customize->add_control( 'wpg_hours', array(
@@ -113,20 +113,4 @@ $wp_customize->add_control( 'wpg_hours', array(
 	'section'  => $contact_section_id,
 	'type'    => 'textarea'
 ));
-
-// ==============================================
-//  = Drag/drop marker Google map=
-//  =============================================
-$wp_customize->add_setting( "wpg_contact_map_latlong_1", array(
-	'default'   => '54.248997, 20.804780',
-));
-
-$wp_customize->add_control(
-	new WPG_Customize_Control_leafletjs_MAP($wp_customize, "wpg_contact_map_latlong_1", array(
-		'settings' => "wpg_contact_map_latlong_1",
-		'section'  => $contact_section_id,
-		'label'    => __( 'Select a location on map', 'wpg_theme' )
-	))
-);
-
 ?>

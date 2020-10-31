@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Powiat Bartoszycki\n"
 "Report-Msgid-Bugs-To: http:/powiatbartoszyce.pl\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-10-25 13:40+0100\n"
+"PO-Revision-Date: 2020-11-19 18:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -23,24 +23,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/404.php:12
+#: src/404.php:10
 msgid "Page not found"
 msgstr "Strona nie została znaleziona"
 
-#: src/404.php:19
+#: src/404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ups! To strona  nie została znaleziona."
 
-#: src/404.php:23, src/components/content_multi/content-none.php:15,
-#: src/components/site/loop-homepage.php:156
+#: src/404.php:20, src/components/content_multi/content-none.php:15,
+#: src/components/features/slider/loop-category.php:53,
+#: src/components/site/loop-homepage.php:131
 msgid "It looks like nothing was found at this location."
 msgstr "Wygląda na to że, nic nie zostało znalezione pod tym adresem."
 
-#: src/attachment.php:31
+#: src/attachment.php:12, src/image.php:12, src/index.php:54,
+#: src/page-templates/page-attachment.php:14,
+#: src/page-templates/page-no_sidebar.php:14, src/page.php:20,
+#: src/search.php:14, src/single.php:14
+msgid "You are here: &nbsp;"
+msgstr "Jesteś tutaj: &nbsp;"
+
+#: src/attachment.php:30
 msgid "Click to download"
 msgstr "Kliknij, aby pobrać"
 
-#: src/attachment.php:35
+#: src/attachment.php:34
 msgid "File size: "
 msgstr "Rozmiar pliku: "
 
@@ -57,125 +65,156 @@ msgid "Comments are closed."
 msgstr "Komentarze są wyłączone."
 
 #: src/components/content_multi/content-none.php:12,
-#: src/components/site/loop-homepage.php:153
+#: src/components/features/slider/loop-category.php:49,
+#: src/components/features/slider/loop-category.php:52,
+#: src/components/site/loop-homepage.php:128
 msgid "Nothing Found"
 msgstr "Nie znaleziono"
 
-#: src/components/content_multi/content-page.php:45,
-#: src/components/content_multi/content-page.php:27,
-#: src/components/content_multi/content.php:45,
-#: src/components/content_multi/content.php:27,
-#: src/components/site/loop-homepage.php:101,
-#: src/components/site/loop-homepage.php:77
+#: src/components/content_multi/content-page.php:29,
+#: src/components/content_multi/content.php:29,
+#: src/components/site/loop-homepage.php:82
 msgid "Author"
 msgstr "Autor"
 
-#. translators: %s: Name of current post
-#: src/components/content_multi/content.php:54,
-#: src/components/features/slider/loop-category.php:41
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: src/components/content_multi/content.php:37
+msgid "Continue reading"
+msgstr "Czytaj dalej"
 
-#: src/components/content_single/content-page.php:34,
-#: src/components/content_single/content.php:32,
+#: src/components/content_single/content-page.php:28,
+#: src/components/content_single/content.php:29,
+#: src/page-templates/page-attachment.php:39,
 #: src/page-templates/page-no_sidebar.php:31
 msgid "Pages:"
 msgstr "Strony:"
 
-#: src/components/content_single/content-page.php:38,
-#: src/components/content_single/content.php:36,
-#: src/components/site/loop-homepage.php:141, src/index.php:85,
+#: src/components/content_single/content-page.php:32,
+#: src/components/content_single/content.php:33,
+#: src/components/site/loop-homepage.php:120, src/index.php:91,
+#: src/page-templates/page-attachment.php:43,
 #: src/page-templates/page-no_sidebar.php:35, src/search.php:44
 msgid "Page"
 msgstr "Strona"
 
-#: src/components/content_single/content.php:45
+#: src/components/content_single/content.php:42
 msgid "Next"
 msgstr "Następny"
 
-#: src/components/content_single/content.php:46
+#: src/components/content_single/content.php:43
 msgid "Next post:"
 msgstr "Następny wpis:"
 
-#: src/components/content_single/content.php:48
+#: src/components/content_single/content.php:45
 msgid "Previous"
 msgstr "Poprzedni"
 
-#: src/components/content_single/content.php:49
+#: src/components/content_single/content.php:46
 msgid "Previous post:"
 msgstr "Poprzedni wpis:"
 
-#: src/components/features/section-alert.php:11,
-#: src/components/features/slider/custom-text.php:12,
-#: src/components/features/slider/custom-text.php:20,
-#: src/components/site/section-alert.php:18,
-#: src/inc/customizer/setting_control/inc_setting_alert.php:66
-msgid "Information"
-msgstr "Informacja"
-
-#: src/components/features/section-alert.php:21,
-#: src/components/features/slider/custom-text.php:31
-msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Czytaj dalej <span class=\"screen-reader-text\"> \"%s\"</span>"
-
-#: src/components/features/section-featured.php:42,
-#: src/components/features/section-featured_sidebar.php:40,
-#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:32,
-#: src/inc/customizer/setting_control/inc_setting_main_loop.php:15,
-#: src/inc/template-tags.php:333, src/index.php:56
+#: src/components/features/section-featured.php:38,
+#: src/components/features/section-featured.php:67,
+#: src/components/features/section-featured_sidebar.php:38,
+#: src/components/features/section-featured_sidebar.php:67,
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:29,
+#: src/inc/template-tags.php:224, src/index.php:64
 msgid "Last post"
 msgstr "Ostanie wpisy"
 
-#: src/components/features/section-featured.php:77
+#: src/components/features/section-featured.php:66,
+#: src/components/features/section-featured_sidebar.php:66
 msgid "Show all"
 msgstr "Pokaż wszystkie"
 
-#: src/components/features/section-links.php:13
-msgid "Links"
-msgstr "Odnośniki"
+#: src/components/features/section-featured_sidebar.php:40,
+#: src/components/features/slider/loop-category.php:16
+msgid "Pause animation slideshow"
+msgstr "Zatrzymaj pokaz slajdów"
 
-#: src/components/site/loop-homepage.php:139, src/index.php:83,
+#: src/components/features/section-featured_sidebar.php:71,
+#: src/components/features/slider/loop-category.php:15
+msgid "Start animation slideshow"
+msgstr "Uruchom pokaz slajdów"
+
+#: src/components/features/section-links.php:12,
+#: src/inc/customizer/setting_control/inc_setting_links.php:30
+msgid "Links to pages"
+msgstr "Linki do stron"
+
+#: src/components/features/slider/custom-text.php:10,
+#: src/components/features/slider/custom-text.php:21,
+#: src/components/site/section-alert.php:18,
+#: src/components/site/section-alert.php:21,
+#: src/inc/customizer/setting_control/inc_setting_alert.php:60
+msgid "Information"
+msgstr "Informacja"
+
+#: src/components/features/slider/custom-text.php:15,
+#: src/components/features/slider/loop-category.php:12,
+#: src/inc/customizer/setting_control/inc_setting_baners.php:79,
+#: src/inc/customizer/setting_control/inc_setting_header.php:13,
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:27,
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:34
+msgid "Section title"
+msgstr "Tytuł sekcji"
+
+#: src/components/features/slider/custom-text.php:30,
+#: src/components/features/slider/loop-category.php:40
+msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Czytaj dalej <span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: src/components/site/loop-homepage.php:118, src/index.php:89,
 #: src/search.php:42
 msgid "Previous page"
 msgstr "Poprzednia strona"
 
-#: src/components/site/loop-homepage.php:140, src/index.php:84,
+#: src/components/site/loop-homepage.php:119, src/index.php:90,
 #: src/search.php:43
 msgid "Next page"
 msgstr "Następna strona"
 
-#: src/components/site/section-alert.php:21,
-#: src/inc/customizer/setting_control/inc_setting_alert.php:34,
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:32
+#: src/components/site/section-alert.php:22,
+#: src/inc/customizer/setting_control/inc_setting_alert.php:30,
+#: src/inc/customizer/setting_control/inc_setting_header.php:49
 msgid "Show more"
 msgstr "Pokaż więcej"
 
-#: src/footer.php:29
+#: src/footer.php:27
 msgid "Place name"
 msgstr "Nazwa miejsca"
 
-#: src/footer.php:33,
+#: src/footer.php:31, src/inc/customizer/helpers/inc_helpers.php:190,
 #: src/inc/customizer/setting_control/inc_setting_contact.php:52
 msgid "Address"
 msgstr "Adres"
 
-#: src/footer.php:42,
-#: src/inc/customizer/custom_control_field/inc_field_open_hours.php:46,
+#: src/footer.php:40,
 #: src/inc/customizer/setting_control/inc_setting_contact.php:112
 msgid "Opening Hours"
 msgstr "Godziny otwarcia"
 
-#: src/footer.php:51,
+#: src/footer.php:49, src/inc/customizer/helpers/inc_helpers.php:204,
 #: src/inc/customizer/setting_control/inc_setting_contact.php:67
 msgid "Telephone number"
 msgstr "Numer telefonu"
 
-#: src/footer.php:63,
-#: src/inc/customizer/setting_control/inc_setting_contact.php:82
+#: src/footer.php:61, src/inc/customizer/helpers/inc_helpers.php:197
 msgid "E-mail"
 msgstr "E-mail"
 
-#: src/footer.php:90
+#: src/footer.php:64
+msgid "Office: "
+msgstr "Urząd: "
+
+#: src/footer.php:65
+msgid "Editorial: "
+msgstr "Redakcja strony: "
+
+#: src/footer.php:70
+msgid "Municipalities in the district"
+msgstr "Gminy w Powiecie"
+
+#: src/footer.php:120
 msgid "All Rights Reserved"
 msgstr "Wszelkie Prawa Zastrzeżone"
 
@@ -184,81 +223,87 @@ msgid "Header Menu"
 msgstr "Menu nagłówka"
 
 #: src/functions.php:84
-msgid "Section - Shortcuts"
-msgstr "Sekcja - Skróty"
-
-#: src/functions.php:85
 msgid "Section - Links to other pages"
 msgstr "Sekcja - Linki do innych stron"
 
-#: src/functions.php:134, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87,
+#: src/functions.php:85
+msgid "Footer Menu"
+msgstr "Menu w stopce"
+
+#: src/functions.php:143, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87,
 #: src/inc/wcga_form.php:96
 msgid "Wyłącz kontrast"
 msgstr "Wyłącz kontrast"
 
-#: src/functions.php:135, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
+#: src/functions.php:144, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
 msgid "Włącz kontrast"
 msgstr "Włącz kontrast"
 
-#: src/functions.php:137
+#: src/functions.php:146
 msgid "Previous Image (left arrow key)"
 msgstr "Poprzednie zdjęcie"
 
-#: src/functions.php:138
+#: src/functions.php:147
 msgid "Next Image (right arrow key)"
 msgstr "Następne zdjęcie"
 
-#: src/functions.php:139
+#: src/functions.php:148
 msgid "of"
 msgstr "z"
 
-#: src/functions.php:140
+#: src/functions.php:149
 msgid "Close (Escape key)"
 msgstr "Zamknij"
 
-#: src/functions.php:141
+#: src/functions.php:150
 msgid "Loading ..."
 msgstr "Ładowanie ..."
 
-#: src/functions.php:142, src/inc/widget/widget-baner.php:113
+#: src/functions.php:151, src/inc/widget/widget-baner.php:120
 msgid "Image"
 msgstr "Zdjęcie"
 
-#: src/functions.php:143
+#: src/functions.php:152
 msgid "it cannot be loaded."
 msgstr "nie zostało załadowane."
 
-#: src/functions.php:157,
-#: src/inc/customizer/setting_control/inc_setting_baners.php:25
+#: src/functions.php:153
+msgid "Link open in a new window"
+msgstr "Link do stron otworzy się w nowym oknie"
+
+#: src/functions.php:167
+msgid "Header Shortcuts"
+msgstr "Nagłówek - Sekcja na skróty"
+
+#: src/functions.php:176,
+#: src/inc/customizer/setting_control/inc_setting_baners.php:23
 msgid "Baners - Primary section"
 msgstr "Pierwsza sekcja z banerami"
 
-#: src/functions.php:166
+#: src/functions.php:185
 msgid "Right Sidebar"
 msgstr "Boczny pasek po prawej"
 
-#: src/functions.php:175,
-#: src/inc/customizer/setting_control/inc_setting_baners.php:70
+#: src/functions.php:194,
+#: src/inc/customizer/setting_control/inc_setting_baners.php:63
 msgid "Baners - Secondary section"
-msgstr "Druga sekcja z banerami."
+msgstr "Druga sekcja z banerami"
 
-#: src/functions.php:185
-msgid "Footer - middle column"
-msgstr "Stopka - środkowa kolumna"
+#: src/header.php:36
+msgid "Skip to content"
+msgstr "Przejdź do treści"
 
-#: src/header.php:75, src/header.php:61
-msgid "Menu"
-msgstr "Menu"
+#: src/header.php:37
+msgid "Go to the main page navigation"
+msgstr "Przejdź do głównej nawigacji strony"
 
-#: src/header.php:78
+#: src/header.php:118, src/header.php:105
+msgid "Menu <span class=\"screen-reader-text\">rozwiń </span>"
+msgstr "Menu <span class=\"screen-reader-text\">rozwiń </span>"
+
+#: src/header.php:121
 msgid "Add menu"
 msgstr "Dodaj menu"
-
-#: src/image.php:12, src/index.php:47,
-#: src/page-templates/page-no_sidebar.php:14, src/page.php:20,
-#: src/single.php:15
-msgid "You are here: &nbsp;"
-msgstr "Jesteś tutaj: &nbsp;"
 
 #: src/image.php:28
 msgid ""
@@ -272,53 +317,57 @@ msgstr ""
 "pikseli <span class=\"screen-reader-text\">(wysokość obrazu)</span></a> w "
 "artykule <a href=\"%4$s\" title=\"Powrót do %5$s\">%6$s</a>"
 
-#: src/inc/customizer/customizer.php:76
+#: src/inc/customizer/customizer.php:72
 msgid "Theme Settings"
 msgstr "Ustawienia Szablonu"
 
-#: src/inc/customizer/customizer.php:89
+#: src/inc/customizer/customizer.php:85
 msgid "Typography"
 msgstr "Typografia"
 
-#: src/inc/customizer/customizer.php:102
-msgid "News section"
-msgstr "Sekcja z najnowszymi wpisami"
-
-#: src/inc/customizer/customizer.php:114
-msgid "Header slider"
-msgstr "Nagłówek - Slajder"
-
-#: src/inc/customizer/customizer.php:125
-msgid "Header without a slider"
-msgstr "Nagłówek - Bez slajdera"
-
-#: src/inc/customizer/customizer.php:137
-msgid "Header - image background"
-msgstr "Nagłówek - obrazek tła"
-
-#: src/inc/customizer/customizer.php:149
-msgid "Featured category"
-msgstr " Wyróżniona kategoria "
-
-#: src/inc/customizer/customizer.php:161
-msgid "Section links"
-msgstr "Sekcja z odnośnikami"
-
-#: src/inc/customizer/customizer.php:173
+#: src/inc/customizer/customizer.php:98
 msgid "Section Alert"
 msgstr "Sekcja - Ważna informacja"
 
-#: src/inc/customizer/customizer.php:186
-msgid "Section Baners"
-msgstr "Sekcja Banery"
+#: src/inc/customizer/customizer.php:110
+msgid "Header"
+msgstr "Nagłówek"
 
-#: src/inc/customizer/customizer.php:199
+#: src/inc/customizer/customizer.php:122
+msgid "Header slider"
+msgstr "Nagłówek - Pokaz slajdów"
+
+#: src/inc/customizer/customizer.php:134
+msgid "Site - Popup"
+msgstr "Okno popup"
+
+#: src/inc/customizer/customizer.php:147
+msgid "Section - News category"
+msgstr "Sekcja - Aktualności"
+
+#: src/inc/customizer/customizer.php:159
+msgid "Section - Featured category"
+msgstr "Sekcja - Wyróżniona kategoria"
+
+#: src/inc/customizer/customizer.php:171
+msgid "Section - Menu links"
+msgstr "Sekcja - Menu z odnośnikami"
+
+#: src/inc/customizer/customizer.php:183
+msgid "Baners"
+msgstr "Banery"
+
+#: src/inc/customizer/customizer.php:196
 msgid "Contact"
 msgstr "Kontakt"
 
-#: src/inc/customizer/customizer.php:210
+#: src/inc/customizer/customizer.php:207
 msgid "Social networks"
 msgstr "Serwisy społecznościowe"
+
+#: src/inc/customizer/customizer.php:218
+msgid "District"
+msgstr "Gminy"
 
 #: src/inc/customizer/helpers/inc_helpers.php:100
 msgid "Category"
@@ -331,51 +380,63 @@ msgstr "Wszystkie kategorie"
 
 #: src/inc/customizer/helpers/inc_helpers.php:153
 msgid "Profile on the site "
-msgstr "Profile na stronie "
+msgstr "Profil Urzędu na stronie "
 
 #: src/inc/customizer/helpers/inc_helpers.php:157
 msgid "Find us on"
 msgstr "Odwiedź nas na"
 
 #: src/inc/customizer/helpers/inc_helpers.php:170,
-#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:60,
-#: src/inc/customizer/setting_control/inc_setting_header_slider.php:64,
-#: src/inc/customizer/setting_control/inc_setting_main_loop.php:43
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:51,
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:66,
+#: src/inc/customizer/setting_control/inc_setting_main_loop.php:35
 msgid "Select Category"
 msgstr "Wybierz kategorię"
 
-#: src/inc/customizer/setting_control/inc_setting_alert.php:23,
-#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:22,
-#: src/inc/customizer/setting_control/inc_setting_header_slider.php:22,
-#: src/inc/customizer/setting_control/inc_setting_links.php:23
+#: src/inc/customizer/setting_control/inc_setting_alert.php:21,
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:21,
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:20,
+#: src/inc/customizer/setting_control/inc_setting_links.php:22
 msgid "Show section"
 msgstr "Pokaż sekcję"
 
-#: src/inc/customizer/setting_control/inc_setting_alert.php:42
+#: src/inc/customizer/setting_control/inc_setting_alert.php:38
 msgid "Button title"
 msgstr "Tytuł przycisku"
 
-#: src/inc/customizer/setting_control/inc_setting_alert.php:57
+#: src/inc/customizer/setting_control/inc_setting_alert.php:53
 msgid "Button url"
 msgstr "Adres strony do której prowdzi przycisk"
 
-#: src/inc/customizer/setting_control/inc_setting_alert.php:72
+#: src/inc/customizer/setting_control/inc_setting_alert.php:65
 msgid "Description"
 msgstr "Opis"
 
-#: src/inc/customizer/setting_control/inc_setting_baners.php:36,
-#: src/inc/customizer/setting_control/inc_setting_baners.php:81,
+#: src/inc/customizer/setting_control/inc_setting_baners.php:32,
+#: src/inc/customizer/setting_control/inc_setting_baners.php:72,
 #: src/sidebar-primary_baners.php:13, src/sidebar-secondary_baners.php:14
 msgid "Title"
 msgstr "Tytuł"
 
-#: src/inc/customizer/setting_control/inc_setting_baners.php:44
-msgid "Section title (only for screen reader)"
-msgstr "Tytuł sekcji (tylko dla czytnika ekranu)"
+#: src/inc/customizer/setting_control/inc_setting_baners.php:40
+msgid "Section title (Text for the blind)"
+msgstr "Tytuł sekcji (Tylko dla osób niewidomych)"
 
-#: src/inc/customizer/setting_control/inc_setting_baners.php:89
-msgid "Section title"
-msgstr "Tytuł sekcji"
+#: src/inc/customizer/setting_control/inc_setting_baners.php:41
+msgid ""
+"Items for the section are added on the <a href='%1s'>widget page</a> (Baners "
+"- Primary section)"
+msgstr ""
+"Elementy dodaje się na stronie <a href='%1s'>Widgety</a> (Pierwsza sekcja z "
+"banerami)"
+
+#: src/inc/customizer/setting_control/inc_setting_baners.php:80
+msgid ""
+"Items for the section are added on the <a href='%1s'>widget page</a> (Baners "
+"- Secondary section)"
+msgstr ""
+"Elementy dodaje się na stronie <a href='%1s'>Widgety</a> (Druga sekcja z "
+"banerami)"
 
 #: src/inc/customizer/setting_control/inc_setting_contact.php:19
 msgid "Show map in contact"
@@ -386,129 +447,185 @@ msgstr "Pokaż mapę w kontaktach"
 msgid "Place title"
 msgstr "Nazwa miejsca"
 
+#: src/inc/customizer/setting_control/inc_setting_contact.php:82
+msgid "E-mail to Office"
+msgstr "E-mail do Urzędu"
+
 #: src/inc/customizer/setting_control/inc_setting_contact.php:97
-msgid "E-mail administrator"
-msgstr "E-mail do administratora strony"
+msgid "E-mail to editorial office"
+msgstr "E-mail do redakcji strony"
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:128
-msgid "Select a location on map"
-msgstr "Zaznacz swoją lokalizację"
+#: src/inc/customizer/setting_control/inc_setting_district.php:16
+msgid "Gmina Miejska Bartoszyce"
+msgstr "Gmina Miejska Bartoszyce"
 
-#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:40,
-#: src/inc/customizer/setting_control/inc_setting_links.php:41,
-#: src/inc/customizer/setting_control/inc_setting_main_loop.php:23
+#: src/inc/customizer/setting_control/inc_setting_district.php:17,
+#: src/inc/customizer/setting_control/inc_setting_district.php:30,
+#: src/inc/customizer/setting_control/inc_setting_district.php:44,
+#: src/inc/customizer/setting_control/inc_setting_district.php:57,
+#: src/inc/customizer/setting_control/inc_setting_district.php:71,
+#: src/inc/customizer/setting_control/inc_setting_district.php:84
+msgid "Url to official page"
+msgstr "Link do oficjalnej strony"
+
+#: src/inc/customizer/setting_control/inc_setting_district.php:29
+msgid "Gmina Miejska Górowo Iławeckie"
+msgstr "Gmina Miejska Górowo Iławeckie"
+
+#: src/inc/customizer/setting_control/inc_setting_district.php:43
+msgid "Gmina Wiejska Bartoszyce"
+msgstr "Gmina Wiejska Bartoszyce"
+
+#: src/inc/customizer/setting_control/inc_setting_district.php:56
+msgid "Gmina Wiejska Górowo Iławeckie"
+msgstr "Gmina Wiejska Górowo Iławeckie"
+
+#: src/inc/customizer/setting_control/inc_setting_district.php:70
+msgid "Gmina Miejsko Wiejska Bisztynek"
+msgstr "Gmina Miejsko Wiejska Bisztynek"
+
+#: src/inc/customizer/setting_control/inc_setting_district.php:83
+msgid "Gmina Miejsko Wiejska Sępopol"
+msgstr "Gmina Miejsko Wiejska Sępopol"
+
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:36,
+#: src/inc/customizer/setting_control/inc_setting_links.php:37,
+#: src/inc/customizer/setting_control/inc_setting_main_loop.php:20
 msgid "Title section"
 msgstr "Tytuł sekcji"
 
-#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:61,
-#: src/inc/customizer/setting_control/inc_setting_main_loop.php:44
+#: src/inc/customizer/setting_control/inc_setting_featuredcat.php:52,
+#: src/inc/customizer/setting_control/inc_setting_main_loop.php:36
 msgid "Select category to show in Section."
 msgstr "Wybierz kategorię do pokazania w sekcji."
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:36
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:34
 msgid "Body Font Family"
 msgstr "Czcionka główna dla strony"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:37,
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:98
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:35,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:84
 msgid "Select font or option Google Font to see advanced options google fonts."
 msgstr ""
 "Wybierz czcionkę lub opcję Google Font żeby zobaczyć zawansowane opcje "
 "czcionek google."
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:54
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:48
 msgid "Google Font Family"
 msgstr "Czcionka Google"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:72,
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:133
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:62,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:111
 msgid "Font Variant"
 msgstr "Styl Czcionki"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:73,
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:134
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:63,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:112
 msgid ""
 "Different variants of the font, provides control over font-weight and italics"
 msgstr "Różne style czcionki, zapewnia kontrolę nad pogrubieniem i kursywą"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:97
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:83
 msgid "Heading Font Family"
 msgstr "Czcionka Nagłówków"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:115
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:97
 msgid "Heading - Google Font Family"
 msgstr "Nagłówek - Czcionka Google"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:151
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:126
 msgid "Latin"
 msgstr "Latin"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:152
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:127
 msgid "Latin Extended"
 msgstr "Latin Extended"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:153
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:128
 msgid "Greek"
 msgstr "Greek"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:154
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:129
 msgid "Greek Extended"
 msgstr "Greek Extended"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:155
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:130
 msgid "Cyrillic"
 msgstr "Cyrillic"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:156
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:131
 msgid "Cyrillic Extended"
 msgstr "Cyrillic Extended"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:157
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:132
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:158
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:133
 msgid "Arabic"
 msgstr "Arabic"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:159
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:134
 msgid "Khmer"
 msgstr "Khmer"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:160
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:135
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:174
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:145
 msgid "Choose Google Font Subsets"
 msgstr "Wybierz podzbiory czcionek Google"
 
-#: src/inc/customizer/setting_control/inc_setting_header_image.php:18
-msgid "Image background "
-msgstr "Obrazek tła "
+#: src/inc/customizer/setting_control/inc_setting_header.php:21
+msgid "Section article - title (Text for the blind)"
+msgstr "Sekcja artykuł - Tytuł (tylko dla niewidomych)"
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:14,
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:22
+#: src/inc/customizer/setting_control/inc_setting_header.php:22
+msgid "Text only for the blind)"
+msgstr "Tekst tylko dla niewidomych"
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:31
 msgid "Title information"
 msgstr "Tytuł informacji"
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:40
-msgid "Information - Button title"
-msgstr "Informacja - tekst przycisku"
+#: src/inc/customizer/setting_control/inc_setting_header.php:39
+msgid "Section article - Article Title"
+msgstr "Sekcja artykuł - Tytuł artykułu"
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:55
-msgid "Information - Button url "
-msgstr "Informacja - Link przycisku "
+#: src/inc/customizer/setting_control/inc_setting_header.php:57
+msgid "Section article - Button title"
+msgstr "Sekcja artykuł - Tekst na przycisku"
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:70
-msgid "Description information"
-msgstr "Informacja - opis"
+#: src/inc/customizer/setting_control/inc_setting_header.php:72
+msgid "Section article - Button url "
+msgstr "Sekcja artykuł - Link przycisku "
 
-#: src/inc/customizer/setting_control/inc_setting_header_slider.php:40
+#: src/inc/customizer/setting_control/inc_setting_header.php:89
+msgid "Section article - Article content"
+msgstr "Sekcja artykuł - Treść artykułu"
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:100
+msgid "Shortcuts"
+msgstr "Na skróty"
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:107
+msgid "Section Shortcuts - Section title (Text for the blind)"
+msgstr "Sekcja na skróty - Tytuł (tylko dla niewidomych)"
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:108
+msgid "Items for the section are added on the <a href='%1s'>widget page</a>"
+msgstr "Elementy dodawane są na stronie <a href='%1s'>Widgety</a>"
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:121
+msgid "Header - Image background "
+msgstr "Nagłówek - Obrazek tła "
+
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:48
 msgid "No of items"
 msgstr "Liczba slajdów"
 
-#: src/inc/customizer/setting_control/inc_setting_header_slider.php:41
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:49
 msgid ""
 "Enter number between %1s and %2s .Save and refresh the page if No of Blocks "
 "is changed."
@@ -516,117 +633,127 @@ msgstr ""
 "Wpisz liczbę pomiędzy %1s a %2s . Opublikuj i odśwież stronę aby zmieniła "
 "się liczba elementów."
 
-#: src/inc/customizer/setting_control/inc_setting_header_slider.php:65
+#: src/inc/customizer/setting_control/inc_setting_header_slider.php:67
 msgid "Select category to show slider."
-msgstr "Wybierz kategorię do pokazania w slajderze."
+msgstr "Wybierz kategorię dla pokazu slajdów."
 
-#: src/inc/customizer/setting_control/inc_setting_links.php:33
-msgid "Links to pages"
-msgstr "Linki do stron"
+#: src/inc/customizer/setting_control/inc_setting_links.php:38
+msgid "Items for the section are added on the <a href='%1s'>menu page</a>"
+msgstr "Elementy dodawane są na stronie <a href='%1s'>ustawnie menu</a>"
 
-#: src/inc/customizer/setting_control/inc_setting_privacy.php:21
-msgid "Show in footer"
-msgstr "Pokaż w stopce"
+#: src/inc/customizer/setting_control/inc_setting_popup.php:20
+msgid "Show popup"
+msgstr "Pokaż popup"
 
-#: src/inc/customizer/setting_control/inc_setting_privacy.php:22
-msgid ""
-"Go to the page with privacy policy settings: <a href=\"%1$s\">Policy "
-"settings</a>"
-msgstr ""
-"Przejdź do strony z ustawieniami: <a href=\"%1$s\">Polityki prywatności</a>"
+#: src/inc/customizer/setting_control/inc_setting_popup.php:33
+msgid "Popup Image"
+msgstr "Popup - grafika"
 
-#: src/inc/customizer/setting_control/inc_setting_social.php:28
+#: src/inc/customizer/setting_control/inc_setting_popup.php:46
+msgid "Popup url "
+msgstr "Popup - link do strony "
+
+#: src/inc/customizer/setting_control/inc_setting_popup.php:62
+msgid "Popup Description"
+msgstr "Popup - opis"
+
+#: src/inc/customizer/setting_control/inc_setting_popup.php:63
+msgid "Description - (Text for the blind)"
+msgstr "Opis (Tylko dla osób niewidomych)"
+
+#: src/inc/customizer/setting_control/inc_setting_social.php:24
 msgid "Link to  %1$s"
 msgstr "Link do  %1$s"
 
-#: src/inc/template-functions.php:90
+#: src/inc/template-functions.php:119
 msgid "Untitled"
 msgstr "Brak tytułu"
 
-#: src/inc/template-tags.php:28
+#: src/inc/template-tags.php:27
 msgid "Data"
 msgstr "Data"
 
-#: src/inc/template-tags.php:43
+#: src/inc/template-tags.php:42
 msgid "Share on Twitter!"
 msgstr "Udostępnij na Twiterze!"
 
-#: src/inc/template-tags.php:44
-msgid "Share on Google+"
-msgstr "Udostępnij na Google+"
-
-#: src/inc/template-tags.php:45
+#: src/inc/template-tags.php:43
 msgid "Share on Facebook"
 msgstr "Udostępnij na Facebooku"
 
-#: src/inc/template-tags.php:96, src/inc/template-tags.php:69
+#: src/inc/template-tags.php:89, src/inc/template-tags.php:63,
+#: src/inc/template-tags.php:208
 msgid "Post published in category "
 msgstr "Artykuł opublikowany w kategorii "
 
-#: src/inc/template-tags.php:102
+#: src/inc/template-tags.php:95
 msgid ", on data"
 msgstr ", dnia"
 
-#: src/inc/template-tags.php:109, src/inc/template-tags.php:136
+#: src/inc/template-tags.php:102, src/inc/template-tags.php:129
 msgid "by user"
 msgstr "przez autroa"
 
-#: src/inc/template-tags.php:130
+#: src/inc/template-tags.php:123
 msgid "Page published on data"
 msgstr "Strona opublikowana dnia"
 
-#: src/inc/template-tags.php:229
+#: src/inc/template-tags.php:171
 msgid "Comment navigation"
 msgstr "Nawigacja komentarzy"
 
-#: src/inc/template-tags.php:332
+#: src/inc/template-tags.php:223
 msgid "Home"
 msgstr "Strona Główna"
 
-#: src/inc/template-tags.php:334
+#: src/inc/template-tags.php:225
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr "<span class=\"screen-reader-text\">Kategoria</span> %s"
 
-#: src/inc/template-tags.php:335
-msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
-msgstr "<span class=\"screen-reader-text\">Wynik wyszukiwania dla:</span> %s"
+#: src/inc/template-tags.php:226
+msgid "<span>Search Results for</span> %s"
+msgstr "<span>Wyniki wyszukiwania dla</span> %s"
 
-#: src/inc/template-tags.php:336
+#: src/inc/template-tags.php:227
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr "<span class=\"screen-reader-text\">Tag</span> %s"
 
-#: src/inc/template-tags.php:337
+#: src/inc/template-tags.php:228
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 "<span class=\"screen-reader-text\">Artykuł opublikowany przez</span> %s"
 
-#: src/inc/template-tags.php:338
+#: src/inc/template-tags.php:229
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr "<span class=\"screen-reader-text\">Błąd 404</span>"
 
-#: src/inc/template-tags.php:339
+#: src/inc/template-tags.php:230
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr "<span class=\"screen-reader-text\">Strona</span> %s"
 
-#: src/inc/template-tags.php:340
+#: src/inc/template-tags.php:231
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr "<span class=\"screen-reader-text\">Strona komentarza</span>e %s"
 
-#: src/inc/template-tags.php:374
+#: src/inc/template-tags.php:265
 msgid "page: "
 msgstr "strona: "
+
+#: src/inc/template-tags.php:438
+msgid "Attachments"
+msgstr "Załączniki"
 
 #: src/inc/wcga_form.php:110
 msgid "Standard font size"
 msgstr "Standardowy rozmiar czcionki"
 
 #: src/inc/wcga_form.php:111
-msgid "Increase font size 150%"
-msgstr "Zwiększ rozmiar czcionki 150%"
+msgid "Increase font size 130%"
+msgstr "Zwiększ rozmiar czcionki 130%"
 
 #: src/inc/wcga_form.php:112
-msgid "Increase font size 200%"
-msgstr "Zwiększ rozmiar czcionki 200%"
+msgid "Increase font size 150%"
+msgstr "Zwiększ rozmiar czcionki 150%"
 
 #: src/inc/widget/widget-baner.php:11
 msgid "Baner with description"
@@ -636,28 +763,120 @@ msgstr "Baner z opisem"
 msgid "Image widget with description"
 msgstr "Widget Baner z opisem"
 
-#: src/inc/widget/widget-baner.php:102
+#: src/inc/widget/widget-baner.php:95
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: src/inc/widget/widget-baner.php:100
+msgid "Url:"
+msgstr "Adres url:"
+
+#: src/inc/widget/widget-baner.php:107
 msgid "Open in new window?"
 msgstr "Otworzyć w nowej karcie ?"
 
-#: src/index.php:59
+#: src/inc/widget/widget-baner.php:114
+msgid "Image Black and white image ?"
+msgstr "Dodać filtr czarno-biały do zdjęcia ?"
+
+#: src/inc/widget/widget-baner.php:123
+msgid "Upload Image"
+msgstr "Dodaj zdjęcie"
+
+#: src/inc/widget/widget-baner.php:124
+msgid "Remove Image"
+msgstr "Usuń zdjęcie"
+
+#: src/inc/widget/widget-baner.php:129
+msgid "Image description:"
+msgstr "Opis obrazka:"
+
+#: src/index.php:67
 msgid " - page: "
 msgstr " - strona: "
+
+#: src/page-templates/page-attachment.php:3
+msgid "Page with attachments"
+msgstr "Strona z załącznikami"
 
 #: src/page-templates/page-no_sidebar.php:3
 msgid "Page - no sidebars"
 msgstr "Szablon bez kolumn"
 
-#: src/search.php:17
+#: src/search.php:20
 msgid "Search Results for: <span> %s </span>"
 msgstr "Wyniki wyszukiwania dla: <span> %s </span>"
 
-#: src/searchform.php:13, src/searchform.php:14, src/searchform.php:15
+#: src/searchform.php:12
+msgid "Search form on the site"
+msgstr "Pole wyszukiwania na stronie"
+
+#: src/searchform.php:13
+msgid "Enter a search word"
+msgstr "Wpisz szukane słowo"
+
+#: src/searchform.php:14, src/searchform.php:14
 msgid "Search"
 msgstr "Szukaj"
 
-#~ msgid "Section - baners"
-#~ msgstr "Sekcja - banery"
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#~ msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#~ msgid "Section Baners"
+#~ msgstr "Sekcja Banery"
+
+#~ msgid "Header without a slider"
+#~ msgstr "Nagłówek - Bez slajdera"
+
+#~ msgid "Header - Shortcuts section"
+#~ msgstr "Nagłówek - Sekcja na skróty"
+
+#~ msgid "Section title (only for screen reader)"
+#~ msgstr "Tytuł sekcji (tylko dla czytnika ekranu)"
+
+#~ msgid "Image background "
+#~ msgstr "Obrazek tła "
+
+#~ msgid "Description information"
+#~ msgstr "Informacja - opis"
+
+#~ msgid "Show in footer"
+#~ msgstr "Pokaż w stopce"
+
+#~ msgid ""
+#~ "Go to the page with privacy policy settings: <a href=\"%1$s\">Policy "
+#~ "settings</a>"
+#~ msgstr ""
+#~ "Przejdź do strony z ustawieniami: <a href=\"%1$s\">Polityki prywatności</"
+#~ "a>"
+
+#~ msgid "E-mail administrator"
+#~ msgstr "E-mail do administratora strony"
+
+#~ msgid "Increase font size 200%"
+#~ msgstr "Zwiększ rozmiar czcionki 200%"
+
+#~ msgid "Footer - middle column"
+#~ msgstr "Stopka - środkowa kolumna"
+
+#~ msgid "News section"
+#~ msgstr "Sekcja z najnowszymi wpisami"
+
+#~ msgid "Select a location on map"
+#~ msgstr "Zaznacz swoją lokalizację"
+
+#~ msgid "Links"
+#~ msgstr "Odnośniki"
+
+#~ msgid "Share on Google+"
+#~ msgstr "Udostępnij na Google+"
+
+#~ msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
+#~ msgstr ""
+#~ "<span class=\"screen-reader-text\">Wynik wyszukiwania dla:</span> %s"
 
 #~ msgid "Home page - Section bottom baners"
 #~ msgstr "Strona główna - sekcja dolna z banerami"
@@ -674,14 +893,8 @@ msgstr "Szukaj"
 #~ msgid "Show footer banners"
 #~ msgstr "Pokaż banery w stopce"
 
-#~ msgid "Continue reading"
-#~ msgstr "Czytaj dalej"
-
 #~ msgid "Tab "
 #~ msgstr "Zakładka "
-
-#~ msgid "Tab content"
-#~ msgstr "Zawartość zakładki"
 
 #~ msgid "Go to the website"
 #~ msgstr "Przejdź do witryny"
@@ -706,9 +919,6 @@ msgstr "Szukaj"
 
 #~ msgid "Show previous news"
 #~ msgstr "Pokaż poprzednie nowości"
-
-#~ msgid "Partners"
-#~ msgstr "Partnerzy"
 
 #~ msgid ""
 #~ "Our site uses cookies of its own to properly display the page. Third-"

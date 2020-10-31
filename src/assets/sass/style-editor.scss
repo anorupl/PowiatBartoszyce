@@ -1,0 +1,29 @@
+.wp-block{
+    max-width: 872px;
+}
+.wp-block[data-align=wide] { /* it can be "data-align=full" and also "right", "left" and "center" */
+    max-width: 872px;
+}
+
+.opis-filmu {
+padding: 10px;
+background: #F1F1F1;
+border: 1px solid #E5E5E5;
+border-top: 0px;
+}
+
+.mce-listbox button {
+min-width: 115px;
+}
+#tinymce [lang],
+.block-library-rich-text__tinymce [lang] {
+    background: #f8f8f8;
+    border: 1px solid #d2d0ce;
+    padding: 2px;
+}
+
+#tinymce div.youtube-caption {
+	background: #f8f8f8;
+    border: 1px solid #d2d0ce;
+    padding: 2px;
+}

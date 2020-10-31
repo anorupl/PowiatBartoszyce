@@ -12,14 +12,14 @@
   /*
   *  ul
   * -----------*/
-  .menu                       {display: flex; flex-direction: column;}
-  .menu > li                  {float: left;}
+  .menu                       {display: flex; flex-direction: column; text-align: center;}
+  .menu > li                  {display: inline-block;}
 
   /*
   *  ul ul
   * -----------*/
-  .sub-menu                       {display: block; position: absolute; min-width: 100%; left: -999em; font-family: $font-base; z-index: $z-dropdown ;}
-  .sub-menu li                    {clear: both; padding: 0 10px; min-width: 100%; max-width: 230px; text-align: left;}
+  .sub-menu                       {display: block; position: absolute; min-width: 260px; max-width: 100%; left: -999em; font-family: $font-base; z-index: $z-level-3 ;}
+  .sub-menu li                    {clear: both; padding: 0 10px; min-width: 100%; max-width: 100%; text-align: left;}
   .sub-menu li a                  {padding: 10px;}
 
   /* li - submenu active*/
@@ -36,13 +36,6 @@
   .menu ul.sub-menu li.focus > ul.sub-menu    {left: -100%; top: -10px;}
 
 
-  .menu > li.menu-item-has-children{
-    text-align: center;
-  }
-  .menu-item-has-children {
-    //width: 200px;
-  }
-
   /*
   *  current li a
   * -----------*/
@@ -56,19 +49,19 @@
   .menu .highlight > a                                  {color: $four-bw; background: $two-color; border-radius: 5px;}
   .menu .highlight > a:hover                            {background-color: $one-color; color: $four-bw;}
   .menu .highlight.menu-item-has-children > a::after    {color: $four-bw; }
-}
-.h-nav--color {
 
-  .menu li > a                {color: $hv-a;}
-  .menu li > a:hover          {color: $hv-ahover;}
 
-  .sub-menu li                {background: $hv-lili;}
-  .sub-menu li a              {color: $hv-aa;}
-  .sub-menu li > a:hover      {color: $hv-aahover;}
-  .sub-menu li li  > a:hover  {color: $hv-aahover;}
+
+  /*
+  * WCAG TAB Focus
+  *----------------*/
+  .menu li.focus > a          {background-color: $bar-bg-ahover; color:$bar-a;}
+
 }
 
 .bar-color {
+
+  .menu > li.menu-item-has-children {text-align: center;}
 
   /*
    *  strzalki
@@ -78,26 +71,30 @@
       color: $hv-plus;
       font-weight: bold;
   }
+
   /* pierwszy poziom strzalka w dół */
   .menu > .menu-item-has-children > a:after 	{
      @extend [class^="icon-"];
      content: "\f107";
+     bottom: -2px;
   }
+
   /* drugi poziom strzalkaw prawo */
 	.sub-menu .menu-item-has-children > a:after 	{
 	    @extend [class^="icon-"];
 	    content: "\f105";
+      bottom: -2px;
 	}
 
 
   .menu li > a                {color: $bar-a;}
   .menu li > a:hover,
-  .menu li.focus > a          {background-color: $bar-bg-ahover;}
+  .menu li.focus > a          {background-color: $bar-bg-ahover; color:$bar-a;}
 
   .sub-menu li                {background: $bar-lili;}
   .sub-menu li a              {color: $bar-aa; border-bottom: solid 1px $bar-lili;}
   .sub-menu li > a:hover      {color: $bar-aahover; background-color: transparent; border-bottom: solid 1px $bar-aahover;}
-  .sub-menu li li > a:hover  {color: $bar-aahover; background-color: transparent;}
+  .sub-menu li li > a:hover   {color: $bar-aahover; background-color: transparent;}
 
 
 }

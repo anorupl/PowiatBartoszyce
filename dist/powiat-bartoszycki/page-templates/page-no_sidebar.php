@@ -10,13 +10,13 @@
 
 get_header(); ?>
 <div id="content" class="site-content clear-both">
-  <div id="breadcrumbs" class="text-center bg-white">
+  <div id="breadcrumbs" class="text-center">
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
   </div>
   <div class="container">
-    <div id="primary" class="content-area col-no_sidebar">
+    <div id="primary" class="content-area">
       <main id="main" class="site-main">
-        <article class="content-style">
+        <article class="content-style style__narrow col-12">
           <header class="entry-header">
               <h1 class="entry-title"><?php the_title(); ?></h1>
           </header>

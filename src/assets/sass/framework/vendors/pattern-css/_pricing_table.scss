@@ -11,7 +11,7 @@
 		@include span (3 no-gutter);
 		min-width: 160px;
 		border: 1px solid $border-color;
-		z-index: 0;
+		z-index: $z-level-1;
 		position: relative;
 		background: $four-bw;
 		color: $one-bw;
@@ -19,7 +19,7 @@
 	}
 
 	#most-popular {
-		z-index: 2;
+		z-index: $z-level-2;
 		top: -3em;
 		padding-bottom: 6em;
 		border-width: 3px;

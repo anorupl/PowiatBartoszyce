@@ -1,4 +1,4 @@
-/* Pretty Select 
+/* Pretty Select
 ========================================================================== */
 select {
     position: relative;
@@ -9,7 +9,7 @@ select {
     padding:10px 40px 10px 10px;
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.1);
 
-    z-index: 2;
+    z-index: $z-level-2;
     cursor: pointer;
     appearance:none;
     text-indent: 0.01px;

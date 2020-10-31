@@ -111,7 +111,7 @@
     height:100%;
     opacity: 0;
     filter: "alpha(opacity=0)";
-    z-index: 90;
+    z-index: $z-level-1;
 
 
     &::before {

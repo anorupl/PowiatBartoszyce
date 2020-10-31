@@ -81,7 +81,7 @@
 	a, span	{
 		display: inline-block;
 		margin: 0px 5px;
-		padding: 10px 16px 8px 17px;
+		padding: 8px 16px 8px 17px;
 		text-decoration: none;
 		border-radius: 25px;
 		border: 2px solid $nav-border;
@@ -113,6 +113,11 @@
 		background: $nav-background-active;
 		border: none;
 	}
+  .post-page-numbers.current {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
 }
 /* ---------------------------------
 * Navigation single (next post)
@@ -141,16 +146,22 @@ padding-bottom: 50px;
 		width: span(10);
 		padding: 20px gutter() 20px gutter();
 		margin: 0 auto;
-		 div {
+		div {
 			margin: 10px 0;
-			border: 2px solid $nav-border;
-			padding: 10px;
-			background: $nav-background;
 		}
-
-		div:hover {
+    div a {
+      display: block;
+      border: 2px solid $nav-border;
+      padding: 10px;
+      background: $nav-background;
+    }
+		div a:hover,
+    div a:focus {
+			color: $nav-text;
 			background: $nav-color;
-			a {color: $nav-text;}
+      span.meta-nav {
+        	color: $nav-text;
+      }
 		}
 	}
 }
