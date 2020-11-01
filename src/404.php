@@ -7,7 +7,7 @@
 */
 get_header(); ?>
 <div id="content" class="clear-both">
-  <div id="breadcrumbs" class="text-center bg-white"><?php _e('Page not found', 'wpg_theme'); ?></div>
+  <div id="breadcrumbs" class="text-center"><?php _e('Page not found', 'wpg_theme'); ?></div>
   <div class="container">
     <div id="primary" class="content-area col-12">
       <main id="main" class="site-main">

@@ -17,7 +17,7 @@ get_header(); ?>
 * Display Only in front page    *
 * ==============================*/
 if (is_home() && !is_paged()) { ?>
-  <div class="container gutters">
+  <div id="content" class="container gutters">
   <?php
   get_template_part('components/site/loop', 'homepage' );
   ?>
@@ -54,7 +54,7 @@ if (is_home() && !is_paged()) { ?>
   } else {
   ?>
   <div id="content" class="clear-both">
-    <div id="breadcrumbs" class="text-center bg-white">
+    <div id="breadcrumbs" class="text-center">
         <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
     </div>
     <div class="container">

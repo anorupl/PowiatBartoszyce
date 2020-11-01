@@ -70,7 +70,7 @@
                    <header class="entry-header">
                      <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
                    </header>
-                   <div class="entry-meta pad-all">
+                   <div class="entry-meta">
                      <div class="meta__item"><?php wpg_time() ?></div>
                      <div class="meta__item screen-reader-text">
                        <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
@@ -94,7 +94,7 @@
                  <header class="entry-header">
                    <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
                  </header>
-                 <div class="entry-meta pad-all">
+                 <div class="entry-meta">
                    <div class="meta__item"><?php wpg_time() ?></div>
                    <div class="meta__item screen-reader-text">
                      <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
@@ -142,8 +142,8 @@
               ?>
               <div id="no-post-container" class="col-12">
                   <article id="post-nopost" class="">
-                    <div class="f-post-content col-5 gutters text-light">
-                      <header class="entry-header a-light a-hover-two">
+                    <div class="f-post-content col-5 gutters">
+                      <header class="entry-header">
                         <h2 class="entry-title"><?php _e('Nothing Found', 'wpg_theme') ?></h2>
                       </header>
                       <div class="entry-summary">

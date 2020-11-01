@@ -94,7 +94,7 @@ msgstr ""
 msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: src/components/features/section-featured.php:42, src/components/features/section-featured_sidebar.php:40, src/inc/customizer/setting_control/inc_setting_featuredcat.php:32, src/inc/customizer/setting_control/inc_setting_main_loop.php:15, src/inc/template-tags.php:333, src/index.php:67
+#: src/components/features/section-featured.php:42, src/components/features/section-featured_sidebar.php:40, src/inc/customizer/setting_control/inc_setting_featuredcat.php:32, src/inc/customizer/setting_control/inc_setting_main_loop.php:15, src/inc/template-tags.php:331, src/index.php:67
 msgid "Last post"
 msgstr ""
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:144, src/inc/widget/widget-baner.php:113
+#: src/functions.php:144, src/inc/widget/widget-baner.php:123
 msgid "Image"
 msgstr ""
 
@@ -230,7 +230,7 @@ msgstr ""
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/image.php:28
+#: src/image.php:30
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
 
@@ -478,71 +478,67 @@ msgstr ""
 msgid "Data"
 msgstr ""
 
-#: src/inc/template-tags.php:43
+#: src/inc/template-tags.php:42
 msgid "Share on Twitter!"
 msgstr ""
 
-#: src/inc/template-tags.php:44
-msgid "Share on Google+"
-msgstr ""
-
-#: src/inc/template-tags.php:45
+#: src/inc/template-tags.php:43
 msgid "Share on Facebook"
 msgstr ""
 
-#: src/inc/template-tags.php:96, src/inc/template-tags.php:69
+#: src/inc/template-tags.php:94, src/inc/template-tags.php:67
 msgid "Post published in category "
 msgstr ""
 
-#: src/inc/template-tags.php:102
+#: src/inc/template-tags.php:100
 msgid ", on data"
 msgstr ""
 
-#: src/inc/template-tags.php:109, src/inc/template-tags.php:136
+#: src/inc/template-tags.php:107, src/inc/template-tags.php:134
 msgid "by user"
 msgstr ""
 
-#: src/inc/template-tags.php:130
+#: src/inc/template-tags.php:128
 msgid "Page published on data"
 msgstr ""
 
-#: src/inc/template-tags.php:229
+#: src/inc/template-tags.php:227
 msgid "Comment navigation"
 msgstr ""
 
-#: src/inc/template-tags.php:332
+#: src/inc/template-tags.php:330
 msgid "Home"
 msgstr ""
 
-#: src/inc/template-tags.php:334
+#: src/inc/template-tags.php:332
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:335
+#: src/inc/template-tags.php:333
 msgid "<span>Search Results for</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:336
+#: src/inc/template-tags.php:334
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:337
+#: src/inc/template-tags.php:335
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:338
+#: src/inc/template-tags.php:336
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:339
+#: src/inc/template-tags.php:337
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:340
+#: src/inc/template-tags.php:338
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr ""
 
-#: src/inc/template-tags.php:374
+#: src/inc/template-tags.php:372
 msgid "page: "
 msgstr ""
 
@@ -566,8 +562,12 @@ msgstr ""
 msgid "Image widget with description"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:102
+#: src/inc/widget/widget-baner.php:112
 msgid "Open in new window?"
+msgstr ""
+
+#: src/inc/widget/widget-baner.php:135
+msgid "Image description:"
 msgstr ""
 
 #: src/index.php:70
@@ -582,6 +582,6 @@ msgstr ""
 msgid "Search Results for: <span> %s </span>"
 msgstr ""
 
-#: src/searchform.php:13, src/searchform.php:14, src/searchform.php:15
+#: src/searchform.php:13, src/searchform.php:14, src/searchform.php:15, src/searchform.php:15
 msgid "Search"
 msgstr ""

@@ -8,19 +8,21 @@
 get_header();
 ?>
 <div id="content" class="site-content clear-both">
-  <div id="breadcrumbs" class="text-center bg-white">
+  <div id="breadcrumbs" class="text-center">
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
   </div>
   <div class="container">
     <div id="primary" class="content-area margin">
       <main id="main" class="site-main">
             <?php while (have_posts()) : the_post(); ?>
-                <div <?php post_class(); ?>>
+                <div <?php post_class('content-style'); ?>>
                   <header class="entry-header">
                       <h1 class="entry-title text-center"><?php the_title(); ?></h1>
                   </header>
                   <hr>
-                  <div class="entry-meta col-10">
+
+
+                  <div class="entry-meta col-10  pad-v text-center-left">
                       <?php
 
                       $metadata = wp_get_attachment_metadata();
@@ -35,11 +37,11 @@ get_header();
                   );
                   ?>
                 </div>
-                <div class="entry-share col-2">
+                <div class="entry-share col-2 pad-v text-center-right">
                     <?php wpg_share(); ?>
                 </div>
 
-                <div class="entry-content text-center">
+                <div class="entry-content entry-image clear-both text-center">
                   <?php echo wp_get_attachment_image($post->ID, 'full'); ?>
                 </div><!-- .entry-content -->
             </div>

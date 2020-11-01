@@ -11,13 +11,13 @@
 
 get_header(); ?>
 <div id="content" class="clear-both">
-  <div id="breadcrumbs" class="text-center bg-white">
+  <div id="breadcrumbs" class="text-center">
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
   </div>
   <div class="container">
     <div id="primary" class="primary-col hentry-multi gutters">
       <main id="main" class="site-main">
-      <header class="content-style col-12">
+      <header id="search-header" class="content-style clear-both">
         <h2><?php printf( __( 'Search Results for: <span> %s </span>', 'wpg_theme' ), esc_html( get_search_query())); ?></h2>
       </header>
         <?php

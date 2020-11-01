@@ -10,7 +10,7 @@
 
 get_header(); ?>
 <div id="content" class="clear-both">
-  <div id="breadcrumbs" class="text-center bg-white">
+  <div id="breadcrumbs" class="text-center">
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
   </div>
   <div class="container">

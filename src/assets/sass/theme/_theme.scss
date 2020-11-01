@@ -104,20 +104,6 @@ main {
 }
 
 /* color schemes */
-.text-light {color: $white;}
-.text-dark {color: $one-color;}
-
-.a-light a {color: $white; }
-.a-dark a  {color: $one-color;}
-
-.a-hover-one a:hover{ color: $one-color;}
-.a-hover-two a:hover {color: $two-color;}
-.a-hover-three a:hover{color: $three-color;}
-.a-hover-light a:hover{color: $four-bw;}
-
-.bg-white {
-  background-color: $white;
-}
 .radius {
   border-radius: 10px;
 }
@@ -126,10 +112,41 @@ main {
   border-radius: 10px;
   border: 1px solid $light-border;
   background-color: $white;
+  padding: 21px;
 
-  padding: gutter();
+  .meta-line  {
+    h1,h2,h3 {background-color: $white;}
+  }
 }
 
+
+.meta-line {
+  position: relative;
+  overflow: hidden;
+
+
+  &:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 2px $three-color;
+    position: absolute;
+    top: 48%;
+    z-index: $z-level-1;
+  }
+  > span {
+    position: relative;
+    display: inline-block;
+  }
+
+  h1,h2,h3 {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+    z-index: $z-level-2;
+    background-color: $four-bw;
+  }
+
+}
 
 
 
@@ -155,6 +172,13 @@ main {
   margin-left: gutter();
   margin-right: gutter();
 }
+
+.pad-v {
+  padding-top: gutter();
+  padding-bottom: gutter();
+}
+
+
 
 /*--------------------------------------------------------------
 3.1 Header
@@ -182,6 +206,13 @@ main {
   margin: 0 2px;
 }
 
+/* Site header content */
+.header-wrapper {
+  z-index: $z-level-3;
+  background: $four-bw;
+  top: -200px;
+  transition: all 0.5s linear;
+}
 
 /* Site branding - Header */
 #site-header {
@@ -203,24 +234,21 @@ main {
   overflow: hidden;
   text-align: center;
   img {
-    max-height: 80px;
+
     width: auto;
+    max-height: 80px;
+    margin-left: auto;
+    margin-right:auto;
     transition: all 0.2s linear 0.4s;
   }
 }
+
 /* Site navigation */
 #site-nav-bar {
   float: left;
   background: $two-color;
 }
 
-/* Site header content */
-.header-wrapper {
-  z-index: $z-level-3;
-  background: $four-bw;
-  top: -200px;
-  transition: all 0.5s linear;
-}
 .fixed-header-2 {
     padding-top: 169px;
 }
@@ -248,7 +276,7 @@ main {
 
 
 #header-content {
-  padding-top: 10rem;
+  padding-top: 5rem;
   overflow: hidden;
   .btn {
     margin-top: 30px;
@@ -257,7 +285,7 @@ main {
 }
 
 #slider-container {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 #slider {
@@ -271,24 +299,7 @@ main {
   }
 }
 
-.meta-line {
-  position: relative;
-  overflow: hidden;
 
-  &:after {
-    content: '';
-    width: 100%;
-    border-bottom: solid 2px $three-color;
-    position: absolute;
-    left: 300px;
-    top: 48%;
-    z-index: $z-level-1;
-  }
-  > span {
-    position: relative;
-    display: inline-block;
-  }
-}
 /*--------------------------------------------------------------
 3.1.2 Header custom text
 --------------------------------------------------------------*/
@@ -345,17 +356,29 @@ main {
 --------------------------------------------------------------*/
 
 #breadcrumbs {
+    display: none;
     padding: 1%;
     margin-bottom: gutter();
     border-bottom: 1px solid $border-color;
+    background-color: $four-bw;
+
 }
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
 .hentry-multi {
   .hentry {
-    padding: gutter();
     margin-bottom: 40px;
+  }
+  .entry-meta{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    @include font-size(($font-size-m));
+
+    border-bottom: 1px solid lighten( $border-color, 10% );
+    i {
+      color: #C4C4C4;
+    }
   }
   .meta__item {
     padding-bottom: 3px;
@@ -391,6 +414,8 @@ main {
     left: 0;
     bottom: 30px;
     width: 100%;
+    padding-top: gutter();
+    padding-bottom: gutter();
     background: $four-bw;
 }
 
@@ -402,7 +427,14 @@ main {
   }
 }
 
+#search-header {
+  margin-bottom: 40px;
+}
 
+.entry-image {
+  padding-top: gutter();
+  border-top: 1px solid $light-border;
+}
 
 
 /*--------------------------------------------------------------
@@ -453,11 +485,13 @@ main {
 4.2 Section loop homepage
 --------------------------------------------------------------*/
 .col-one article:nth-child(1) {
+  padding: gutters();
   @include linear-gradient(90deg, #EB3349, #F45C43);
   color: $four-bw;
 
 
-  a {color: $four-bw;}
+  a,
+  i {color: $four-bw;}
   a:hover {color:$one-bw;}
 
 }

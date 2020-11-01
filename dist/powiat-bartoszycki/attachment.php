@@ -15,7 +15,7 @@ get_header();
 
                 <?php $attachment_data = wp_prepare_attachment_for_js($post->ID); ?>
 
-                <div <?php post_class(); ?>>
+                <div <?php post_class('content-style'); ?>>
                     <div class="entry-header">
                         <h1 class="entry-title"><?php the_title(); ?></h1>
                         <hr>

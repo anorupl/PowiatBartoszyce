@@ -2209,42 +2209,6 @@ main {
 }
 
 /* color schemes */
-.text-light {
-  color: #ffffff;
-}
-
-.text-dark {
-  color: #32292f;
-}
-
-.a-light a {
-  color: #ffffff;
-}
-
-.a-dark a {
-  color: #32292f;
-}
-
-.a-hover-one a:hover {
-  color: #32292f;
-}
-
-.a-hover-two a:hover {
-  color: #c10000;
-}
-
-.a-hover-three a:hover {
-  color: #ea3949;
-}
-
-.a-hover-light a:hover {
-  color: #fbfafc;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
 .radius {
   border-radius: 10px;
 }
@@ -2253,7 +2217,38 @@ main {
   border-radius: 10px;
   border: 1px solid #e9e9e9;
   background-color: #ffffff;
-  padding: 2.08333%;
+  padding: 21px;
+}
+
+.content-style .meta-line h1, .content-style .meta-line h2, .content-style .meta-line h3 {
+  background-color: #ffffff;
+}
+
+.meta-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.meta-line:after {
+  content: '';
+  width: 100%;
+  border-bottom: solid 2px #ea3949;
+  position: absolute;
+  top: 48%;
+  z-index: 5000;
+}
+
+.meta-line > span {
+  position: relative;
+  display: inline-block;
+}
+
+.meta-line h1, .meta-line h2, .meta-line h3 {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  z-index: 6000;
+  background-color: #fbfafc;
 }
 
 /*--------------------------------------------------------------
@@ -2277,6 +2272,11 @@ main {
 .secondary-col {
   margin-left: 2.08333%;
   margin-right: 2.08333%;
+}
+
+.pad-v {
+  padding-top: 2.08333%;
+  padding-bottom: 2.08333%;
 }
 
 /*--------------------------------------------------------------
@@ -2304,6 +2304,16 @@ main {
 .form-wcga input {
   width: auto;
   margin: 0 2px;
+}
+
+/* Site header content */
+.header-wrapper {
+  z-index: 7000;
+  background: #fbfafc;
+  top: -200px;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 /* Site branding - Header */
@@ -2334,8 +2344,10 @@ main {
 }
 
 .site-title img {
-  max-height: 80px;
   width: auto;
+  max-height: 80px;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transition: all 0.2s linear 0.4s;
   -o-transition: all 0.2s linear 0.4s;
   transition: all 0.2s linear 0.4s;
@@ -2345,16 +2357,6 @@ main {
 #site-nav-bar {
   float: left;
   background: #c10000;
-}
-
-/* Site header content */
-.header-wrapper {
-  z-index: 7000;
-  background: #fbfafc;
-  top: -200px;
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
 .fixed-header-2 {
@@ -2384,7 +2386,7 @@ main {
 }
 
 #header-content {
-  padding-top: 10rem;
+  padding-top: 5rem;
   overflow: hidden;
 }
 
@@ -2394,7 +2396,7 @@ main {
 }
 
 #slider-container {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 #slider {
@@ -2408,26 +2410,6 @@ main {
 #slider article {
   overflow: hidden;
   padding: 15px;
-}
-
-.meta-line {
-  position: relative;
-  overflow: hidden;
-}
-
-.meta-line:after {
-  content: '';
-  width: 100%;
-  border-bottom: solid 2px #ea3949;
-  position: absolute;
-  left: 300px;
-  top: 48%;
-  z-index: 5000;
-}
-
-.meta-line > span {
-  position: relative;
-  display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -2500,17 +2482,30 @@ main {
 3.2  Regular Content
 --------------------------------------------------------------*/
 #breadcrumbs {
+  display: none;
   padding: 1%;
   margin-bottom: 2.08333%;
   border-bottom: 1px solid #d5d4d9;
+  background-color: #fbfafc;
 }
 
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
 .hentry-multi .hentry {
-  padding: 2.08333%;
   margin-bottom: 40px;
+}
+
+.hentry-multi .entry-meta {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #efeff1;
+}
+
+.hentry-multi .entry-meta i {
+  color: #C4C4C4;
 }
 
 .hentry-multi .meta__item {
@@ -2547,6 +2542,8 @@ main {
   left: 0;
   bottom: 30px;
   width: 100%;
+  padding-top: 2.08333%;
+  padding-bottom: 2.08333%;
   background: #fbfafc;
 }
 
@@ -2556,6 +2553,15 @@ main {
 
 .post-thumbnail img {
   width: 100%;
+}
+
+#search-header {
+  margin-bottom: 40px;
+}
+
+.entry-image {
+  padding-top: 2.08333%;
+  border-top: 1px solid #e9e9e9;
 }
 
 /*--------------------------------------------------------------
@@ -2610,6 +2616,7 @@ main {
 4.2 Section loop homepage
 --------------------------------------------------------------*/
 .col-one article:nth-child(1) {
+  padding: 2.08333%;
   background: #EB3349;
   background: -webkit-gradient(linear, left top, right top, from(#EB3349), to(#F45C43));
   background: -o-linear-gradient(left, #EB3349, #F45C43);
@@ -2617,7 +2624,8 @@ main {
   color: #fbfafc;
 }
 
-.col-one article:nth-child(1) a {
+.col-one article:nth-child(1) a,
+.col-one article:nth-child(1) i {
   color: #fbfafc;
 }
 
@@ -3792,6 +3800,9 @@ a.skip-main:active {
   /*--------------------------------------------------------------
 3.3  Posts - multi loop
 --------------------------------------------------------------*/
+  #content {
+    padding-top: 40px;
+  }
   .more-link {
     display: block;
   }
@@ -3803,6 +3814,9 @@ a.skip-main:active {
 @media (min-width: 62em) {
   .hide-desktop {
     display: none !important;
+  }
+  #breadcrumbs {
+    display: block;
   }
   .wide-col .col-12--2-4 {
     width: 25%;
@@ -3984,6 +3998,9 @@ a.skip-main:active {
   .site-title {
     text-align: left;
   }
+  .site-title img {
+    margin-left: 0;
+  }
   .fixed-header .header-wrapper {
     top: 0;
   }
@@ -4001,6 +4018,12 @@ a.skip-main:active {
   /*--------------------------------------------------------------
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
+  #header-content {
+    padding-top: 10rem;
+  }
+  #slider-container {
+    padding-bottom: 10rem;
+  }
   #slider {
     width: 100%;
   }
@@ -4068,11 +4091,14 @@ a.skip-main:active {
 4.2 Section loop homepage
 --------------------------------------------------------------*/
   .col-one {
-    padding-right: 2.08333%;
+    padding-right: 20px;
     border-right: 1px solid #e9e9e9;
   }
   .col-one .hentry {
     min-height: 274px;
+  }
+  .col-two {
+    padding-left: 20px;
   }
   .col-two .hentry {
     min-height: 274px;

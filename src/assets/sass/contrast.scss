@@ -8,34 +8,46 @@
 @import "setting/mixin";
 @import "setting/variables";
 
+/* Theme style
+========================================================================== */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS
 ----------------------------------------------------------------
 1.0 Normalize
 2.0 Universal styles
 3.0 Layout
+
 3.1 Header
+3.1.1 Header Slider with post
+3.1.2 Header custom text
+3.1.3 Header quick links
+
 3.2  Regular Content
 3.3  Posts - multi loop
 3.4  Posts & Page
 3.5  Taxonomy
 3.6  Attachment
+3.7 Widgets
+
 4 Sections
-4.1 Loop in header with post
-4.2 Featured category
-4.3 Events
-4.4 Clubs
-4.5 New colections
-4.6 Catl
-4.7 Contact
-4.8 Contact & Catl
-4.9 Partners (slick slider css)
-4.10 Copyright
-5.0  Widgets
-6.0  Event calander - plugin Events Manager by Marcus Sykes
+4.1 Section alert
+4.2 Section loop homepage
+4.3 Section featured category
+4.4 Section menu with custom links to pages (education links)
+4.5 Section advice and services (widget sidebar-bottom_baners)
+4.6 Section Partners (widget sidebar-footer_banners )
+
+5.0 Footer
+5.1 Footer Contact
+5.2 Footer quick links (widget sidebar-footer_contact )
+
+6.0 Cookie and Copyright
 --------------------------------------------------------------*/
 
-
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
 body {
   background: $wcag-bg;
   color: $wcag-text;
@@ -49,39 +61,288 @@ a {
     text-decoration: underline;
   }
 }
-.h-nav--color {
-  
-  .sub-menu li                {background: $wcag-bg;}
-  
-  .menu li > a,
-  .sub-menu li a {color: $wcag-herf}
-  
-  .menu li > a:hover,
-  .sub-menu li > a:hover,
-  .sub-menu li li  > a:hover  {color: $wcag-herf; text-decoration: underline;}
-}
-.h-nav--arrow {
-  .menu > li > .sub-menu::before {border-bottom-color: $wcag-herf;}
-  .sub-menu    {border-top-color: $wcag-herf;}
-  .sub-menu li {border-bottom-color: $wcag-text;}
-  .menu-item-has-children > a:after {
-    color: $wcag-text;
-  }
-}
-.h-nav--desc {
-  .menu-item-description {
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.btn, .more-link {
+  color: $wcag-bg;
+  background-color: $wcag-herf;
+  border: 1px solid $wcag-herf;
+  &:hover {
     color: $wcag-herf;
+    background-color: $wcag-bg;
   }
 }
+
+.content-style {
+  border: 1px solid $wcag-text;
+  background-color: $wcag-bg;
+  padding: 21px;
+
+  .meta-line  {
+    h1,h2,h3 {background-color: $wcag-bg;}
+  }
+}
+
+.meta-line {
+  &:after {
+    border-bottom: solid 2px $wcag-text;
+  }
+  h1,h2,h3 {
+    background-color: $wcag-bg;
+  }
+}
+
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+.header-wrapper {
+  background: $wcag-bg;
+}
+
+/* Site navigation */
+#site-nav-bar {
+  float: left;
+  background: $wcag-bg;
+}
+
+.bar-color {
+  .menu-item-has-children > a:after {color: $wcag-text;}
+  .menu li > a                {color: $wcag-herf;}
+  .menu li > a:hover,
+  .menu li.focus > a          {background-color: $wcag-herf; color:$wcag-bg;}
+
+  .sub-menu li                {background: $wcag-bg;}
+  .sub-menu li a              {color: $wcag-herf; border-bottom-color: $wcag-bg;}
+  .sub-menu li > a:hover      {color: $wcag-bg; border-bottom-color: $wcag-bg; background-color: $wcag-herf; }
+  .sub-menu li li > a:hover   {color: $wcag-bg; background-color: $wcag-herf; }
+}
+
+
+
+/*--------------------------------------------------------------
+3.1.1 Header Slider with post
+--------------------------------------------------------------*/
+#header-background {
+  &::after {
+      background: $wcag-text;
+  }
+}
+#slider {
+  width: 80%;
+  margin: 10px auto;
+  background: $wcag-bg;
+  border: 1px solid $wcag-text;
+}
+/*--------------------------------------------------------------
+3.1.2 Header custom text
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1.3 Header quick links
+--------------------------------------------------------------*/
+#bar_shortcuts {
+  li {
+    background: $wcag-bg;
+    &:hover {
+      background: $wcag-bg;
+    }
+  }
+
+  a {
+    color: $wcag-herf;
+    &:hover {color: $wcag-herf;}
+  }
+}
+
+
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+#breadcrumbs {
+    background-color: $wcag-bg;
+}
+
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi .entry-meta {
+  border-color: $wcag-bg;
+}
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.over-thumbnail {
+    background: $wcag-bg;
+}
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.7 Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4 Sections
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4.1 Section alert
+--------------------------------------------------------------*/
+#section-alert {
+  background-color: $wcag-herf;
+  color: $wcag-bg;
+    a { color: $wcag-bg;}
+    a:hover {color: $wcag-bg;}
+    a.btn--alert {
+      color: $wcag-herf;
+      background:  $two-bw;
+      border:1px solid $wcag-bg;
+
+    }
+    a.btn--alert:hover {
+      color: $wcag-bg;
+      background: $wcag-herf;
+      border:1px solid $wcag-bg;
+    }
+}
+.alert-summary {
+  border-bottom: 4px solid $wcag-bg;
+}
+/*--------------------------------------------------------------
+4.2 Section loop homepage
+--------------------------------------------------------------*/
+.col-one article:nth-child(1) {
+  background: $wcag-bg;
+  color: $wcag-text;
+  border: 1px solid $wcag-text;
+
+  a,
+  i {color: $wcag-text;}
+  a:hover {color:$wcag-herf;}
+
+}
+/*--------------------------------------------------------------
+4.3 Section featured category
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.4 Section menu with custom links to pages (education links)
+--------------------------------------------------------------*/
+#page_links {
+  li {
+    color: $wcag-bg;
+  }
+  a {
+      color: $wcag-bg;
+      background: $wcag-herf;
+      border: 1px solid $wcag-herf;
+
+      &:hover {
+        color: $wcag-herf;
+        background: $wcag-bg;
+        border: 1px solid $wcag-herf;
+      }
+  }
+}
+/*--------------------------------------------------------------
+4.5 Section advice and services (widget sidebar-bottom_baners)
+--------------------------------------------------------------*/
+.footer-background {
+  display: none;
+}
+/*--------------------------------------------------------------
+4.6 Section Partners (widget sidebar-footer_banners )
+--------------------------------------------------------------*/
+#secondary-baners {
+  background: $wcag-bg;
+}
+/*--------------------------------------------------------------
+5.0 Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Footer Contact
+--------------------------------------------------------------*/
+#contact-footer {
+  background: $wcag-bg;
+  border-top: 10px solid $wcag-text;
+  border-bottom: 10px solid $wcag-text;
+  a {
+    color: $wcag-herf;
+    &:hover {color: $wcag-herf;}
+  }
+
+
+}
+
+
+
+/*--------------------------------------------------------------
+5.2 Footer quick links (widget sidebar-footer_contact )
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.0 Cookie and Copyright
+--------------------------------------------------------------*/
+#copyright {
+
+  background-color: $wcag-bg;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .v-nav {
   .menu li a                      {color: $wcag-herf; border-bottom-color: $wcag-text;}
-  
+
   .menu a:hover,
   .menu .current_page_item > a,
   .menu .current-menu-item > a,
   .menu .current_page_ancestor > a        {color: $wcag-herf; text-decoration: underline;}
-  
-  
+
+
 }
 .v-nav.dropdown {
   .menu .dropdown-toggle					        { color: $wcag-herf;}
@@ -115,17 +376,17 @@ a {
     color: $wcag-text;
     background-color: $wcag-bg;
   }
-  
+
   a > span {
     color: $wcag-bg;
     background-color: $wcag-text;
   }
-  
+
   a:hover {
     background: $wcag-herf;
     color: $wcag-bg;
   }
-  
+
   a:hover > span {
     color: $wcag-herf;
     background: $wcag-bg;
@@ -139,7 +400,7 @@ a {
   }
 }
 .pagination-inside {
-  
+
   a, span	{
     border-color: $wcag-herf;
   }
@@ -151,17 +412,17 @@ a {
     color: $wcag-text;
     background-color: $wcag-bg;
   }
-  
+
   a > span {
     color: $wcag-bg;
     background-color: $wcag-text;
   }
-  
+
   a:hover {
     background: $wcag-herf;
     color: $wcag-bg;
   }
-  
+
   a:hover > span {
     color: $wcag-herf;
     background: $wcag-bg;
@@ -171,13 +432,13 @@ a {
   span.meta-nav 	{
     color: $wcag-text;
   }
-  
+
   .nav-links {
     div {
       border-color: $wcag-herf;
       background-color: $wcag-bg;
     }
-    
+
     div:hover {
       span.meta-nav 	{
         color: $wcag-bg;
@@ -245,7 +506,7 @@ pre {
   table {
     border: 5px solid $wcag-text;
   }
-  
+
   table caption,
   td,
   td[scope=col] {
@@ -265,361 +526,23 @@ pre {
   }
 }
 
+// Gallery shortcode
+.gallery-caption,
+.wp-caption-text {
+  border-color: $wcag-text;
+  background: $wcag-bg;
+}
 
-
-/*--------------------------------------------------------------
-2.0 Universal styles
---------------------------------------------------------------*/
-.btn,
-.btn--three {
-  color: $wcag-bg;
-  background-color: $wcag-herf;
-  border: 1px solid $wcag-herf;
-  &:hover {
-    color: $wcag-herf;
-    background-color: $wcag-bg;
-  }
+// widget
+.secondary-col .widget {
+    border-bottom: 10px solid $border-color;
+}
+.widget-title::after {
+  background: $wcag-text;
 }
 
 
-/* color schemes */
-.text-dark {color: $white;}
 
-.a-light a {color: $wcag-herf; }
-.a-dark a  {color: $wcag-herf; }
-
-.a-hover-one a:hover,
-.a-hover-two a:hover,
-.a-hover-three a:hover,
-.a-hover-light a:hover {
-  color: $wcag-herf;
-}
-.gray-content {
-  color: $wcag-text;
-  a {
-    color: $wcag-bg;
-  }
-  a:hover{
-    color: $wcag-herf;
-    text-decoration: underline;}
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*--------------------------------------------------------------
-  3.1 Header
-  --------------------------------------------------------------*/
-  #top-bar {
-    
-    border-bottom: 1px solid $wcag-text;
-  }
-  .header-wrapper {
-    background-color: $wcag-bg;
-    border-color: $wcag-text;
-  }
-  
-  
-  .form-wcga  button {
-    background-color: $wcag-herf;
-    border-color: $wcag-herf;
-  }
-  
-  /*--------------------------------------------------------------
-  3.2  Regular Content
-  --------------------------------------------------------------*/
-  .header-content {
-    color: $wcag-bg;
-    background-color:$wcag-text;
-    background-image: none;
-  }
-  #breadcrumbs {
-    a {
-      color: $wcag-herf;
-    }
-    color: $wcag-text;
-    background-color: $wcag-bg;
-  }
-  /*--------------------------------------------------------------
-  3.3  Posts - multi loop
-  --------------------------------------------------------------*/
-  .hentry-multi {
-    .hentry {
-      
-      background-color: $wcag-bg;
-      border-color: $wcag-text;
-    }
-  }
-  /*--------------------------------------------------------------
-  3.4  Posts & Page
-  --------------------------------------------------------------*/
-  .entry-meta {
-    border-color: $wcag-text;
-  }
-  /*--------------------------------------------------------------
-  3.5  Taxonomy
-  --------------------------------------------------------------*/
-  #term_description {
-    border-bottom-color: $wcag-text;
-  }
-  .desc_header {
-    background-color: $wcag-bg;
-  }
-  /*--------------------------------------------------------------
-  3.6  Attachment
-  --------------------------------------------------------------*/
-  .attachment--other {
-    background: $wcag-bg;
-    border-color: $wcag-text;
-  }
-  .attachment__header,
-  .attachment__size {
-    border-bottom-color: $wcag-text;
-  }
-  /*--------------------------------------------------------------
-  4.1 Loop in header with post
-  --------------------------------------------------------------*/
-  .f-post,
-  .f-post-content,
-  #posts-min article,
-  #posts-min h2,
-  #header-nav-bottom {
-    background-color: $wcag-bg;
-  }
-  
-  
-  a.arrow-allpost-icon {
-    color: $wcag-bg;
-    background-color: $wcag-herf;
-    border-color:$wcag-herf;
-    &:hover {
-      color:$wcag-herf;
-      background-color: $wcag-bg;
-      border-color:$wcag-herf;
-    }
-  }
-  // Continer for menu
-  #header-nav-bottom {
-    border: 5px solid $wcag-text;
-  }
-  /*--------------------------------------------------------------
-  4.2 Featured category
-  --------------------------------------------------------------*/
-  #featured-cat h3 {
-    background-color:$wcag-bg;
-  }
-  #featured-cat a {
-    color:$wcag-herf;
-  }
-  #featured-cat .header-section {
-    color: $wcag-text;
-  }
-  #wpg-evets .header-section {
-    color: $wcag-bg;
-  }
-  
-  /*--------------------------------------------------------------
-  4.3 Events
-  --------------------------------------------------------------*/
-  #wpg-evets .header-section {
-    color: $wcag-text;
-  }
-  .green_bg {
-    background-color: $wcag-bg;
-    background-image: none;
-    border: 5px solid $wcag-text;
-  }
-  .green_bg::before,
-  .ev-wrapper::before,
-  .ev-wrapper::after {
-    display: none;
-  }
-  .ev-title {
-    color:$wcag-text;
-  }
-  /* calander in section */
-  #calendar_events {
-    background-color: $wcag-bg;
-    border: 5px solid $wcag-herf;
-  }
-  
-  .em-calendar thead {
-    background-color:$wcag-bg;
-    a {
-      color: $wcag-herf;
-    }
-  }
-  .em-calendar tbody {
-    background-color: $wcag-bg;
-  }
-  tr.days-names {
-    color: $four-bw;
-  }
-  /*--------------------------------------------------------------
-  4.4 Clubs
-  --------------------------------------------------------------*/
-  .clubs {
-    background-color: $wcag-bg;
-    
-    &::after {
-      background-color: $wcag-bg;
-    }
-  }
-  .club-item {
-    &:first-child,
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4)
-    {
-      background-color: $wcag-bg;
-      border:1px solid $wcag-text;
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  4.5  New colections
-  --------------------------------------------------------------*/
-  .newitems {
-    .tabs__item {
-      border-bottom: 1px solid $wcag-text;
-      
-      a[aria-selected=true] {
-        color: $wcag-bg;
-        background-color: $wcag-herf;
-        
-      }
-    }
-    .tabs__content {
-      border: 5px solid $wcag-text;
-    }
-  }
-  .coletion-image,
-  .coletion-content,
-  .coletion-gallery {
-    background-color: $wcag-bg;
-  }
-  
-  /*--------------------------------------------------------------
-  4.6  Catl
-  --------------------------------------------------------------*/
-  #catl {
-    background-color: $wcag-bg;
-    .tabs__item {
-      a {
-        color: $wcag-herf;
-      }
-      a:hover {
-        color: $wcag-herf;
-      }
-      a[aria-selected=true] {
-        color: $wcag-bg;
-        background-color: $wcag-herf;
-        border-bottom-color: $wcag-herf;
-      }
-    }
-    
-    .btn {
-      color: $wcag-bg;
-      background-color: $wcag-herf;
-      border-color: $wcag-herf;
-      
-      &:hover {
-        color: $wcag-herf;
-        background-color: $wcag-bg;
-      }
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  4.7  Contact
-  --------------------------------------------------------------*/
-  #contact {
-    .header-section h2 {
-      background-color: $wcag-bg;
-    }
-    .header-section::before{
-      display: none;
-    }
-    .tabs__item {
-      a[aria-selected=true] {
-        color: $wcag-bg;
-        background-color: $wcag-herf;
-        border-bottom-color: $wcag-herf;
-      }
-    }
-  }
-  .home #contact {
-    background-color: $wcag-bg;
-  }
-  .home.paged #contact {
-    background-color: $wcag-bg;
-  }
-  /* contact tabs */
-  #contact__content {
-    background-color: $wcag-bg;
-  }
-  /* contact social portal links */
-  #contact-social {
-    border-top: 1px solid $wcag-text;
-    a {
-      color: $wcag-herf;
-    }
-  }
-  #contact__map::before {
-    display: none;
-  }
-  
-  /*--------------------------------------------------------------
-  4.9  Partners (slick slider css)
-  --------------------------------------------------------------*/
-  #partners {
-    background-color: $wcag-bg;
-  }
-  
-  /*--------------------------------------------------------------
-  5.0  Widgets
-  --------------------------------------------------------------*/
-  .widget {
-    background-color: $wcag-bg;
-  }
-  .widget-title::after {
-    background-color: $border-color;
-  }
-  
-  /*--------------------------------------------------------------
-  6.0  Event calander - plugin Events Manager by Marcus Sykes
-  --------------------------------------------------------------*/
-  table.em-calendar td.eventless-today,
-  table.em-calendar td.eventful-today {
-    background-color: $wcag-text;
-    color: $wcag-bg;
-  }
-  table.em-calendar td.eventful a,
-  table.em-calendar td.eventful-today a {
-    color: $wcag-herf;
-  }
-  
-  /* Event list */
-  .ev-item {
-    background: $wcag-bg;
-    border: 1px solid $wcag-text;
-  }
-  .ev-item__date {
-    background-color: $wcag-text;
-    color: $wcag-bg;
-  }
-  .ev-item__hour,
-  .ev-item__location {
-    border-bottom-color: $wcag-text;
-  }
-  
   /* Forms
   ========================================================================== */
   fieldset,
@@ -658,4 +581,3 @@ pre {
       border-color: $wcag-herf;
     }
   }
-  

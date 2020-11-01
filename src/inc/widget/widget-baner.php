@@ -30,15 +30,24 @@ class Widget_Banner extends WP_Widget {
     //Our variables from the widget settings.
 
     //Our variables from the widget settings.
-		$title = $instance['title'];
-		$url = $instance['url'];
+		$title      = $instance['title'];
+		$url        = $instance['url'];
 		$new_window = $instance['new_window'];
-		$uri = $instance['image_uri'];
+		$uri        = $instance['image_uri'];
+    $alt_img    = $instance['alt_img'];
 
     echo $before_widget;
-    ?>
-      <a href="<?php echo (!empty($url) ? $url : "#"); ?>" target="<?php echo (!empty($new_window) ? "_blank" : "_self"); ?>"  ><img src="<?php echo $uri; ?>" /><?php echo $before_title .' ' . $title . ' ' . $after_title;?></a>
-<?php
+
+      printf('<a href="%1$s" target="%2$s"><img src="%3$s" alt="%4$s" />%5$s %6$s %7$s</a>',
+        (!empty($url) ? $url : "#"),
+        (!empty($new_window) ? "_blank" : "_self"),
+        $uri,
+        (!empty($alt_img) ? $alt_img : ''),
+        $before_title,
+        $title,
+        $after_title
+    );
+
     echo $after_widget;
   }
 
@@ -53,10 +62,11 @@ class Widget_Banner extends WP_Widget {
 
   /* Default Widget Settings */
   $defaults = array(
-    'title' => 'tytul',
-    'url'=>'',
-    'new_window'=>'',
-    'image_uri'=>''
+    'title'       => 'tytul',
+    'url'         => '',
+    'new_window'  => '',
+    'image_uri'   => '',
+    'alt_img'     => ''
 
 
 
@@ -119,10 +129,12 @@ class Widget_Banner extends WP_Widget {
          <input type="button" id="<?php echo $this->id . '_up' ?>" data-id="<?php echo $this->id ?>" class="button pokaz button-primary js_custom_upload_media" value="Upload Image" style="margin-top:5px;" />
 
          <input type="button" id="<?php echo $this->id . '_del'?>" data-id="<?php echo $this->id ?>" class="button button-primary js_custom_remove_media" value="Remove Image" style="margin-top:5px;" />
-
-
-
      </div>
+     <!-- alt img  -->
+     <p>
+         <label for="<?php echo $this->get_field_id( 'alt_img' ); ?>"><?php _e('Image description:', 'wpg_theme') ?></label>
+         <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'alt_img' ); ?>" name="<?php echo $this->get_field_name( 'alt_img' ); ?>" value="<?php echo $instance['alt_img']; ?>" />
+     </p>
      <?php
      }
 
@@ -141,9 +153,11 @@ class Widget_Banner extends WP_Widget {
         $instance['new_window'] = isset( $new_instance['new_window'] );
 
     		//Strip tags from title and name to remove HTML
-    		$instance['title'] = $new_instance['title'];
-    		$instance['url'] = $new_instance['url'];
+    		$instance['title']     = $new_instance['title'];
+    		$instance['url']       = $new_instance['url'];
         $instance['image_uri'] = $new_instance['image_uri'];
+        $instance['alt_img']   = $new_instance['alt_img'];
+
 
 
 

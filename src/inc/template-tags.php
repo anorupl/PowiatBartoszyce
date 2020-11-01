@@ -37,11 +37,9 @@ esc_html( get_the_date() ));
 */
 function wpg_share() {
   printf('
-  <a title="%1$s" class="social-share" target="_blank" href="http://twitter.com/home?status=Reading:%4$s"><i class="icon-twitter-f"></i></a>
-  <a title="%2$s" class="social-share" target="_blank" href="https://plus.google.com/share?url=%4$s"><i class="icon-google-f"></i></a>
-  <a title="%3$s" class="social-share" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%4$s"><i class="icon-facebook-f"></i></a>',
+  <a title="%1$s" class="social-share" target="_blank" href="http://twitter.com/home?status=Reading:%3$s"><i class="icon-twitter-f"></i></a>
+  <a title="%2$s" class="social-share" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%3$s"><i class="icon-facebook-f"></i></a>',
   __('Share on Twitter!','wpg_theme'),
-  __('Share on Google+','wpg_theme'),
   __('Share on Facebook','wpg_theme'),
   get_the_permalink());
 }
