@@ -113,20 +113,4 @@ $wp_customize->add_control( 'wpg_hours', array(
 	'section'  => $contact_section_id,
 	'type'    => 'textarea'
 ));
-
-// ==============================================
-//  = Drag/drop marker Google map=
-//  =============================================
-$wp_customize->add_setting( "wpg_contact_map_latlong_1", array(
-	'default'   => '54.248997, 20.804780',
-));
-
-$wp_customize->add_control(
-	new WPG_Customize_Control_leafletjs_MAP($wp_customize, "wpg_contact_map_latlong_1", array(
-		'settings' => "wpg_contact_map_latlong_1",
-		'section'  => $contact_section_id,
-		'label'    => __( 'Select a location on map', 'wpg_theme' )
-	))
-);
-
 ?>

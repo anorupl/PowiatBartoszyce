@@ -31,6 +31,8 @@
     <?php
     the_content();
 
+    wpg_attachments();
+
     wp_link_pages(array(
       'before' => '<nav class="page-links pagination-inside" role="navigation"><span class="page-links-title">' . __('Pages:', 'wpg_theme') . '</span>',
       'after' => '</nav>',

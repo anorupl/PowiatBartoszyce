@@ -16,7 +16,7 @@
 @import "framework/base/icon_font";
 
 /*--------------------------------------------------------------
--- framework/components/
+-- framework/components/...
 --------------------------------------------------------------*/
 @import "framework/components/alignments";
 @import "framework/components/base_html_tags";
@@ -27,9 +27,6 @@
 @import "framework/components/media";
 @import "framework/components/tables";
 
-/*--------------------------------------------------------------
--- framework/components/forms/
---------------------------------------------------------------*/
 @import "framework/components/forms/forms__normalize";
 @import "framework/components/forms/forms";
 
@@ -39,8 +36,9 @@
 @import "framework/layout/gird";
 
 /*--------------------------------------------------------------
--- framework/vendors/pluginy_js/
+-- framework/vendors/...
 --------------------------------------------------------------*/
+@import "framework/vendors/pattern-css/attachment";
 @import "framework/vendors/pluginy_js/_magnificPopup";
 
 /*--------------------------------------------------------------
@@ -75,6 +73,22 @@
 }
 
 
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (max-width: $phone) {
+
+.hentry table {
+      caption { background-image: none; }
+      thead, table th { display: none; }
+
+      td {display: block; @include font-size(1.1);}
+
+      tbody td::before {content: attr(data-th); float: left; width: 30%; font-weight: bold; }
+      tbody td::after { content: ''; display:block; clear: both; }
+  }
+}
+
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint
@@ -85,6 +99,9 @@
 
 //  @import "theme/theme--rwd_max-desktop";
 //  @import "theme/nav/nav_horizontal_rwd-tablet";
+/*----------------------------------
+ *  Tables
+ * ---------------------------------*/
 
 }
 
@@ -150,7 +167,10 @@
   #bar_shortcuts {
     li  { flex-basis: 145px; }
     a   { height: 145px; }
-    h3  { @include font-size($font-size-m); }
+    h3  { @include font-size($font-size-m);}
+    .no-flexbox & h3 {
+      min-height: 36px;
+    }
   }
 }
 

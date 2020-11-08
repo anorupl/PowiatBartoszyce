@@ -16,7 +16,7 @@ $slide_title = esc_html(get_theme_mod('wpg_noslider_title',__('Information', 'wp
   <header class="screen-reader-text">
     <h2><?php echo get_theme_mod('wpg_noslider_section',__('Section title', 'wpg_theme'));?></h2>
   </header>
-      <div id="slider" class="pad-all">
+      <div id="slider-no" class="slider-bg pad-all">
               <article id="header-post-noslide" class="pad-all">
                   <div class="header-post-meta meta-line">
                     <span class="pad-all">

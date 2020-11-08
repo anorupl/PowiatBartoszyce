@@ -81,7 +81,7 @@
 	a, span	{
 		display: inline-block;
 		margin: 0px 5px;
-		padding: 10px 16px 8px 17px;
+		padding: 8px 16px 8px 17px;
 		text-decoration: none;
 		border-radius: 25px;
 		border: 2px solid $nav-border;
@@ -113,6 +113,11 @@
 		background: $nav-background-active;
 		border: none;
 	}
+  .post-page-numbers.current {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
 }
 /* ---------------------------------
 * Navigation single (next post)

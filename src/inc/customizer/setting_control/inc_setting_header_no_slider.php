@@ -18,7 +18,7 @@
 
   $wp_customize->add_control( 'wpg_noslider_section', array(
     'settings' => 'wpg_noslider_section',
-    'label'   => __('Section title', 'wpg_theme'),
+    'label'   => __('Section title (Text for the blind)', 'wpg_theme'),
     'section'  => $header_section_id,
     'type'    => 'text'
      ));

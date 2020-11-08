@@ -12,8 +12,8 @@
   /*
   *  ul
   * -----------*/
-  .menu                       {display: flex; flex-direction: column;}
-  .menu > li                  {float: left;}
+  .menu                       {display: flex; flex-direction: column; text-align: center;}
+  .menu > li                  {display: inline-block;}
 
   /*
   *  ul ul

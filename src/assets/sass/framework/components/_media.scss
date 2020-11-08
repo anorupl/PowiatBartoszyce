@@ -57,6 +57,46 @@ svg:not(:root) {
 	display: none;
 }
 .svg .svg-element {
-	display: block; 
+	display: block;
 	width: 100%;
+}
+
+img[src*=".svg"] {
+  width: 100%;
+}
+svg {
+	width: 100%;
+}
+
+/* Media - Wordpress 5.0 gutenberg
+========================================================================== */
+.wp-block-embed__wrapper{
+	position: static;
+}
+
+
+.wp-block-embed-youtube {
+	overflow: hidden;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 56.25%;
+}
+
+.wp-block-embed-youtube iframe,
+.wp-block-embed-youtube object,
+.wp-block-embed-youtube embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.wp-block-video {
+
+	video {width: 100%;}
+	
+	.alignleft video,
+	.alignright video {width: auto;}
+
 }

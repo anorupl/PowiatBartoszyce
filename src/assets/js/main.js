@@ -36,7 +36,12 @@
        document.documentElement.className = document.documentElement.className.replace(/(\s*)no-svg(\s*)/, '$1svg$2');
      }
 
+    $(function() {
 
+   	var $item = $('a[target="_blank"]');
+   	  $item.append('<span class="blank-ico">'+ datalanuge.blank +'</span>');
+   	  $item.addClass( "blank" );
+   	});
      /**
      *  function menu
      */
@@ -92,11 +97,12 @@
      }
 
      $('#slider').slick({
-       dots: false,
+       dots: true,
        arrows: false,
        slidesToShow: 1,
-       autoplay: true,
+       autoplay: false,
        pauseOnHover: false,
+       accessibility: true
      })
 
      $('#featured-slide').slick({
@@ -143,6 +149,25 @@
          }
        });
      });
+
+     /**
+     * Do mapy svg
+     */
+     $("path").on('mouseover', function(e) {
+       $("#title_path").text(($(this).data("title"))).fadeIn('slow');
+     });
+     $("path").on('mouseleave', function(e) {
+       $("#title_path").empty();
+     });
+
+      $('a.gmina_link').on('mouseover', function(e) {
+        $($(this).data("gmina")).attr("class", "cls-3")
+      });
+      $('a.gmina_link').on('mouseleave', function(e) {
+        $($(this).data("gmina")).attr("class", "cls-1")
+      });
+
+
 
        /**
        * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
@@ -192,6 +217,14 @@
            }
          }
        });
+
+       /**
+   		* Activate rwd table.
+   		*/
+   	    $('.hentry table').table();
+
+
+
      });
 
 
@@ -232,6 +265,28 @@
          }).resize();
        });
      };
+
+     /**
+ * Function rwd table.
+ */
+   $.fn.table = function() {
+       return this.each(function () {
+         var headertext = [];
+
+     var $this = $(this);
+
+     $this.find('thead td, th').each(function(){
+           headertext.push($(this).html());
+     });
+
+     $this.find('tbody tr').each(function(){
+           $(this).find('td').each(function(index){
+                 $(this).attr('data-th', headertext[index]);
+         });
+     });
+   });
+ };
+
 
 
 

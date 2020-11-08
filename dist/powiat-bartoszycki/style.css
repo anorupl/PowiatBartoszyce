@@ -105,228 +105,37 @@
 .l-icon,
 i.l-icon {
   font-size: 150%;
-  line-height: 150%;
+  line-height: 1;
 }
 
 .xl-icon,
 i.xl-icon {
   font-size: 265%;
-  line-height: 265%;
+  line-height: 1;
 }
 
-.icon-college-graduation:before, #page_links li > a:before {
-  content: "\e909";
+.icon-file-pdf-o:before {
+  content: "\e90f";
 }
 
-.icon-info:before {
-  content: "\e600";
+.icon-file-archive-o:before {
+  content: "\e90a";
 }
 
-.icon-file:before {
-  content: "\e900";
+.icon-file-text-o:before {
+  content: "\e90b";
 }
 
-.icon-expand:before {
-  content: "\e901";
+.icon-file-powerpoint-o:before {
+  content: "\e90c";
 }
 
-.icon-collapse:before {
-  content: "\e902";
+.icon-file-excel-o:before {
+  content: "\e90d";
 }
 
-.icon-pictures:before {
-  content: "\e903";
-}
-
-.icon-arrow_back:before {
-  content: "\e5c4";
-}
-
-.icon-arrow_downward:before {
-  content: "\e5db";
-}
-
-.icon-arrow_forward:before {
-  content: "\e5c8";
-}
-
-.icon-arrow_upward:before {
-  content: "\e5d8";
-}
-
-.icon-call_made:before {
-  content: "\e0b2";
-}
-
-.icon-call_received:before {
-  content: "\e0b5";
-}
-
-.icon-desktop_mac:before {
-  content: "\e30b";
-}
-
-.icon-phone_android:before {
-  content: "\e324";
-}
-
-.icon-event_note:before {
-  content: "\e616";
-}
-
-.icon-instagram:before {
-  content: "\e907";
-}
-
-.icon-instagram-f:before {
-  content: "\e907";
-}
-
-.icon-music:before,
-.icon-audiobooki:before {
-  content: "\e908";
-}
-
-.icon-folder:before {
-  content: "\e92f";
-}
-
-.icon-folder-open:before {
-  content: "\e930";
-}
-
-.icon-price-tag:before {
-  content: "\e935";
-}
-
-.icon-price-tags:before {
-  content: "\e936";
-}
-
-.icon-clock:before {
-  content: "\e94e";
-}
-
-.icon-clock-full:before {
-  content: "\e94f";
-}
-
-.icon-box-add:before {
-  content: "\e95e";
-}
-
-.icon-bubbles:before {
-  content: "\e96c";
-}
-
-.icon-bubbles3:before {
-  content: "\e96f";
-}
-
-.icon-user2:before {
-  content: "\e971";
-}
-
-.icon-users:before {
-  content: "\e972";
-}
-
-.icon-quotes-left:before {
-  content: "\e977";
-}
-
-.icon-quotes-right:before {
-  content: "\e978";
-}
-
-.icon-lock2:before {
-  content: "\e98f";
-}
-
-.icon-unlocked:before {
-  content: "\e990";
-}
-
-.icon-bookmark2:before {
-  content: "\e9d2";
-}
-
-.icon-bookmarks:before {
-  content: "\e9d3";
-}
-
-.icon-checkbox-checked:before {
-  content: "\ea52";
-}
-
-.icon-checkbox-unchecked:before {
-  content: "\ea53";
-}
-
-.icon-google-f:before {
-  content: "\ea89";
-}
-
-.icon-facebook-f:before {
-  content: "\ea8d";
-}
-
-.icon-twitter-f:before {
-  content: "\ea92";
-}
-
-.icon-feed:before {
-  content: "\ea94";
-}
-
-.icon-feed-f:before {
-  content: "\ea95";
-}
-
-.icon-youtube-f:before {
-  content: "\ea97";
-}
-
-.icon-youtube:before {
-  content: "\ea99";
-}
-
-.icon-vimeo-f:before {
-  content: "\ea9d";
-}
-
-.icon-linkedin-f:before {
-  content: "\eac8";
-}
-
-.icon-pencil:before {
-  content: "\e904";
-}
-
-.icon-quill:before {
-  content: "\e905";
-}
-
-.icon-star-full:before {
-  content: "\e906";
-}
-
-.icon-arrow-right-b:before {
-  content: "\ea3c";
-}
-
-.icon-arrow-left-b:before {
-  content: "\ea40";
-}
-
-.icon-film:before,
-.icon-filmy:before {
-  content: "\e913";
-}
-
-.icon-book:before,
-.icon-ksiazki:before {
-  content: "\e91f";
+.icon-file-word-o:before {
+  content: "\e90e";
 }
 
 .icon-twitter:before {
@@ -337,16 +146,8 @@ i.xl-icon {
   content: "\f09a";
 }
 
-.icon-google:before {
-  content: "\f0d5";
-}
-
 .icon-linkedin:before {
   content: "\f0e1";
-}
-
-.icon-behance:before {
-  content: "\f1b4";
 }
 
 .icon-behance-f:before {
@@ -473,8 +274,216 @@ i.xl-icon {
   content: "\f03e";
 }
 
+.icon-college-graduation:before, #page_links li > a:before {
+  content: "\e909";
+}
+
+.icon-info:before {
+  content: "\e600";
+}
+
+.icon-file:before {
+  content: "\e900";
+}
+
+.icon-expand:before {
+  content: "\e901";
+}
+
+.icon-collapse:before {
+  content: "\e902";
+}
+
+.icon-pictures:before {
+  content: "\e903";
+}
+
+.icon-arrow_back:before {
+  content: "\e5c4";
+}
+
+.icon-arrow_downward:before {
+  content: "\e5db";
+}
+
+.icon-arrow_forward:before {
+  content: "\e5c8";
+}
+
+.icon-arrow_upward:before {
+  content: "\e5d8";
+}
+
+.icon-call_made:before {
+  content: "\e0b2";
+}
+
+.icon-call_received:before {
+  content: "\e0b5";
+}
+
+.icon-desktop_mac:before {
+  content: "\e30b";
+}
+
+.icon-phone_android:before {
+  content: "\e324";
+}
+
+.icon-event_note:before {
+  content: "\e616";
+}
+
+.icon-instagram:before {
+  content: "\e907";
+}
+
+.icon-instagram-f:before {
+  content: "\e907";
+}
+
+.icon-music:before {
+  content: "\e908";
+}
+
+.icon-folder:before {
+  content: "\e92f";
+}
+
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+.icon-price-tag:before {
+  content: "\e935";
+}
+
+.icon-price-tags:before {
+  content: "\e936";
+}
+
+.icon-clock:before {
+  content: "\e94e";
+}
+
+.icon-clock-full:before {
+  content: "\e94f";
+}
+
+.icon-box-add:before {
+  content: "\e95e";
+}
+
+.icon-bubbles:before {
+  content: "\e96c";
+}
+
+.icon-bubbles3:before {
+  content: "\e96f";
+}
+
+.icon-user2:before {
+  content: "\e971";
+}
+
+.icon-users:before {
+  content: "\e972";
+}
+
+.icon-quotes-left:before {
+  content: "\e977";
+}
+
+.icon-quotes-right:before {
+  content: "\e978";
+}
+
+.icon-lock2:before {
+  content: "\e98f";
+}
+
+.icon-unlocked:before {
+  content: "\e990";
+}
+
+.icon-bookmark2:before {
+  content: "\e9d2";
+}
+
+.icon-bookmarks:before {
+  content: "\e9d3";
+}
+
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
+
+.icon-facebook-f:before {
+  content: "\ea8d";
+}
+
+.icon-twitter-f:before {
+  content: "\ea92";
+}
+
+.icon-feed:before {
+  content: "\ea94";
+}
+
+.icon-feed-f:before {
+  content: "\ea95";
+}
+
+.icon-youtube-f:before {
+  content: "\ea97";
+}
+
+.icon-youtube:before {
+  content: "\ea99";
+}
+
+.icon-vimeo-f:before {
+  content: "\ea9d";
+}
+
+.icon-linkedin-f:before {
+  content: "\eac8";
+}
+
+.icon-pencil:before {
+  content: "\e904";
+}
+
+.icon-quill:before {
+  content: "\e905";
+}
+
+.icon-star-full:before {
+  content: "\e906";
+}
+
+.icon-arrow-right-b:before {
+  content: "\ea3c";
+}
+
+.icon-arrow-left-b:before {
+  content: "\ea40";
+}
+
+.icon-film:before {
+  content: "\e913";
+}
+
+.icon-book:before {
+  content: "\e91f";
+}
+
 /*--------------------------------------------------------------
--- framework/components/
+-- framework/components/...
 --------------------------------------------------------------*/
 /* Alignments
 ========================================================================== */
@@ -729,6 +738,12 @@ blockquote > p:last-child {
 
 blockquote q, blockquote cite, blockquote small {
   font-size: 70.58824%;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  padding: 10px 10px 10px 100px;
+  margin: 0.5em 0 1.6667em 0;
 }
 
 abbr[title],
@@ -1013,7 +1028,7 @@ ul.menu,
   list-style: none;
 }
 
-.clear-list {
+.clear-list, #section-attachments .post-attachments {
   list-style-position: outside;
   list-style: none;
   margin: 0;
@@ -1085,6 +1100,47 @@ svg:not(:root) {
   width: 100%;
 }
 
+img[src*=".svg"] {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+}
+
+/* Media - Wordpress 5.0 gutenberg
+========================================================================== */
+.wp-block-embed__wrapper {
+  position: static;
+}
+
+.wp-block-embed-youtube {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+}
+
+.wp-block-embed-youtube iframe,
+.wp-block-embed-youtube object,
+.wp-block-embed-youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wp-block-video video {
+  width: 100%;
+}
+
+.wp-block-video .alignleft video,
+.wp-block-video .alignright video {
+  width: auto;
+}
+
 /* Tables
 ========================================================================== */
 table {
@@ -1149,9 +1205,6 @@ td {
   background: #f5f5f5;
 }
 
-/*--------------------------------------------------------------
--- framework/components/forms/
---------------------------------------------------------------*/
 /* Forms - normalize.css v7.0.0 | MIT License |
 ========================================================================== */
 /**
@@ -1604,8 +1657,30 @@ form input[type=file] {
 }
 
 /*--------------------------------------------------------------
--- framework/vendors/pluginy_js/
+-- framework/vendors/...
 --------------------------------------------------------------*/
+/* attachment
+========================================================================== */
+#section-attachments .post-attachments li {
+  position: relative;
+  margin: 7px 0;
+  padding-left: 55px;
+}
+
+#section-attachments .attachment-info {
+  font-size: 70.58824%;
+}
+
+.post-attachment {
+  background-size: contain;
+}
+
+#section-attachments i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
 /* Magnific Popup CSS
 ========================================================================== */
 .mfp-bg {
@@ -2132,6 +2207,7 @@ img.mfp-img {
 5.0 Footer
 5.1 Footer Contact
 5.2 Footer quick links (widget sidebar-footer_contact )
+5.3 footer map
 
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
@@ -2220,10 +2296,6 @@ main {
   padding: 21px;
 }
 
-.content-style .meta-line h1, .content-style .meta-line h2, .content-style .meta-line h3 {
-  background-color: #ffffff;
-}
-
 .meta-line {
   position: relative;
   overflow: hidden;
@@ -2249,6 +2321,26 @@ main {
   padding-right: 10px;
   z-index: 6000;
   background-color: #fbfafc;
+}
+
+#secondary-baners .meta-line h1, #secondary-baners .meta-line h2, #secondary-baners .meta-line h3,
+.content-style .meta-line h1,
+.content-style .meta-line h2,
+.content-style .meta-line h3 {
+  background-color: #ffffff;
+}
+
+.bw-image {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+a:hover .bw-image {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 /*--------------------------------------------------------------
@@ -2277,6 +2369,28 @@ main {
 .pad-v {
   padding-top: 2.08333%;
   padding-bottom: 2.08333%;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-col-2 .wpg-block-column {
+  width: 50%;
+}
+
+.wpg-block-column {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  min-width: 320px;
 }
 
 /*--------------------------------------------------------------
@@ -2337,10 +2451,10 @@ main {
 }
 
 .site-title {
+  display: inline-block;
   margin: 0;
   max-height: 80px;
   overflow: hidden;
-  text-align: center;
 }
 
 .site-title img {
@@ -2399,7 +2513,7 @@ main {
   padding-bottom: 5rem;
 }
 
-#slider {
+.slider-bg {
   width: 80%;
   margin: 10px auto;
   background: #fbfafc;
@@ -2407,7 +2521,7 @@ main {
   background: rgba(251, 250, 252, 0.8);
 }
 
-#slider article {
+.slider-bg article {
   overflow: hidden;
   padding: 15px;
 }
@@ -2446,6 +2560,7 @@ main {
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-size: 1.7rem;
+  overflow: hidden;
 }
 
 #bar_shortcuts a {
@@ -2458,6 +2573,15 @@ main {
 
 #bar_shortcuts a:hover {
   color: #c10000;
+}
+
+.no-flexbox #bar_shortcuts li {
+  display: inline-block;
+  width: 160px;
+}
+
+.no-flexbox #bar_shortcuts h3 {
+  min-height: 44px;
 }
 
 .shortcuts-links {
@@ -2527,6 +2651,18 @@ main {
 --------------------------------------------------------------*/
 .hentry {
   overflow: hidden;
+}
+
+.single .hentry .entry-header {
+  margin-bottom: 20px;
+}
+
+.single .hentry .entry-meta {
+  margin: 20px 0;
+}
+
+.single .hentry .entry-content {
+  margin-top: 40px;
 }
 
 .meta__item {
@@ -2782,6 +2918,15 @@ main {
   margin-bottom: 20px;
 }
 
+#contact-footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+#contact-footer .wpg-block-column {
+  min-width: 155px;
+}
+
 .contact-item__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2813,12 +2958,47 @@ main {
 5.2 Footer quick links
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+5.3 footer map
+--------------------------------------------------------------*/
+#map_svg {
+  padding-top: 4%;
+}
+
+#title_path {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+  z-index: 5000;
+  max-width: 49%;
+}
+
+/*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
 #copyright {
   min-height: 80px;
   background-color: #fbfafc;
   overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+7.0 Gutenberg blocks
+--------------------------------------------------------------*/
+.wp-block-button__link img {
+  display: inline;
+  margin: -2rem 0 -2rem 24px;
+  max-width: 50px;
+}
+
+.wp-block-file .wp-block-file__button {
+  font-size: 17px;
+  font-size: 1.7rem;
+  padding: 10px 15px;
+  border-radius: 15px;
+  min-width: 140px;
+  display: inline-block;
+  text-align: center;
+  background: #c10000;
 }
 
 /* Widget
@@ -3182,6 +3362,15 @@ a.skip-main:active {
   margin: 0 !important;
 }
 
+.blank-ico {
+  position: absolute;
+  margin: 1px 5px 0 5px;
+  border: 0 !important;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
 /*--------------------------------------------------------------
 -- theme/nav/
 --------------------------------------------------------------*/
@@ -3235,10 +3424,11 @@ a.skip-main:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 .h-nav .menu > li {
-  float: left;
+  display: inline-block;
 }
 
 .h-nav .sub-menu {
@@ -3450,7 +3640,7 @@ a.skip-main:active {
 .pagination-inside a, .pagination-inside span {
   display: inline-block;
   margin: 0px 5px;
-  padding: 10px 16px 8px 17px;
+  padding: 8px 16px 8px 17px;
   text-decoration: none;
   border-radius: 25px;
   border: 2px solid #c10000;
@@ -3483,6 +3673,12 @@ a.skip-main:active {
   color: #c10000;
   background: #fbfafc;
   border: none;
+}
+
+.pagination-inside .post-page-numbers.current {
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 /* ---------------------------------
@@ -3738,10 +3934,41 @@ a.skip-main:active {
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
+@media (max-width: 36em) {
+  .hentry table caption {
+    background-image: none;
+  }
+  .hentry table thead, .hentry table table th {
+    display: none;
+  }
+  .hentry table td {
+    display: block;
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  .hentry table tbody td::before {
+    content: attr(data-th);
+    float: left;
+    width: 30%;
+    font-weight: bold;
+  }
+  .hentry table tbody td::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
 @media (max-width: 61.9375em) {
   .hide-on-small {
     display: none !important;
   }
+  /*----------------------------------
+ *  Tables
+ * ---------------------------------*/
 }
 
 /*--------------------------------------------------------------
@@ -3994,8 +4221,6 @@ a.skip-main:active {
   }
   .title-area {
     padding-left: 0;
-  }
-  .site-title {
     text-align: left;
   }
   .site-title img {
@@ -4011,6 +4236,9 @@ a.skip-main:active {
   }
   .fixed-header #site-search {
     display: none;
+  }
+  .fixed-header .title-area {
+    text-align: center;
   }
   .fixed-header-2 .header-wrapper {
     position: fixed;
@@ -4129,6 +4357,9 @@ a.skip-main:active {
 5.2 Footer quick links
 --------------------------------------------------------------*/
   /*--------------------------------------------------------------
+5.3 footer map
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
   /* Alignments  RWD -- tablet
@@ -4136,10 +4367,12 @@ a.skip-main:active {
   .alignleft {
     display: inline;
     float: left;
+    margin: 0.5em 0.5em 0.5em 0;
   }
   .alignright {
     display: inline;
     float: right;
+    margin: 0.5em 0 0.5em 0.5em;
   }
   .text-center-right {
     text-align: right;
@@ -4231,6 +4464,9 @@ a.skip-main:active {
   #bar_shortcuts h3 {
     font-size: 14px;
     font-size: 1.4rem;
+  }
+  .no-flexbox #bar_shortcuts h3 {
+    min-height: 36px;
   }
 }
 

@@ -205,13 +205,54 @@ function wpg_add_allow_upload_extension_exception( $types, $file, $filename, $mi
 }
 add_filter( 'wp_check_filetype_and_ext', 'wpg_add_allow_upload_extension_exception', 99, 4 );
 
-// Opis na podstawie ID
+#one for JS mime-type
+add_action( 'template_redirect', function(){
+  ob_start( function( $buffer ){
+       $buffer = str_replace( array( 'type="text/javascript"', "type='text/javascript'" ), '', $buffer );
+       return $buffer;
+    });
+});
+#one for CSS-Mime-Type
+add_action( 'template_redirect', function(){
+    ob_start( function( $buffer ){
+        $buffer = str_replace( array( 'type="text/css"', "type='text/css'" ), '', $buffer );
+        return $buffer;
+    });
+});
+
+
+add_filter( 'navigation_markup_template', 'cyb_navigation_template' );
+function cyb_navigation_template( $template ) {
+    $template = '<nav class="navigation %1$s" aria-label="%4$s"><h2 class="screen-reader-text">%2$s</h2><div class="nav-links">%3$s</div></nav>';
+
+    return $template;
+
+}
+
+
+// Dodatkowa wtyczka TABELE (link do wtyczki)- Tinymce 4
+function my_custom_plugins( $plugins ) {
+	$plugins['table'] = THEME_URL . 'js/assets/table_plugin.min.js';
+	return $plugins;
+}
+// Dodatkowa wtyczka TABELE (Rejestracja przycisku)- Tinymce 4
+add_action( 'mce_external_plugins', 'my_custom_plugins' );
+function wpex_style_select( $buttons ) {
+	array_push( $buttons, 'table' );
+	return $buttons;
+}
+add_filter( 'mce_buttons', 'wpex_style_select' );
 
 
 
 
+function misha_gutenberg_css(){
 
+	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
+	add_editor_style( 'css/style-editor.css' );
 
+}
+add_action( 'after_setup_theme', 'misha_gutenberg_css' );
 
 
 ?>

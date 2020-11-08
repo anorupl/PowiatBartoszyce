@@ -9,7 +9,7 @@
 
 ?>
   <section id="page_links" class="page-section content-style col-4_5">
-    <header class="header-section meta-line">
+    <header class="header-section meta-line" tabindex="0">
           <h2><?php echo esc_html(get_theme_mod('wpg_links_title',__('Links to pages', 'wpg_theme'))); ?></h2>
     </header>
     <?php if (has_nav_menu('menu_page_links')):

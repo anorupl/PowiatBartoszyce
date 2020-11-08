@@ -60,22 +60,21 @@
            'type' => 'url',
        ));
 
-      // Test of TinyMCE control
-      $wp_customize->add_setting( "wpg_alert_tinymce",
-        array(
-          'default' => __('Information', 'wpg_theme'),
-          'sanitize_callback' => 'wp_kses_post'
-        )
-      );
-      $wp_customize->add_control( new WPG_TinyMCE_Custom_control( $wp_customize, "wpg_alert_tinymce",
-        array(
-          'label'       => __('Description', 'wpg_theme'),
-          'section'     => $alert_section_id,
-          'input_attrs' => array(
-            'toolbar1' => 'bold italic bullist numlist alignjustify link',
-          )
-        )
-      ) );
+       $wp_customize->add_setting('wpg_alert_textarea', array(
+           'default' => __('Information', 'wpg_theme'),
+           'capability' => 'edit_theme_options',
+           'sanitize_callback' => 'wp_kses_post',
+       ));
+       $wp_customize->add_control('wpg_alert_textarea', array(
+           'label'       => __('Description', 'wpg_theme'),
+           'section' => $alert_section_id,
+           'settings' => 'wpg_alert_textarea',
+           'type' => 'textarea',
+       ));
+
+
+
+
 
 
 ?>

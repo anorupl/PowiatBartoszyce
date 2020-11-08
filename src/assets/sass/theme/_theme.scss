@@ -31,6 +31,7 @@
 5.0 Footer
 5.1 Footer Contact
 5.2 Footer quick links (widget sidebar-footer_contact )
+5.3 footer map
 
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
@@ -114,9 +115,6 @@ main {
   background-color: $white;
   padding: 21px;
 
-  .meta-line  {
-    h1,h2,h3 {background-color: $white;}
-  }
 }
 
 
@@ -146,9 +144,22 @@ main {
     background-color: $four-bw;
   }
 
+ #secondary-baners &,
+ .content-style & {
+   h1,h2,h3 {
+     background-color: $white;
+   }
+ }
 }
 
 
+.bw-image {
+  filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+a:hover .bw-image {
+  filter: grayscale(0%);
+}
 
 /*--------------------------------------------------------------
 3.0 Layout
@@ -178,6 +189,21 @@ main {
   padding-bottom: gutter();
 }
 
+
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.flex-col-2 {
+  .wpg-block-column {
+    width: 50%;
+  }
+}
+.wpg-block-column {
+  flex-basis: auto;
+  min-width: 320px;
+}
 
 
 /*--------------------------------------------------------------
@@ -229,10 +255,11 @@ main {
   text-align: center;
 }
 .site-title {
+  display: inline-block;
   margin: 0;
   max-height: 80px;
   overflow: hidden;
-  text-align: center;
+
   img {
 
     width: auto;
@@ -288,7 +315,7 @@ main {
   padding-bottom: 5rem;
 }
 
-#slider {
+.slider-bg {
   width: 80%;
   margin: 10px auto;
   @include bg-op($four-bw, 0.8);
@@ -330,7 +357,9 @@ main {
   h3 {
     font-family: $font-base;
     @include font-size($size-base);
+    overflow: hidden;
   }
+
 
   a {
     display: inline-block;
@@ -339,6 +368,13 @@ main {
     padding: 5px;
     color: $one-bw;
     &:hover {color: $two-color;}
+  }
+  .no-flexbox & li {
+    display: inline-block;
+    width: 160px;
+  }
+  .no-flexbox & h3 {
+    min-height: 44px;
   }
 }
 .shortcuts-links {
@@ -401,6 +437,13 @@ main {
 --------------------------------------------------------------*/
 .hentry{
   overflow: hidden;
+
+  .single & {
+
+    .entry-header {margin-bottom: 20px;}
+    .entry-meta {margin: 20px 0;}
+    .entry-content { margin-top: 40px;}
+  }
 }
 .meta__item {
     display: inline-block;
@@ -633,11 +676,16 @@ main {
     border-bottom: solid 4px;
     padding-bottom: 10px;
     margin-bottom: 25px;
-
   }
-
   .contact-item {
     margin-bottom: 20px;
+  }
+  ul {
+     padding: 0;
+    list-style: none;
+  }
+  .wpg-block-column {
+    min-width: 155px;
   }
 }
 
@@ -663,10 +711,46 @@ main {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+5.3 footer map
+--------------------------------------------------------------*/
+#map_svg {
+  padding-top: 4%;
+}
+
+#title_path {
+    position: absolute;
+    bottom: 55px;
+    left: 5px;
+    z-index: $z-level-1;
+    max-width: 49%;
+}
+
+/*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
 #copyright {
   min-height: 80px;
   background-color: $four-bw;
   overflow: hidden;
+}
+
+
+/*--------------------------------------------------------------
+7.0 Gutenberg blocks
+--------------------------------------------------------------*/
+
+.wp-block-button__link img {
+    display: inline;
+    margin: -2rem 0 -2rem 24px;
+    max-width: 50px;
+}
+
+.wp-block-file .wp-block-file__button {
+@include font-size($size-base);
+padding: 10px 15px;
+border-radius: 15px;
+min-width: 140px;
+display: inline-block;
+text-align: center;
+background: $two-color;
 }

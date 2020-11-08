@@ -164,7 +164,7 @@ a {
 #header-background::after {
   background: #ffffff; }
 
-#slider {
+.slider-bg {
   width: 80%;
   margin: 10px auto;
   background: #000000;
@@ -376,23 +376,23 @@ a {
   color: #ffffff; }
 
 .pagination-inside a, .pagination-inside span {
-  border-color: #FFFE00; }
+  border: 2px solid #FFFE00; }
 
 .pagination-inside a {
   color: #FFFE00;
-  background: #000000; }
+  background: #FFFE00; }
 
 .pagination-inside span {
-  color: #ffffff;
-  background-color: #000000; }
+  color: #FFFE00;
+  background: #000000; }
 
 .pagination-inside a > span {
   color: #000000;
-  background-color: #ffffff; }
+  background: #FFFE00; }
 
 .pagination-inside a:hover {
-  background: #FFFE00;
-  color: #000000; }
+  background: #000000;
+  color: #FFFE00; }
 
 .pagination-inside a:hover > span {
   color: #FFFE00;
@@ -485,6 +485,9 @@ pre {
 .widget-title::after {
   background: #ffffff; }
 
+.secondary-col .widget-title::after {
+  background: #ffffff; }
+
 /* Forms
   ========================================================================== */
 fieldset,
@@ -526,3 +529,39 @@ input, textarea {
   border-color: #ffffff; }
   input:focus, textarea:focus {
     border-color: #FFFE00; }
+
+/* Gutenber block - wordpres 5.0
+  ========================================================================== */
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button {
+  background-color: #FFFE00;
+  color: #000000; }
+
+.is-style-outline .wp-block-button__link {
+  border-color: #FFFE00;
+  color: #FFFE00; }
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:visited {
+  color: #000000; }
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  color: #000000; }
+
+/* Slick theme
+  ========================================================================== */
+.btn-slider {
+  color: #FFFE00;
+  border: 2px solid #FFFE00; }
+  .btn-slider:hover {
+    color: #000000;
+    background-color: #FFFE00;
+    border-color: #FFFE00; }
+
+.slick-dots li button:before {
+  color: #FFFE00; }
+
+.slick-dots li.slick-active button:before {
+  color: #FFFE00; }

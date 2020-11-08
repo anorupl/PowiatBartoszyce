@@ -148,7 +148,7 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section( $shortcuts_section_id, array(
 		'priority'   		=> '6',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Shortcuts section', 'wpg_theme' ),
+		'title'      		=> __( 'Header - Shortcuts section', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
@@ -160,7 +160,7 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section( $loop_section_id, array(
 		'priority'   		=> '7',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'News section', 'wpg_theme' ),
+		'title'      		=> __( 'Section - News category', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
@@ -172,7 +172,7 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section($featuredcat_id, array(
 		'priority'   		=> '8',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Featured category', 'wpg_theme' ),
+		'title'      		=> __( 'Section - Featured category', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
@@ -225,7 +225,16 @@ function wpg_customizer_general($wp_customize) {
 	));
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_social.php';
 
+	// 13. District
+	$district_section_id = 'wpg_district_stc';
 
+	$wp_customize->add_section(  $district_section_id, array(
+		'priority'   		=> '13',
+		'capability' 		=> 'edit_theme_options',
+		'title'      		=> __( 'District', 'wpg_theme' ),
+		'panel' 			=> $theme_panel_id
+	));
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_district.php';
 
 }
 add_action( 'customize_register', 'wpg_customizer_general' );

@@ -132,7 +132,7 @@ a {
       background: $wcag-text;
   }
 }
-#slider {
+.slider-bg {
   width: 80%;
   margin: 10px auto;
   background: $wcag-bg;
@@ -400,34 +400,39 @@ a {
   }
 }
 .pagination-inside {
+	a, span	{
+		border: 2px solid $wcag-herf;
+	}
+	a {
+		color: $wcag-herf;
+		background: $wcag-herf;
+	}
+	span {
+		color: $wcag-herf;
+		background: $wcag-bg;
+	}
 
-  a, span	{
-    border-color: $wcag-herf;
-  }
-  a {
-    color: $wcag-herf;
-    background: $wcag-bg;
-  }
-  span {
-    color: $wcag-text;
-    background-color: $wcag-bg;
-  }
+	a > span {
+		color: $wcag-bg;
+		background: $wcag-herf;
+	}
 
-  a > span {
-    color: $wcag-bg;
-    background-color: $wcag-text;
-  }
+	a:hover {
+		background: $wcag-bg;
+		color: $wcag-herf;
+	}
 
-  a:hover {
-    background: $wcag-herf;
-    color: $wcag-bg;
-  }
+	a:hover > span {
+		color: $wcag-herf;
+		background: $wcag-bg;
 
-  a:hover > span {
-    color: $wcag-herf;
-    background: $wcag-bg;
-  }
+	}
 }
+
+
+
+
+
 .post-navigation {
   span.meta-nav 	{
     color: $wcag-text;
@@ -540,7 +545,13 @@ pre {
 .widget-title::after {
   background: $wcag-text;
 }
-
+.secondary-col {
+  .widget-title {
+      &::after {
+        background: $wcag-text;
+      }
+  }
+}
 
 
   /* Forms
@@ -580,4 +591,56 @@ pre {
     &:focus {
       border-color: $wcag-herf;
     }
+  }
+
+
+  /* Gutenber block - wordpres 5.0
+  ========================================================================== */
+  .wp-block-button__link,
+  .wp-block-file .wp-block-file__button {
+    background-color: $wcag-herf;
+    color: $wcag-bg;
+  }
+  .is-style-outline .wp-block-button__link {
+    border-color: $wcag-herf;
+    color: $wcag-herf;
+  }
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:visited {
+  color: $wcag-bg;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  color: $wcag-bg;
+}
+
+  /* Slick theme
+  ========================================================================== */
+
+  .btn-slider {
+      color: $wcag-herf;
+      border: 2px solid $wcag-herf;
+
+      &:hover {
+          color: $wcag-bg;
+          background-color: $wcag-herf;
+          border-color: $wcag-herf;
+      }
+  }
+
+
+  .slick-dots {
+      li {
+          button {
+              &:before {
+                  color: $wcag-herf;
+              }
+          }
+          &.slick-active button:before {
+              color: $wcag-herf;
+          }
+      }
   }

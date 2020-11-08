@@ -12,7 +12,7 @@
         <header class="screen-reader-text">
           <h2><?php echo get_theme_mod('wpg_slider_section',__('Section title', 'wpg_theme'));?></h2>
         </header>
-        <div id="slider" class="slides radius">
+        <div id="slider" class="slider-bg slides radius">
         <?php
         $slider_number = absint( get_theme_mod('wpg_slider_number', 1 ) );
         $slider_category = absint( get_theme_mod('wpg_slider_category', 0 ) );
@@ -40,7 +40,7 @@
                         </span>
                       </div>
                       <div class="text-center-left">
-                        <header class=""><?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?></header>
+                        <header class=""><?php the_title(sprintf('<h2 itemprop="name" class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?></header>
                         <a href="<?php the_permalink();?>" class="btn alignleft"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
                       </div>
                   </article>

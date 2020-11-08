@@ -39,6 +39,7 @@
  $wp_customize->add_control( 'wpg_links_title', array(
    'settings' => 'wpg_links_title',
    'label'   => __('Title section', 'wpg_theme'),
+   'description' => sprintf(__("Items for the section are added on the <a href='%1s'>menu page</a>",'wpg_theme'), admin_url( 'nav-menus.php')),
    'section'  => $links_section_id,
    'type'    => 'text'
  ));

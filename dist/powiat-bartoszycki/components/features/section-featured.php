@@ -38,7 +38,7 @@
   if ( $query_featuredcat->have_posts()) :
     ?>
     <section id="featured-cat" class="page-section content-style col-7">
-        <header class="header-section meta-line">
+        <header class="header-section meta-line" tabindex="0">
               <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h2>
         </header>
         <div class="featured-item">
@@ -54,8 +54,12 @@
             ?>
             <article <?php post_class('col-4 pad-all'); ?>>
               <figure class="post-thumbnail">
-                <a href="<?php the_permalink(); ?>" aria-hidden="true">
-                  <img src="<?php echo esc_url($url_thumb); ?>" alt="  <?php the_title() ;?>" />
+                <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                <?php if (has_post_thumbnail()) :
+                   the_post_thumbnail('full', array('alt' => get_the_title()));
+                  else: ?>
+                  <img width="1200" height="800" src="<?php echo THEME_URL . 'img\default\no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
+                  <?php endif; ?>
                 </a>
               </figure>
               <div class="entry-meta">

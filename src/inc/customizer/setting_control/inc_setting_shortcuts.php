@@ -16,7 +16,8 @@ $wp_customize->add_setting('wpg_shortcuts_section', array(
 
 $wp_customize->add_control( 'wpg_shortcuts_section', array(
  'settings'=> 'wpg_shortcuts_section',
- 'label'   => __('Section title', 'wpg_theme'),
+ 'label'   => __('Section title (Text for the blind)', 'wpg_theme'),
+ 'description' => sprintf(__("Items for the section are added on the <a href='%1s'>widget page</a>",'wpg_theme'), admin_url( 'widgets.php')),
  'section' => $shortcuts_section_id,
  'type'    => 'text'
 ));

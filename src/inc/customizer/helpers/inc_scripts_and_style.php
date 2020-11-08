@@ -2,8 +2,8 @@
 /**
 * File with functions to registration scripts and css in Customizer
 *
-* @package Powiat Bartoszycki
-* @since 0.1.0
+ * @package MBP Bartoszyce
+ * @since 0.1.0
 */
 
 
@@ -20,9 +20,6 @@ function wpg_custom_customize_enqueue() {
 
 	wp_enqueue_script( 'jquery');
 
-	// Register map leaflet
-	wp_enqueue_style( 'leaflet',"https://unpkg.com/leaflet@1.3.4/dist/leaflet.css");
-  wp_enqueue_script( 'leaflet-js', "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js");
 
 	// Register the script
 	wp_enqueue_script( 'wpg_customizer_js', get_template_directory_uri() . '/inc/customizer/assets/js/theme-customize.js', '','', true);
@@ -56,10 +53,17 @@ function google_font_url() {
 		$fonts[] = get_theme_mod('wpg_heading_google_font','Oswald') .':' . str_replace( 'regular', '400',get_theme_mod( 'wpg_heading_google_variants', 'regular'));
 	}
 
+	$subset = get_theme_mod( 'google_subsets', 'latin-ext');
+
+	if (!is_string($subset)) {
+		$subset = implode( ',', $subset );
+	}
+
+
 	if ( !empty( $fonts )) {
 		$query_args = array(
 			'family' => str_replace( " ", "+", implode( '%7C', array_values( $fonts ) ) ),
-			'subset' => implode( ',', get_theme_mod( 'google_subsets', array('latin-ext')))
+			'subset' => $subset
 		);
 
 		$protocol = is_ssl() ? 'https' : 'http';

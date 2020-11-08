@@ -44,3 +44,16 @@ a.skip-main:active 	{
 	overflow: hidden;
 	margin: 0 !important;
 }
+
+.blank-ico 	{
+position: absolute;
+margin: 1px 5px 0 5px;
+border: 0 !important;
+//display: inline-block;
+//width: 19px;
+//height: 17px;
+text-indent: -9999px;
+//background: url(#{$img-path}new_window.png);
+background-repeat: no-repeat;
+opacity: 0;
+}

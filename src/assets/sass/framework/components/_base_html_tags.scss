@@ -148,7 +148,7 @@ hr {
   height: 0;
   border: 0;
   border-bottom: 1px solid $light-border;
-  
+
   &.style-two {
     height: 1px;
     border-top: 0;
@@ -183,15 +183,15 @@ blockquote {
   min-width: 35vw;
   min-height: 80px;
   min-height: 8rem;
-  
-  
+
+
   @include font-size-procent($font-size-xl);
-  
+
   font-style: italic;
   border-top: 1px solid $two-color;
   border-bottom: 1px solid $two-color;
   overflow: hidden;
-  
+
   &:before {
     @extend .i-style;
     content: "\e977";
@@ -203,18 +203,23 @@ blockquote {
     line-height: 1em;
     color: $two-color;
   }
-  
+
   em, i, cite {
     font-style: normal;
   }
-  
+
   & > p:last-child {
     margin-bottom: 0;
   }
-  
+
   q, cite, small {
     @include font-size-procent($font-size-s);
   }
+}
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  padding: 10px 10px 10px 100px;
+  margin: 0.5em 0 1.6667em 0; 
 }
 
 
@@ -235,11 +240,11 @@ pre {
   overflow: auto;
   padding: 0.8em;
   margin-bottom: 1.6em;
-  
+
   color:	$one-color;
   background-color: $three-bw;
   border: 1px solid $border-color;
-  
+
   white-space: pre-wrap;
   word-wrap: break-word;
 }

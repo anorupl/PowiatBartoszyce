@@ -25,8 +25,8 @@
 <body <?php body_class(); ?> >
 	<div id="skip-links">
 		<span class="clear"></span>
-		<a role="button" id="first-skip-link" class="skip-main" href="#main"> <?php _e('Skip to content','wpg_theme'); ?></a>
-		<a role="button" class="skip-main" href="#menu_header"><?php _e('Go to the main page navigation','wpg_themee'); ?></a>
+		<a role="button" id="first-skip-link" class="skip-main" href="#main" tabindex="1"> <?php _e('Skip to content','wpg_theme'); ?></a>
+		<a role="button" class="skip-main" href="#menu_header" tabindex="2"><?php _e('Go to the main page navigation','wpg_themee'); ?></a>
 		<span class="clear"></span>
 	</div>
 <div id="top-bar" class="header-top clear-both">
@@ -48,7 +48,6 @@
 	<div id="site-header" class="wrapper">
 		<div class="title-area col-7">
 			<h1 class="site-title">
-				<span class="screen-reader-text"><?php bloginfo('name');?></span>
 				<?php if (!has_custom_logo()): ?>
 					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name');?></a>
 				<?php else: ?>

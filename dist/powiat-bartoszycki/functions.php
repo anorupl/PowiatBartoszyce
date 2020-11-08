@@ -115,8 +115,8 @@ function wpg_enqueue() {
 	wp_enqueue_style( 'slick', THEME_URL . "css/slick.css");
 
 	// fallback css
-	wp_enqueue_style( 'wpg-ie', THEME_URL . 'css/ie.css');
-	wp_style_add_data( 'wpg-ie', 'conditional', 'lt IE 9' );
+	//wp_enqueue_style( 'wpg-ie', THEME_URL . 'css/ie.css');
+	//wp_style_add_data( 'wpg-ie', 'conditional', 'lt IE 9' );
 
 	//Enqueue scripts
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js');
@@ -142,7 +142,8 @@ function wpg_enqueue() {
 		'close' => __('Close (Escape key)', 'wpg_theme'),
 		'load'=> __('Loading ...', 'wpg_theme'),
 		'image' => __('Image', 'wpg_theme'),
-		'error_image' => __('it cannot be loaded.', 'wpg_theme')
+		'error_image' => __('it cannot be loaded.', 'wpg_theme'),
+		'blank' 			=> __('Link open in a new window', 'wpg_theme'),
 	));
 }
 add_action( 'wp_enqueue_scripts', 'wpg_enqueue' );
@@ -189,16 +190,6 @@ function wpg_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="widget ' . wpg_the_widgets_count('wpg-footerbar-secondary_baners') . ' %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="screen-reader">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer - middle column', 'wpg_theme' ),
-		'id'            => 'wpg-footer_column',
-		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }

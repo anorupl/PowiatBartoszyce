@@ -24,7 +24,7 @@ function wpg_get_excerpt($limit) {
 */
 function wpg_time() {
 printf('<span class="meta-left"><i class="icon-clock-full"></i></span>
-<span class="meta-right"><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" itemprop="datePublished dateModified" datetime="%2$s">%3$s</time></span>',
+<span class="meta-right"><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" datetime="%2$s">%3$s</time></span>',
 __('Data', 'wpg_theme'),
 esc_attr( get_the_date( 'c' ) ),
 esc_html( get_the_date() ));
@@ -96,7 +96,7 @@ function wpg_meta_post( $class='') {
   }
 
   // print meta - data
-  printf('<div class="meta__item"><i class="icon-clock-full"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" itemprop="datePublished dateModified" datetime="%2$s">%3$s</time></div>',
+  printf('<div class="meta__item"><i class="icon-clock-full"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" datetime="%2$s">%3$s</time></div>',
     __(', on data', 'wpg_theme'),
     esc_attr( get_the_date( 'c' ) ),
     esc_html( get_the_date() ));
@@ -124,7 +124,7 @@ function wpg_meta_page( $class='') {
   );
 
   // print meta - data
-  printf('<div class="meta__item"><i class="icon-clock-full"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" itemprop="datePublished dateModified" datetime="%2$s">%3$s</time></div>',
+  printf('<div class="meta__item"><i class="icon-clock-full"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" datetime="%2$s">%3$s</time></div>',
     __('Page published on data', 'wpg_theme'),
     esc_attr( get_the_date( 'c' ) ),
     esc_html( get_the_date() ));
@@ -517,4 +517,108 @@ function wpg_breadcrumbs() {
         }
         echo $wrap_after;
       }
+    }
+
+
+    // Wyświetlanie załaczników typu pdf,rar,zip,exel,word,powerpoint, openoffice, txt
+
+    function wpg_attachments(  ) {
+
+      $content = '';
+
+    	global $post;
+
+    	$attachments = get_posts( array(
+    		'post_type' => 'attachment',
+    		'post_mime_type' => 'application/zip, application/rar, application/pdf, text/plain, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.openxmlformats-officedocument.presentationml.template, application/vnd.oasis.opendocument.text, application/vnd.oasis.opendocument.presentation, application/vnd.oasis.opendocument.spreadsheet',
+    		'posts_per_page' => '-1',
+    		'post_parent' => $post->ID
+    	));
+
+
+    	if ( $attachments ) {
+    		$content .= '<div tabindex="0" id="section-attachments">';
+    		$content .= '<span class="class-h2">'.__('Attachments','wpg_theme').'</span>';
+    		$content .= '<ul class="post-attachments">';
+
+    			foreach ( $attachments as $attachment ) {
+    			$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+
+    			$type = $attachment->post_mime_type;
+          $ico = '<i class="icon-file-archive-o xl-icon"></i>';
+
+
+
+    			switch ($type) {
+    				case 'application/zip':
+    					$type = 'Archiwum ZIP';
+    					break;
+    				case 'application/rar':
+    					$type = 'Archiwum RAR';
+    					break;
+    				case ('application/msword'):
+    					$type = 'Dokument <span lang="en">Microsoft Word</span>';
+              $ico = '<i class="icon-file-word-o xl-icon"></i>';
+              break;
+    				case ('application/vnd.openxmlformats-officedocument.wordprocessingml.document'):
+    					$type = 'Dokument <span lang="en">Microsoft Word</span>';
+              $ico = '<i class="icon-file-word-o xl-icon"></i>';
+    					break;
+    				case ('application/vnd.ms-powerpoint'):
+    					$type = 'Dokument <span lang="en">Microsoft Powerpoint</span>';
+              $ico = '<i class="icon-file-powerpoint-o xl-icon"></i>';
+    					break;
+    				case ('application/vnd.openxmlformats-officedocument.presentationml.presentation'):
+    					$type = 'Dokument <span lang="en">Microsoft Powerpoint</span>';
+              $ico = '<i class="icon-file-powerpoint-o xl-icon"></i>';
+    					break;
+    				case ('application/vnd.ms-excel'):
+    					$type = 'Dokument <span lang="en">Microsoft Excel 2007</span>';
+              $ico = '<i class="icon-file-excel-o xl-icon"></i>';
+    					break;
+    				case ('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'):
+    					$type = 'Dokument <span lang="en">Microsoft Excel 2003</span>';
+              $ico = '<i class="icon-file-excel-o xl-icon"></i>';
+    					break;
+    				case 'application/vnd.oasis.opendocument.text':
+    					$type = 'Dokument Tekstowy <span lang="en">Open office</span>';
+              $ico = '<i class="icon-file-text-o xl-icon"></i>';
+    					break;
+    				case 'application/vnd.oasis.opendocument.spreadsheet':
+    					$type = 'Arkusz kalkulacyjny <span lang="en">Open office</span>';
+              $ico = '<i class="icon-file-excel-o xl-icon"></i>';
+    					break;
+    				case 'application/vnd.oasis.opendocument.presentation':
+    					$type = 'Prezentacja <span lang="en">Open office</span>';
+              $ico = '<i class="icon-file-powerpoint-o xl-icon"></i>';
+    					break;
+    				case 'text/plain':
+    					$type = 'Dokument tekstowy';
+              $ico = '<i class="icon-file-text-o xl-icon"></i>';
+    					break;
+    				case 'application/pdf':
+    					$type = 'Dokument PDF';
+              $ico = '<i class="icon-file-pdf-o xl-icon"></i>';
+    					break;
+    				default:
+    					$type = null;
+    					break;
+    			}
+
+
+    			$url = $attachment->guid;
+    			$title = $attachment->post_title;
+
+    			$size = filesize( get_attached_file( $attachment->ID ) );
+    			$size =	size_format($size, 1);
+
+    			$size = str_replace(' B',' Bajty',$size);
+
+    			$content .= '<li class="' . $class . '">' . $ico . '<a title="Pobierz załącznik" href="'. $url .'">' . $title . '<br><span class="attachment-info">('.$type .', Rozmiar '. $size .')</span></a></li>';
+
+
+    			}
+    	$content .= '</ul></div>';
+    	}
+    echo $content;
     }
