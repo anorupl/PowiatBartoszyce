@@ -108,8 +108,8 @@ function form_wcga(){
 	<form action="<?php echo home_url(); ?>/" method='post'>
 		<?php printf('<button type="submit" value="%1$s" name="wcga" class="normal-font">%2$s</button>',$style,$button); ?>
 		<button type="submit" value="base" name="wcga" class="normal-font hide-on-small"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Standard font size','wpg_theme'); ?></span></button>
-		<button type="submit" value="medium" name="wcga" class="medium-font hide-on-small"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 150%','wpg_theme'); ?></span></button>
-		<button type="submit" value="big" name="wcga" class="big-font hide-on-small"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 200%','wpg_theme'); ?></span></button>
+		<button type="submit" value="medium" name="wcga" class="medium-font hide-on-small"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 130%','wpg_theme'); ?></span></button>
+		<button type="submit" value="big" name="wcga" class="big-font hide-on-small"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 150%','wpg_theme'); ?></span></button>
 	</form>
 	<?php
 } ?>

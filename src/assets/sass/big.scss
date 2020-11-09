@@ -10,10 +10,10 @@
 
 $wcga-a-size-s        : 1.8;
 $wcga-a-font-m        : 2.0;
-$wcga-a-font-base     : 2.1;
-$wcga-a-size-xl       : 2.4;
-$wcga-a-size-xxl      : 2.4;
-$wcga-a-size-xxxl     : 2.8;
+$wcga-a-font-base     : 2.5;
+$wcga-a-size-xl       : 2.7;
+$wcga-a-size-xxl      : 2.9;
+$wcga-a-size-xxxl     : 3.1;
 
 body { @include font-size($wcga-a-font-base);}
 
@@ -22,6 +22,21 @@ h2,.class-h2,.f-size-h2         { @include font-size(($wcga-a-font-base + 1.0));
 h3,.class-h3,.f-size-h3         { @include font-size(($wcga-a-font-base + 0.7));}
 h4,.class-h4,.f-size-h4         { @include font-size(($wcga-a-font-base + 0.4));}
 h5, h6, .class-h5,.f-size-h5    { @include font-size(($wcga-a-font-base + 0.2));}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) {
+#home-posts {
+ .col-7,
+ .col-5 {width: 100%;}
+}
+#featured-cat.col-7,
+#page_links.col-4_5,
+#slider-container.col-7,
+#bar_shortcuts.col-5  {width: 100%;}
+}
+
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint

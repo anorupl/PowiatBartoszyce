@@ -86,6 +86,7 @@ main {
   background-color: $two-color;
   border: 1px solid $two-color;
   padding: 0.7em;
+  max-width: 320px;
   min-width: 200px;
   display: inline-block;
   text-align: center;
@@ -97,8 +98,9 @@ main {
   }
 }
 
-.btn--50 {
-  width: 50%;
+.btn--center {
+  width: 75%;
+  max-width: 320px;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -178,6 +180,10 @@ a:hover .bw-image {
   margin-top: gutter();
   margin-bottom: gutter();
 }
+.primary-col,
+.secondary-col {
+  overflow: hidden;
+}
 
 .secondary-col {
   margin-left: gutter();
@@ -211,7 +217,7 @@ a:hover .bw-image {
 --------------------------------------------------------------*/
 /* Top bar - Header */
 #top-bar {
-  @include font-size($font-size-m);
+  font-size: 85%;
   padding: 5px gutter();
   border-bottom: 1px solid $light-border;
 
@@ -409,7 +415,7 @@ a:hover .bw-image {
   .entry-meta{
     padding-bottom: 5px;
     margin-bottom: 10px;
-    @include font-size(($font-size-m));
+    font-size: 85%;
 
     border-bottom: 1px solid lighten( $border-color, 10% );
     i {
@@ -487,7 +493,15 @@ a:hover .bw-image {
 /*--------------------------------------------------------------
 3.6  Attachment
 --------------------------------------------------------------*/
+.attachment-file {
+  max-width: 600px;
+  margin: 70px auto 100px auto;
 
+  img {
+    display: inline-block;
+    margin: 30px auto;
+  }
+}
 /*--------------------------------------------------------------
 3.7  Widgets
 --------------------------------------------------------------*/
@@ -543,7 +557,7 @@ a:hover .bw-image {
 --------------------------------------------------------------*/
 #featured-cat{
   h3.entry-title {
-  @include font-size(($size-base));
+  font-size: 100%;
   }
   .entry-meta {
     &::after {
@@ -556,7 +570,7 @@ a:hover .bw-image {
   }
   .meta__item {
     margin: 10px 0;
-    @include font-size(($font-size-m));
+    font-size: 85%;
   }
   img {
     width: 100%;
@@ -698,7 +712,7 @@ a:hover .bw-image {
   }
   span {
     display: inline-block;
-    @include font-size($font-size-xl);
+    font-size: 112%;
   }
 }
 .contact-item__text {
@@ -733,6 +747,61 @@ a:hover .bw-image {
   background-color: $four-bw;
   overflow: hidden;
 }
+body.prevent-scroll {
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+}
+
+body.prevent-scroll #page:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: $z-level-4;
+    transition: opacity 500ms ease-in-out;
+}
+
+body.prevent-scroll.prevent-scroll--enabled,
+body.prevent-scroll.prevent-scroll--enabled #page:after {
+    opacity: 1;
+}
+
+
+#cookie-notice {
+    display: none;
+    position: fixed;
+    min-width: 100%;
+    height: auto;
+    z-index: $z-level-5;
+    left: 0;
+    text-align: center;
+    background: $white;
+    bottom: 0;
+    border-top: 2px solid $border-color;
+}
+#cn-notice-text {
+  .btn {
+    margin: 10px;
+    line-height: 1;
+  }
+}
+
+#cookie-notice.cookie-notice-visible {
+  display: block;
+}
+
+
+
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -746,7 +815,7 @@ a:hover .bw-image {
 }
 
 .wp-block-file .wp-block-file__button {
-@include font-size($size-base);
+font-size: 100%;
 padding: 10px 15px;
 border-radius: 15px;
 min-width: 140px;

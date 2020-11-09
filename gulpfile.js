@@ -105,7 +105,7 @@ function copyFonts() {
 //4.0 Copy Js assets: silder, html5shiv
 function copyJs() {
   return gulp
-  .src([html5shiv, cookies])
+  .src([slider,html5shiv, cookies])
   .pipe(changed(project_dir + dist_assets_js))
   .pipe(gulp.dest(project_dir + dist_assets_js))
 }

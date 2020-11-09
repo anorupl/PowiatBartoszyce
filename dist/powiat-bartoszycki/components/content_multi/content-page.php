@@ -14,12 +14,12 @@
         <?php if (has_post_thumbnail()) :
           the_post_thumbnail('full', array('alt' => get_the_title()));
          else: ?>
-           <img width="1200" height="800" src="<?php echo THEME_URL . 'img\default\no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
+           <img width="1200" height="800" src="<?php echo THEME_URL . 'img/default/no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
         <?php endif; ?>
       </a>
     </figure>
   </div>
-  <div class="col-7">
+  <div class="col-7 gutters">
     <header class="entry-header">
       <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
     </header>

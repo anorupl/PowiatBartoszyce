@@ -10,6 +10,7 @@
    $(document).ready(function () {
 
 
+
      /**
      *  Scroll
      */
@@ -38,7 +39,9 @@
 
     $(function() {
 
-   	var $item = $('a[target="_blank"]');
+      cookiewpg();
+
+   	  var $item = $('a[target="_blank"]');
    	  $item.append('<span class="blank-ico">'+ datalanuge.blank +'</span>');
    	  $item.addClass( "blank" );
    	});
@@ -167,8 +170,6 @@
         $($(this).data("gmina")).attr("class", "cls-1")
       });
 
-
-
        /**
        * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
        */
@@ -226,7 +227,28 @@
 
 
      });
+     /*
+     * Function cookie information
+     */
+     function cookiewpg() {
 
+      var cookie_mbp = $.cookie('cookie_mbp');
+
+      if (cookie_mbp != 'powiatbartoszyce-accept') {
+
+        //$('body').addClass('prevent-scroll prevent-scroll--enabled');
+        $('#cookie-notice').addClass('cookie-notice-visible');
+
+
+        $("#cn-accept-cookie").click(function(e){
+          e.preventDefault();
+          $.cookie("cookie_mbp", 'powiatbartoszyce-accept', {expires: 365, path: '/'});
+
+          $('#cookie-notice').removeClass('cookie-notice-visible');
+          //$('body').removeClass('prevent-scroll prevent-scroll--enabled');
+        });
+      }
+     }
 
      /*
      * Function Test if inline SVGs are supported.

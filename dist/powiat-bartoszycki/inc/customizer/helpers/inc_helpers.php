@@ -183,25 +183,25 @@ function wpg_category_lists(){
  *
  * @return	string with html
  */
-function wpg_the_adress($index_tab = '1'){
-	if (get_theme_mod("wpg_contact_adres_$index_tab", '') !== '') : ?>
+function wpg_the_adress(){
+	if (get_theme_mod("wpg_contact_adres_1", '') !== '') : ?>
 
 		<div class="contact-item adress-contact">
-			<i class="icon-map-marker item-icon"></i><?php echo esc_html(get_theme_mod("wpg_contact_adres_$index_tab",'')); ?>
+			<i class="icon-map-marker item-icon"></i><span class="screen-reader"><?php _e('Address', 'wpg_theme');?>, </span><?php echo esc_html(get_theme_mod("wpg_contact_adres_1",'')); ?>
 		</div>
 
 	<?php endif; ?>
-	<?php if (get_theme_mod("wpg_contact_email_$index_tab", '') !== '') : ?>
+	<?php if (get_theme_mod("wpg_contact_email_1", '') !== '') : ?>
 
 		<div class="contact-item adress-contact">
-			<i class="icon-envelope item-icon"></i><?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_$index_tab",''))); ?>
+			<i class="icon-envelope item-icon"></i><span class="screen-reader"><?php _e('E-mail', 'wpg_theme');?>, </span><?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_office",''))); ?>
 		</div>
 
 	<?php endif; ?>
-	<?php if (get_theme_mod("wpg_contact_phone_$index_tab", '') !== '') : ?>
+	<?php if (get_theme_mod("wpg_contact_phone_1", '') !== '') : ?>
 
 		<div class="contact-item adress-contact">
-			<i class="icon-phone_android item-icon"></i><?php echo esc_html(get_theme_mod("wpg_contact_phone_$index_tab",'')); ?>
+			<i class="icon-phone_android item-icon"></i><span class="screen-reader"><?php _e('Telephone number', 'wpg_theme');?>, </span><?php echo esc_html(get_theme_mod("wpg_contact_phone_1",'')); ?>
 		</div>
 
 	<?php endif;

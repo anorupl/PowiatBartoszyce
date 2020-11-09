@@ -6,41 +6,45 @@
 * @since 0.1.0
 */
 
-get_header();
-?>
-<div id="content">
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main ">
+get_header(); ?>
+<div id="content" class="site-content clear-both">
+  <div id="breadcrumbs" class="text-center">
+      <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
+  </div>
+  <div class="container">
+    <div id="primary" class="content-area margin">
+      <main id="main" class="site-main">
             <?php while (have_posts()) : the_post(); ?>
-
-                <?php $attachment_data = wp_prepare_attachment_for_js($post->ID); ?>
-
-                <div <?php post_class('content-style'); ?>>
-                    <div class="entry-header">
-                        <h1 class="entry-title"><?php the_title(); ?></h1>
-                        <hr>
-                    </div><!-- .entry-header -->
-                    <div class="attachment-content text-center">
-                        <div class="attachment-file text-center">
-                            <?php
-                            //icon button
-                            echo wp_get_attachment_link($post->ID, 'thumbnail', false, true, false);
-                            ?>
+            <div <?php post_class('content-style attachment-file'); ?>>
+              <?php $attachment_data = wp_prepare_attachment_for_js($post->ID); ?>
+                  <div class="entry-header text-center">
+                      <h1 class="entry-title"><?php the_title(); ?></h1>
+                      <hr>
+                  </div><!-- .entry-header -->
+                  <div class="attachment-content text-center">
+                      <div class="text-center">
+                          <?php
+                          //icon button
+                          echo wp_get_attachment_link($post->ID, 'thumbnail', false, true, false);
+                          ?>
+                      </div>
+                      <div tabindex="0">
+                        <div class="clera-both">
+                            <span class="class-h4"><a class="btn" href="<?php echo $attachment_data['url']; ?>"><?php _e('Click to download', 'wpg_theme') ?> <span class="screen-reader"><?php the_title(); ?></span></a></span>
                         </div>
-                        <div>
-                            <span class="class-h3"><a class="btn btn__dark" href="<?php echo $attachment_data['url']; ?>"><?php _e('Click to download', 'wpg_theme') ?></a></span>
-                        </div>
-                        <div class="attachment-size">
+                        <div class="clear-both attachment-size">
                             <?php
                             _e('File size: ', 'wpg_theme');
                             echo $attachment_data['filesizeHumanReadable'];
                             ?>
                         </div>
-                    </div>
-                </div>
-
-            <?php endwhile; // End of the loop.	  ?>
-        </main><!-- #main -->
-    </div><!-- primary -->
+                      </div>
+                  </div>
+            </div>
+        <?php endwhile; // End of the loop.	  ?>
+    </main><!-- #main -->
+  </main><!-- #main -->
+</div><!-- primary -->
+</div><!-- .container -->
 </div><!-- #content -->
 <?php get_footer(); ?>

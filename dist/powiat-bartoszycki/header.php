@@ -29,6 +29,15 @@
 		<a role="button" class="skip-main" href="#menu_header" tabindex="2"><?php _e('Go to the main page navigation','wpg_themee'); ?></a>
 		<span class="clear"></span>
 	</div>
+<div id="cookie-notice" role="banner" class="cookie-wpg" aria-label="Informacja o ciasteczkach">
+  <div class="notice-continer col-12 gutters">
+	  <div id="cn-notice-text" class="text-center pad-all">
+			Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
+			<button id="cn-accept-cookie" class="btn">Akceptuj</button>
+			<a href="#" target="_blank" id="cn-more-info" class="btn">Polityka prywatności</a>
+	  </div>
+	</div>
+</div>
 <div id="top-bar" class="header-top clear-both">
 	<div class="wrapper">
 		<div id="top-bar__address" class="inline-left hide-on-small">

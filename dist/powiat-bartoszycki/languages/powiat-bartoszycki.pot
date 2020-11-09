@@ -26,11 +26,15 @@ msgstr ""
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
-#: src/attachment.php:31
+#: src/attachment.php:12, src/image.php:12, src/index.php:58, src/page-templates/page-no_sidebar.php:14, src/page.php:20, src/search.php:15, src/single.php:14
+msgid "You are here: &nbsp;"
+msgstr ""
+
+#: src/attachment.php:33
 msgid "Click to download"
 msgstr ""
 
-#: src/attachment.php:35
+#: src/attachment.php:37
 msgid "File size: "
 msgstr ""
 
@@ -57,35 +61,35 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: src/components/content_single/content-page.php:34, src/components/content_single/content.php:37, src/page-templates/page-no_sidebar.php:31
+#: src/components/content_single/content-page.php:28, src/components/content_single/content.php:29, src/page-templates/page-no_sidebar.php:31
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-page.php:38, src/components/content_single/content.php:41, src/components/site/loop-homepage.php:119, src/index.php:96, src/page-templates/page-no_sidebar.php:35, src/search.php:44
+#: src/components/content_single/content-page.php:32, src/components/content_single/content.php:33, src/components/site/loop-homepage.php:119, src/index.php:96, src/page-templates/page-no_sidebar.php:35, src/search.php:44
 msgid "Page"
 msgstr ""
 
-#: src/components/content_single/content.php:50
+#: src/components/content_single/content.php:42
 msgid "Next"
 msgstr ""
 
-#: src/components/content_single/content.php:51
+#: src/components/content_single/content.php:43
 msgid "Next post:"
 msgstr ""
 
-#: src/components/content_single/content.php:53
+#: src/components/content_single/content.php:45
 msgid "Previous"
 msgstr ""
 
-#: src/components/content_single/content.php:54
+#: src/components/content_single/content.php:46
 msgid "Previous post:"
 msgstr ""
 
-#: src/components/features/section-featured.php:42, src/components/features/section-featured_sidebar.php:40, src/inc/customizer/setting_control/inc_setting_featuredcat.php:32, src/inc/customizer/setting_control/inc_setting_main_loop.php:15, src/inc/template-tags.php:331, src/index.php:67
+#: src/components/features/section-featured.php:38, src/components/features/section-featured.php:67, src/components/features/section-featured_sidebar.php:38, src/components/features/section-featured_sidebar.php:68, src/inc/customizer/setting_control/inc_setting_featuredcat.php:32, src/inc/customizer/setting_control/inc_setting_main_loop.php:15, src/inc/template-tags.php:330, src/index.php:67
 msgid "Last post"
 msgstr ""
 
-#: src/components/features/section-featured.php:81
+#: src/components/features/section-featured.php:66, src/components/features/section-featured_sidebar.php:67
 msgid "Show all"
 msgstr ""
 
@@ -97,7 +101,7 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: src/components/features/slider/custom-text.php:17, src/components/features/slider/loop-category.php:13, src/header.php:133, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40, src/inc/customizer/setting_control/inc_setting_shortcuts.php:12
+#: src/components/features/slider/custom-text.php:17, src/components/features/slider/loop-category.php:13, src/header.php:140, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40, src/inc/customizer/setting_control/inc_setting_shortcuts.php:12
 msgid "Section title"
 msgstr ""
 
@@ -125,7 +129,7 @@ msgstr ""
 msgid "Place name"
 msgstr ""
 
-#: src/footer.php:33, src/inc/customizer/setting_control/inc_setting_contact.php:52
+#: src/footer.php:33, src/inc/customizer/helpers/inc_helpers.php:190, src/inc/customizer/setting_control/inc_setting_contact.php:52
 msgid "Address"
 msgstr ""
 
@@ -133,19 +137,27 @@ msgstr ""
 msgid "Opening Hours"
 msgstr ""
 
-#: src/footer.php:51, src/inc/customizer/setting_control/inc_setting_contact.php:67
+#: src/footer.php:51, src/inc/customizer/helpers/inc_helpers.php:204, src/inc/customizer/setting_control/inc_setting_contact.php:67
 msgid "Telephone number"
 msgstr ""
 
-#: src/footer.php:63, src/inc/customizer/setting_control/inc_setting_contact.php:82
+#: src/footer.php:63, src/inc/customizer/helpers/inc_helpers.php:197
 msgid "E-mail"
 msgstr ""
 
-#: src/footer.php:71
+#: src/footer.php:66
+msgid "Office: "
+msgstr ""
+
+#: src/footer.php:67
+msgid "Editorial: "
+msgstr ""
+
+#: src/footer.php:72
 msgid "Municipalities in the district"
 msgstr ""
 
-#: src/footer.php:122
+#: src/footer.php:123
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -217,20 +229,16 @@ msgstr ""
 msgid "Baners - Secondary section"
 msgstr ""
 
-#: src/header.php:28
+#: src/header.php:29
 msgid "Skip to content"
 msgstr ""
 
-#: src/header.php:80, src/header.php:66
+#: src/header.php:87, src/header.php:73
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:83
+#: src/header.php:90
 msgid "Add menu"
-msgstr ""
-
-#: src/image.php:12, src/index.php:58, src/page-templates/page-no_sidebar.php:14, src/page.php:20, src/search.php:15, src/single.php:14
-msgid "You are here: &nbsp;"
 msgstr ""
 
 #: src/image.php:30
@@ -353,8 +361,12 @@ msgstr ""
 msgid "Place title"
 msgstr ""
 
+#: src/inc/customizer/setting_control/inc_setting_contact.php:82
+msgid "E-mail to Office"
+msgstr ""
+
 #: src/inc/customizer/setting_control/inc_setting_contact.php:97
-msgid "E-mail administrator"
+msgid "E-mail to editorial office"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_district.php:16
@@ -521,75 +533,75 @@ msgstr ""
 msgid "Untitled"
 msgstr ""
 
-#: src/inc/template-tags.php:28
+#: src/inc/template-tags.php:27
 msgid "Data"
 msgstr ""
 
-#: src/inc/template-tags.php:42
+#: src/inc/template-tags.php:41
 msgid "Share on Twitter!"
 msgstr ""
 
-#: src/inc/template-tags.php:43
+#: src/inc/template-tags.php:42
 msgid "Share on Facebook"
 msgstr ""
 
-#: src/inc/template-tags.php:94, src/inc/template-tags.php:67
+#: src/inc/template-tags.php:93, src/inc/template-tags.php:66
 msgid "Post published in category "
 msgstr ""
 
-#: src/inc/template-tags.php:100
+#: src/inc/template-tags.php:99
 msgid ", on data"
 msgstr ""
 
-#: src/inc/template-tags.php:107, src/inc/template-tags.php:134
+#: src/inc/template-tags.php:106, src/inc/template-tags.php:133
 msgid "by user"
 msgstr ""
 
-#: src/inc/template-tags.php:128
+#: src/inc/template-tags.php:127
 msgid "Page published on data"
 msgstr ""
 
-#: src/inc/template-tags.php:227
+#: src/inc/template-tags.php:226
 msgid "Comment navigation"
 msgstr ""
 
-#: src/inc/template-tags.php:330
+#: src/inc/template-tags.php:329
 msgid "Home"
 msgstr ""
 
-#: src/inc/template-tags.php:332
+#: src/inc/template-tags.php:331
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:333
+#: src/inc/template-tags.php:332
 msgid "<span>Search Results for</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:334
+#: src/inc/template-tags.php:333
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:335
+#: src/inc/template-tags.php:334
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:336
+#: src/inc/template-tags.php:335
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:337
+#: src/inc/template-tags.php:336
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:338
+#: src/inc/template-tags.php:337
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr ""
 
-#: src/inc/template-tags.php:372
+#: src/inc/template-tags.php:371
 msgid "page: "
 msgstr ""
 
-#: src/inc/template-tags.php:541
+#: src/inc/template-tags.php:540
 msgid "Attachments"
 msgstr ""
 
@@ -598,11 +610,11 @@ msgid "Standard font size"
 msgstr ""
 
 #: src/inc/wcga_form.php:111
-msgid "Increase font size 150%"
+msgid "Increase font size 130%"
 msgstr ""
 
 #: src/inc/wcga_form.php:112
-msgid "Increase font size 200%"
+msgid "Increase font size 150%"
 msgstr ""
 
 #: src/inc/widget/widget-baner.php:11

@@ -76,12 +76,14 @@
   .menu > .menu-item-has-children > a:after 	{
      @extend [class^="icon-"];
      content: "\f107";
+     bottom: -2px;
   }
 
   /* drugi poziom strzalkaw prawo */
 	.sub-menu .menu-item-has-children > a:after 	{
 	    @extend [class^="icon-"];
 	    content: "\f105";
+      bottom: -2px;
 	}
 
 

@@ -9,23 +9,17 @@
 */
 ?>
 <article <?php post_class('content-style'); ?>>
-  <?php if (has_post_thumbnail()) : ?>
+  <div class="top-thumbnail">
     <figure class="post-thumbnail">
-        <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
-        <?php wpg_meta_page('over-thumbnail text-center'); ?>
+      <?php if (has_post_thumbnail()) : the_post_thumbnail('medium', array('alt' => get_the_title())); else: ?>
+         <img width="1200" height="800" src="<?php echo THEME_URL . 'img/default/no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
+      <?php endif; ?>
     </figure>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-    </header>
-  <?php else: ?>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-    </header>
-    <hr>
-    <?php wpg_meta_page(); ?>
-    <hr>
-  <?php endif; ?>
-
+    <?php wpg_meta_page('over-thumbnail text-center'); ?>
+  </div>
+  <header class="entry-header">
+    <h1 class="entry-title"><?php the_title(); ?></h1>
+  </header>
   <div class="entry-content">
     <?php
     the_content();

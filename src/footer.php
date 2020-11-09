@@ -63,7 +63,8 @@
             <i class="icon-envelope"></i><span class="h-font"><?php _e('E-mail', 'wpg_theme');?></span>
           </div>
           <div class="contact-item__text">
-            <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_1"))); ?>
+            <?php _e('Office: ','wpg_theme');  printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_office"))); ?><br />
+            <?php _e('Editorial: ','wpg_theme'); printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_editorial"))); ?>
           </div>
         </div>
     </div>
@@ -71,14 +72,14 @@
         <h3 class="widget-title"><?php _e('Municipalities in the district','wpg_theme'); ?></h3>
         <div class="flex-column flex-col-2">
           <div class="wpg-block-column gutters">
-            <h4>Gminy Miejskie</h4>
+            <span class="h-font">Gminy Miejskie</span>
             <ul>
               <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis1_url', '#'); ?>" data-gmina="#gmina_m_bartoszyce" target="_blank">Bartoszyce</a></li>
               <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis2_url', '#'); ?>" data-gmina="#gmina_m_gorowo" target="_blank">Górowo Iławeckie</a></li>
             </ul>
           </div>
           <div class="wpg-block-column gutters">
-            <h4>Gminy Wiejskie</h4>
+            <span class="h-font">Gminy Wiejskie</span>
             <ul>
               <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis3_url', '#'); ?>" data-gmina="#gmina_w_bartoszyce" target="_blank">Bartoszyce</a></li>
               <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis4_url', '#'); ?>" data-gmina="#gmina_w_gorowo" target="_blank">Górowo Iławeckie</a></li>
@@ -86,7 +87,7 @@
           </div>
         </div><!-- . flex-column-->
         <div class="gutters">
-          <h4>Gminy Miejsko Wiejskie</h4>
+          <span class="h-font">Gminy Miejsko Wiejskie</span>
           <ul>
             <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis5_url', '#'); ?>" data-gmina="#gmina_bisztynek" target="_blank">Bisztynek</a></li>
             <li><a class="gmina_link" href="<?php echo get_theme_mod('wpg_dis6_url', '#'); ?>" data-gmina="#gmina_sepopol" target="_blank">Sępopol</a></li>
