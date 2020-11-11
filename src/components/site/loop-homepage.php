@@ -8,7 +8,7 @@
 * @since 0.1.0
 */
 ?>
-  <main id="main" class="site-main hentry-multi" tabindex="0">
+  <main id="main" class="site-main hentry-multi clear-both" tabindex="0">
     <section id="home-posts" class="page-section posts content-style col-12">
       <header class="meta-line">
       <?php
@@ -57,8 +57,9 @@
 ?>
 
                <article id="post-<?php the_ID(); ?>" <?php post_class('clear-both'); ?>>
-
-
+                 <header class="entry-header clear-both">
+                   <h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php wpg_title_shorten(120)?></a></h3>
+                 </header>
                  <div class="col-4_5">
                    <figure class="post-thumbnail">
                      <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -71,21 +72,18 @@
                    </figure>
                  </div>
                  <div class="col-7_5 gutters">
-                   <header class="entry-header">
-                     <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
-                   </header>
                    <div class="entry-meta">
                      <div class="meta__item"><?php wpg_time() ?></div>
                      <div class="meta__item screen-reader-text">
                        <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
                      </div>
                      <?php if ($post->post_type !== 'page') : ?>
-                       <div class="meta__item screen-reader-text"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
+                       <div class="meta__item screen-reader-text"><i class="icon-folder-open"></i><?php the_list_terms('-1'); ?></div>
                      <?php endif; ?>
                    </div><!-- .entry-meta -->
                    <div class="entry-summary">
                     <?php if ($i > 4) {
-                       echo wpg_get_excerpt(22);
+                       echo wpg_get_excerpt(17);
                     } else {
                       echo wpg_get_excerpt(28);
                     }
@@ -121,23 +119,18 @@
 
                ?>
                </div>
-              <?
-               else:
-              ?>
-              <div id="no-post-container" class="col-12">
-                  <article id="post-nopost" class="">
-                    <div class="f-post-content col-5 gutters">
-                      <header class="entry-header">
-                        <h2 class="entry-title"><?php _e('Nothing Found', 'wpg_theme') ?></h2>
-                      </header>
-                      <div class="entry-summary">
-                        <p><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></p>
-                      </div>
-                    </div>
-                  </article>
-                </div><!-- end .no-post-container -->
-                  <?php
-                endif;
-                ?>
+              <? else: ?>
+              <div class="col-one col-home col-7">
+                <article id="post-nopost" class="clear-both">
+                  <header class="entry-header">
+                    <h3 class="entry-title"><?php _e('Nothing Found', 'wpg_theme') ?></h3>
+                  </header>
+                  <div class="entry-summary">
+                    <p><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-two col-home col-5"></div>
+              <?php endif; ?>
     </section>
 </main>

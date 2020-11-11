@@ -57,3 +57,11 @@ text-indent: -9999px;
 background-repeat: no-repeat;
 opacity: 0;
 }
+article:focus,
+section:focus,
+main:focus,
+header:focus,
+div:focus,
+a:focus  {
+	outline: 2px solid $two-color;
+}

@@ -22,7 +22,7 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: src/404.php:20, src/components/content_multi/content-none.php:15, src/components/features/slider/loop-category.php:58, src/components/site/loop-homepage.php:134
+#: src/404.php:20, src/components/content_multi/content-none.php:15, src/components/features/slider/loop-category.php:51, src/components/site/loop-homepage.php:129
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
@@ -49,11 +49,11 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-none.php:12, src/components/features/slider/loop-category.php:54, src/components/features/slider/loop-category.php:57, src/components/site/loop-homepage.php:131
+#: src/components/content_multi/content-none.php:12, src/components/features/slider/loop-category.php:47, src/components/features/slider/loop-category.php:50, src/components/site/loop-homepage.php:126
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_multi/content-page.php:29, src/components/content_multi/content.php:29, src/components/site/loop-homepage.php:80
+#: src/components/content_multi/content-page.php:29, src/components/content_multi/content.php:29, src/components/site/loop-homepage.php:78
 msgid "Author"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-page.php:32, src/components/content_single/content.php:33, src/components/site/loop-homepage.php:119, src/index.php:96, src/page-templates/page-no_sidebar.php:35, src/search.php:44
+#: src/components/content_single/content-page.php:32, src/components/content_single/content.php:33, src/components/site/loop-homepage.php:117, src/index.php:96, src/page-templates/page-no_sidebar.php:35, src/search.php:44
 msgid "Page"
 msgstr ""
 
@@ -97,27 +97,27 @@ msgstr ""
 msgid "Links to pages"
 msgstr ""
 
-#: src/components/features/slider/custom-text.php:12, src/components/features/slider/custom-text.php:23, src/components/site/section-alert.php:18, src/components/site/section-alert.php:21, src/inc/customizer/setting_control/inc_setting_alert.php:64
+#: src/components/features/slider/custom-text.php:10, src/components/features/slider/custom-text.php:21, src/components/site/section-alert.php:18, src/components/site/section-alert.php:21, src/inc/customizer/setting_control/inc_setting_alert.php:64
 msgid "Information"
 msgstr ""
 
-#: src/components/features/slider/custom-text.php:17, src/components/features/slider/loop-category.php:13, src/header.php:140, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40, src/inc/customizer/setting_control/inc_setting_shortcuts.php:12
+#: src/components/features/slider/custom-text.php:15, src/components/features/slider/loop-category.php:12, src/header.php:142, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40, src/inc/customizer/setting_control/inc_setting_shortcuts.php:12
 msgid "Section title"
 msgstr ""
 
-#: src/components/features/slider/custom-text.php:34
+#: src/components/features/slider/custom-text.php:32
 msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: src/components/features/slider/loop-category.php:44
+#: src/components/features/slider/loop-category.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: src/components/site/loop-homepage.php:117, src/index.php:94, src/search.php:42
+#: src/components/site/loop-homepage.php:115, src/index.php:94, src/search.php:42
 msgid "Previous page"
 msgstr ""
 
-#: src/components/site/loop-homepage.php:118, src/index.php:95, src/search.php:43
+#: src/components/site/loop-homepage.php:116, src/index.php:95, src/search.php:43
 msgid "Next page"
 msgstr ""
 
@@ -229,15 +229,19 @@ msgstr ""
 msgid "Baners - Secondary section"
 msgstr ""
 
-#: src/header.php:29
+#: src/header.php:28
 msgid "Skip to content"
 msgstr ""
 
-#: src/header.php:87, src/header.php:73
+#: src/header.php:29
+msgid "Go to the main page navigation"
+msgstr ""
+
+#: src/header.php:89, src/header.php:75
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:90
+#: src/header.php:92
 msgid "Add menu"
 msgstr ""
 
@@ -545,7 +549,7 @@ msgstr ""
 msgid "Share on Facebook"
 msgstr ""
 
-#: src/inc/template-tags.php:93, src/inc/template-tags.php:66
+#: src/inc/template-tags.php:93, src/inc/template-tags.php:66, src/inc/template-tags.php:313
 msgid "Post published in category "
 msgstr ""
 
@@ -665,6 +669,6 @@ msgstr ""
 msgid "Enter a search word"
 msgstr ""
 
-#: src/searchform.php:15
+#: src/searchform.php:15, src/searchform.php:15
 msgid "Search"
 msgstr ""

@@ -157,26 +157,34 @@
     display: inline-block;
   }
   .post-thumbnail{
-    margin: 1em 0;
+    margin: 0 0 1em 0;
     border-radius: 5px;
   }
 
-  .entry-summary,
-  .has-post-thumbnail .entry-header,
-  .has-post-thumbnail .entry-meta {
+
+  .has-post-thumbnail .entry-meta,
+  .entry-summary, {
     margin-left: gutter();
     margin-right: gutter();
   }
 }
 .hentry-multi {
   #home-posts .hentry {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 .more-link {
   float: right;
   display: inline-block;
 }
+
+.col-one article:nth-child(1n+2) {
+  margin-top:10px;
+}
+.col-two article:nth-child(1n+2) {
+  margin-top:10px;
+}
+
 /*--------------------------------------------------------------
 3.4  Posts & Page
 --------------------------------------------------------------*/
@@ -226,7 +234,12 @@
 .home {
   #featured-cat,
   #page_links{
-    min-height: 665px;
+    min-height: 695px;
+  }
+}
+.featured-item {
+  .entry-meta {
+    font-size: 85%;
   }
 }
 

@@ -25,7 +25,7 @@ get_header(); ?>
          ?>
       </main><!-- #main -->
     </div><!-- primary -->
-    <aside id="secondary" class="secondary-col narrow-col widget-area content-style" role="complementary">
+    <aside id="secondary" class="secondary-col narrow-col widget-area content-style">
       <?php  get_template_part( 'components/site/secondary', 'column'); ?>
     </aside><!-- #secondary -->
   </div><!-- .container -->

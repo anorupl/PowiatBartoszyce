@@ -37,9 +37,9 @@ if ( $query_featuredcat->have_posts()) : ?>
   <header class="header-section meta-line" tabindex="0">
     <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h2>
   </header>
-  <div class="featured-item">
+  <div class="featured-item hentry-multi">
   <?php while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post(); ?>
-    <article <?php post_class('col-4 pad-all'); ?>>
+    <article class="hentry col-4 gutters">
       <figure class="post-thumbnail">
         <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
           <?php if (has_post_thumbnail()) : the_post_thumbnail('full', array('alt' => get_the_title())); else: ?>
@@ -47,13 +47,13 @@ if ( $query_featuredcat->have_posts()) : ?>
           <?php endif; ?>
         </a>
       </figure>
-      <div class="entry-meta">
+      <div class="featured-entry-meta">
       <?php wpg_time() ?>
       </div>
       <header class="entry-header">
       <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
       </header>
-      <div class="entry-summary">
+      <div class="featured-entry-summary">
       <?php echo wpg_get_excerpt(15); ?>
       </div>
     </article>
@@ -61,7 +61,7 @@ if ( $query_featuredcat->have_posts()) : ?>
     <div class="clear-both">
     <?php
     if ($category === true) {
-      printf('<a class="btn btn--center" href="%1$s">%2$s <span class="screen-reader">%3$s</span></span><i class="icon-angle-right"></i></a>',
+      printf('<a class="btn btn--center" href="%1$s">%2$s <span class="screen-reader">%3$s</span><i class="icon-angle-right"></i></a>',
         get_category_link($featuredcat_id),
         __('Show all', 'wpg_theme'),
         get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))

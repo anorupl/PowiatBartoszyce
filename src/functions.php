@@ -187,7 +187,7 @@ function wpg_widgets_init() {
 		'name'          => esc_html__( 'Baners - Secondary section', 'wpg_theme' ),
 		'id'            => 'wpg-footerbar-secondary_baners',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="widget ' . wpg_the_widgets_count('wpg-footerbar-secondary_baners') . ' %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget widget-item ' . wpg_the_widgets_count('wpg-footerbar-secondary_baners') . ' %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="screen-reader">',
 		'after_title'   => '</h3>',

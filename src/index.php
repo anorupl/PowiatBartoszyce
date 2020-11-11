@@ -58,7 +58,7 @@ if (is_home() && !is_paged()) { ?>
         <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
     </div>
     <div class="container">
-      <div id="primary" class="primary-col hentry-multi gutters">
+      <div id="primary" class="primary-col hentry-multi gutters" tabindex="0">
         <header class="meta-line col-12">
           <?php
           if ( is_front_page() && is_home() ) {
@@ -80,7 +80,7 @@ if (is_home() && !is_paged()) { ?>
           }
           ?>
         </header>
-        <main id="main" class="site-main ">
+        <main id="main" class="site-main clear-both">
 
           <?php
           if ( have_posts() ) :

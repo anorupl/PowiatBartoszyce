@@ -26,7 +26,7 @@
 	<div id="skip-links">
 		<span class="clear"></span>
 		<a role="button" id="first-skip-link" class="skip-main" href="#main" tabindex="1"> <?php _e('Skip to content','wpg_theme'); ?></a>
-		<a role="button" class="skip-main" href="#menu_header" tabindex="2"><?php _e('Go to the main page navigation','wpg_themee'); ?></a>
+		<a role="button" class="skip-main" href="#menu_header" tabindex="2"><?php _e('Go to the main page navigation','wpg_theme'); ?></a>
 		<span class="clear"></span>
 	</div>
 <div id="cookie-notice" role="banner" class="cookie-wpg" aria-label="Informacja o ciasteczkach">

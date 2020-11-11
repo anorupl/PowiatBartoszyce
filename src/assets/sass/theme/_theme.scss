@@ -122,6 +122,7 @@ main {
 
 .meta-line {
   position: relative;
+  margin-bottom: 20px;
   overflow: hidden;
 
 
@@ -325,14 +326,16 @@ a:hover .bw-image {
   width: 80%;
   margin: 10px auto;
   @include bg-op($four-bw, 0.8);
-
-  article {
-    overflow: hidden;
-    padding: 15px;
-  }
 }
 
 
+#header-content {
+  .slick-slide {
+    overflow: hidden;
+    padding: 15px;
+    margin: 5px;
+  }
+}
 /*--------------------------------------------------------------
 3.1.2 Header custom text
 --------------------------------------------------------------*/
@@ -413,16 +416,17 @@ a:hover .bw-image {
     margin-bottom: 40px;
   }
   .entry-meta{
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding-bottom: 5px;
-    margin-bottom: 10px;
-    font-size: 85%;
-
     border-bottom: 1px solid lighten( $border-color, 10% );
     i {
       color: #C4C4C4;
     }
   }
   .meta__item {
+    display: inline-block;
+    padding: 0 2%;
     padding-bottom: 3px;
 
     [class^="icon-"] {
@@ -441,14 +445,17 @@ a:hover .bw-image {
 /*--------------------------------------------------------------
 3.4  Posts & Page
 --------------------------------------------------------------*/
-.hentry{
+.hentry {
   overflow: hidden;
 
   .single & {
 
-    .entry-header {margin-bottom: 20px;}
+    .entry-header {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
     .entry-meta {margin: 20px 0;}
-    .entry-content { margin-top: 40px;}
   }
 }
 .meta__item {
@@ -465,7 +472,7 @@ a:hover .bw-image {
     width: 100%;
     padding-top: gutter();
     padding-bottom: gutter();
-    background: $four-bw;
+    background: $white;
 }
 
 .post-thumbnail {
@@ -559,19 +566,6 @@ a:hover .bw-image {
   h3.entry-title {
   font-size: 100%;
   }
-  .entry-meta {
-    &::after {
-        content: '';
-        width: 100%;
-        display: block;
-        height: 1px;
-        background-color: $light-border;
-    }
-  }
-  .meta__item {
-    margin: 10px 0;
-    font-size: 85%;
-  }
   img {
     width: 100%;
   }
@@ -634,6 +628,7 @@ a:hover .bw-image {
 #primary-baners {
 
   .widget-item {
+    a {display: block;}
     margin-bottom: gutter();
   }
 
@@ -657,7 +652,7 @@ a:hover .bw-image {
 #secondary-baners {
   background: $white;
   padding-bottom: gutter();
-
+  .widget-item a {display: block;}
   .widget {
     margin-bottom: gutter();
   }

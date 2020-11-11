@@ -294,7 +294,7 @@ function wpg_no_thumbnail($format = 'figure', $image_content = false)
 /**
 * Echo list with terms links for object.
 */
-function the_list_terms(){
+function the_list_terms($tabindex='0'){
   global $post;
 
   // Get post type taxonomies
@@ -310,7 +310,7 @@ function the_list_terms(){
 
     if ( !empty( $terms ) ) {
       foreach ( $terms as $term ) {
-        $out[] = '<a href="'.    get_term_link( $term->slug, $taxonomy_slug ) .'">'.$term->name."</a>, ";
+        $out[] = '<a href="'.    get_term_link( $term->slug, $taxonomy_slug ) .'" tabindex=' . $tabindex . '><span class="screen-reader">'. __('Post published in category ','wpg_theme') . '</span>'.$term->name."</a>, ";
       }
     }
 

@@ -2299,6 +2299,7 @@ main {
 
 .meta-line {
   position: relative;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -2526,9 +2527,10 @@ a:hover .bw-image {
   background: rgba(251, 250, 252, 0.8);
 }
 
-.slider-bg article {
+#header-content .slick-slide {
   overflow: hidden;
   padding: 15px;
+  margin: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -2626,9 +2628,9 @@ a:hover .bw-image {
 }
 
 .hentry-multi .entry-meta {
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding-bottom: 5px;
-  margin-bottom: 10px;
-  font-size: 85%;
   border-bottom: 1px solid #efeff1;
 }
 
@@ -2637,6 +2639,8 @@ a:hover .bw-image {
 }
 
 .hentry-multi .meta__item {
+  display: inline-block;
+  padding: 0 2%;
   padding-bottom: 3px;
 }
 
@@ -2658,15 +2662,13 @@ a:hover .bw-image {
 }
 
 .single .hentry .entry-header {
+  margin-top: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .single .hentry .entry-meta {
   margin: 20px 0;
-}
-
-.single .hentry .entry-content {
-  margin-top: 40px;
 }
 
 .meta__item {
@@ -2684,7 +2686,7 @@ a:hover .bw-image {
   width: 100%;
   padding-top: 2.08333%;
   padding-bottom: 2.08333%;
-  background: #fbfafc;
+  background: #ffffff;
 }
 
 .post-thumbnail {
@@ -2790,19 +2792,6 @@ a:hover .bw-image {
   font-size: 100%;
 }
 
-#featured-cat .entry-meta::after {
-  content: '';
-  width: 100%;
-  display: block;
-  height: 1px;
-  background-color: #e9e9e9;
-}
-
-#featured-cat .meta__item {
-  margin: 10px 0;
-  font-size: 85%;
-}
-
 #featured-cat img {
   width: 100%;
 }
@@ -2866,6 +2855,10 @@ a:hover .bw-image {
   margin-bottom: 2.08333%;
 }
 
+#primary-baners .widget-item a {
+  display: block;
+}
+
 #primary-baners .widget_media_image {
   max-height: 285px;
   overflow: hidden;
@@ -2885,6 +2878,10 @@ a:hover .bw-image {
 #secondary-baners {
   background: #ffffff;
   padding-bottom: 2.08333%;
+}
+
+#secondary-baners .widget-item a {
+  display: block;
 }
 
 #secondary-baners .widget {
@@ -3431,6 +3428,15 @@ a.skip-main:active {
   text-indent: -9999px;
   background-repeat: no-repeat;
   opacity: 0;
+}
+
+article:focus,
+section:focus,
+main:focus,
+header:focus,
+div:focus,
+a:focus {
+  outline: 2px solid #c10000;
 }
 
 /*--------------------------------------------------------------
@@ -4345,21 +4351,26 @@ a.skip-main:active {
     display: inline-block;
   }
   .hentry-multi .post-thumbnail {
-    margin: 1em 0;
+    margin: 0 0 1em 0;
     border-radius: 5px;
   }
-  .hentry-multi .entry-summary,
-  .hentry-multi .has-post-thumbnail .entry-header,
-  .hentry-multi .has-post-thumbnail .entry-meta {
+  .hentry-multi .has-post-thumbnail .entry-meta,
+  .hentry-multi .entry-summary {
     margin-left: 2.08333%;
     margin-right: 2.08333%;
   }
   .hentry-multi #home-posts .hentry {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   .more-link {
     float: right;
     display: inline-block;
+  }
+  .col-one article:nth-child(1n+2) {
+    margin-top: 10px;
+  }
+  .col-two article:nth-child(1n+2) {
+    margin-top: 10px;
   }
   /*--------------------------------------------------------------
 3.4  Posts & Page
@@ -4400,7 +4411,10 @@ a.skip-main:active {
 --------------------------------------------------------------*/
   .home #featured-cat,
   .home #page_links {
-    min-height: 665px;
+    min-height: 695px;
+  }
+  .featured-item .entry-meta {
+    font-size: 85%;
   }
   /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)
