@@ -23,21 +23,43 @@
 	<?php wp_head();?>
 </head>
 <body <?php body_class(); ?> >
+	<div id="cookie-notice" role="banner" class="cookie-wpg" aria-label="Informacja o ciasteczkach">
+	  <div class="notice-continer col-12 gutters">
+		  <div id="cn-notice-text" class="text-center pad-all">
+				Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
+				<button id="cn-accept-cookie" class="btn">Akceptuj</button>
+				<a href="#" target="_blank" id="cn-more-info" class="btn">Polityka prywatności</a>
+		  </div>
+		</div>
+	</div>
 	<div id="skip-links">
 		<span class="clear"></span>
-		<a role="button" id="first-skip-link" class="skip-main" href="#main" tabindex="1"> <?php _e('Skip to content','wpg_theme'); ?></a>
-		<a role="button" class="skip-main" href="#menu_header" tabindex="2"><?php _e('Go to the main page navigation','wpg_theme'); ?></a>
+		<a role="button" id="first-skip-link" class="skip-main" href="#main"> <?php _e('Skip to content','wpg_theme'); ?></a>
+		<a role="button" class="skip-main" href="#menu_header"><?php _e('Go to the main page navigation','wpg_theme'); ?></a>
 		<span class="clear"></span>
 	</div>
-<div id="cookie-notice" role="banner" class="cookie-wpg" aria-label="Informacja o ciasteczkach">
-  <div class="notice-continer col-12 gutters">
-	  <div id="cn-notice-text" class="text-center pad-all">
-			Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
-			<button id="cn-accept-cookie" class="btn">Akceptuj</button>
-			<a href="#" target="_blank" id="cn-more-info" class="btn">Polityka prywatności</a>
-	  </div>
+	<?php
+	/* ====================
+	 * Popup - content   *
+	 * ===================*/
+	if (get_theme_mod('wpg_popup_active', false) === true):
+	/* =================================
+	*  Customizer - image background   *
+	* =================================*/
+	$popup_image_id = absint(get_theme_mod('wpg_popup_image',''));
+
+	if (!empty($popup_image_id)) {
+		$popup_image_id = wp_get_attachment_image_url( $popup_image_id, 'full');
+	} else {
+		$popup_image_id = get_template_directory_uri() . '/img/default/no_image.jpg';
+	}
+	?>
+	<div id="site-popup" class="mfp-hide">
+		<a href="<?php echo get_theme_mod('wpg_popup_url', '#');?>">
+			<img alt="<?php echo get_theme_mod('wpg_popup_desc', '');?>" src="<?php echo esc_url($popup_image_id); ?>"/>
+		</a>
 	</div>
-</div>
+	<?php endif; ?>
 <div id="top-bar" class="header-top clear-both">
 	<div class="wrapper">
 		<div id="top-bar__address" class="inline-left hide-on-small">

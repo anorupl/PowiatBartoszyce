@@ -20,10 +20,6 @@
          /* === Fn. Checkbox Multiple Sort Control === */
          $('.customize-control-checkbox-multiple-sort').multiCheckboxesSort();
 
-         /* === Contact leafletjs === */
-         leafletjs.init();
-
-         openingHours.init();
 
          /**
        	 * TinyMCE Custom Control

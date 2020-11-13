@@ -22,7 +22,7 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: src/404.php:20, src/components/content_multi/content-none.php:15, src/components/features/slider/loop-category.php:51, src/components/site/loop-homepage.php:129
+#: src/404.php:20, src/components/content_multi/content-none.php:15, src/components/features/slider/loop-category.php:49, src/components/site/loop-homepage.php:129
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-none.php:12, src/components/features/slider/loop-category.php:47, src/components/features/slider/loop-category.php:50, src/components/site/loop-homepage.php:126
+#: src/components/content_multi/content-none.php:12, src/components/features/slider/loop-category.php:45, src/components/features/slider/loop-category.php:48, src/components/site/loop-homepage.php:126
 msgid "Nothing Found"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: src/components/features/slider/custom-text.php:15, src/components/features/slider/loop-category.php:12, src/header.php:142, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40, src/inc/customizer/setting_control/inc_setting_shortcuts.php:12
+#: src/components/features/slider/custom-text.php:15, src/components/features/slider/loop-category.php:12, src/header.php:164, src/inc/customizer/setting_control/inc_setting_baners.php:90, src/inc/customizer/setting_control/inc_setting_header.php:13, src/inc/customizer/setting_control/inc_setting_header_slider.php:32, src/inc/customizer/setting_control/inc_setting_header_slider.php:40
 msgid "Section title"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Continue reading <span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: src/components/features/slider/loop-category.php:37
+#: src/components/features/slider/loop-category.php:36
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Next page"
 msgstr ""
 
-#: src/components/site/section-alert.php:22, src/inc/customizer/setting_control/inc_setting_alert.php:34, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:48
+#: src/components/site/section-alert.php:22, src/inc/customizer/setting_control/inc_setting_alert.php:34, src/inc/customizer/setting_control/inc_setting_header.php:49
 msgid "Show more"
 msgstr ""
 
@@ -229,19 +229,19 @@ msgstr ""
 msgid "Baners - Secondary section"
 msgstr ""
 
-#: src/header.php:28
+#: src/header.php:37
 msgid "Skip to content"
 msgstr ""
 
-#: src/header.php:29
+#: src/header.php:38
 msgid "Go to the main page navigation"
 msgstr ""
 
-#: src/header.php:89, src/header.php:75
+#: src/header.php:111, src/header.php:97
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:92
+#: src/header.php:114
 msgid "Add menu"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgid "Section Alert"
 msgstr ""
 
 #: src/inc/customizer/customizer.php:114
-msgid "Header without a slider"
+msgid "Header"
 msgstr ""
 
 #: src/inc/customizer/customizer.php:126
@@ -270,38 +270,34 @@ msgid "Header slider"
 msgstr ""
 
 #: src/inc/customizer/customizer.php:138
-msgid "Header - image background"
+msgid "Site - Popup"
 msgstr ""
 
 #: src/inc/customizer/customizer.php:151
-msgid "Header - Shortcuts section"
-msgstr ""
-
-#: src/inc/customizer/customizer.php:163
 msgid "Section - News category"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:175
+#: src/inc/customizer/customizer.php:163
 msgid "Section - Featured category"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:187
+#: src/inc/customizer/customizer.php:175
 msgid "Section links"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:199
+#: src/inc/customizer/customizer.php:187
 msgid "Section Baners"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:212
+#: src/inc/customizer/customizer.php:200
 msgid "Contact"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:223
+#: src/inc/customizer/customizer.php:211
 msgid "Social networks"
 msgstr ""
 
-#: src/inc/customizer/customizer.php:234
+#: src/inc/customizer/customizer.php:222
 msgid "District"
 msgstr ""
 
@@ -346,7 +342,7 @@ msgid "Title"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_baners.php:44
-msgid "Section title (only for screen reader)"
+msgid "Section title (Text for the blind)"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_baners.php:45
@@ -477,28 +473,48 @@ msgstr ""
 msgid "Choose Google Font Subsets"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_image.php:18
-msgid "Image background "
+#: src/inc/customizer/setting_control/inc_setting_header.php:21
+msgid "Section article - title (Text for the blind)"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:21, src/inc/customizer/setting_control/inc_setting_shortcuts.php:19
-msgid "Section title (Text for the blind)"
+#: src/inc/customizer/setting_control/inc_setting_header.php:22
+msgid "Text only for the blind)"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:30, src/inc/customizer/setting_control/inc_setting_header_no_slider.php:38
+#: src/inc/customizer/setting_control/inc_setting_header.php:31
 msgid "Title information"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:56
-msgid "Information - Button title"
+#: src/inc/customizer/setting_control/inc_setting_header.php:39
+msgid "Section article - Article Title"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:71
-msgid "Information - Button url "
+#: src/inc/customizer/setting_control/inc_setting_header.php:57
+msgid "Section article - Button title"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_header_no_slider.php:86
-msgid "Description information"
+#: src/inc/customizer/setting_control/inc_setting_header.php:72
+msgid "Section article - Button url "
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:90
+msgid "Section article - Article content"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:102
+msgid "Shortcuts"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:109
+msgid "Section Shortcuts - Section title (Text for the blind)"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:110
+msgid "Items for the section are added on the <a href='%1s'>widget page</a>"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_header.php:123
+msgid "Header - Image background "
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_header_slider.php:58
@@ -517,16 +533,24 @@ msgstr ""
 msgid "Items for the section are added on the <a href='%1s'>menu page</a>"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_privacy.php:21
-msgid "Show in footer"
+#: src/inc/customizer/setting_control/inc_setting_popup.php:22
+msgid "Show popup"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_privacy.php:22
-msgid "Go to the page with privacy policy settings: <a href=\"%1$s\">Policy settings</a>"
+#: src/inc/customizer/setting_control/inc_setting_popup.php:39
+msgid "Popup Image"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_shortcuts.php:20
-msgid "Items for the section are added on the <a href='%1s'>widget page</a>"
+#: src/inc/customizer/setting_control/inc_setting_popup.php:52
+msgid "Popup url "
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_popup.php:68
+msgid "Popup Description"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_popup.php:69
+msgid "Description - Text for the blind)"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_social.php:28

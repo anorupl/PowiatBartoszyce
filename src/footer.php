@@ -125,6 +125,28 @@
     </div>
   </div>
 </footer>
-<?php wp_footer();  ?>
+<?php
+
+wp_footer();
+
+if (get_theme_mod('wpg_popup_active', false) === true): ?>
+
+<script>
+$(document).ready(function () {
+    var check_cookie = Cookies.get("InfoPopup");
+    //if (check_cookie == undefined) {
+        //Cookies.set("InfoPopup", 'yes', {expires: 1, path: '/'});
+        $.magnificPopup.open({
+          items: {
+            src: '#site-popup',
+            type: 'inline'
+          }
+        });
+    //}
+});
+</script>
+
+<?php endif; ?>
+
 </body>
 </html>

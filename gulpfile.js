@@ -27,7 +27,7 @@ const project_dir = dist + project + '/';
 
 // Config assets_js
 const jquery         = node + 'jquery/dist/jquery.min.js';
-const cookies        = node + 'jquery.cookie/jquery.cookie.js';
+const cookies        = node + 'js-cookie/src/js.cookie.js';
 const html5shiv      = node + 'html5shiv/dist/*.min.js';
 const slider         = node + 'slick-carousel/slick/slick.min.js';
 const carousel       = node + 'owl.carousel/dist/owl.carousel.min.js';
@@ -105,7 +105,7 @@ function copyFonts() {
 //4.0 Copy Js assets: silder, html5shiv
 function copyJs() {
   return gulp
-  .src([slider,html5shiv, cookies])
+  .src([html5shiv, cookies])
   .pipe(changed(project_dir + dist_assets_js))
   .pipe(gulp.dest(project_dir + dist_assets_js))
 }

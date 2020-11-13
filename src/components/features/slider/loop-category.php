@@ -28,28 +28,26 @@ if (isset($query_slajd) && $query_slajd->have_posts()) :
   while ($query_slajd->have_posts()) : $query_slajd->the_post();
   ?>
 
-<article id="header-post-<?php the_ID(); ?>" class="slick-slide">
-<div class="header-post-meta meta-line">
-<span class="pad-all"><?php wpg_time() ?></span>
-</div>
-<div class="text-center-left">
-<header class=""><?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?></header>
+<article id="slide-post-<?php the_ID(); ?>" class="slick-slide">
+<span class="meta-line">
+  <span class="pad-all" aria-hidden="false"><?php wpg_time() ?></span>
+</span>
+<header><?php the_title(sprintf('<h2 class="entry-title"><a tabindex="-1" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?></header>
 <a href="<?php the_permalink();?>" class="btn alignleft"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
-</div>
 </article>
 <?php
 endwhile;
 wp_reset_postdata();// Restore original Post Data
 else:
   ?>
-<article id="header-nopost" class="pad-all">
-<div class="header-post-meta meta-line">
-<span class="pad-all"><?php _e('Nothing Found', 'wpg_theme'); ?></span>
-</div>
-<div class="text-center-left">
-<header class=""><?php _e('Nothing Found', 'wpg_theme'); ?></header>
-<span class="btn alignleft"><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></span>
-</div>
+<article id="slide-nopost" class="pad-all">
+  <span class="meta-line">
+    <span class="pad-all"><?php _e('Nothing Found', 'wpg_theme'); ?></span>
+  </span>
+  <span class="slide-content text-center-left">
+    <header class=""><?php _e('Nothing Found', 'wpg_theme'); ?></header>
+    <span class="btn alignleft"><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></span>
+  </span>
 </article>
 <?php endif; ?>
 </div><!-- #slider -->

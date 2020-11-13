@@ -47,7 +47,7 @@ if ( $query_featuredcat->have_posts()) : ?>
           <?php endif; ?>
         </a>
       </figure>
-      <div class="featured-entry-meta">
+      <div class="entry-meta">
       <?php wpg_time() ?>
       </div>
       <header class="entry-header">
@@ -72,4 +72,4 @@ if ( $query_featuredcat->have_posts()) : ?>
   </div>
 </section>
 <?php endif; ?>
-<?php wp_reset_query(); ?>
+<?php wp_reset_query(); ?> 

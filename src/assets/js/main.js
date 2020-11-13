@@ -101,11 +101,13 @@
 
      $('#slider').slick({
        dots: true,
-       arrows: false,
+       arrows: true,
        slidesToShow: 1,
        autoplay: false,
        pauseOnHover: false,
-       accessibility: true
+       accessibility: true,
+       focusOnChange: true
+
      })
 
      $('#featured-slide').slick({
@@ -113,7 +115,7 @@
        arrows: false,
        slidesToShow: 1,
        autoplay: true,
-       pauseOnHover: false,
+       pauseOnHover: false
      })
 
 
@@ -123,6 +125,7 @@
      //Translating magnificPopup
      $.extend(true, $.magnificPopup.defaults, {
        tClose: datalanuge.close, // Alt text on close button
+       closeMarkup:'<button title="%title%" type="button" class="mfp-close"></button>',
        tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
        gallery: {
          tPrev: datalanuge.prev, // Alt text on left arrow
@@ -184,13 +187,13 @@
            switch(value) {
              case 'contrast':
              $('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/contrast.css" type="text/css" />');
-             $.cookie("color", 'contrast', {expires: 365, path: '/'});
+             Cookies.set("color", 'contrast', {expires: 365, path: '/'});
              button.val('normal');
              button.html(datalanuge.offcontrast);
              break;
              case 'normal':
              $("#contrast-style-css").remove();
-             $.removeCookie('color', { path: '/' });
+             Cookies.remove('color', { path: '/' });
              button.val('contrast');
              button.html(datalanuge.oncontrast);
              break;
@@ -199,19 +202,19 @@
            }
          } else {
 
-           if ($.cookie("font-size")) {
+           if (Cookies.get("font-size")) {
              $("#font-size-css").remove();
-             $.removeCookie('font-size', { path: '/' });
+             Cookies.remove('font-size', { path: '/' });
            }
 
            switch(value) {
              case 'medium':
              $('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/medium.css" type="text/css" />');
-             $.cookie("font-size",'medium', {expires: 365, path: '/'});
+             Cookies.set("font-size",'medium', {expires: 365, path: '/'});
              break;
              case 'big':
              $('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/big.css" type="text/css" />');
-             $.cookie("font-size",'big', {expires: 365, path: '/'});
+             Cookies.set("font-size",'big', {expires: 365, path: '/'});
              break;
              default:
              break;
@@ -232,7 +235,7 @@
      */
      function cookiewpg() {
 
-      var cookie_mbp = $.cookie('cookie_mbp');
+      var cookie_mbp = Cookies.get('cookie_mbp');
 
       if (cookie_mbp != 'powiatbartoszyce-accept') {
 
@@ -242,7 +245,7 @@
 
         $("#cn-accept-cookie").click(function(e){
           e.preventDefault();
-          $.cookie("cookie_mbp", 'powiatbartoszyce-accept', {expires: 365, path: '/'});
+          Cookies.set("cookie_mbp", 'powiatbartoszyce-accept', {expires: 365, path: '/'});
 
           $('#cookie-notice').removeClass('cookie-notice-visible');
           //$('body').removeClass('prevent-scroll prevent-scroll--enabled');

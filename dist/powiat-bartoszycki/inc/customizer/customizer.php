@@ -111,11 +111,11 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section($header_section_id, array(
 		'priority'   		=> '3',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Header without a slider', 'wpg_theme' ),
+		'title'      		=> __( 'Header', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_no_slider.php';
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header.php';
 
 	// 4. Slider setting in header
 	$header_slider_section_id = 'wpg_h_slider_stc';
@@ -129,30 +129,18 @@ function wpg_customizer_general($wp_customize) {
 	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_slider.php';
 
 
-	// 5. Image background setting in header
-	$header_img_id = 'wpg_h_img_stc';
+	// 5. The site Popup
+	$popup_id = 'wpg_popup_stc';
 
-	$wp_customize->add_section($header_img_id, array(
+	$wp_customize->add_section($popup_id, array(
 		'priority'   		=> '5',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Header - image background', 'wpg_theme' ),
+		'title'      		=> __( 'Site - Popup', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_header_image.php';
+	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_popup.php';
 
-
-	// 6. Shortcuts section in header
-	$shortcuts_section_id = 'wpg_shortcuts_stc';
-
-	$wp_customize->add_section( $shortcuts_section_id, array(
-		'priority'   		=> '6',
-		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Header - Shortcuts section', 'wpg_theme' ),
-		'panel' 				=> $theme_panel_id,
-	));
-
-	require get_template_directory() . '/inc/customizer/setting_control/inc_setting_shortcuts.php';
 
 	// 7. Main loop setting in homepage
 	$loop_section_id = 'wpg_loop_stc';
