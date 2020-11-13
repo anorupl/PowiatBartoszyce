@@ -101,23 +101,51 @@
 
      $('#slider').slick({
        dots: true,
-       arrows: true,
-       slidesToShow: 1,
-       autoplay: false,
-       pauseOnHover: false,
-       accessibility: true,
-       focusOnChange: true
-
-     })
-
-     $('#featured-slide').slick({
-       dots: false,
        arrows: false,
        slidesToShow: 1,
        autoplay: true,
-       pauseOnHover: false
-     })
+       accessibility: true,
+       focusOnChange: false
 
+     });
+
+     $('#featured-slide').slick({
+       dots: true,
+       arrows: false,
+       slidesToShow: 1,
+       autoplay: true,
+       pauseOnHover: true,
+       accessibility: true,
+       focusOnChange: true
+     });
+
+     $('#stop-header').on('click', function(e){
+       console.log('dddd')
+       $('#slider').slick('slickPause').slick('slickSetOption', 'focusOnChange', true);
+
+       $('#stop-header').toggleClass( "hide" );
+       $('#play-header').toggleClass( "hide" );
+     });
+
+     $('#play-header').on('click', function(e){
+        $('#slider').slick('slickPlay').slick('slickSetOption', 'focusOnChange', false, true);
+
+        $('#stop-header').toggleClass( "hide" );
+        $('#play-header').toggleClass( "hide" );
+      });
+
+     $('#stop-featured').on('click', function(e){
+       $('#featured-slide').slick('slickPause').slick('slickSetOption', 'focusOnChange', true);
+
+       $('#stop-featured').toggleClass( "hide" );
+       $('#play-featured').toggleClass( "hide" );
+     });
+     $('#play-featured').on('click', function(e){
+       $('#featured-slide').slick('slickPlay').slick('slickSetOption', 'focusOnChange', false, true);
+
+       $('#stop-featured').toggleClass( "hide" );
+       $('#play-featured').toggleClass( "hide" );
+     });
 
      /**
      * Image Popup
@@ -125,7 +153,7 @@
      //Translating magnificPopup
      $.extend(true, $.magnificPopup.defaults, {
        tClose: datalanuge.close, // Alt text on close button
-       closeMarkup:'<button title="%title%" type="button" class="mfp-close"></button>',
+       closeMarkup:'<button title="%title%" type="button" class="mfp-close i-style icon-close"></button>',
        tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
        gallery: {
          tPrev: datalanuge.prev, // Alt text on left arrow

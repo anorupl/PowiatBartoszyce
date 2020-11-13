@@ -2286,6 +2286,18 @@ main {
   margin-left: auto;
 }
 
+.btn-slide {
+  position: absolute;
+  z-index: 8000;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.btn-slide:focus {
+  opacity: 1;
+}
+
 /* color schemes */
 .radius {
   border-radius: 10px;

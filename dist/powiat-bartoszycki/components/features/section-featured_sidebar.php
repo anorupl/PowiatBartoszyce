@@ -37,6 +37,7 @@ if ( $query_featuredcat->have_posts()) : ?>
   <header class="header-section">
     <h3 class="widget-title"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h3>
   </header>
+  <button id="stop-featured" class="btn-slide"><?php _e('Pause animation slideshow','wpg_theme');?></button>
   <div id="featured-slide" class="featured-item hentry-multi slides">
     <?php while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post(); ?>
       <article class="hentry col-4 slick-slide">
@@ -70,6 +71,7 @@ if ( $query_featuredcat->have_posts()) : ?>
   }
   ?>
   </div>
+  <button id="play-featured" class="btn-slide hide"><?php _e('Start animation slideshow','wpg_theme');?></button>
 </aside>
 <?php endif; ?>
-<?php wp_reset_query(); ?> 
+<?php wp_reset_query(); ?>

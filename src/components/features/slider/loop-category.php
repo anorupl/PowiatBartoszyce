@@ -11,6 +11,10 @@
 <header class="screen-reader-text">
 <h2><?php echo get_theme_mod('wpg_slider_section',__('Section title', 'wpg_theme'));?></h2>
 </header>
+
+<button id="play-header" class="btn-slide hide"><?php _e('Start animation slideshow','wpg_theme');?></button>
+<button id="stop-header" class="btn-slide"><?php _e('Pause animation slideshow','wpg_theme');?></button>
+
 <div id="slider" class="slider-bg slides radius">
 <?php
 $slider_number = absint( get_theme_mod('wpg_slider_number', 1 ) );
