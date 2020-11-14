@@ -7,14 +7,14 @@
 * @since 0.1.0
 */
 
-  /* ==========================================
-  * Section - loop with custom category       *
-  * =====================================+====*/
-  if (get_theme_mod('wpg_featuredcat_active', false) === true) {
-    get_template_part('components/features/section', 'featured_sidebar' );
-  }
-  ?>
-  <section id="primary-baners" class="widget narrow-col col-12">
+/* ==========================================
+* Section - loop with custom category       *
+* =====================================+====*/
+if (get_theme_mod('wpg_featuredcat_active', false) === true) {
+  get_template_part('components/features/section', 'featured_sidebar' );
+}
+?>
+<aside id="primary-baners" class="widget narrow-col">
   <?php
   /* ==========================================
   * Section - widget banner                   *
@@ -23,9 +23,5 @@
     get_sidebar('primary_baners');
   }
   ?>
-  </section>
-  <?php
-
-  get_sidebar('right');
-
-  ?>
+</aside>
+<?php get_sidebar('right'); ?>

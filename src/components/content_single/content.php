@@ -7,14 +7,14 @@
 *
 */
 ?>
-<article <?php post_class('content-style'); ?>>
+<article <?php post_class('content-style style__narrow'); ?>>
   <div class="top-thumbnail">
     <figure class="post-thumbnail">
       <?php if (has_post_thumbnail()) : the_post_thumbnail('medium', array('alt' => get_the_title())); else: ?>
-         <img width="1200" height="800" src="<?php echo THEME_URL . 'img/default/no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
+        <img width="1200" height="800" src="<?php echo THEME_URL . 'img/default/no_image_powiat_1200.jpg" class="attachment-full size-full wp-post-image" alt="Grafika z herbem powiatu bartoszyckiego.'; ?>" loading="lazy">
       <?php endif; ?>
     </figure>
-    <?php wpg_meta_page('over-thumbnail text-center'); ?>
+    <?php wpg_meta_post('over-thumbnail text-center'); ?>
   </div>
   <header class="entry-header">
     <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -45,7 +45,6 @@ the_post_navigation( array(
   'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'wpg_theme' ) . '</span> ' .
   '<span class="screen-reader-text">' . __( 'Previous post:', 'wpg_theme' ) . '</span> ' .
   '<span class="post-title">%title</span>'
-
 ) );
 
 // If comments are open or we have at least one comment, load up the comment template.

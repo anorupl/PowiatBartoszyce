@@ -13,7 +13,7 @@ get_header(); ?>
       <main id="main" class="site-main">
         <div class="error-404 not-found">
           <header class="entry-header text-center">
-              <h1 class="entry-title"><?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?></h1>
+            <h1 class="entry-title"><?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?></h1>
           </header>
           <hr>
           <div class="entry-content class-h2 text-center">

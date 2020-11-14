@@ -1142,8 +1142,12 @@ svg {
 
 /* Tables
 ========================================================================== */
+.wp-block-table table {
+  table-layout: fixed;
+}
+
 table {
-  width: 100%;
+  min-width: 100%;
   margin: 0 0 20px;
   border: 0;
   border-collapse: collapse;
@@ -1167,7 +1171,7 @@ th {
 }
 
 td {
-  border: 0;
+  border: 1px solid #d5d4d9;
 }
 
 .entry-content table {
@@ -2256,7 +2260,7 @@ main {
   display: none;
 }
 
-.h-font, #page_links {
+.h-font, #page_links, .footer-item--h {
   font-family: Roboto, "Open Sans", sans-serif;
 }
 
@@ -2289,13 +2293,14 @@ main {
 .btn-slide {
   position: absolute;
   z-index: 8000;
-  left: 0;
+  left: -9999px;
   top: 0;
   opacity: 0;
 }
 
 .btn-slide:focus {
   opacity: 1;
+  left: 0;
 }
 
 /* color schemes */
@@ -2307,7 +2312,14 @@ main {
   border-radius: 10px;
   border: 1px solid #e9e9e9;
   background-color: #ffffff;
-  padding: 21px;
+}
+
+.style__wide {
+  padding: 21px 4.08333%;
+}
+
+.style__narrow {
+  padding: 21px 2.08333%;
 }
 
 .meta-line {
@@ -2524,15 +2536,15 @@ a:hover .bw-image {
   overflow: hidden;
 }
 
-#header-content .slick-slide {
-  overflow: hidden;
-  padding: 15px;
-  margin: 5px;
-}
-
 #header-content .btn, #header-content .more-link {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.slick-slide {
+  overflow: hidden;
+  padding: 15px;
+  margin: 5px;
 }
 
 #slider-container {
@@ -2543,7 +2555,7 @@ a:hover .bw-image {
   display: inline-block;
 }
 
-.slider-bg {
+.slides {
   width: 80%;
   margin: 10px auto;
   background: #fbfafc;
@@ -2641,6 +2653,10 @@ a:hover .bw-image {
   margin-bottom: 2.08333%;
   border-bottom: 1px solid #d5d4d9;
   background-color: #fbfafc;
+}
+
+.site-main {
+  margin: 2px auto;
 }
 
 /*--------------------------------------------------------------
@@ -2811,11 +2827,11 @@ a:hover .bw-image {
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-#featured-cat h3.entry-title {
+.featured-cat h3.entry-title {
   font-size: 100%;
 }
 
-#featured-cat img {
+.featured-cat img {
   width: 100%;
 }
 
@@ -2918,6 +2934,10 @@ a:hover .bw-image {
   width: 100%;
 }
 
+.footer-item--h {
+  font-size: 112%;
+}
+
 /*--------------------------------------------------------------
 5.1 Footer Contact
 --------------------------------------------------------------*/
@@ -2978,7 +2998,6 @@ a:hover .bw-image {
 
 .contact-item__icon span {
   display: inline-block;
-  font-size: 112%;
 }
 
 .contact-item__text {
@@ -3146,8 +3165,9 @@ body.prevent-scroll.prevent-scroll--enabled #page:after {
 }
 
 .secondary-col .widget {
-  padding: 0 15px 15px;
+  padding: 0 2.08333% 15px;
   border-bottom: 2px solid #d5d4d9;
+  overflow: hidden;
 }
 
 .secondary-col .widget::after {
@@ -4451,12 +4471,15 @@ a:focus {
   /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-  .home #featured-cat,
-  .home #page_links {
+  #featured-cat-frontpage,
+  #page_links {
     min-height: 695px;
   }
   .featured-item .entry-meta {
     font-size: 85%;
+  }
+  #featured-cat-frontpage .hentry {
+    padding: 2.08333%;
   }
   /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)

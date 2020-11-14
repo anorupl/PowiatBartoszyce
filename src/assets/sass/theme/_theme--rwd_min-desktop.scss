@@ -231,17 +231,21 @@
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-.home {
-  #featured-cat,
-  #page_links{
+#featured-cat-frontpage,
+#page_links {
     min-height: 695px;
-  }
 }
 .featured-item {
   .entry-meta {
     font-size: 85%;
   }
 }
+#featured-cat-frontpage {
+  .hentry {padding: gutter();}
+}
+
+
+
 
 /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)

@@ -40,10 +40,6 @@ if(isset($wp_customize)) {
 	require get_template_directory() . '/inc/customizer/custom_control_field/inc_multi_checbox.php';
 	// Class "WPG_Customize_Control_Checkbox_Multiple_Sort"
 	require get_template_directory() . '/inc/customizer/custom_control_field/inc_multisort_checbox.php';
-	// Class "WPG_Customize_Control_leafletjs_MAP".
-	require get_template_directory() . '/inc/customizer/custom_control_field/inc_leafletjs_map.php';
-	// Class "WPG_Custom_OpeningHours".
-	require get_template_directory() . '/inc/customizer/custom_control_field/inc_field_open_hours.php';
 	// Class "WPG_TinyMCE_Custom_control".
 	require get_template_directory() . '/inc/customizer/custom_control_field/inc_tinymce.php';
 }
@@ -172,7 +168,7 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section($links_section_id, array(
 		'priority'   		=> '9',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Section links', 'wpg_theme' ),
+		'title'      		=> __( 'Section - Menu links', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 
@@ -184,7 +180,7 @@ function wpg_customizer_general($wp_customize) {
 	$wp_customize->add_section($baners_section_id, array(
 		'priority'   		=> '10',
 		'capability' 		=> 'edit_theme_options',
-		'title'      		=> __( 'Section Baners', 'wpg_theme' ),
+		'title'      		=> __( 'Baners', 'wpg_theme' ),
 		'panel' 				=> $theme_panel_id,
 	));
 

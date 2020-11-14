@@ -9,11 +9,11 @@
 */
 ?>
 
-	<header class="screen-reader" tabindex="0">
-		<h2><?php echo esc_html(get_theme_mod('wpg_primary_baners_title',__('Title', 'wpg_theme'))); ?></h2>
-	</header>
-	<?php
-	if ( is_active_sidebar( 'wpg-footerbar-primary_baners' ) ) {
-		dynamic_sidebar( 'wpg-footerbar-primary_baners' );
-	}
-	?>
+<header class="screen-reader" tabindex="0">
+	<h2><?php echo esc_html(get_theme_mod('wpg_primary_baners_title',__('Title', 'wpg_theme'))); ?></h2>
+</header>
+<?php
+if ( is_active_sidebar( 'wpg-footerbar-primary_baners' ) ) {
+	dynamic_sidebar( 'wpg-footerbar-primary_baners' );
+}
+?>

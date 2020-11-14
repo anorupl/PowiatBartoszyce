@@ -5,9 +5,8 @@
 * @package Powiat Bartoszycki
 * @since 0.1.0
 */
-?>
 
-<?php $unique_id = esc_attr( uniqid( 'search' ) ); ?>
+$unique_id = esc_attr( uniqid( 'search' ) ); ?>
 
 <form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label for="form<?php echo $unique_id; ?>" class="screen-reader-text"><?php _e('Search form on the site','wpg_theme'); ?></label>

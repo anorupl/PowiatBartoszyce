@@ -7,6 +7,39 @@
 */
 
 /**
+* W3c - Remove attr type of javascript links.
+*/
+function remove_w3c_javascript(){
+	ob_start( function( $buffer ){
+		$buffer = str_replace( array( 'type="text/javascript"', "type='text/javascript'" ), '', $buffer );
+		return $buffer;
+	});
+}
+add_action( 'template_redirect', 'remove_w3c_javascript');
+
+/**
+* W3c - Remove attr type of css links.
+*/
+function remove_w3c_css(){
+	ob_start( function( $buffer ){
+		$buffer = str_replace( array( 'type="text/css"', "type='text/css'" ), '', $buffer );
+		return $buffer;
+	});
+}
+add_action( 'template_redirect', 'remove_w3c_css');
+
+/**
+* W3c - Change template for navigation.
+*/
+function wpg_navigation_template( $template ) {
+
+	$template = '<nav class="navigation %1$s" aria-label="%4$s"><h2 class="screen-reader-text">%2$s</h2><div class="nav-links">%3$s</div></nav>';
+
+	return $template;
+}
+add_filter( 'navigation_markup_template', 'wpg_navigation_template' );
+
+/**
 * The Code below will modify the main WordPress loop, before the queries fired
 */
 function wpg_mian_query($query) {
@@ -24,16 +57,14 @@ function wpg_mian_query($query) {
 					'taxonomy' => 'category',
 					'field' => 'term_id',
 					'terms' => $main_cat_id,
-					)
 				)
-			);
-
-
-
+			));
 		}
 	}
 }
 add_action( 'pre_get_posts', 'wpg_mian_query', 1 );
+
+
 /**
 * Adds custom classes to the array of body classes.
 *
@@ -54,16 +85,14 @@ function wpg_body_class($class) {
 
 			if ($featuredcat === true ||$b_bottom === true) {
 
-			  $class[] = 'active-sidebar';
+				$class[] = 'active-sidebar';
 
 			} elseif (is_active_sidebar( 'wpg-sidebar-right' ) ) {
 
 				$class[] = 'active-sidebar';
-
 			}
 		}
 	}
-
 	return $class;
 }
 add_filter( 'body_class', 'wpg_body_class' );
@@ -117,26 +146,6 @@ add_filter( 'widget_nav_menu_args', 'wpg_widget_nav_menu', 10, 3 );
 
 
 /**
-* Modifies the menu
-* @param array $item_output .
-* @param array $item .
-* @param array $depth .
-* @param array $args .
-* @return array $item_output .
-*/
-function wpg_nav_image( $item_output, $item, $depth, $args ) {
-
-	$custom_menu_meta = get_post_meta( $item->ID, 'jt_hover_image', true );
-
-	if ( ! empty( $custom_menu_meta ) ) {
-		$item_output = str_replace( '">', '"><img src="' . wp_get_attachment_url( intval($custom_menu_meta) ) .  '" />', $item_output );
-	}
-	return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'wpg_nav_image', 10, 4 );
-
-
-/**
 * Count active widget in sidebar.
 *
 * @param string $sidebar_id ID sidebar.
@@ -150,22 +159,22 @@ function wpg_the_widgets_count( $sidebar_id ) {
 
 		if (!empty($sidebars_widgets[ $sidebar_id ])) {
 
-		 switch (count($sidebars_widgets[ $sidebar_id ])) {
-			case (2):
-		  	return 'col-6';
-		  	break;
-			case (3):
-			  	return 'col-12--3';
-			case (4):
-		  	return 'col-12--2-4';
-		  		break;
-		 	default:
-		 		return 'col-12--2-4';
-		 		break;
-		 }
-	 } else {
-		 return 'col-12--2-4';
-	 }
+			switch (count($sidebars_widgets[ $sidebar_id ])) {
+				case (2):
+				return 'col-6';
+				break;
+				case (3):
+				return 'col-12--3';
+				case (4):
+				return 'col-12--2-4';
+				break;
+				default:
+				return 'col-12--2-4';
+				break;
+			}
+		} else {
+			return 'col-12--2-4';
+		}
 	}
 }
 
@@ -178,10 +187,9 @@ function wpg_the_widgets_count( $sidebar_id ) {
 * @return array $mimes_types.
 */
 function wpg_modify_upload_mimes ( $mimes_types ) {
-    // add your extension to the mimes array as below
-    $mimes_types['zip'] = 'application/zip';
-    $mimes_types['gz'] = 'application/x-gzip';
-    return $mimes_types;
+	// add your extension to the mimes array as below
+	$mimes_types['zip'] = 'application/zip';
+	return $mimes_types;
 }
 add_filter( 'upload_mimes', 'wpg_modify_upload_mimes', 99 );
 
@@ -193,66 +201,35 @@ add_filter( 'upload_mimes', 'wpg_modify_upload_mimes', 99 );
 * @return array $mimes_types.
 */
 function wpg_add_allow_upload_extension_exception( $types, $file, $filename, $mimes ) {
-    // Do basic extension validation and MIME mapping
-    $wp_filetype = wp_check_filetype( $filename, $mimes );
-    $ext         = $wp_filetype['ext'];
-    $type        = $wp_filetype['type'];
-    if( in_array( $ext, array( 'zip', 'gz' ) ) ) { // it allows zip files
-        $types['ext'] = $ext;
-        $types['type'] = $type;
-    }
-    return $types;
+	// Do basic extension validation and MIME mapping
+	$wp_filetype = wp_check_filetype( $filename, $mimes );
+	$ext         = $wp_filetype['ext'];
+	$type        = $wp_filetype['type'];
+	if( in_array( $ext, array( 'zip') ) ) { // it allows zip files
+		$types['ext'] = $ext;
+		$types['type'] = $type;
+	}
+	return $types;
 }
 add_filter( 'wp_check_filetype_and_ext', 'wpg_add_allow_upload_extension_exception', 99, 4 );
 
-#one for JS mime-type
-add_action( 'template_redirect', function(){
-  ob_start( function( $buffer ){
-       $buffer = str_replace( array( 'type="text/javascript"', "type='text/javascript'" ), '', $buffer );
-       return $buffer;
-    });
-});
-#one for CSS-Mime-Type
-add_action( 'template_redirect', function(){
-    ob_start( function( $buffer ){
-        $buffer = str_replace( array( 'type="text/css"', "type='text/css'" ), '', $buffer );
-        return $buffer;
-    });
-});
-
-
-add_filter( 'navigation_markup_template', 'cyb_navigation_template' );
-function cyb_navigation_template( $template ) {
-    $template = '<nav class="navigation %1$s" aria-label="%4$s"><h2 class="screen-reader-text">%2$s</h2><div class="nav-links">%3$s</div></nav>';
-
-    return $template;
-
-}
-
-
-// Dodatkowa wtyczka TABELE (link do wtyczki)- Tinymce 4
-function my_custom_plugins( $plugins ) {
+/**
+* Dodatkowa wtyczka TABELE (link do wtyczki)- Tinymce 4
+*
+*/
+function wpg_custom_plugins_Tinymce( $plugins ) {
 	$plugins['table'] = THEME_URL . 'js/assets/table_plugin.min.js';
 	return $plugins;
 }
-// Dodatkowa wtyczka TABELE (Rejestracja przycisku)- Tinymce 4
-add_action( 'mce_external_plugins', 'my_custom_plugins' );
-function wpex_style_select( $buttons ) {
+add_action( 'mce_external_plugins', 'wpg_custom_plugins_Tinymce' );
+
+/**
+* Dodatkowa wtyczka TABELE (Rejestracja przycisku)- Tinymce 4
+*
+*/
+function wpg_add_buttons_Tinymce( $buttons ) {
 	array_push( $buttons, 'table' );
 	return $buttons;
 }
-add_filter( 'mce_buttons', 'wpex_style_select' );
-
-
-
-
-function misha_gutenberg_css(){
-
-	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
-	add_editor_style( 'css/style-editor.css' );
-
-}
-add_action( 'after_setup_theme', 'misha_gutenberg_css' );
-
-
+add_filter( 'mce_buttons', 'wpg_add_buttons_Tinymce' );
 ?>

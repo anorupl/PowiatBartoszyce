@@ -16,7 +16,7 @@ get_header(); ?>
   <div class="container">
     <div id="primary" class="content-area">
       <main id="main" class="site-main">
-        <article class="content-style col-12">
+        <article class="content-style style__narrow col-12">
           <header class="entry-header">
               <h1 class="entry-title"><?php the_title(); ?></h1>
           </header>

@@ -110,12 +110,13 @@ main {
 .btn-slide {
   position: absolute;
   z-index: $z-level-4;
-  left: 0;
+  left: -9999px;
   top: 0;
   opacity: 0;
 }
 .btn-slide:focus {
   opacity: 1;
+  left: 0;
 }
 
 /* color schemes */
@@ -127,8 +128,12 @@ main {
   border-radius: 10px;
   border: 1px solid $light-border;
   background-color: $white;
-  padding: 21px;
-
+}
+.style__wide{
+  padding: 21px 4.08333%;
+}
+.style__narrow{
+  padding: 21px 2.08333%;
 }
 
 
@@ -309,7 +314,6 @@ a:hover .bw-image {
   background-position: bottom center;
   overflow: hidden;
 
-
   &::after {
       content: '';
       display: block;
@@ -320,22 +324,19 @@ a:hover .bw-image {
   }
 }
 
-
-
 #header-content {
   padding-top: 5rem;
   overflow: hidden;
-  .slick-slide {
-    overflow: hidden;
-    padding: 15px;
-    margin: 5px;
-  }
   .btn {
     margin-top: 30px;
     margin-bottom:30px;
   }
 }
-
+.slick-slide {
+  overflow: hidden;
+  padding: 15px;
+  margin: 5px;
+}
 
 #slider-container {
   padding-bottom: 5rem;
@@ -343,7 +344,7 @@ a:hover .bw-image {
 .slide-content {
   display: inline-block;
 }
-.slider-bg {
+.slides {
   width: 80%;
   margin: 10px auto;
   @include bg-op($four-bw, 0.8);
@@ -424,6 +425,9 @@ a:hover .bw-image {
     border-bottom: 1px solid $border-color;
     background-color: $four-bw;
 
+}
+.site-main {
+  margin: 2px auto;
 }
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
@@ -579,14 +583,11 @@ a:hover .bw-image {
 /*--------------------------------------------------------------
 4.3 Section featured category
 --------------------------------------------------------------*/
-#featured-cat{
-  h3.entry-title {
-  font-size: 100%;
-  }
-  img {
-    width: 100%;
-  }
+.featured-cat {
+  h3.entry-title {font-size: 100%;}
+  img            {width: 100%;}
 }
+
 /*--------------------------------------------------------------
 4.4 Section menu with custom links to pages (education links)
 --------------------------------------------------------------*/
@@ -682,7 +683,10 @@ a:hover .bw-image {
     width: 100%;
   }
 }
-
+.footer-item--h {
+  font-size: 112%;
+  @extend .h-font;
+}
 /*--------------------------------------------------------------
 5.1 Footer Contact
 --------------------------------------------------------------*/
@@ -719,13 +723,8 @@ a:hover .bw-image {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  i {
-    width: 35px;
-  }
-  span {
-    display: inline-block;
-    font-size: 112%;
-  }
+  i    {width: 35px;}
+  span {display: inline-block;}
 }
 .contact-item__text {
   padding-left: 38px;

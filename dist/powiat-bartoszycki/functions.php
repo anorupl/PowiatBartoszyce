@@ -22,82 +22,87 @@ define( 'THEME_DEBUG',   true );
 
 
 if ( ! function_exists( 'wpg_setup' ) ) :
-	/**
-	* Sets up theme defaults and registers support for various WordPress features.
-	*
-	* Note that this function is hooked into the after_setup_theme hook, which
-	* runs before the init hook. The init hook is too late for some features, such
-	* as indicating support for post thumbnails.
-	*
-	*/
-	function wpg_setup() {
+/**
+* Sets up theme defaults and registers support for various WordPress features.
+*
+* Note that this function is hooked into the after_setup_theme hook, which
+* runs before the init hook. The init hook is too late for some features, such
+* as indicating support for post thumbnails.
+*
+*/
+function wpg_setup() {
 
-		if ( ! isset( $content_width ) ) {
-			$content_width = 1366;
-		}
-
-		load_theme_textdomain( 'wpg_theme', THEME_PATH . 'languages' );
-
-		/**
-		* Add default posts and comments RSS feed links to head.
-		*/
-		add_theme_support( 'automatic-feed-links' );
-
-		/**
-		* Let WordPress manage the document title.
-		*/
-		add_theme_support( 'title-tag' );
-
-		/**
-		*  Add theme support for Custom Logo.
-		*/
-		add_theme_support( 'custom-logo', array(
-			'height'  => 287,
-			'width'   => 768,
-			'flex-height' => true,
-			'flex-width'  => true
-		));
-
-		/**
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-		add_theme_support( 'post-thumbnails' );
-
-		/**
-		* Switch core markup to output valid HTML5.
-		*/
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption'
-		) );
-
-		/**
-		* This theme uses wp_nav_menu().
-		*/
-		register_nav_menus( array(
-			'menu_header'				=> esc_html__( 'Header Menu', 'wpg_theme' ),
-			'menu_page_links'		=> esc_html__( 'Section - Links to other pages', 'wpg_theme' ),
-			'menu_footer'		=> esc_html__( 'Footer Menu', 'wpg_theme' )
-		));
-
-		/**
-		* Update image size;
-		*/
-		update_option( 'thumbnail_size_w', 320 );
-		update_option( 'thumbnail_size_h', 480 );
-		update_option( 'thumbnail_crop', false );
-		update_option( 'medium_size_w', 768);
-		update_option( 'medium_size_h', 512 );
-		update_option( 'large_size_w', 1366);
-		update_option( 'large_size_h', 911 );
-
+	if ( ! isset( $content_width ) ) {
+		$content_width = 1366;
 	}
-	add_action( 'after_setup_theme', 'wpg_setup' );
+
+	load_theme_textdomain( 'wpg_theme', THEME_PATH . 'languages' );
+
+	/**
+	* Add default posts and comments RSS feed links to head.
+	*/
+	add_theme_support( 'automatic-feed-links' );
+
+	/**
+	* Let WordPress manage the document title.
+	*/
+	add_theme_support( 'title-tag' );
+
+	/**
+	*  Add theme support for Custom Logo.
+	*/
+	add_theme_support( 'custom-logo', array(
+		'height'  => 287,
+		'width'   => 768,
+		'flex-height' => true,
+		'flex-width'  => true
+	));
+
+	/**
+	* Enable support for Post Thumbnails on posts and pages.
+	*
+	* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	*/
+	add_theme_support( 'post-thumbnails' );
+
+	/**
+	* Switch core markup to output valid HTML5.
+	*/
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
+	) );
+
+	/**
+	* This theme uses wp_nav_menu().
+	*/
+	register_nav_menus( array(
+		'menu_header'				=> esc_html__( 'Header Menu', 'wpg_theme' ),
+		'menu_page_links'		=> esc_html__( 'Section - Links to other pages', 'wpg_theme' ),
+		'menu_footer'		=> esc_html__( 'Footer Menu', 'wpg_theme' )
+	));
+
+	/**
+	* Update image size;
+	*/
+	update_option( 'thumbnail_size_w', 320 );
+	update_option( 'thumbnail_size_h', 480 );
+	update_option( 'thumbnail_crop', false );
+	update_option( 'medium_size_w', 768);
+	update_option( 'medium_size_h', 512 );
+	update_option( 'large_size_w', 1366);
+	update_option( 'large_size_h', 911 );
+
+	/**
+	* Custom style css for gutenberg editor
+	*/
+	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
+	add_editor_style( 'css/style-editor.css' );
+}
+add_action( 'after_setup_theme', 'wpg_setup' );
 endif;
 
 /**
@@ -195,8 +200,6 @@ function wpg_widgets_init() {
 }
 add_action( 'widgets_init', 'wpg_widgets_init' );
 
-
-
 /**
 * Include file with customizer.
 */
@@ -210,5 +213,7 @@ require THEME_PATH . 'inc/template-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 require THEME_PATH . 'inc/wcga_form.php';
 
-
+/**
+* Include file with custom widget.
+*/
 require THEME_PATH . 'inc/widget/widget-baner.php';

@@ -104,7 +104,7 @@ $wp_customize->add_control( "wpg_contact_email_editorial", array(
 //  =============================================
 $wp_customize->add_setting('wpg_hours', array(
 	'default'        => '',
-		'sanitize_callback' => 'sanitize_text_field'
+	'sanitize_callback' => 'sanitize_text_field'
 ));
 
 $wp_customize->add_control( 'wpg_hours', array(
