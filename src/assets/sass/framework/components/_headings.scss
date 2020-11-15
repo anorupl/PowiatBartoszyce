@@ -21,7 +21,7 @@ h6,
 	line-height: 1.3em;
 }
 
-h1,.class-h1,.f-size-h1         { @include font-size(($size-base + 1.3));}
+h1,.class-h1,.f-size-h1         { @include font-size(($size-base + 1.8));}
 h2,.class-h2,.f-size-h2         { @include font-size(($size-base + 1.0));}
 h3,.class-h3,.f-size-h3         { @include font-size(($size-base + 0.7));}
 h4,.class-h4,.f-size-h4         { @include font-size(($size-base + 0.4));}

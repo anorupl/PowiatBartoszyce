@@ -22,11 +22,12 @@ function wpg_get_excerpt($limit) {
 *
 * @return 	string
 */
-function wpg_time() {
-  printf('<i class="icon-clock-full"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" datetime="%2$s">%3$s</time>',
+function wpg_time($class_icon='') {
+  printf('<i class="icon-clock-full %4$s"></i><span class="screen-reader-text">%1$s: </span><time class="entry-date published updated" datetime="%2$s">%3$s</time>',
   __('Data', 'wpg_theme'),
   esc_attr( get_the_date( 'c' ) ),
-  esc_html( get_the_date() ));
+  esc_html( get_the_date() ),
+  $class_icon);
 }
 
 /**

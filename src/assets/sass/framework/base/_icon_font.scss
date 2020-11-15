@@ -34,7 +34,7 @@
 .i-size,
 [class^="icon-"] {
 	padding: 0 10px;
-	min-width: 40px;
+	min-width: 31px;
 }
 
 .l-icon,
@@ -47,6 +47,9 @@ i.l-icon  {
 i.xl-icon {
 	font-size: 265%;
 	line-height: 1;
+}
+.left-icon {
+	padding: 0 10px 0 0;
 }
 
 .icon-file-pdf-o:before {

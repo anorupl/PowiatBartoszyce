@@ -74,8 +74,8 @@
 			</div>
 		</div>
 	</div>
-	<header class="header-wrapper clear-both" >
-		<div id="site-header" class="wrapper">
+	<div class="header-wrapper clear-both" >
+		<header id="site-header" class="wrapper">
 			<div class="title-area col-7">
 				<?php if ( is_front_page() ) :?>
 					<h1 class="site-title">
@@ -98,13 +98,11 @@
 			<div id="site-search" class="col-5 hide-on-small">
 				<?php get_search_form(); ?>
 			</div>
-		</div><!-- end #site-header-bar -->
+		</header><!-- end #site-header-bar -->
 		<div id="site-nav-bar" class="clear-both">
 			<div class="container">
 				<?php if (has_nav_menu('menu_header')): ?>
-					<button class="icon-button-small-menu hide-desktop center-button">
-						<?php _e('Menu', 'wpg_theme');?>
-					</button>
+					<button class="icon-button-small-menu hide-desktop center-button" aria-expanded="false"><?php _e('Menu <span class="screen-reader-text">rozwiń </span>', 'wpg_theme');?></button>
 					<?
 					wp_nav_menu(array(
 						'container'      => false,
@@ -117,7 +115,7 @@
 					if (current_user_can( 'administrator' )) :
 						?>
 						<!-- Menu poziome -->
-						<button class="icon-button-small-menu hide-desktop center-button" aria-expanded="false" aria-controls="header-menu"><?php _e('Menu', 'wpg_theme'); ?></button>
+						<button class="icon-button-small-menu hide-desktop center-button" aria-expanded="false"><?php _e('Menu <span class="screen-reader-text">rozwiń </span>', 'wpg_theme');?></button>
 						<nav id="menu_header" class="h-nav bar-color hide-on-small wp-nav" data-class="h-nav bar-color hide-on-small wp-nav" role="navigation">
 							<ul class="menu">
 								<li class="menu-item"><a href="<?php echo admin_url('nav-menus.php'); ?>"><?php _e('Add menu', 'wpg_theme'); ?></a></li>
@@ -129,7 +127,7 @@
 				?>
 			</div><!-- end .wrapper -->
 		</div><!-- end #site-nav-bar -->
-	</header>
+	</div>
 	<?php
 	/* ====================
 	* Section - alert   *
@@ -167,14 +165,11 @@
 				<?php
 				if ( is_active_sidebar( 'wpg-headerbar-shortcuts' ) ) {
 					?>
-					<section id="bar_shortcuts" class="col-5">
-						<header class="screen-reader-text">
-							<h2><?php echo get_theme_mod('wpg_shortcuts_section',__('Section title', 'wpg_theme'));?></h2>
-						</header>
+					<div id="bar_shortcuts" class="col-5">
 						<ul class="shortcuts-links">
 							<?php dynamic_sidebar( 'wpg-headerbar-shortcuts' ); ?>
 						</ul>
-					</section>
+					</div>
 					<?php
 				}
 				?>

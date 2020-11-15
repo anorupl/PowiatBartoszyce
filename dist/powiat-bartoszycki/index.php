@@ -36,16 +36,15 @@ if (is_home() && !is_paged()) { ?>
       get_template_part('components/features/section', 'links' );
     }
     ?>
-    <section id="primary-baners" class="page-section wide-col col-12">
-      <?php
+    <?php
       /* ==========================================
       * Section - widget banner                   *
       * =====================================+====*/
-      if (get_theme_mod('wpg_primary_baners_active', false) === true) {
-        get_sidebar('primary_baners');
-      }
-      ?>
-    </section>
+      if (get_theme_mod('wpg_primary_baners_active', false) === true) { ?>
+        <section id="primary-baners" class="page-section wide-col col-12">
+        <?php get_sidebar('primary_baners'); ?>
+        </section>
+      <?php } ?>
   </div><!-- .container -->
   <?php
 } else {

@@ -167,8 +167,8 @@ function wpg_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<li id="%1$s" class="widget radius %2$s">',
 		'after_widget'  => '</li>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<span class="widget-title class-h3">',
+		'after_title'   => '</span>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Baners - Primary section', 'wpg_theme' ),
@@ -185,8 +185,8 @@ function wpg_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Baners - Secondary section', 'wpg_theme' ),
@@ -199,6 +199,26 @@ function wpg_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'wpg_widgets_init' );
+
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ *
+ * @link https://git.io/vWdr2
+ */
+function wpg_skip_link_focus_fix() {
+	// The following is minified from js/assets/skip-link-focus-fix.js`.
+	?>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'wpg_skip_link_focus_fix' );
+
 
 /**
 * Include file with customizer.

@@ -45,7 +45,7 @@ add_filter( 'navigation_markup_template', 'wpg_navigation_template' );
 function wpg_mian_query($query) {
 
 	// Before anything else, make sure this is the right query...
-	if ( !is_admin() && $query->is_main_query() && is_home() ) {
+	if ( !is_admin() && $query->is_main_query() && $query->is_home ) {
 
 		$main_cat_id = get_theme_mod('wpg_mainloop_cat', 0);
 
@@ -78,7 +78,7 @@ function wpg_body_class($class) {
 	$class[] = 'hfeed site';
 
 	if (!is_admin()) {
-		if (!$query->is_home) {
+		if (!is_home()) {
 
 			$featuredcat = get_theme_mod('wpg_featuredcat_active', false);
 			$b_bottom = get_theme_mod('wpg_b_bottom_active', false);

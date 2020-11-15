@@ -26,7 +26,7 @@
     wpg_attachments();
 
     wp_link_pages(array(
-      'before' => '<nav class="page-links pagination-inside" role="navigation"><span class="page-links-title">' . __('Pages:', 'wpg_theme') . '</span>',
+      'before' => '<nav class="page-links pagination-inside"><span class="page-links-title">' . __('Pages:', 'wpg_theme') . '</span>',
       'after' => '</nav>',
       'link_before' => '<span>',
       'link_after' => '</span>',
@@ -49,6 +49,6 @@ the_post_navigation( array(
 
 // If comments are open or we have at least one comment, load up the comment template.
 if ( comments_open() || get_comments_number() ) {
-  comments_template();
+  //comments_template();
 }
 ?>

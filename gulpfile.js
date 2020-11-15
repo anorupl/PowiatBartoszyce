@@ -142,7 +142,7 @@ function style() {
   .src([theme.css.src + 'style.scss'])
   .pipe(changed(theme.css.dist))
   //Default:nestedValues:nested,expanded,compact,compressed
-  .pipe(sass({outputStyle: 'expanded' }).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(prefixer())
   .pipe(gulp.dest(theme.css.dist));
 }
@@ -169,22 +169,22 @@ function headerTag() {
   return gulp
   .src(project_dir + 'style.css')
   .pipe(header(
-    '/*\n\
-    Theme Name: Powiat Bartoszycki\n\
-    Theme URI: https://powiat.bartoszyce.pl/\n\
-    Author: Kamil Żerebny\n\
-    Author URI:https://zerebny.ovh\n\
-    Description: :Theme for Powiat Bartoszycki\n\
-    Version: 0.1.0\n\
-    Licence: GPL-2.0\n\
-    Licence URI: http://www.gnu.org/licenses/gpl-2.0.html\n\
-    Tags: one-column,responsive-layout,custom-menu,featured-images,microformats,threaded-comments,translation-ready\n\
-    Text Domain: wpg_theme\n\
-    */\n'
+'/*\n\
+Theme Name: Powiat Bartoszycki\n\
+Theme URI: https://powiatbartoszyce.pl/\n\
+Author: Kamil Zerebny\n\
+Author URI: https://zerebny.ovh\n\
+Description: Oficjalny szablon strony Starostwa Powiatowego w Bartoszycach.\n\
+Version: 0.1.0\n\
+Licence: GPL-2.0\n\
+Licence URI: http://www.gnu.org/licenses/gpl-2.0.html\n\
+Tags: one-column,responsive-layout,custom-menu,featured-images,microformats,threaded-comments,translation-ready\n\
+Text Domain: wpg_theme\n\
+*/\n'
   ))
   .pipe(gulp.dest(project_dir))
-
 }
+
 //4.0 imagesFile
 function imagesFile() {
   return gulp

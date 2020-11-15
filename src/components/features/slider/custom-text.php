@@ -10,21 +10,19 @@
 $slide_title = esc_html(get_theme_mod('wpg_noslider_title',__('Information', 'wpg_theme')));
 ?>
 
-<section class="radius">
-  <header class="screen-reader-text">
-    <h2><?php echo get_theme_mod('wpg_noslider_section',__('Section title', 'wpg_theme'));?></h2>
-  </header>
+<div class="radius">
+  <span class="screen-reader-text" tabindex="0">
+    <?php echo get_theme_mod('wpg_noslider_section',__('Section title', 'wpg_theme'));?>
+  </span>
   <div id="slider-no" class="slides">
-    <article id="header-post-noslide" class="pad-all">
+    <div id="header-post-noslide" class="pad-all">
       <div class="header-post-meta meta-line">
         <span class="pad-all">
           <?php _e('Information', 'wpg_theme'); ?>
         </span>
       </div>
       <div class="text-center-left pad-all">
-        <header>
-          <h2 class="entry-title"><a href="<?php echo get_theme_mod('wpg_noslider_btn_url', '#');?>"><?php echo $slide_title;?></a></h2>
-        </header>
+        <div class="entry-title class-h2"><a href="<?php echo get_theme_mod('wpg_noslider_btn_url', '#');?>"><?php echo $slide_title;?></a></div>
         <div class="entry-summary">
           <?php echo get_theme_mod('wpg_noslider_tinymce', '');?>
         </div>
@@ -34,6 +32,6 @@ $slide_title = esc_html(get_theme_mod('wpg_noslider_title',__('Information', 'wp
           <i class="icon-angle-right"></i>
         </a>
       </div>
-    </article>
+    </div>
   </div>
-</section>
+</div>

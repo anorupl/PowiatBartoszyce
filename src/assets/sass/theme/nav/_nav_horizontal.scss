@@ -19,7 +19,7 @@
   *  ul ul
   * -----------*/
   .sub-menu                       {display: block; position: absolute; min-width: 100%; left: -999em; font-family: $font-base; z-index: $z-level-3 ;}
-  .sub-menu li                    {clear: both; padding: 0 10px; min-width: 100%; max-width: 230px; text-align: left;}
+  .sub-menu li                    {clear: both; padding: 0 10px; min-width: 100%; max-width: 290px; text-align: left; white-space: nowrap;}
   .sub-menu li a                  {padding: 10px;}
 
   /* li - submenu active*/

@@ -164,7 +164,7 @@ a {
 #header-background::after {
   background: #ffffff; }
 
-.slider-bg {
+.slides {
   width: 80%;
   margin: 10px auto;
   background: #000000;

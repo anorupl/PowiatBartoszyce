@@ -35,12 +35,12 @@ $query_featuredcat = new WP_Query($query_feat);
 if ( $query_featuredcat->have_posts()) : ?>
 <aside id="featured-cat-slide" class="featured-cat widget widget-area">
   <header class="header-section">
-    <h3 class="widget-title"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h3>
+    <h2 class="widget-title"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('Last post', 'wpg_theme'))); ?></h2>
   </header>
   <button id="stop-featured" class="btn-slide"><?php _e('Pause animation slideshow','wpg_theme');?></button>
   <div id="featured-slide" class="featured-item hentry-multi slides">
     <?php while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post(); ?>
-      <article class="hentry col-4">
+      <article class="hentry clear-both slick-slide">
         <figure class="post-thumbnail radius">
           <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
             <?php if (has_post_thumbnail()) : the_post_thumbnail('full', array('alt' => get_the_title())); else: ?>

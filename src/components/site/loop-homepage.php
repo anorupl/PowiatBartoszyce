@@ -22,6 +22,7 @@
 
       $post_number = $wp_query->post_count;
 
+
       if ($post_number <= 4 ) {
         $close_column_one = $post_number; // 1 2 3 4
       } else {
@@ -93,9 +94,11 @@
       if ($i == $close_column_one) {
         echo '</div><!-- end column-one -->';
       }
-      //zamyka druga kolumne
-      if ($i == $close_column_two) {
-        echo '</div><!-- end column-two -->';
+      if (isset($close_column_two)){
+        //zamyka druga kolumne
+        if ($i == $close_column_two) {
+          echo '</div><!-- end column-two -->';
+        }
       }
 
       $i++;
@@ -111,7 +114,7 @@
         'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'wpg_theme' ) . ' </span>',
       ));
       ?>
-    </div>
+    </div><!-- page_navigation -->
   <? else: ?>
   <div class="col-one col-home col-7">
     <article id="post-nopost" class="clear-both">

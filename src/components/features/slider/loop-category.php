@@ -7,10 +7,10 @@
 *
 */
 ?>
-<section class="radius">
-  <header class="screen-reader-text">
-    <h2><?php echo get_theme_mod('wpg_slider_section',__('Section title', 'wpg_theme'));?></h2>
-  </header>
+<div class="radius">
+  <span class="screen-reader-text" tabindex="0">
+    <?php echo get_theme_mod('wpg_slider_section',__('Section title', 'wpg_theme'));?>
+  </span>
 
   <button id="play-header" class="btn-slide hide"><?php _e('Start animation slideshow','wpg_theme');?></button>
   <button id="stop-header" class="btn-slide"><?php _e('Pause animation slideshow','wpg_theme');?></button>
@@ -32,27 +32,27 @@
       while ($query_slajd->have_posts()) :
         $query_slajd->the_post();
         ?>
-        <article id="slide-post-<?php the_ID(); ?>" class="slick-slide">
-          <span class="meta-line">
-            <span class="pad-all" aria-hidden="false"><?php wpg_time() ?></span>
-          </span>
-          <header><?php the_title(sprintf('<h2 class="entry-title"><a tabindex="-1" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?></header>
+        <div id="slide-post-<?php the_ID(); ?>" class="slick-slide">
+          <div class="meta-line">
+            <span class="meta-line--content" aria-hidden="false"><?php wpg_time('left-icon') ?></span>
+          </div>
+          <?php the_title(sprintf('<div class="entry-title class-h2"><a tabindex="-1" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></div>'); ?>
           <a href="<?php the_permalink();?>" class="btn alignleft"><? printf(__( 'Continue reading <span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
-        </article>
+        </div>
         <?php
       endwhile;
       wp_reset_postdata();// Restore original Post Data
     else:
       ?>
-      <article id="slide-nopost" class="pad-all">
-        <span class="meta-line">
+      <div id="slide-nopost" class="pad-all">
+        <div class="meta-line">
           <span class="pad-all"><?php _e('Nothing Found', 'wpg_theme'); ?></span>
-        </span>
+        </div>
         <span class="slide-content text-center-left">
-          <header class=""><?php _e('Nothing Found', 'wpg_theme'); ?></header>
+          <div class="class-h2"><?php _e('Nothing Found', 'wpg_theme'); ?></div>
           <span class="btn alignleft"><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></span>
         </span>
-      </article>
+      </div>
     <?php endif; ?>
   </div><!-- #slider -->
-</section>
+</div>
