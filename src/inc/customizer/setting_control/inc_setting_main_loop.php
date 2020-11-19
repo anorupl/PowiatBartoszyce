@@ -10,7 +10,7 @@
 //  = Section title								=
 //  =============================================
 $wp_customize->add_setting('wpg_mainloop_title', array(
-  'default'        => __('Last post', 'wpg_theme'),
+  'default'        => __('', 'wpg_theme'),
   'capability' 		=> 'edit_theme_options',
   'sanitize_callback' => 'sanitize_text_field'
 ));

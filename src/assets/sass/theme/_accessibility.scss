@@ -44,6 +44,23 @@ a.skip-main:active 	{
 	overflow: hidden;
 	margin: 0 !important;
 }
+.screen-reader-focus {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	margin: 0;
+	&:focus {
+		position: relative;
+		clip: auto;
+		height: auto;
+		width: auto;
+	}
+}
 
 .blank-ico 	{
 position: absolute;

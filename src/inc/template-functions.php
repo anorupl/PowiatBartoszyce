@@ -78,7 +78,7 @@ function wpg_body_class($class) {
 	$class[] = 'hfeed site';
 
 	if (!is_admin()) {
-		if (!is_home()) {
+		if (!is_home() || is_paged()) {
 
 			$featuredcat = get_theme_mod('wpg_featuredcat_active', false);
 			$b_bottom = get_theme_mod('wpg_b_bottom_active', false);
@@ -232,4 +232,6 @@ function wpg_add_buttons_Tinymce( $buttons ) {
 	return $buttons;
 }
 add_filter( 'mce_buttons', 'wpg_add_buttons_Tinymce' );
+
+
 ?>

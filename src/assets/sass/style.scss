@@ -159,6 +159,21 @@
 }
 
 
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-ldpi) {
+  .h-nav li a {
+      padding: 20px 5px;
+  }
+  .h-nav {
+      font-size: 14px;
+  }
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint
@@ -173,6 +188,14 @@
     }
   }
 }
+
+
+
+
+
+
+
+
 
 @media (min-width: $desktop-mdpi) {
   .container  {

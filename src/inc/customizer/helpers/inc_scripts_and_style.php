@@ -2,7 +2,7 @@
 /**
 * File with functions to registration scripts and css in Customizer
 *
-* @package MBP Bartoszyce
+* @package Powiat Bartoszycki
 * @since 0.1.0
 */
 
@@ -51,7 +51,7 @@ function google_font_url() {
 	if (!is_string($subset)) {
 		$subset = implode( ',', $subset );
 	}
-	
+
 	if ( !empty( $fonts )) {
 		$query_args = array(
 			'family' => str_replace( " ", "+", implode( '%7C', array_values( $fonts ) ) ),

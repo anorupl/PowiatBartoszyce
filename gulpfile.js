@@ -151,7 +151,7 @@ function otherStyle() {
   return gulp
   .src([theme.css.src + 'big.scss', theme.css.src + 'medium.scss', theme.css.src + 'contrast.scss',theme.css.src + 'print.scss',theme.css.src + 'slick.scss', theme.css.src + 'style-editor.scss'])
   .pipe(changed(theme.css.dist_css))
-  .pipe(sass().on('error', function(error) {console.log(error);this.emit('end');}))
+  .pipe(sass({outputStyle: 'compressed' }).on('error', function(error) {console.log(error);this.emit('end');}))
   .pipe(gulp.dest(theme.css.dist_css));
 
 }

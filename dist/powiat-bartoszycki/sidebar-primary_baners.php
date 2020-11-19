@@ -9,7 +9,7 @@
 */
 ?>
 
-<header class="screen-reader" tabindex="0">
+<header class="screen-reader-focus" tabindex="0">
 	<h2><?php echo esc_html(get_theme_mod('wpg_primary_baners_title',__('Title', 'wpg_theme'))); ?></h2>
 </header>
 <?php

@@ -53,7 +53,7 @@ $wp_customize->add_setting('wpg_dis4_url', array(
   'sanitize_callback' => 'esc_url_raw',
 ));
 $wp_customize->add_control('wpg_dis4_url', array(
-  'label' => __('Gmina Wiejska Bartoszyce', 'wpg_theme'),
+  'label' => __('Gmina Wiejska Górowo Iławeckie', 'wpg_theme'),
   'description' => __('Url to official page', 'wpg_theme'),
   'section' => $district_section_id,
   'settings' => 'wpg_dis4_url',
@@ -67,7 +67,7 @@ $wp_customize->add_setting('wpg_dis5_url', array(
   'sanitize_callback' => 'esc_url_raw',
 ));
 $wp_customize->add_control('wpg_dis5_url', array(
-  'label' => __('Gmina Miejska-Wiejska Bisztynek', 'wpg_theme'),
+  'label' => __('Gmina Miejsko Wiejska Bisztynek', 'wpg_theme'),
   'description' => __('Url to official page', 'wpg_theme'),
   'section' => $district_section_id,
   'settings' => 'wpg_dis5_url',
@@ -80,7 +80,7 @@ $wp_customize->add_setting('wpg_dis6_url', array(
   'sanitize_callback' => 'esc_url_raw',
 ));
 $wp_customize->add_control('wpg_dis6_url', array(
-  'label' => __('Gmina Miejska-Wiejska Sępopol', 'wpg_theme'),
+  'label' => __('Gmina Miejsko Wiejska Sępopol', 'wpg_theme'),
   'description' => __('Url to official page', 'wpg_theme'),
   'section' => $district_section_id,
   'settings' => 'wpg_dis6_url',

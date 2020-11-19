@@ -115,7 +115,7 @@ function get_all_terms( $only_tax = false, $one_tax = false, $taxonomies = array
 			}
 		}//$custom_taxonomies
 	}//$one_tax
-	
+
 
 	foreach ($taxonomies  as $name => $value) {
 
@@ -191,7 +191,7 @@ function wpg_the_adress(){
 	</div>
 
 <?php endif; ?>
-<?php if (get_theme_mod("wpg_contact_email_1", '') !== '') : ?>
+<?php if (get_theme_mod("wpg_contact_email_office", '') !== '') : ?>
 
 	<div class="contact-item adress-contact">
 		<i class="icon-envelope item-icon"></i><span class="screen-reader"><?php _e('E-mail', 'wpg_theme');?>, </span><?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_office",''))); ?>

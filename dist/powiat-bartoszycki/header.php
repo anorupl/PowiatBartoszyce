@@ -166,9 +166,6 @@
 				if ( is_active_sidebar( 'wpg-headerbar-shortcuts' ) ) {
 					?>
 					<div id="bar_shortcuts" class="col-5">
-						<span class="screen-reader-text" tabindex="0">
-							<?php echo get_theme_mod('wpg_shortcuts_section',__('Section title', 'wpg_theme'));?>
-						</span>
 						<ul class="shortcuts-links">
 							<?php dynamic_sidebar( 'wpg-headerbar-shortcuts' ); ?>
 						</ul>

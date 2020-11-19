@@ -8,14 +8,20 @@
 ?>
 <main id="main" class="site-main hentry-multi clear-both" tabindex="0">
   <section id="home-posts" class="page-section posts content-style style__narrow col-12">
-    <header class="meta-line">
       <?php
-      $category = get_option('default_category');
-      $term = get_term_by( 'id', $category, 'category' );
-      ?>
-      <h2><?php echo $term->name ?> </h2>
-    </header>
-    <?php
+
+      $loop_title = get_theme_mod('wpg_mainloop_title', '');
+
+      if (!empty($loop_title)) {
+        printf('<header class="meta-line"><h2>%1$s</h2></header>',$loop_title);
+      } else {
+        
+        $category = get_option('default_category');
+        $term = get_term_by( 'id', $category, 'category' );
+
+        printf('<header class="meta-line"><h2>%1$s</h2></header>',$term->name);
+      }
+
     if (have_posts()):
 
       $i = 1;

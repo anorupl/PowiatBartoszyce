@@ -92,12 +92,12 @@ public function form( $instance ) {
 <div class="widget-field">
   <!-- text title -->
   <p>
-    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'gmina_theme') ?></label>
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'wpg_theme') ?></label>
     <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
   </p>
   <!-- url link baner  -->
   <p>
-    <label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e('url:', 'gmina_theme') ?></label>
+    <label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e('Url:', 'wpg_theme') ?></label>
     <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" value="<?php echo $instance['url']; ?>" />
   </p>
   <!-- checkbox new window -->

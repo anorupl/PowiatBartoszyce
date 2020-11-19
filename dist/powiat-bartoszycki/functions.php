@@ -88,13 +88,15 @@ function wpg_setup() {
 	/**
 	* Update image size;
 	*/
-	update_option( 'thumbnail_size_w', 320 );
-	update_option( 'thumbnail_size_h', 480 );
+	update_option( 'thumbnail_size_w', 768 );
+	update_option( 'thumbnail_size_h', 512 );
 	update_option( 'thumbnail_crop', false );
-	update_option( 'medium_size_w', 768);
-	update_option( 'medium_size_h', 512 );
-	update_option( 'large_size_w', 1366);
-	update_option( 'large_size_h', 911 );
+
+	update_option( 'medium_size_w', 1068);
+	update_option( 'medium_size_h', 812 );
+
+	update_option( 'large_size_w', 1600);
+	update_option( 'large_size_h', 1067 );
 
 	/**
 	* Custom style css for gutenberg editor
@@ -232,6 +234,11 @@ require THEME_PATH . 'inc/fn_disabled.php';
 require THEME_PATH . 'inc/template-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 require THEME_PATH . 'inc/wcga_form.php';
+
+if (is_admin()) {
+	require THEME_PATH . 'inc/admin/tinymce_wcga.php';
+}
+
 
 /**
 * Include file with custom widget.

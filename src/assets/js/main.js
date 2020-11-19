@@ -281,12 +281,12 @@
   *  Function cookie information
   **************************************************/
   function cookiewpg() {
-    var cookie_mbp = Cookies.get('cookie_mbp');
-    if (cookie_mbp != 'powiatbartoszyce-accept') {
+    var cookie_wpg = Cookies.get('cookie_wpg');
+    if (cookie_wpg != 'powiatbartoszyce-accept') {
       $('#cookie-notice').addClass('cookie-notice-visible');
       $("#cn-accept-cookie").click(function(e){
         e.preventDefault();
-        Cookies.set("cookie_mbp", 'powiatbartoszyce-accept', {expires: 365, path: '/'});
+        Cookies.set("cookie_wpg", 'powiatbartoszyce-accept', {expires: 365, path: '/'});
         $('#cookie-notice').removeClass('cookie-notice-visible');
       });
     }
