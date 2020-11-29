@@ -5,7 +5,7 @@
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 *
 * @package Powiat Bartoszycki
-* @since 0.1.0
+* @since 0.1.1
 */
 
 ?>
@@ -61,8 +61,11 @@ if (get_theme_mod('wpg_secondary_baners_active', false) === true) {
             <i class="icon-envelope"></i><span class="footer-item--h"><?php _e('E-mail', 'wpg_theme');?></span>
           </div>
           <div class="contact-item__text">
-            <?php _e('Office: ','wpg_theme');  printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_office"))); ?><br />
-            <?php _e('Editorial: ','wpg_theme'); printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_editorial"))); ?>
+            <?php _e('Office: ','wpg_theme'); ?>
+            <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_office"))); ?>
+            <br />
+            <?php _e('Editorial: ','wpg_theme'); ?>
+            <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_editorial"))); ?>
           </div>
         </div>
       </aside>

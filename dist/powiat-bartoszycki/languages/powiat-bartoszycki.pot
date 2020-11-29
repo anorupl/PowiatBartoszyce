@@ -133,15 +133,15 @@ msgstr ""
 msgid "Place name"
 msgstr ""
 
-#: src/footer.php:31, src/inc/customizer/helpers/inc_helpers.php:190, src/inc/customizer/setting_control/inc_setting_contact.php:52
+#: src/footer.php:31, src/inc/customizer/helpers/inc_helpers.php:190, src/inc/customizer/setting_control/inc_setting_contact.php:36
 msgid "Address"
 msgstr ""
 
-#: src/footer.php:40, src/inc/customizer/setting_control/inc_setting_contact.php:112
+#: src/footer.php:40, src/inc/customizer/setting_control/inc_setting_contact.php:96
 msgid "Opening Hours"
 msgstr ""
 
-#: src/footer.php:49, src/inc/customizer/helpers/inc_helpers.php:204, src/inc/customizer/setting_control/inc_setting_contact.php:67
+#: src/footer.php:49, src/inc/customizer/helpers/inc_helpers.php:204, src/inc/customizer/setting_control/inc_setting_contact.php:51
 msgid "Telephone number"
 msgstr ""
 
@@ -153,15 +153,15 @@ msgstr ""
 msgid "Office: "
 msgstr ""
 
-#: src/footer.php:65
+#: src/footer.php:67
 msgid "Editorial: "
 msgstr ""
 
-#: src/footer.php:70
+#: src/footer.php:73
 msgid "Municipalities in the district"
 msgstr ""
 
-#: src/footer.php:120
+#: src/footer.php:123
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -177,59 +177,59 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: src/functions.php:143, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87, src/inc/wcga_form.php:96
+#: src/functions.php:142, src/inc/wcga_form.php:103, src/inc/wcga_form.php:87, src/inc/wcga_form.php:96
 msgid "Wyłącz kontrast"
 msgstr ""
 
-#: src/functions.php:144, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
+#: src/functions.php:143, src/inc/wcga_form.php:81, src/inc/wcga_form.php:91
 msgid "Włącz kontrast"
 msgstr ""
 
-#: src/functions.php:146
+#: src/functions.php:145
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:147
+#: src/functions.php:146
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:148
+#: src/functions.php:147
 msgid "of"
 msgstr ""
 
-#: src/functions.php:149
+#: src/functions.php:148
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:150
+#: src/functions.php:149
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:151, src/inc/widget/widget-baner.php:120
+#: src/functions.php:150, src/inc/widget/widget-baner.php:120
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:152
+#: src/functions.php:151
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:153
+#: src/functions.php:152
 msgid "Link open in a new window"
 msgstr ""
 
-#: src/functions.php:167
+#: src/functions.php:166
 msgid "Header Shortcuts"
 msgstr ""
 
-#: src/functions.php:176, src/inc/customizer/setting_control/inc_setting_baners.php:23
+#: src/functions.php:175, src/inc/customizer/setting_control/inc_setting_baners.php:23
 msgid "Baners - Primary section"
 msgstr ""
 
-#: src/functions.php:185
+#: src/functions.php:184
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/functions.php:194, src/inc/customizer/setting_control/inc_setting_baners.php:63
+#: src/functions.php:193, src/inc/customizer/setting_control/inc_setting_baners.php:63
 msgid "Baners - Secondary section"
 msgstr ""
 
@@ -357,19 +357,15 @@ msgstr ""
 msgid "Items for the section are added on the <a href='%1s'>widget page</a> (Baners - Secondary section)"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:19
-msgid "Show map in contact"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_contact.php:29, src/inc/customizer/setting_control/inc_setting_contact.php:37
+#: src/inc/customizer/setting_control/inc_setting_contact.php:13, src/inc/customizer/setting_control/inc_setting_contact.php:21
 msgid "Place title"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:82
+#: src/inc/customizer/setting_control/inc_setting_contact.php:66
 msgid "E-mail to Office"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:97
+#: src/inc/customizer/setting_control/inc_setting_contact.php:81
 msgid "E-mail to editorial office"
 msgstr ""
 
@@ -568,7 +564,7 @@ msgstr ""
 msgid "Link to  %1$s"
 msgstr ""
 
-#: src/inc/template-functions.php:119
+#: src/inc/template-functions.php:122
 msgid "Untitled"
 msgstr ""
 

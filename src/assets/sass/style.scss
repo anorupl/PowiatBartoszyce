@@ -68,26 +68,10 @@
 -- Responsive breakpoint
 --------------------------------------------------------------*/
 @media (min-width: $phone) {
-
   .wide-col .col-12--3 {@include span(4); }
 }
 
 
-/*--------------------------------------------------------------
--- Responsive breakpoint
---------------------------------------------------------------*/
-@media (max-width: $phone) {
-
-.hentry table {
-      caption { background-image: none; }
-      thead, table th { display: none; }
-
-      td {display: block; @include font-size(1.1);}
-
-      tbody td::before {content: attr(data-th); float: left; width: 30%; font-weight: bold; }
-      tbody td::after { content: ''; display:block; clear: both; }
-  }
-}
 
 
 /*--------------------------------------------------------------
@@ -96,12 +80,9 @@
 @media (max-width: $tablet) {
 
 .hide-on-small {display: none !important;}
-
-//  @import "theme/theme--rwd_max-desktop";
-//  @import "theme/nav/nav_horizontal_rwd-tablet";
-/*----------------------------------
- *  Tables
- * ---------------------------------*/
+.wp-block-image {
+  .alignleft, .alignright {float: none; margin: .5em auto;}
+}
 
 }
 
@@ -190,15 +171,261 @@
 }
 
 
-
-
-
-
-
-
-
 @media (min-width: $desktop-mdpi) {
   .container  {
     max-width: 1466px;
   }
+}
+
+
+
+
+/*--------------------------------------------------------------
+-- Media Querie for print
+--------------------------------------------------------------*/
+
+@media print {
+
+
+  body                            { font-size: 12pt; color: #000 !important; }
+  .fixed-header-2                 { padding-top: 0; }
+  .fixed-header-2 .header-wrapper { position: static;}
+
+  #skip-links,
+  #cookie-notice,
+  #top-bar,
+  #site-search,
+  #site-nav-bar,
+  #bar_shortcuts,
+  .footer-background,
+  #footer-widget,
+  #map_svg,
+  #menu_footer {
+    display: none;
+  }
+
+  .slides             {border: 1px solid $border-color;}
+  .top-thumbnail img  {display: none;}
+  .over-thumbnail     {position: relative;}
+
+
+  /* content */
+  h1,.class-h1,.f-size-h1         { font-size: 14pt;}
+  h2,.class-h2,.f-size-h2         { font-size: 13pt;}
+  h3,.class-h3,.f-size-h3         { font-size: 12pt;}
+  h4,.class-h4,.f-size-h4         { font-size: 12pt;}
+  h5, h6, .class-h5,.f-size-h5    { font-size: 12pt; letter-spacing: 0.1em; text-transform: uppercase;}
+
+  img {display: block; max-width: 100%; height: auto; border: 0;}
+
+  /* fix if contrast is Enable */
+  a {
+    	color: $two-color !important;
+    &:hover,
+    &:active {
+      color: $one-color !important;
+    }
+  }
+
+  /* home page */
+  .col-home {
+    .col-4_5 {width: 30%;}
+    .col-7_5 {width: 70%;}
+  }
+  .col-12--3,
+  .col-12--2-4 {
+    width: 33.33333%;
+  }
+  .featured-item  .col-4 {
+    width: 33.33333%;
+    padding: 0 10px;
+  }
+
+
+  /* category page */
+  .archive {
+    .hentry-multi {
+      .col-5 {width: 30%;}
+      .col-7 {width: 70%;}
+    }
+
+    #breadcrumbs {
+      display: block;
+    }
+    #header-content,
+    #secondary-baners,
+    #secondary,
+    .more-link {
+      display: none;
+    }
+  }
+
+
+  /*  Posts and Pages */
+  .single {
+
+    #header-background,
+    .post-navigation,
+    #comments,
+    .footer-background,
+    #secondary-baners,
+    #menu_footer,
+    #footer-widget,
+    #map_svg,
+    #secondary {
+      display: none;
+    }
+
+    #site-header {
+      max-width: 7cm;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #breadcrumbs {
+      width: 100%;
+      padding: 0.5cm;
+    }
+
+    #top-thumbnail {
+      max-width: 25%;
+      display: block;
+      margin: 1cm auto;
+    }
+  }
+
+  /* footer  - contact */
+  #contact-info {
+    font-size: 10pt;
+
+    text-align: center;
+    width: 100%;
+    clear: both;
+
+    .contact-item {
+      display: inline-block;
+      margin-bottom: 0;
+
+      &.email {
+        clear: both;
+        width: 100%;
+      }
+    }
+
+    .contact-item__icon,
+    .contact-item__text {
+      display: inline;
+      padding-left: 0;
+    }
+  }
+
+
+  /* Gallery */
+  .blocks-gallery-grid.columns-3 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-3 .blocks-gallery-item,
+  .wp-block-gallery.columns-3 .blocks-gallery-image,
+  .wp-block-gallery.columns-3 .blocks-gallery-item {
+    width:calc(33.33333% - 10.66667px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-4 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-4 .blocks-gallery-item,
+  .wp-block-gallery.columns-4 .blocks-gallery-image,
+  .wp-block-gallery.columns-4 .blocks-gallery-item {
+    width: calc(25% - 12px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-5 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-5 .blocks-gallery-item,
+  .wp-block-gallery.columns-5 .blocks-gallery-image,
+  .wp-block-gallery.columns-5 .blocks-gallery-item {
+    width: calc(20% - 12.8px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-6 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-6 .blocks-gallery-item,
+  .wp-block-gallery.columns-6 .blocks-gallery-image,
+  .wp-block-gallery.columns-6 .blocks-gallery-item {
+    width: calc(16.66667% - 13.33333px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-7 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-7 .blocks-gallery-item,
+  .wp-block-gallery.columns-7 .blocks-gallery-image,
+  .wp-block-gallery.columns-7 .blocks-gallery-item {
+    width: calc(14.28571% - 13.71429px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-8 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-8 .blocks-gallery-item,
+  .wp-block-gallery.columns-8 .blocks-gallery-image,
+  .wp-block-gallery.columns-8 .blocks-gallery-item {
+    width: calc(12.5% - 14px);
+    margin-right: 16px
+  }
+
+  .blocks-gallery-grid.columns-1 .blocks-gallery-image:nth-of-type(1n),
+  .blocks-gallery-grid.columns-1 .blocks-gallery-item:nth-of-type(1n),
+  .wp-block-gallery.columns-1 .blocks-gallery-image:nth-of-type(1n),
+  .wp-block-gallery.columns-1 .blocks-gallery-item:nth-of-type(1n),
+  .blocks-gallery-grid.columns-2 .blocks-gallery-image:nth-of-type(2n),
+  .blocks-gallery-grid.columns-2 .blocks-gallery-item:nth-of-type(2n),
+  .wp-block-gallery.columns-2 .blocks-gallery-image:nth-of-type(2n),
+  .wp-block-gallery.columns-2 .blocks-gallery-item:nth-of-type(2n),
+  .blocks-gallery-grid.columns-3 .blocks-gallery-image:nth-of-type(3n),
+  .blocks-gallery-grid.columns-3 .blocks-gallery-item:nth-of-type(3n),
+  .wp-block-gallery.columns-3 .blocks-gallery-image:nth-of-type(3n),
+  .wp-block-gallery.columns-3 .blocks-gallery-item:nth-of-type(3n),
+  .blocks-gallery-grid.columns-4 .blocks-gallery-image:nth-of-type(4n),
+  .blocks-gallery-grid.columns-4 .blocks-gallery-item:nth-of-type(4n),
+  .wp-block-gallery.columns-4 .blocks-gallery-image:nth-of-type(4n),
+  .wp-block-gallery.columns-4 .blocks-gallery-item:nth-of-type(4n),
+  .blocks-gallery-grid.columns-5 .blocks-gallery-image:nth-of-type(5n),
+  .blocks-gallery-grid.columns-5 .blocks-gallery-item:nth-of-type(5n),
+  .wp-block-gallery.columns-5 .blocks-gallery-image:nth-of-type(5n),
+  .wp-block-gallery.columns-5 .blocks-gallery-item:nth-of-type(5n),
+  .blocks-gallery-grid.columns-6 .blocks-gallery-image:nth-of-type(6n),
+  .blocks-gallery-grid.columns-6 .blocks-gallery-item:nth-of-type(6n),
+  .wp-block-gallery.columns-6 .blocks-gallery-image:nth-of-type(6n),
+  .wp-block-gallery.columns-6 .blocks-gallery-item:nth-of-type(6n),
+  .blocks-gallery-grid.columns-7 .blocks-gallery-image:nth-of-type(7n),
+  .blocks-gallery-grid.columns-7 .blocks-gallery-item:nth-of-type(7n),
+  .wp-block-gallery.columns-7 .blocks-gallery-image:nth-of-type(7n),
+  .wp-block-gallery.columns-7 .blocks-gallery-item:nth-of-type(7n),
+  .blocks-gallery-grid.columns-8 .blocks-gallery-image:nth-of-type(8n),
+  .blocks-gallery-grid.columns-8 .blocks-gallery-item:nth-of-type(8n),
+  .wp-block-gallery.columns-8 .blocks-gallery-image:nth-of-type(8n),
+  .wp-block-gallery.columns-8 .blocks-gallery-item:nth-of-type(8n) {
+    margin-right: 0
+
+  }
+
+  .blocks-gallery-grid .blocks-gallery-image:last-child,
+  .blocks-gallery-grid .blocks-gallery-item:last-child,
+  .wp-block-gallery .blocks-gallery-image:last-child,
+  .wp-block-gallery .blocks-gallery-item:last-child {
+    margin-right: 0
+  }
+
+  .blocks-gallery-grid.alignleft,
+  .blocks-gallery-grid.alignright,
+  .wp-block-gallery.alignleft,
+  .wp-block-gallery.alignright {
+    max-width: 290px;
+    width: 100%
+  }
+
+  .blocks-gallery-grid.aligncenter .blocks-gallery-item figure,
+  .wp-block-gallery.aligncenter .blocks-gallery-item figure {
+    justify-content: center
+  }
+
+
+
+
 }

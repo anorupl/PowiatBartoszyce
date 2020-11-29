@@ -84,14 +84,19 @@ a {
   }
 }
 
-.meta-line {
-  &:after {
+.meta-line:after {
     border-bottom: solid 2px $wcag-text;
   }
+
+.meta-line,
+#secondary-baners .meta-line {
   h1,h2,h3 {
     background-color: $wcag-bg;
   }
 }
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -293,7 +298,8 @@ a {
 /*--------------------------------------------------------------
 6.0 Cookie and Copyright
 --------------------------------------------------------------*/
-#copyright {
+#copyright,
+#cookie-notice {
 
   background-color: $wcag-bg;
 

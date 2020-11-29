@@ -3,24 +3,8 @@
 * File with setting and control in 'club' section
 *
 * @package Powiat Bartoszycki
-* @since 0.1.0
+* @since 0.1.1
 */
-
-// ==============================================
-//  = Show map=
-//  =============================================
-$wp_customize->add_setting('wpg_contact_maps', array(
-	'default'=> false,
-	'capability' => 'edit_theme_options',
-));
-
-$wp_customize->add_control( 'wpg_contact_maps', array(
-	'settings' => 'wpg_contact_maps',
-	'label'   => __('Show map in contact', 'wpg_theme'),
-	'section'  => $contact_section_id,
-	'type'=> 'checkbox'
-));
-
 
 // ==============================================
 //  = Place title						=
