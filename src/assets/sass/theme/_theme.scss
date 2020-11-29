@@ -309,7 +309,7 @@ a:hover .bw-image {
 3.1.1 Header Slider with post
 --------------------------------------------------------------*/
 #header-background {
-  background: url('http://beta.kz.atthost24.pl/wp-content/uploads/2020/10/iStockm.jpg');
+  background: url(#{$img-path}bg-header.jpg);
   background-size: cover;
   background-position: bottom center;
   overflow: hidden;
@@ -319,7 +319,7 @@ a:hover .bw-image {
       display: block;
       width: 100%;
       height: 25px;
-      @include linear-gradient(90deg, #EB3349, #F45C43);
+      @include linear-gradient(90deg, #E12D42, #F45C43);
       clear: both;
   }
 }
@@ -576,7 +576,7 @@ a:hover .bw-image {
 --------------------------------------------------------------*/
 .col-one article:nth-child(1) {
   padding: gutters();
-  @include linear-gradient(90deg, #EB3349, #F45C43);
+  @include linear-gradient(90deg, #E12D42, #F45C43);
   color: $four-bw;
 
 
@@ -616,7 +616,7 @@ a:hover .bw-image {
       min-height: 81px;
       width: 100%;
       color: lighten( $three-bw, 20% );
-      @include linear-gradient(90deg, #EB3349, #F45C43);
+      @include linear-gradient(90deg, #E12D42, #F45C43);
       padding: gutter() gutter() gutter() 80px;
       margin-bottom: gutter();
 
@@ -698,7 +698,7 @@ a:hover .bw-image {
 #contact-footer {
   min-height: 200px;
   overflow: hidden;
-  @include linear-gradient(90deg, #EB3349, #F45C43);
+  @include linear-gradient(90deg, #E12D42, #F45C43);
   color: lighten( $three-bw, 20% );
   border-color: lighten( $three-bw, 20% );
 

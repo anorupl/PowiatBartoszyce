@@ -175,7 +175,7 @@ Theme URI: https://powiatbartoszyce.pl/\n\
 Author: Kamil Zerebny\n\
 Author URI: https://zerebny.ovh\n\
 Description: Oficjalny szablon strony Starostwa Powiatowego w Bartoszycach.\n\
-Version: 0.1.0\n\
+Version: 0.1.1\n\
 Licence: GPL-2.0\n\
 Licence URI: http://www.gnu.org/licenses/gpl-2.0.html\n\
 Tags: one-column,responsive-layout,custom-menu,featured-images,microformats,threaded-comments,translation-ready\n\

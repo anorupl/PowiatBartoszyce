@@ -92,6 +92,9 @@ function wpg_body_class($class) {
 				$class[] = 'active-sidebar';
 			}
 		}
+		if (is_page()){
+			$class[] = 'single';
+		}
 	}
 	return $class;
 }

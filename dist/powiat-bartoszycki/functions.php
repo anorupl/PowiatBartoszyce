@@ -116,8 +116,7 @@ function wpg_enqueue() {
 	wp_deregister_script( 'jquery' );
 
 	//css
-	wp_enqueue_style( 'wpg-style', get_stylesheet_uri(),array(),THEME_VERSION, 'screen' );
-	wp_enqueue_style(	'wpg-print-style', THEME_URL . 'css/print.css', array(), THEME_VERSION, 'print');
+	wp_enqueue_style( 'wpg-style', get_stylesheet_uri(),array(),THEME_VERSION, 'all' );
 
 	wp_enqueue_style( 'slick', THEME_URL . "css/slick.css");
 
