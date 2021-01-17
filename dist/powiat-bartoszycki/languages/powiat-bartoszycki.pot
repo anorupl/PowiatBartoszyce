@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Powiat Bartoszycki
+# Copyright (C) 2021 Powiat Bartoszycki
 # This file is distributed under the same license as the Powiat Bartoszycki package.
 msgid ""
 msgstr ""
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: src/components/features/section-featured.php:38, src/components/features/section-featured.php:67, src/components/features/section-featured_sidebar.php:38, src/components/features/section-featured_sidebar.php:67, src/inc/customizer/setting_control/inc_setting_featuredcat.php:29, src/inc/template-tags.php:224, src/index.php:64
+#: src/components/features/section-featured.php:37, src/components/features/section-featured.php:66, src/components/features/section-featured_sidebar.php:38, src/components/features/section-featured_sidebar.php:67, src/inc/customizer/setting_control/inc_setting_featuredcat.php:29, src/inc/template-tags.php:224, src/index.php:64
 msgid "Last post"
 msgstr ""
 
-#: src/components/features/section-featured.php:66, src/components/features/section-featured_sidebar.php:66
+#: src/components/features/section-featured.php:65, src/components/features/section-featured_sidebar.php:66
 msgid "Show all"
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:150, src/inc/widget/widget-baner.php:120
+#: src/functions.php:150, src/inc/widget/widget-baner.php:126
 msgid "Image"
 msgstr ""
 
@@ -652,39 +652,39 @@ msgstr ""
 msgid "Increase font size 150%"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:11
+#: src/inc/widget/widget-baner.php:19
 msgid "Baner with description"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:14
+#: src/inc/widget/widget-baner.php:22
 msgid "Image widget with description"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:95
+#: src/inc/widget/widget-baner.php:101
 msgid "Title:"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:100
+#: src/inc/widget/widget-baner.php:106
 msgid "Url:"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:107
+#: src/inc/widget/widget-baner.php:113
 msgid "Open in new window?"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:114
+#: src/inc/widget/widget-baner.php:120
 msgid "Image Black and white image ?"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:123
+#: src/inc/widget/widget-baner.php:129
 msgid "Upload Image"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:124
+#: src/inc/widget/widget-baner.php:130
 msgid "Remove Image"
 msgstr ""
 
-#: src/inc/widget/widget-baner.php:129
+#: src/inc/widget/widget-baner.php:135
 msgid "Image description:"
 msgstr ""
 

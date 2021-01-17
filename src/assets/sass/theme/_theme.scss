@@ -92,6 +92,7 @@ main {
   display: inline-block;
   text-align: center;
   border-radius: 0.7em;
+  &:focus,
   &:hover {
     color: $four-bw;
     background-color: $one-color;
@@ -283,8 +284,10 @@ a:hover .bw-image {
   display: inline-block;
   margin: 0;
   max-height: 80px;
-  overflow: hidden;
-
+  > a {
+    display: inline-block;
+    margin: 4px;
+  }
   img {
 
     width: auto;
@@ -293,6 +296,10 @@ a:hover .bw-image {
     margin-right:auto;
     transition: all 0.2s linear 0.4s;
   }
+}
+
+#form-wcga, #top-bar__social {
+  padding: 4px;
 }
 
 /* Site navigation */
@@ -395,7 +402,7 @@ a:hover .bw-image {
     height: 160px;
     padding: 5px;
     color: $one-bw;
-    &:hover {color: $two-color;}
+    &:hover,&:focus {color: $two-color;}
   }
   .no-flexbox & li {
     display: inline-block;
@@ -582,7 +589,7 @@ a:hover .bw-image {
 
   a,
   i {color: $four-bw;}
-  a:hover {color:$one-bw;}
+  a:hover, a:focus {color:$one-bw;}
 
 }
 /*--------------------------------------------------------------
@@ -620,7 +627,7 @@ a:hover .bw-image {
       padding: gutter() gutter() gutter() 80px;
       margin-bottom: gutter();
 
-      &:hover {
+      &:hover,&:focus {
         color:$one-bw;
         @include linear-gradient(90deg, darken($three-bw, 10%), $three-bw);
       }

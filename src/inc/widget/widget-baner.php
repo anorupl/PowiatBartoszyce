@@ -1,4 +1,12 @@
 <?php
+/**
+* Custom widget
+*
+* @package Powiat Bartoszycki
+* @since 0.1.1
+*/
+
+
 class Widget_Banner extends WP_Widget {
 
   /**
@@ -28,14 +36,12 @@ class Widget_Banner extends WP_Widget {
     // outputs the content of the widget
     extract( $args );
     //Our variables from the widget settings.
-
-    //Our variables from the widget settings.
-    $title      = $instance['title'];
-    $url        = $instance['url'];
-    $new_window = $instance['new_window'];
-    $uri        = $instance['image_uri'];
-    $alt_img    = $instance['alt_img'];
-    $bw_img     = $instance['bw_img'];
+    $title      = isset($instance['title']) ? $instance['title'] : '';
+    $url        = isset($instance['url']) ? $instance['url'] : '';
+    $new_window = isset($instance['new_window']) ? $instance['new_window'] : '';
+    $uri        = isset($instance['image_uri']) ? $instance['image_uri'] : '';
+    $alt_img    = isset($instance['alt_img']) ? $instance['alt_img'] : '';
+    $bw_img     = isset($instance['bw_img']) ? $instance['bw_img'] : '';
 
     echo $before_widget;
 

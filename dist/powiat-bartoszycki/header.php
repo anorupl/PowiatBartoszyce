@@ -6,7 +6,7 @@
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 *
 * @package Powiat Bartoszycki
-* @since 0.1.0
+* @since 0.1.1
 */
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 			<div id="cn-notice-text" class="text-center pad-all">
 				Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
 				<button id="cn-accept-cookie" class="btn">Akceptuj</button>
-				<a href="#" target="_blank" id="cn-more-info" class="btn">Polityka prywatności</a>
+				<a href="<?php echo (get_privacy_policy_url() !== '') ? get_privacy_policy_url() : '#'; ?>"  id="cn-more-info" class="btn">Polityka prywatności</a>
 			</div>
 		</div>
 	</div>

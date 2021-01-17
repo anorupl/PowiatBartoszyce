@@ -65,7 +65,7 @@ textarea {
   vertical-align: baseline;
   outline: none;
 
-  :focus & {
+  &:focus {
     outline: $outline;
   }
 }
@@ -83,7 +83,7 @@ textarea {
   background: $fields-bg;
 
   &:focus {
-    border-color: $fields-active;
+    border-color: $border-color;
   }
 }
 
@@ -136,6 +136,7 @@ form {
 ========================================================================== */
 .searchform {
   width: 100%;
+  padding: 0 2px;
   position: relative;
   .field {
     width: 100%;
@@ -146,7 +147,7 @@ form {
   button {
     display: block;
     position: absolute;
-    right: 0;
+    right: 2px;
     top: 0;
     padding: 0 5px;
     height: 100%;

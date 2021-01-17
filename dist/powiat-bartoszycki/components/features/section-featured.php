@@ -6,14 +6,13 @@
 * @since 0.1.0
 */
 $featuredcat_id = get_theme_mod('wpg_featuredcat', 0);
-$sticky         = get_option( 'sticky_posts' );
+
 $category       = false;
 
 $query_feat = array(
   'post_type'           =>'post',
   'posts_per_page'      => 3,
-  'ignore_sticky_posts' => 1,
-  'post__in'            => $sticky
+  'ignore_sticky_posts' => true,
 );
 
 if (!empty($featuredcat_id) && ($featuredcat_id != 0)) {
